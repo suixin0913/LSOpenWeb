@@ -1,0 +1,7 @@
+include:
+  - project: 'RS_iflyos-aiui-service/OPS/Pipeline'
+    ref: master
+    file: '/pure-docker-web.yml'
+ 
+variables:
+  CONFIG_FILE: docusaurus.config.js
