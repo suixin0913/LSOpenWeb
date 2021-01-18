@@ -5,7 +5,7 @@ slug: /guides
 ---
 
 ## 从这里开始
-### [快速入门CSK项目开发@梓伦 @钟蔚](www)
+### [快速入门CSK项目开发@梓伦 @钟蔚](http://localhost:3000/getting_start)
 
 完整了解如何从安装配置到创建你的第一个CSK项目。@梓伦 @钟蔚
 
@@ -98,7 +98,7 @@ LISA API简介
 
 --------
 
-### [LISA API使用指南](www)
+### [LISA API使用指南](http://localhost:3000/lisa_guide)
 
 LISA API使用指南
 
