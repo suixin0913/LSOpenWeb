@@ -1,7 +1,8 @@
 FROM node:12-buster as builder
 WORKDIR /app
 ADD . /app
-RUN npm install && \
+RUN npm install cnpm -g && \
+    cnpm install && \
     npm run build
 
 FROM jboesl/docker-nginx-headers-more:1.11.4-0.31
