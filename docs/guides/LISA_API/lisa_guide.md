@@ -4,9 +4,6 @@ title: LISA API开发指南
 slug: /lisa_guide
 ---
 
-# CSK 离在线方案开发者指引
-
-[TOC]
 
 ## 1.概述
 
@@ -44,7 +41,7 @@ Castor 离在线标准方案是基于聆思自研AI语音芯片 CSK ，结合 Wi
 
 下图详细描述了离在线方案各个环节的运行机制，开发者可通过该流程图，快速了解方案整体运行逻辑。
 
-<img src="./files/Developer_Guidelines/frame.png" alt="frame90" style="zoom:100%;" />
+<img src="./files/Developer_Guidelines/frame.png" alt="frame90" styles="zoom:100%;" />
 
 
 
@@ -52,7 +49,7 @@ Castor 离在线标准方案是基于聆思自研AI语音芯片 CSK ，结合 Wi
 
 设备端音频处理链路如下图所示，麦克风拾取人声后，将原始音频送至 ADC 。ADC 将模拟信号转换为数字信号后的音频传送至 CSK 芯片做前端声学处理，经过处理后将输出8路音频。
 
-<img src="./files/Developer_Guidelines/Audio_transmission.png" alt="80" style="zoom:100%;" />
+<img src="./files/Developer_Guidelines/Audio_transmission.png" alt="80" styles="zoom:100%;" />
 
 **本地识别**
 
