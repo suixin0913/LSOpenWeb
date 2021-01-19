@@ -78,7 +78,7 @@ slug: /guides_index
 
 ---------
 
-### [入门调优与自动调优](http://localhost:3000//auto_optimize) @巍巍
+### [入门调优与自动调优](http://localhost:3000/auto_optimize) @巍巍
 
 本篇介绍什么是语音效果调优，如何使用LStudio自动调优与测试。
 `./guides/advanced/auto_optimize`
