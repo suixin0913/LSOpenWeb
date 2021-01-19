@@ -78,24 +78,19 @@ slug: /guides_index
 
 ---------
 
+### [入门调优与自动调优](http://localhost:3000//auto_optimize) @巍巍
 
-### [效果调优@晓庆 @思宇](/lisa_guide) 
-
-本篇介绍如何对语音效果进行调优。包含测试报告分析，以及常用的调优思路和调优方法。
-`./guides/advanced/optimize`
-
---------
-
-
-### [自动调优](/lisa_guide) @巍巍
-
-本篇介绍如何如何通过LStudio，在不使用实验室的情况下进行自动调优和测试。
-`./guides/advanced/auto_test`
-
-
+本篇介绍什么是语音效果调优，如何使用LStudio自动调优与测试。
+`./guides/advanced/auto_optimize`
 
 -----------------
 
+### [阈值调节技巧](/lisa_guide) 
+
+本篇介绍如何对语音效果进行调优。包含测试报告分析，以及常用的调优思路和调优方法。
+`./guides/advanced/optimize_skills`
+
+--------
 ### [芯片业务逻辑debug（施工中）](/lisa_guide)
 
 
