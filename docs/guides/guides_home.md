@@ -96,7 +96,7 @@ slug: /guides_index
 --------
 
 
-### [芯片业务逻辑debug（施工中）](www)
+### [芯片业务逻辑debug（施工中）](/lisa_guide)
 
 
 了解如何使用LStudio debug芯片业务逻辑。
@@ -115,7 +115,7 @@ slug: /guides_index
 
 
 
-### [音频传输](www)
+### [音频传输](/lisa_guide)
 
 
 了解如何把算法处理后的音频传输给上位机。
