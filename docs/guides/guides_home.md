@@ -57,7 +57,7 @@ slug: /guides_index
 --------
 
 
-### [芯片通讯协议@钟蔚](www)
+### [芯片通讯协议@钟蔚](/lisa_guide)
 
 
 
@@ -174,37 +174,37 @@ LISA API代码示例。
 
 --------
 
-## 业务引擎LScript @钟蔚
+## 业务引擎EngineCore @钟蔚
 
 ### [快速熟悉常用语法](/lisa_guide)
 
 从0到1搭建自己的业务引擎，熟悉LScript常用语法。
 
-`./guides/LScript/grammar/`
+`./guides/EngineCore/grammar/`
 
 -------------------
 
-### [了解LScript API](/lisa_guide)
+### [了解EngineCore API](/lisa_guide)
 
 本篇介绍所有LScript API。
 
-`./guides/LScript/API/`
+`./guides/EngineCore/API/`
 
 -------------------
 
-### [LScript 编译](/lisa_guide)
+### [EngineCore编译](/lisa_guide)
 
-本篇介绍LScript的编译方式。。
+本篇介绍EngineCore的编译方式。。
 
-`./guides/LScript/bulid/`
+`./guides/EngineCore/bulid/`
 
 --------
 
-### [LScript debug](/lisa_guide)
+### [EngineCore debug](/lisa_guide)
 
-本篇介绍如何对LScript进行debug。
+本篇介绍如何对EngineCore进行debug。
 
-`./guiides/LScript/debug/`
+`./guiides/EngineCore/debug/`
 
 -------------------
 ## 硬件基础知识 @晓溪
