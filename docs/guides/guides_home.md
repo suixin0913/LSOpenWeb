@@ -18,6 +18,8 @@ slug: /guides_index
 
 ## 固件基础知识
 
+`./guides/firmware`
+
 ### [CSK项目基础配置@张喆](/lisa_guide)
 
 完整了解CSK项目的每一个基础配置项，包括麦克风配置、TTS配置、交互配置等。@梓伦
@@ -67,6 +69,9 @@ slug: /guides_index
 
 ## 进阶知识
 
+`./guides/advanced`
+
+
 ### [实验室语音效果测试](/lisa_guide) @张喆
 
 
@@ -112,6 +117,7 @@ slug: /guides_index
 
 ## 上位机通讯编程 @星晨
 
+`./guides/msio`
 
 
 ### [音频传输](/lisa_guide)
@@ -120,6 +126,12 @@ slug: /guides_index
 本篇介绍CSK芯片和上位机之间的音频传输。包含通过I2S/UAC输出算法处理后的音频，及接收上位机传输的音频。
 
 `./guides/msio/audio`
+
+-------------------
+
+#### [在线语音交互模式](/lisa_guide)
+
+`./guides/msio/mode`
 
 -------------------
 
