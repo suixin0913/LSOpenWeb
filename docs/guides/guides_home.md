@@ -28,7 +28,7 @@ slug: /guides_index
 
 --------
 
-### [自定义词表与回复语@囧](/lisa_guide)
+### [自定义词表与回复语@囧](/vui)
 
 
 本篇介绍CSK项目的语音交互配置。包含交互模板使用、自定义命令词词条和回复语提示音，也会介绍如何设计合适的命令词词条，并根据词条检测结果对命令词词条进行修改。
@@ -78,14 +78,14 @@ slug: /guides_index
 
 ---------
 
-### [入门调优与自动调优](http://localhost:3000/auto_optimize) @巍巍
+### [入门调优与自动调优](/auto_optimize) @巍巍
 
 本篇介绍什么是语音效果调优，如何使用LStudio自动调优与测试。
 `./guides/advanced/auto_optimize`
 
 -----------------
 
-### [阈值调节技巧](/lisa_guide) 
+### [阈值调节技巧](/optimize_skills) 
 
 本篇介绍如何对语音效果进行调优。包含测试报告分析，以及常用的调优思路和调优方法。
 `./guides/advanced/optimize_skills`
