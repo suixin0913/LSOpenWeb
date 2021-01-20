@@ -91,10 +91,19 @@ slug: /guides_index
 `./guides/advanced/optimize_skills`
 
 --------
+
+### [配置application](/application_config) 
+
+通过application.toml，你可以迅速适配自己的硬件板型，具体包括：产测配置、业务配置、硬件配置、驱动配置。
+`./guides/advanced/application_config`
+
+--------
+
+
 ### [芯片业务逻辑debug（施工中）](/lisa_guide)
 
 
-::: tip 提示
+:::tip 提示
 文档建设中
 :::
 
