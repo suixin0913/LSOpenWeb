@@ -13,6 +13,9 @@ slug: /guides_index
 
 `./guides/getting_start`
 
+:::caution 未交货
+:::
+
 
 --------
 
@@ -20,15 +23,15 @@ slug: /guides_index
 
 `./guides/firmware`
 
-### [CSK项目基础配置@张喆](/base_config)
+### [CSK项目基础配置](/guides/firmware/base_config) @巍巍
 
 完整了解CSK项目的每一个基础配置项，包括麦克风配置、TTS配置、交互配置等。@梓伦
 
-`./guides/firmware/base_config`
+`./guides/firmware/guides/firmware/base_config`
 
 --------
 
-### [自定义词表与回复语@囧](/vui)
+### [自定义词表与回复语](/vui)@囧
 
 
 本篇介绍CSK项目的语音交互配置。包含交互模板使用、自定义命令词词条和回复语提示音，也会介绍如何设计合适的命令词词条，并根据词条检测结果对命令词词条进行修改。
@@ -37,7 +40,7 @@ slug: /guides_index
 
 --------
 
-### [外围引脚配置@罗梓伦](/peripheral_config)
+### [外围引脚配置](/peripheral_config)@罗梓伦
 
 本篇介绍如何根据硬件需求在hardware.toml中配置CSK项目中的引脚，包含uart、i2c、i2s、spi、gpio等接口。
 
@@ -46,21 +49,27 @@ slug: /guides_index
 --------
 
 
-### [拦截语音命令@钟蔚](/interceptor)
+### [拦截语音命令](/interceptor)@钟蔚
 
 本篇介绍CSK项目语音拦截器的使用。包含所有可以使用的语音拦截器指令，以及自定义业务逻辑。
 
 `./guides/firmware/interceptor`
 
+:::caution 未交货
+:::
+
 --------
 
 
-### [芯片通讯协议@钟蔚](/io_protocol)
+### [芯片通讯协议](/io_protocol)@钟蔚
 
 
 
 本篇介绍CSK项目和外围芯片的通讯。包含UART、PWM、GPIO、I2C等接口。
 `./guides/firmware/io_protocol`
+
+:::caution 未交货
+:::
 
 
 --------
@@ -109,7 +118,7 @@ slug: /guides_index
 --------
 
 
-### [产测开发](/lisa_guide) @佳楠
+### [产测开发](/factory_config) @梓伦
 
 `./guides/advanced/factory_config`
 本篇介绍如何在LStudio中配置CSK项目的产测流程。
@@ -118,30 +127,24 @@ slug: /guides_index
 
 ## 上位机通讯编程 @星晨 @良艺
 
-`./guides/msio`
+### [音频传输](/audio_transmission)
 
+`./guides/msio/audio_transmission`
 
+:::caution 未交货
+:::
 
-### [在线语音交互模式](/lisa_guide)
-
-本篇介绍在线语音交互中CSK芯片如何与上位机之间实现音频传输。包含通过I2S/UAC输出算法处理后的音频，及接收上位机传输的音频。
-
-`./guides/msio/mode`
 
 -------------------
-### [DSP模式（Android或特定设备）](/lisa_guide)
 
-本篇介绍如何把CSK芯片作为单纯的DSP来进行声学降噪，并把降噪后音频输出给上位机。
-
-`./guides/msio/dsp`
-
---------
-
-### [OTA](/lisa_guide)
+### [OTA](/guides/msio/ota)
 
 本篇介绍如何通过上位机为CSK升级固件。
 
 `./guides/msio/ota`
+
+:::caution 未交货
+:::
 
 -------------------
 
@@ -174,11 +177,18 @@ LISA API代码示例。 -->
 
 ## 业务引擎EngineCore @展晖
 
+### [快速实现业务逻辑](/guides/EngineCore/getting_started)
+
+-------
+
 ### [快速熟悉常用语法](/lisa_guide)
 
 从0到1搭建自己的业务引擎，熟悉LScript常用语法。
 
 `./guides/engine_core/grammar/`
+
+:::caution 未交货
+:::
 
 -------------------
 
@@ -188,6 +198,9 @@ LISA API代码示例。 -->
 
 `./guides/engine_core/api/`
 
+:::caution 未交货
+:::
+
 -------------------
 
 ### [EngineCore编译](/lisa_guide)
@@ -196,6 +209,9 @@ LISA API代码示例。 -->
 
 `./guides/engine_core/bulid/`
 
+:::caution 未交货
+:::
+
 --------
 
 ### [EngineCore debug](/lisa_guide)
@@ -203,6 +219,9 @@ LISA API代码示例。 -->
 本篇介绍如何对EngineCore进行debug。
 
 `./guiides/engine_core/debug/`
+
+:::caution 未交货
+:::
 
 -------------------
 ## 硬件基础知识 @晓溪
@@ -230,6 +249,13 @@ LISA API代码示例。 -->
 ### [量产保障](/lisa_guide)
 
 ---------------------
+## 技术支持
+
+### [创建工单获取技术支持](/cloud_project)
+
+本篇介绍如何通过工单系统获取各类技术支持。
+
+------------------------------------
 
 ## 附录及其他
 
@@ -237,17 +263,7 @@ LISA API代码示例。 -->
 
 [下载LSKits Bom表](/lisa_guide)
 
---------
-## 支持 @梓伦
 
-### 工单功能介绍
 
-### 在LSClous创建CSK项目
-
-### 通过工单获取技术支持
-
-### 通过工单获取硬件评审支持
-
-### 通过工单获取测试音频资源
 
 
