@@ -6,7 +6,7 @@ slug: /guides_index
 
 ## 从这里开始
 
-### [快速入门CSK项目开发@晓庆](http://localhost:3000/getting_start)
+### [快速入门CSK项目开发@晓庆](/getting_start)
 
 
 从0到1完成你的第一个CSK项目。@梓伦 @钟蔚
@@ -20,7 +20,7 @@ slug: /guides_index
 
 `./guides/firmware`
 
-### [CSK项目基础配置@张喆](/lisa_guide)
+### [CSK项目基础配置@张喆](/base_config)
 
 完整了解CSK项目的每一个基础配置项，包括麦克风配置、TTS配置、交互配置等。@梓伦
 
@@ -46,7 +46,7 @@ slug: /guides_index
 --------
 
 
-### [拦截语音命令@钟蔚](/lisa_guide)
+### [拦截语音命令@钟蔚](/interceptor)
 
 本篇介绍CSK项目语音拦截器的使用。包含所有可以使用的语音拦截器指令，以及自定义业务逻辑。
 
@@ -55,7 +55,7 @@ slug: /guides_index
 --------
 
 
-### [芯片通讯协议@钟蔚](/lisa_guide)
+### [芯片通讯协议@钟蔚](/io_protocol)
 
 
 
@@ -70,7 +70,7 @@ slug: /guides_index
 `./guides/advanced`
 
 
-### [实验室语音效果测试](/lisa_guide) @张喆
+### [实验室语音效果测试](/test) @张喆
 
 
 本篇介绍如何通过语音实验室评估语音效果。包含语音实验室搭建，测试用例准备，测试环境布置，自动测试工具使用和测试结果统计。
