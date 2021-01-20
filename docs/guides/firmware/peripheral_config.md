@@ -1,6 +1,6 @@
 ---
 id: peripheral_config
-title: 外围器件引脚配置
+title: 外围引脚配置
 slug: /peripheral_config
 ---
 
@@ -51,18 +51,19 @@ pin脚电平需求
 
 `./config/environment/hardware.toml`
 
-## 3.配置字段说明
+## 3.配置项说明
 
 | 键名 | 键值 | 说明 | 
 | - | - | - | 
-| tag | name |  pin 脚的名字，用户可指定 |
-| pin | 1~64 | CSK 芯片的 pin 脚（范围为 1~64，具体参考Datasheet） |
-| mux | 0~4 | - |
-| - | - | - |
-| - | - | - |
-| - | - | - |
-| - | - | - |
+| tag | name |  pin脚的名字，用户可指定 |
+| pin | 1~64 | CSK芯片的引脚，具体参考Datasheet|
+| mux | 0~4 | pin 脚的复用功能 |
+| dir | true/false | ture：引脚设置为输出<br/>false:引脚设置为输入 |
+| def | true/false | ture：当引脚设为输出时，输出的逻辑电平为高<br/>false: 当pin脚设为输出时，输出的逻辑电平为低 |
+| rev |  true/false| ture：逻辑电平和物理电平一致<br/>false:逻辑电平和物理电平相反 |
 
 
-## 参数有什么
+## 4.检查配置差异，修改配置
+
+在明确需求与配置项含义后，就可以核对当前hardware.toml配置与需求的差异。并根据需求调整配置。
 

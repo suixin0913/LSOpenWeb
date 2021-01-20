@@ -37,7 +37,7 @@ slug: /guides_index
 
 --------
 
-### [修改硬件配置](/peripheral_config)
+### [外围引脚配置](/peripheral_config)
 
 本篇介绍如何根据硬件设计配置CSK项目中的引脚，主要包含UART、I2S等接口。
 
