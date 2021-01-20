@@ -13,7 +13,7 @@ slug: /application_config
 
 **sys_mode**
 
-```toml
+```javascript
 sys_mode = "private"
 ```
 
@@ -102,7 +102,7 @@ i2s_out_chs = [
   6
 ]
 
-```toml
+```
 
 :::note 只支持4路通道配置。参数为通道编号：
  - 1：mic 1原始音频；

@@ -6,7 +6,7 @@ slug: /guides_index
 
 ## 从这里开始
 
-### [快速入门CSK项目开发@梓伦 @钟蔚](http://localhost:3000/getting_start)
+### [快速入门CSK项目开发@晓庆](http://localhost:3000/getting_start)
 
 
 从0到1完成你的第一个CSK项目。@梓伦 @钟蔚
@@ -37,9 +37,9 @@ slug: /guides_index
 
 --------
 
-### [外围引脚配置](/peripheral_config)
+### [外围引脚配置@罗梓伦](/peripheral_config)
 
-本篇介绍如何根据硬件设计配置CSK项目中的引脚，主要包含UART、I2S等接口。
+本篇介绍如何根据硬件需求在hardware.toml中配置CSK项目中的引脚，包含uart、i2c、i2s、spi、gpio等接口。
 
 `./guides/firmware/peripheral_config`
 
@@ -85,14 +85,14 @@ slug: /guides_index
 
 -----------------
 
-### [阈值调节技巧](/optimize_skills) 
+### [阈值调节技巧](/optimize_skills) @巍巍
 
 本篇介绍如何对语音效果进行调优。包含测试报告分析，以及常用的调优思路和调优方法。
 `./guides/advanced/optimize_skills`
 
 --------
 
-### [配置application](/application_config) 
+### [配置application](/application_config) @梓伦
 
 通过application.toml，你可以迅速适配自己的硬件板型，具体包括：产测配置、业务配置、硬件配置、驱动配置。
 `./guides/advanced/application_config`
@@ -100,24 +100,23 @@ slug: /guides_index
 --------
 
 
-### [芯片业务逻辑debug（施工中）](/lisa_guide)
+### [芯片业务逻辑debug（施工中）](/guides_index)
 
 
-:::tip 提示
-文档建设中
+:::note 文档建设中
 :::
 
 --------
 
 
-### [产测开发@佳楠](/lisa_guide) 
+### [产测开发](/lisa_guide) @佳楠
 
 `./guides/advanced/factory_config`
 本篇介绍如何在LStudio中配置CSK项目的产测流程。
 
 --------
 
-## 上位机通讯编程 @星晨
+## 上位机通讯编程 @星晨 @良艺
 
 `./guides/msio`
 
@@ -150,9 +149,13 @@ slug: /guides_index
 
 ## LISA API （建设中）@星晨
 
-### [LISA API简介](/lisa_guide)
+:::note 文档建设中
+:::
 
-LISA API简介
+<!-- ### [LISA API简介](/lisa_guide)
+
+:::note 文档建设中
+:::
 
 --------
 
@@ -165,11 +168,11 @@ LISA API使用指南。
 
 ### [LISA API代码示例](/lisa_guide)
 
-LISA API代码示例。
+LISA API代码示例。 -->
 
 --------
 
-## 业务引擎EngineCore @钟蔚
+## 业务引擎EngineCore @展晖
 
 ### [快速熟悉常用语法](/lisa_guide)
 
