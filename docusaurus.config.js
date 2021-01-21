@@ -12,7 +12,7 @@ module.exports = {
     navbar: {
       title: '聆思文档中心',
       logo: {
-        href: '/',
+        href: '/guides_index',
         alt: 'LSOpen Logo',
         src: 'img/logo.png',
       },

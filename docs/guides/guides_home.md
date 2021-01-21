@@ -14,7 +14,6 @@ slug: /guides_index
 `./guides/getting_start`
 
 
-
 ## 固件基础知识
 
 `./guides/firmware`
