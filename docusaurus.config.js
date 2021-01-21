@@ -28,7 +28,7 @@ module.exports = {
           position: 'left'
         },
         {
-          href: "https://cloud.listenai.com/",
+          href: "https://cloud.listenai.com/csksdk_api",
           label: "LSCloud",
           position: 'right'
         }

@@ -176,11 +176,9 @@ LISA API代码示例。 -->
 
 -------
 
-### [快速熟悉常用语法](/lisa_guide)
+### [快速熟悉常用语法](/guides/EngineCore/grammar)
 
 从0到1搭建自己的业务引擎，熟悉LScript常用语法。
-
-`./guides/engine_core/grammar/`
 
 :::caution 未交货
 :::
