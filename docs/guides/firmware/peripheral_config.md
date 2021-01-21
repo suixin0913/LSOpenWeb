@@ -4,15 +4,11 @@ title: 外围引脚配置
 slug: /peripheral_config
 ---
 
-:::note 本篇介绍如何在hardware.toml完成外围器件的引脚配置。读完本文后，你将学习到：
-
+>本篇介绍如何在hardware.toml完成外围器件的引脚配置。读完本文后，你将学习到：
 - 如何确认引脚配置需求。
-
 - 在什么地方可以完成配置。
-
 - hardware.toml 有哪些引脚配置参数及其含义。
 
-:::
 
 ## 1.需求分析与确认
 
@@ -56,11 +52,11 @@ hardware.toml 中需要用到以下字段：
 | rev |  true/false| ture：逻辑电平和物理电平一致<br/>false:逻辑电平和物理电平相反 |
 
 
-## 4.检查配置差异，修改配置
+## 4.配置示例
 
 在明确需求与字段含义后，核对当前hardware.toml配置与需求的差异，并根据需求调整配置。
 
-**配置实例**
+### 4.1 i2c示例
 
 根据硬件需求，模组仅使用一组 `i2c`，选用 `29` 与 `30` 两个引脚。可参照Datasheet的引脚功能：
 
@@ -83,5 +79,77 @@ hardware.toml 中需要用到以下字段：
     mux = 2
 
 [[peripheral.i2c]]
+```
+
+### 4.2 uart示例
+
+根据硬件需求，模组仅使用两组 `uart`，选用 `4` 、 `5` 、`55`、`56`4个引脚。
+
+在 hardware.toml 配置 `peripheral.uart` ：
+1. 使用第二组，第三组uart；
+2. 第2组，`peripheral.uart.txd` 中，`pin`设为 `55` ， `mux` 设为 `2` ；
+3. 第2组，`peripheral.uart.rxd` 中，`pin`设为 `56` ， `mux` 设为 `2` ；
+4. 第3组，`peripheral.uart.txd` 中，`pin`设为 `4` ， `mux` 设为 `2` ；
+5. 第3组，`peripheral.uart.rxd` 中，`pin`设为 `5` ， `mux` 设为 `2` 。
+
+
+```js
+  [[peripheral.uart]]
+
+  [[peripheral.uart]]
+
+    [peripheral.uart.txd]
+    pin = 55
+    mux = 2
+
+    [peripheral.uart.rxd]
+    pin = 56
+    mux = 2
+
+  [[peripheral.uart]]
+
+    [peripheral.uart.txd]
+    pin = 4
+    mux = 2
+
+    [peripheral.uart.rxd]
+    pin = 5
+    mux = 2
+```
+
+### 4.3 i2s示例
+
+根据硬件需求，要用到使用两组 `i2s`，Datasheet对应引脚为 `33`~ `37` 5个引脚。
+
+在 hardware.toml 配置 `peripheral.i2s` ：
+1. `peripheral.i2s.mclk`中，`pin`设为 `37` ， `mux` 设为 `1` ；
+2. `peripheral.i2s.bclk` 中，`pin`设为 `34` ， `mux` 设为 `1` ；
+3. `peripheral.i2s.lrck` 中，`pin`设为 `33` ， `mux` 设为 `1` ；
+4. `peripheral.i2s.dout` 中，`pin`设为 `35` ， `mux` 设为 `1` ；
+5. `peripheral.i2s.din0` 中，`pin`设为 `36` ， `mux` 设为 `1` 。
+
+
+```js
+[[peripheral.i2s]]
+
+    [peripheral.i2s.mclk]
+    pin = 37
+    mux = 1
+
+    [peripheral.i2s.bclk]
+    pin = 34
+    mux = 1
+
+    [peripheral.i2s.lrck]
+    pin = 33
+    mux = 1
+
+    [peripheral.i2s.dout]
+    pin = 35
+    mux = 1
+
+    [peripheral.i2s.din0]
+    pin = 36
+    mux = 1
 ```
 
