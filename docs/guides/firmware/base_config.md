@@ -27,8 +27,8 @@ slug: /guides/firmware/base_config
 | 综合唤醒率     | 90%                  | 95%                  | 95%                                |
 | 麦克风阵列     | 1mic                 | 2mic                 | 2mic                               |
 | 功耗           | 60mA@3.6V            | 60mA@3.6V            | 130mA@3.6V                         |
-| 支持编程语言   | c<br>mruby/c         | c<br>mruby/c         | c<br>mruby/c                       |
-| 内存           | 1M SRAM              | 1M SRAM              | 1MB SRAM<br>8MB PSRAM              |
+| 支持编程语言   | c<br/>mruby/c         | c<br/>mruby/c         | c<br/>mruby/c                       |
+| 内存           | 1M SRAM              | 1M SRAM              | 1MB SRAM<br/>8MB PSRAM              |
 | 存储           | 4MB Flash            | 4MB Flash            | 8MB Flash                          |
 | 命令词上限     | 50条                 | 50条                 | 200条                              |
 | 适用环境       | 常见客卧             | 嘈杂客卧             | 客卧、卫浴、厨房、阳台、会议、卖场 |
@@ -77,7 +77,7 @@ slug: /guides/firmware/base_config
 
 | 基础固件版本 | 说明                                                         |
 | ------------ | ------------------------------------------------------------ |
-| 2.0.1        | 增加UartTask，对自定义串口功能的支持；<br />使用最新的CAE算法，版本更新至`3002.B3001.v1.beta1`，输出3路音频到`MINIESR`；<br>使用最新的ESR算法，版本更新至`3002.1210.V1.beta3`，接收3路音频，极大的提升了识别效果；<br>在没有PSRAM的情况下，支持USB录音。 |
+| 2.0.1        | 增加UartTask，对自定义串口功能的支持；<br />使用最新的CAE算法，版本更新至`3002.B3001.v1.beta1`，输出3路音频到`MINIESR`；<br/>使用最新的ESR算法，版本更新至`3002.1210.V1.beta3`，接收3路音频，极大的提升了识别效果；<br/>在没有PSRAM的情况下，支持USB录音。 |
 
 - 4002基础固件版本
 
