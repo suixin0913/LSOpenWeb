@@ -30,11 +30,12 @@ slug: /getting_start
 
 ### 1.3 安装git
 
-进入LStudio界面后，请按照提示按照git客户端。
+进入LStudio界面后，请按照提示安装git客户端。
 
 ### 1.4 安装驱动
 
 ![](./files/install_driver.png)
+
 点击左上方常用工具，安装烧录驱动。
 
 ### 1.5 安装vc++环境依赖
@@ -69,9 +70,7 @@ slug: /getting_start
 
 ### 2.2 基础配置
 
-接下来，点击工具栏左上角的“基础配置”来选择你想使用的配置，如下图。
-
-交互指令选择“自定义指令”，其它暂时使用默认配置。当然在这里你也可以通过修改TTS配置和交互配置等实现个性化效果。
+接下来，点击工具栏左上角的“基础配置”来选择你想使用的配置，如下图。交互指令选择“自定义指令”，其它暂时使用默认配置。当然在这里你也可以通过修改TTS配置和交互配置等实现个性化效果。
 
 ![](./files/config1.png)
 
@@ -150,7 +149,7 @@ slug: /getting_start
 
 ### 3.1 注册回调事件并配置GPIO口（LED20引脚）
 
-  展开工程目录找到app/app_main.c文件，打开唤醒词、命令词和LED20 pin脚配置，如下图所示。
+展开工程目录找到app/app_main.c文件，打开唤醒词、命令词和LED20 pin脚配置，如下图所示。
 
 ```js
 void
@@ -177,11 +176,7 @@ app_main(void)
 
 ### 3.2 GPIO口操作实现LED20 控制
 
-LStudio支持使用轻量级mruby语法并提供了丰富的
-
-[EnginCore]: https://open.listenai.com/csk_sdk_demo
-
-方便开发者自定义处理业务逻辑。
+LStudio支持使用轻量级语法实现业务配置，具体可查看[CSK SDK使用示例](https://open.listenai.com/csk_sdk_demo) 。
 
 修改 `app/scripts/intents.rb`为以下内容:
 
@@ -216,12 +211,15 @@ end
 ## 4. 学习更多开发知识
 
 为了快速定制扩展语音项目，你可能对以下内容也感兴趣：
-[自定义词表与回复语](http://open.listenai.com/vui) 
-[如何使用LStudio实现自定义业务开发](http://open.listenai.com/csk_sdk_demo) 
-[如何使用LStudio修改基础配置](https://open.listenai.com/guides/firmware/base_config) 
+
+- [自定义词表与回复语](http://open.listenai.com/vui) 
+
+- [如何使用LStudio实现自定义业务开发](http://open.listenai.com/csk_sdk_demo) 
+
+- [如何使用LStudio修改基础配置](https://open.listenai.com/guides/firmware/base_config) 
 
 在项目开发过程中如果需要帮助，可以通过工单系统向我们获取技术支持。
 
-[工单系统](https://cloud.listenai.com/cloud_project) 
+- [工单系统](https://open.listenai.com/cloud_project) 
 
 
