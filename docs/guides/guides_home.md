@@ -1,7 +1,7 @@
 ---
 id: guides_index
 title: CSK项目开发指南
-slug: /
+slug: /guides_index
 ---
 
 ## 从这里开始
