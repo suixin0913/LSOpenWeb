@@ -99,7 +99,7 @@ end
 
 ### 5.1 存储
 
-EngineCore提供了键值对存储的工具，可以在设备当次运行过程里持久存储，参考API文档。使用示例如下:
+EngineCore提供了键值对存储的工具，可以在设备当次运行过程里持久存储，参考[API文档](/csksdk/csk4002/mruby/EngineStorage.html)。使用示例如下:
 
 ```ruby
 EngineCore.storage.set("counter", 1)
@@ -125,7 +125,7 @@ end
 
 ### 5.2 自定义数据解析
 
-你除了可以使用最基础的`on_uart`处理解析和业务逻辑，EngineCore还提供了`on_uart_parsed`帮你将协议解析和业务逻辑进行分离，如下为intents文件示例：
+你除了可以使用最基础的`on_uart`处理解析和业务逻辑，EngineCore还提供了`on_uart_parsed`帮你将协议解析和业务逻辑进行分离，参考[API文档](http://localhost:3102/csksdk/csk4002/mruby/Object.html#method-i-on_uart_parsed)，如下为intents文件示例：
 
 ```ruby
 # 首先定义自己的解析类
@@ -158,7 +158,7 @@ end
 
 ### 5.3 替换自己的组件
 
-可以替换EngineCore的组件，实现自己的逻辑，在intents.rb文件开头进行配置，例如：
+可以替换EngineCore的组件，实现自己的逻辑，在intents.rb文件开头进行配置，参考[API文档](http://localhost:3102/csksdk/csk4002/mruby/EngineCore.html)，例如：
 
 ```ruby
 class MyLogger
