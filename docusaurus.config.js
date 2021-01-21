@@ -12,18 +12,13 @@ module.exports = {
     navbar: {
       title: '聆思文档中心',
       logo: {
-        href: '/guides_index',
+        href: '/',
         alt: 'LSOpen Logo',
         src: 'img/logo.png',
       },
       items: [
         {
-          to: '/guides_index',
-          label: '使用指南',
-          position: 'left'
-        },
-        {
-          to: "/csksdk_api",
+          href: "https://open.listenai.com/sdk",
           label: 'API',
           position: 'left'
         },
@@ -33,7 +28,7 @@ module.exports = {
           position: 'left'
         },
         {
-          href: "https://cloud.listenai.com/",
+          href: "https://cloud.listenai.com/csksdk_api",
           label: "LSCloud",
           position: 'right'
         }
