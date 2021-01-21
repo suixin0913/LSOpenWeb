@@ -6,18 +6,14 @@ slug: /guides_index
 
 ## 从这里开始
 
-### [快速入门CSK项目开发@晓庆](/getting_start)
+### [快速入门CSK项目开发](/getting_start)
 
 
-从0到1完成你的第一个CSK项目。@梓伦 @钟蔚
+从0到1完成你的第一个CSK项目
 
 `./guides/getting_start`
 
-:::caution 未交货
-:::
 
-
---------
 
 ## 固件基础知识
 
