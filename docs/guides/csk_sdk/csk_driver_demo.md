@@ -7,9 +7,9 @@ slug: /csk_driver_demo
 > 本篇介绍CSK的硬件驱动使用示例，包含UART、PWM、GPIO、I2C等通信接口。
 > 看完本篇你将了解到：
 >
-> 1. uart串口通信实现指令的接收和发送。
+> -  uart串口通信实现指令的接收和发送。
 
-## CSK硬件驱动使用示例
+
 
 ### 1. UART
 

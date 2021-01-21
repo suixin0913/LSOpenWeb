@@ -1,6 +1,6 @@
 ---
 id: hardware_guide
-title: CSK项目开发快速入门
+title: 快速设计CSK硬件
 slug: /hardware_guide
 ---
 

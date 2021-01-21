@@ -163,7 +163,7 @@ LISA API代码示例。 -->
 
 -------------------
 
-### [快速设计CSK硬件](/lisa_guide)
+### [快速设计CSK硬件](/hardware_guide)
 
 本篇针对CSK产品中结构设计、硬件设计提供设计指南与参考。
 
@@ -182,7 +182,7 @@ LISA API代码示例。 -->
 
 ------------------------------------
 
-[下载 LSKits 参考设计](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83LSKits%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1.zip)
+[下载 LSKits 参考设计](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FLSKits%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1.zip)
 
 
 
