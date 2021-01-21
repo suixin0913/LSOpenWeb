@@ -9,14 +9,9 @@ slug: /
 ### [快速入门CSK项目开发](/getting_start)
 
 
-从0到1完成你的第一个CSK项目
+从0到1完成你的第一个CSK项目。
 
-<<<<<<< HEAD
 -------
-=======
-`./guides/getting_start`
-
->>>>>>> de392f7c792bd933dd98533f86bd93d392897533
 
 ## 固件基础知识
 
