@@ -23,7 +23,7 @@ module.exports = {
           position: 'left'
         },
         {
-          to: '/sdk',
+          href: "https://open.listenai.com/sdk",
           label: 'API',
           position: 'left'
         },
