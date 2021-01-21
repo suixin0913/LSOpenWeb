@@ -12,7 +12,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        聆思智能推出 AI 芯片 CSK系列，通过完善的开发生态体系让端侧 AI 能力变得触手可及。聆思文档中心通过文档和简单的示例，让开发者快速学会CSK芯片的开发。【<a href="/guides_index">点击前往</a>】
+        聆思智能通过完善的开发生态体系让端侧 AI 能力变得触手可及。聆思文档中心通过文档和简单的示例，让开发者快速学会CSK芯片的开发。【<a href="/guides_index">点击前往</a>】
       </>
     ),
   },
