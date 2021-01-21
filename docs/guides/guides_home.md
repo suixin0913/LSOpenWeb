@@ -148,37 +148,6 @@ LISA API代码示例。 -->
 
 从0到1搭建自己的业务引擎，熟悉LScript常用语法。
 
-
--------------------
-
-### [了解EngineCore API](/lisa_guide)
-
-本篇介绍所有LScript API。
-
-
-
-:::caution 未交货
-:::
-
--------------------
-
-### [EngineCore编译](/lisa_guide)
-
-本篇介绍EngineCore的编译方式。。
-
-
-:::caution 未交货
-:::
-
---------
-
-### [EngineCore debug](/lisa_guide)
-
-本篇介绍如何对EngineCore进行debug。
-
-:::caution 未交货
-::: -->
-
 -------------------
 ## 硬件基础知识 
 
