@@ -1,10 +1,11 @@
-# 音频传输
+---
+id: audio_transmission
+title: 音频传输
+slug: /audio_transmission
+---
 
-:::note
 
-阅读
-
-读完本文后，你将学习到：
+:::note 读完本文后，你将学习到：
 
 - 如何配置使CSK正常录音。
 
@@ -18,29 +19,28 @@
 
 :::important
 
-在开始探索之前，你需要关注一个配置文件： [**application.json**](http://open.listenai.com/application_config) ，录音和音频输出的配置都在该文件中
+在开始探索之前，你需要关注一个配置文件： [**application.toml**](http://open.listenai.com/application_config) ，录音和音频输出的配置都在该文件中
 
 :::
 
 
 
-## 跟我操作
+## 1.跟我操作
 
-打开 LStudio ，新建/打开一个 CSK4002 项目，按照下图路径，找到 **application.json** 配置文件。
+打开 LStudio ，新建/打开一个 CSK4002 项目，按照下图路径，找到 **application.toml** 配置文件。
 
-
-
-<img src="./files/path.png" alt="1" style="zoom:120%;" />
+![](./files/path.png)
 
 
 
-## 配置CSK录音
 
-### 1.配置系统工作模式
+## 2.配置CSK录音
+
+### 2.1 配置系统工作模式
 
 打开配置文件，首先配置系统工作模式。
 
-```toml
+```js
 "business": {
   "sys_mode": "demo",
 ```
@@ -51,9 +51,9 @@
 
 
 
-### 2.配置ADC信息
+### 2.2 配置ADC信息
 
-```toml
+```js
 "adc": {
   "adc_type": "nau85l40",
   "adc_gain": [
@@ -77,15 +77,15 @@
 | 字段名   | 类型           | 取值说明                                                     |
 | -------- | -------------- | ------------------------------------------------------------ |
 | adc_type | String         | adc类型，取值：<br />- nau85l40；4路录音通道，录音格式:16k32bit4通道。<br />- es7210；4路录音通道，录音格式:16k32bit4通道<br />- es7243e；2路录音通道，录音格式:16k16bit4通道 |
-| adc_gain | JSONArray<int> | adc增益，取值：<br />3：表示第1通道的增益大小，范围[0,10]<br />3：表示第2通道的增益大小，范围[0,10]<br />10：表示第3通道的增益大小，范围[0,10]<br />10：表示第4通道的增益大小，范围[0,10] |
-| mic_chs  | JSONArray<int> | 表示麦克映射的通道号，根据 ADC 选型来确定映射数量。<br/>例如：es7210 四路录音通道，则映射取值范围为1~4 |
-| ref_chs  | JSONArray<int> | 表示回采映射的通道号，根据 ADC 选型来确定映射数量。<br/>例如：es7210 四路录音通道，则映射取值范围为1~4 |
+| adc_gain | JSONArray | adc增益，取值：<br />3：表示第1通道的增益大小，范围[0,10]<br />3：表示第2通道的增益大小，范围[0,10]<br />10：表示第3通道的增益大小，范围[0,10]<br />10：表示第4通道的增益大小，范围[0,10] |
+| mic_chs  | JSONArray | 表示麦克映射的通道号，根据 ADC 选型来确定映射数量。<br/>例如：es7210 四路录音通道，则映射取值范围为1~4 |
+| ref_chs  | JSONArray | 表示回采映射的通道号，根据 ADC 选型来确定映射数量。<br/>例如：es7210 四路录音通道，则映射取值范围为1~4 |
 
 
 
-## 配置 CSK 音频输出信息
+## 3.配置 CSK 音频输出信息
 
-```toml
+```js
 "hw_config": {
   "usb_mode": {
     "uac_in_enable": false,
@@ -114,12 +114,12 @@
 | type           | String         | `amic` 表示使用模拟麦，`dmic` 表示使用数字麦。默认取值 `amic`，如需使用数字麦则需联系聆思技术支持对源码修改 |
 | dist           | int            | 麦克风间距，取值范围35~110mm，推荐使用 `35mm` 或 `110mm`     |
 | i2s_out_enable | boolean        | 是否使用 i2s 传输音频，默认为 `true`                         |
-| i2s_out_chs    | JSONArray<int> | 选择需要获取的音频。   0表示静音，1表示MIC1，2表示MIC2，3表示REF1，4表示REF2，5表示CAE1，6表示CAE2，7表示测试，8表示送往云端识别的音频，其余无效 。**默认选择1，2，5，6路音频** |
+| i2s_out_chs    | JSONArray | 选择需要获取的音频。   0表示静音，1表示MIC1，2表示MIC2，3表示REF1，4表示REF2，5表示CAE1，6表示CAE2，7表示测试，8表示送往云端识别的音频，其余无效 。**默认选择1，2，5，6路音频** |
 
 至此，你已经可以通过 CSK 进行录音并通过 i2s 输出音频了！
 
 
 
-## 传送音频至 CSK
+## 4.传送音频至 CSK
 
 如果你需要送音频到 CSK 中播放，记得将 `uac_in_enable` 设为 `true` 即可。
