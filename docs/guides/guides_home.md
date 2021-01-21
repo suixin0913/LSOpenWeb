@@ -49,7 +49,7 @@ slug: /guides_index
 --------
 
 
-### [拦截语音命令](/interceptor)@钟蔚
+### [拦截语音命令](/guides_index)@钟蔚
 
 本篇介绍CSK项目语音拦截器的使用。包含所有可以使用的语音拦截器指令，以及自定义业务逻辑。
 
@@ -61,7 +61,7 @@ slug: /guides_index
 --------
 
 
-### [芯片通讯协议](/io_protocol)@钟蔚
+### [芯片通讯协议](/guides_index)@钟蔚
 
 
 
@@ -137,7 +137,7 @@ slug: /guides_index
 
 -------------------
 
-### [OTA](/guides/msio/ota)
+### [OTA](/guides_index)
 
 本篇介绍如何通过上位机为CSK升级固件。
 
