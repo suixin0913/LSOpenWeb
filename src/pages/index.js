@@ -8,38 +8,35 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: 'Easy to Use',
+    title: '快速开始',
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        聆思智能推出 AI 芯片 CSK系列，通过完善的开发生态体系让端侧 AI 能力变得触手可及。聆思文档中心通过文档和简单的示例，让开发者快速学会CSK芯片的开发。【<a href="/guides_index">点击前往</a>】
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: '丰富 API',
     imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        CSK芯片拥有拓展性强的 SDK，开发者可以方便地查看 API 文档，来使用CSK SDK。【<a href="/csksdk_api">点击前往</a>】
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '代码开源',
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        聆思智能通过 LSCloud 开源所有 CSK 芯片的开源代码，开发者可以在开源代码基础上进行二次开发，实现自己的业务逻辑。【<a href="https://cloud.listenai.com/">点击前往</a>】
       </>
     ),
   },
 ];
 
-function Feature({imageUrl, title, description}) {
+function Feature({ imageUrl, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={clsx('col col--4', styles.feature)}>
@@ -57,7 +54,7 @@ function Feature({imageUrl, title, description}) {
 function Home() {
   const context = useDocusaurusContext();
   console.log(context)
-  const {siteConfig = {}} = context;
+  const { siteConfig = {} } = context;
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
