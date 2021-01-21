@@ -1,7 +1,7 @@
 module.exports = {
-  title: 'LSOpen',
+  title: 'LSCloud|文档中心',
   tagline: 'LSOpen资料库',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'http://open.listenai.com/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -10,13 +10,29 @@ module.exports = {
   projectName: 'LSOpen', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'LSOpen',
+      title: '聆思文档中心',
       logo: {
         href: '/',
         alt: 'LSOpen Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
-      items: [],
+      items: [
+        {
+          href: "https://open.listenai.com/sdk",
+          label: 'API',
+          position: 'left'
+        },
+        {
+          to: '/download',
+          label: '下载中心',
+          position: 'left'
+        },
+        {
+          href: "https://cloud.listenai.com/csksdk_api",
+          label: "LSCloud",
+          position: 'right'
+        }
+      ],
     },
     colorMode: {
       defaultMode: 'light',
@@ -25,7 +41,7 @@ module.exports = {
     footer: {
       style: 'dark',
       links: [],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © 安徽聆思智能科技有限公司皖ICP备05001217号`,
     }
   },
   presets: [

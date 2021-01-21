@@ -7,7 +7,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary: #1D99FF;
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
@@ -36,4 +36,20 @@
   --ifm-alert-background-color: #4a803c;
   /* --ifm-alert-border-color: var(--ifm-color-danger); */
   --ifm-alert-border-color: #4a803c;
+}
+
+/* header > h1 {
+  font-size: 40px !important;
+} */
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.table-of-contents {
+  font-size: 0.9rem !important;
 }

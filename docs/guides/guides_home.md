@@ -1,106 +1,85 @@
 ---
 id: guides_index
 title: CSK项目开发指南
-slug: /guides_index
+slug: /
 ---
 
 ## 从这里开始
 
-### [快速入门CSK项目开发@晓庆](/getting_start)
+### [快速入门CSK项目开发](/getting_start)
 
 
-从0到1完成你的第一个CSK项目。@梓伦 @钟蔚
+从0到1完成你的第一个CSK项目。
 
-`./guides/getting_start`
-
-
---------
+-------
 
 ## 固件基础知识
 
-`./guides/firmware`
+### [CSK项目基础配置](/guides/firmware/base_config) 
 
-### [CSK项目基础配置@张喆](/base_config)
-
-完整了解CSK项目的每一个基础配置项，包括麦克风配置、TTS配置、交互配置等。@梓伦
-
-`./guides/firmware/base_config`
+完整了解CSK项目的每一个基础配置项，包括麦克风配置、TTS配置、交互配置等。
 
 --------
 
-### [自定义词表与回复语@囧](/vui)
-
+### [自定义词表与回复语](/vui)
 
 本篇介绍CSK项目的语音交互配置。包含交互模板使用、自定义命令词词条和回复语提示音，也会介绍如何设计合适的命令词词条，并根据词条检测结果对命令词词条进行修改。
 
-`./guides/firmware/vui`
-
 --------
 
-### [外围引脚配置@罗梓伦](/peripheral_config)
+### [外围引脚配置](/peripheral_config)
 
 本篇介绍如何根据硬件需求在hardware.toml中配置CSK项目中的引脚，包含uart、i2c、i2s、spi、gpio等接口。
 
-`./guides/firmware/peripheral_config`
-
 --------
 
+## CSK SDK API
 
-### [拦截语音命令@钟蔚](/interceptor)
+### [拦截语音命令](/guides_index)
 
 本篇介绍CSK项目语音拦截器的使用。包含所有可以使用的语音拦截器指令，以及自定义业务逻辑。
 
-`./guides/firmware/interceptor`
+
 
 --------
 
 
-### [芯片通讯协议@钟蔚](/io_protocol)
-
+### [芯片通讯协议](/guides_index)
 
 
 本篇介绍CSK项目和外围芯片的通讯。包含UART、PWM、GPIO、I2C等接口。
-`./guides/firmware/io_protocol`
 
 
 --------
 
 ## 进阶知识
 
-`./guides/advanced`
-
-
-### [实验室语音效果测试](/test) @张喆
-
+### [实验室语音效果测试](/test) 
 
 本篇介绍如何通过语音实验室评估语音效果。包含语音实验室搭建，测试用例准备，测试环境布置，自动测试工具使用和测试结果统计。
-`./guides/advanced/test`
+
 
 ---------
 
-### [入门调优与自动调优](/auto_optimize) @巍巍
-
+### [入门调优与自动调优](/auto_optimize) 
 本篇介绍什么是语音效果调优，如何使用LStudio自动调优与测试。
-`./guides/advanced/auto_optimize`
 
 -----------------
 
-### [阈值调节技巧](/optimize_skills) @巍巍
+### [阈值调节技巧](/optimize_skills) 
 
 本篇介绍如何对语音效果进行调优。包含测试报告分析，以及常用的调优思路和调优方法。
-`./guides/advanced/optimize_skills`
 
 --------
 
-### [配置application](/application_config) @梓伦
+### [配置application](/application_config) 
 
 通过application.toml，你可以迅速适配自己的硬件板型，具体包括：产测配置、业务配置、硬件配置、驱动配置。
-`./guides/advanced/application_config`
 
 --------
 
 
-### [芯片业务逻辑debug（施工中）](/guides_index)
+### [芯片业务逻辑debug](/guides_index)
 
 
 :::note 文档建设中
@@ -109,45 +88,30 @@ slug: /guides_index
 --------
 
 
-### [产测开发](/lisa_guide) @佳楠
+### [产测开发](/factory_config) 
 
-`./guides/advanced/factory_config`
 本篇介绍如何在LStudio中配置CSK项目的产测流程。
 
 --------
 
-## 上位机通讯编程 @星晨 @良艺
+## 上位机通讯编程 
 
-`./guides/msio`
+### [音频传输](/audio_transmission)
 
-
-
-### [在线语音交互模式](/lisa_guide)
-
-本篇介绍在线语音交互中CSK芯片如何与上位机之间实现音频传输。包含通过I2S/UAC输出算法处理后的音频，及接收上位机传输的音频。
-
-`./guides/msio/mode`
+本篇介绍如何配置使CSK正常录音；如何使CSK输出音频；如何送音频至CSK播放。
 
 -------------------
-### [DSP模式（Android或特定设备）](/lisa_guide)
 
-本篇介绍如何把CSK芯片作为单纯的DSP来进行声学降噪，并把降噪后音频输出给上位机。
+### [OTA](/guides_index)
 
-`./guides/msio/dsp`
-
---------
-
-### [OTA](/lisa_guide)
-
-本篇介绍如何通过上位机为CSK升级固件。
-
-`./guides/msio/ota`
+:::note 文档建设中
+:::
 
 -------------------
 
 
 
-## LISA API （建设中）@星晨
+## LISA API 
 
 :::note 文档建设中
 :::
@@ -172,82 +136,39 @@ LISA API代码示例。 -->
 
 --------
 
-## 业务引擎EngineCore @展晖
+## 业务引擎EngineCore
 
-### [快速熟悉常用语法](/lisa_guide)
+### [快速实现业务逻辑](/guides/EngineCore/getting_started)
+
+本篇通过具体示例介绍如何使用EngineCore快速实现业务逻辑。
+
+---------
+
+### [快速熟悉常用语法](/guides/EngineCore/grammar)
 
 从0到1搭建自己的业务引擎，熟悉LScript常用语法。
 
-`./guides/engine_core/grammar/`
-
 -------------------
-
-### [了解EngineCore API](/lisa_guide)
-
-本篇介绍所有LScript API。
-
-`./guides/engine_core/api/`
-
--------------------
-
-### [EngineCore编译](/lisa_guide)
-
-本篇介绍EngineCore的编译方式。。
-
-`./guides/engine_core/bulid/`
-
---------
-
-### [EngineCore debug](/lisa_guide)
-
-本篇介绍如何对EngineCore进行debug。
-
-`./guiides/engine_core/debug/`
-
--------------------
-## 硬件基础知识 @晓溪
+## 硬件基础知识 
 
 ### [快速设计CSK硬件](/lisa_guide)
 
-------------------------
-
-### [声学问题排查](/lisa_guide)
-
--------------------
-
-### [硬件debug](/lisa_guide)
+本篇针对CSK产品中结构设计、硬件设计提供设计指南与参考。
 
 ---------------------
+## 技术支持
 
-### [基础电声调优](/lisa_guide)
+### [创建工单获取技术支持](/cloud_project)
 
----------------------
+本篇介绍如何通过工单系统获取各类技术支持。
 
-### [硬件问题排查](/lisa_guide)
-
-----------------------
-
-### [量产保障](/lisa_guide)
-
----------------------
+------------------------------------
 
 ## 附录及其他
 
-[下载LSKits硬件设计源文件](/lisa_guide)
+[下载 LSKits 参考设计](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83LSKits%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1.zip)
 
-[下载LSKits Bom表](/lisa_guide)
 
---------
-## 支持 @梓伦
 
-### 工单功能介绍
-
-### 在LSClous创建CSK项目
-
-### 通过工单获取技术支持
-
-### 通过工单获取硬件评审支持
-
-### 通过工单获取测试音频资源
 
 
