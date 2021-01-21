@@ -18,7 +18,16 @@ module.exports = {
       },
       items: [
         {
+<<<<<<< HEAD
           href: "https://open.listenai.com/sdk",
+=======
+          to: '/guides_index',
+          label: '使用指南',
+          position: 'left'
+        },
+        {
+          to: "/csksdk_api",
+>>>>>>> bfa8e04509c807f90fac881b325c83b41bb6afe1
           label: 'API',
           position: 'left'
         },
