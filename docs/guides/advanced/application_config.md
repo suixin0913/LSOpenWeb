@@ -11,17 +11,11 @@ slug: /application_config
 
 ### 1.1 基础配置
 
-**sys_mode**
+| 字段 | 取值 | 说明 |示例 |
+| - | - | - | - |
+| `sys_mode` | - public<br/>- private<br/> - custome<br/>| - 聆思公版串口协议<br/>- 私有协议：适用于演示demo或带单工业务场景<br/>- 自定义开发模式：适用于双工业务场景 | `sys_mode = "private"` |
+| `welcome` | | - 聆思公版串口协议<br/>- 私有协议：适用于演示demo或带单工业务场景<br/>- 自定义开发模式：适用于双工业务场景 | `sys_mode = "private"` |
 
-```javascript
-sys_mode = "private"
-```
-
-| sys_mode 取值 | 取值说明 | 
-| -- | -- |
-| public | 聆思公版串口协议；目前离在线方案推荐使用该协议。|
-| private | 私有串口协议；适用于演示demo或带单工（只能发不能收）私有串口协议场景; |
-| custome |  自定义开发模式；适用于双工（能发能收）私有串口协议场景; |
 
 
 **配置开机提示音**
