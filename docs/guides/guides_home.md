@@ -8,7 +8,6 @@ slug: /guides_index
 
 ### [快速入门CSK项目开发](/getting_start)
 
-
 从0到1完成你的第一个CSK项目。
 
 -------
@@ -33,12 +32,11 @@ slug: /guides_index
 
 --------
 
-## CSK SDK API
+## SDK API 使用指南
 
-### [拦截语音命令](/guides_index)
+### [事件回调](/guides_index)
 
-本篇介绍CSK项目语音拦截器的使用。包含所有可以使用的语音拦截器指令，以及自定义业务逻辑。
-
+本篇介绍CSK项目事件回调功能的使用，及自定义业务逻辑的方式。
 
 
 --------
@@ -47,7 +45,7 @@ slug: /guides_index
 ### [芯片通讯协议](/guides_index)
 
 
-本篇介绍CSK项目和外围芯片的通讯。包含UART、PWM、GPIO、I2C等接口。
+本篇介绍CSK芯片和外围芯片的通讯，包含UART、PWM、GPIO、I2C等接口。
 
 
 --------
