@@ -16,7 +16,28 @@ module.exports = {
         alt: 'LSOpen Logo',
         src: 'img/logo.png',
       },
-      items: [],
+      items: [
+        {
+          to: '/guides_index',
+          label: '使用指南',
+          position: 'left'
+        },
+        {
+          to: '/sdk',
+          label: 'API',
+          position: 'left'
+        },
+        {
+          to: '/download',
+          label: '下载中心',
+          position: 'left'
+        },
+        {
+          href: "https://cloud.listenai.com/",
+          label: "LSCloud",
+          position: 'right'
+        }
+      ],
     },
     colorMode: {
       defaultMode: 'light',
