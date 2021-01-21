@@ -99,7 +99,7 @@ end
 
 ### 5.1 存储
 
-EngineCore提供了键值对存储的工具，可以在设备当次运行过程里持久存储，参考[API文档](/csksdk/csk4002/mruby/EngineStorage.html)。使用示例如下:
+EngineCore提供了键值对存储的工具，可以在设备当次运行过程里持久存储，参考[API文档](http://open.listenai.com/csksdk/csk4002/mruby/EngineStorage.html)。使用示例如下:
 
 ```ruby
 EngineCore.storage.set("counter", 1)
