@@ -4,16 +4,11 @@ title: 音频传输
 slug: /audio_transmission
 ---
 
-
-:::note 读完本文后，你将学习到：
+> 读完本文后，你将学习到：
 
 - 如何配置使CSK正常录音。
-
 - 如何使CSK输出音频。
-
 - 如何送音频至CSK播放
-
-:::
 
 
 
@@ -25,24 +20,18 @@ slug: /audio_transmission
 
 
 
-## 1.跟我操作
+## 1.配置CSK录音
 
-打开 LStudio ，新建/打开一个 CSK4002 项目，按照下图路径，找到 **application.toml** 配置文件。
-
-![](./files/path.png)
-
+首先，你需要在 LSTudio 中新建/打开 CSK4002 项目，并找到 application.toml 配置文件，文件具体路径如下：
+`./config/environment/hardware.toml`
 
 
 
-## 2.配置CSK录音
-
-### 2.1 配置系统工作模式
+### 1.1 配置系统工作模式
 
 打开配置文件，首先配置系统工作模式。
-
-```js
-"business": {
-  "sys_mode": "demo",
+```
+sys_mode = "public"
 ```
 
 | 字段名   | 类型   | 取值说明                                                     |
@@ -51,28 +40,25 @@ slug: /audio_transmission
 
 
 
-### 2.2 配置ADC信息
+### 1.2 配置ADC信息
 
-```js
-"adc": {
-  "adc_type": "nau85l40",
-  "adc_gain": [
-    3,
-    3,
-    10,
-    10
-  ],
-  "mic_chs": [
-    3,
-    4
-  ],
-  "ref_chs": [
-    1,
-    1
-  ]
-}
-
-```
+    adc: {
+    adc_type = "nau85l40"
+    adc_gain = [
+      3,             
+      3,             
+      10,              
+      10               
+    ]
+    mic_chs = [
+      3,             
+      4
+    ]
+    ref_chs = [
+      1,
+      1
+    ]
+    }
 
 | 字段名   | 类型           | 取值说明                                                     |
 | -------- | -------------- | ------------------------------------------------------------ |
@@ -83,27 +69,24 @@ slug: /audio_transmission
 
 
 
-## 3.配置 CSK 音频输出信息
+## 2.配置 CSK 音频输出信息
 
-```js
-"hw_config": {
-  "usb_mode": {
-    "uac_in_enable": false,
-    "uac_in_channel": 3,
-    "custom_enable": true
-  },
-  "mic": {
-    "type": "amic",
-    "dist": 110
-      },
-  "i2s_out_enable": true,
-  "i2s_out_chs": [
+```
+  [hw_config]
+  [hw_config.usb_mode]
+  uac_in_enable = false
+  uac_in_channel = 3
+  custom_enable = true
+  [hw_config.mic]
+    type = "amic" 
+    dist = 35
+  i2s_out_enable = true
+  i2s_out_chs = [
     1,
     2,
     5,
     6
   ]
-  }
 ```
 
 | 字段名         | 类型           | 取值说明                                                     |
@@ -120,6 +103,6 @@ slug: /audio_transmission
 
 
 
-## 4.传送音频至 CSK
+## 3.传送音频至 CSK
 
-如果你需要送音频到 CSK 中播放，记得将 `uac_in_enable` 设为 `true` 即可。
+如果你需要送音频到 CSK 中播放，记得将 `uac_in_enable` 设为 `true` 即可.
