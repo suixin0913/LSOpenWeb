@@ -18,12 +18,7 @@ module.exports = {
       },
       items: [
         {
-          to: '/guides_index',
-          label: '使用指南',
-          position: 'left'
-        },
-        {
-          to: '/sdk',
+          href: "https://open.listenai.com/sdk",
           label: 'API',
           position: 'left'
         },
@@ -33,7 +28,7 @@ module.exports = {
           position: 'left'
         },
         {
-          href: "https://cloud.listenai.com/",
+          href: "https://cloud.listenai.com/csksdk_api",
           label: "LSCloud",
           position: 'right'
         }

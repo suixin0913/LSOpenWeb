@@ -1,7 +1,7 @@
 ---
 id: guides_index
 title: CSK项目开发指南
-slug: /guides_index
+slug: /
 ---
 
 ## 从这里开始
@@ -11,7 +11,12 @@ slug: /guides_index
 
 从0到1完成你的第一个CSK项目
 
+<<<<<<< HEAD
 -------
+=======
+`./guides/getting_start`
+
+>>>>>>> de392f7c792bd933dd98533f86bd93d392897533
 
 ## 固件基础知识
 
@@ -142,14 +147,12 @@ LISA API代码示例。 -->
 
 本篇通过具体示例介绍如何使用EngineCore快速实现业务逻辑。
 
+---------
 
-<!-- ### [快速熟悉常用语法](/lisa_guide)
+### [快速熟悉常用语法](/guides/EngineCore/grammar)
 
 从0到1搭建自己的业务引擎，熟悉LScript常用语法。
 
-
-:::caution 未交货
-:::
 
 -------------------
 

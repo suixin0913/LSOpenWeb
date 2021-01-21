@@ -1,9 +1,0 @@
-replicaCount: 1
-image:
-  repository: registry.iflyos.vip:3512/iflyos-service/cahomepwaweb
-  tag: latest
-  pullPolicy: IfNotPresent
-service:
-  name: ca-home-pwa-web
-  type: ClusterIP
-  port: http
