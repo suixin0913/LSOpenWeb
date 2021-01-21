@@ -35,3 +35,8 @@
   height: 200px;
   width: 200px;
 }
+
+body {
+  font-family: Helvetica, Arial, "PingFang SC", "Noto Sans", Roboto, "Microsoft Yahei", sans-serif;
+  letter-spacing: .03em;
+}
