@@ -98,7 +98,8 @@ i2s_out_chs = [
 
 ```
 
-:::note 只支持4路通道配置。参数为通道编号：
+:::note
+只支持4路通道配置。参数为通道编号：
  - 1：mic 1原始音频；
  - 2：mic 2原始音频；
  - 3：ref 1音频；
@@ -123,7 +124,8 @@ uac_in_enable = false
 custom_enable = true
 ```
 
-:::note 只有在 uac_in_enable = false 时可用
+:::note
+只有在 uac_in_enable = false 时可用
 :::
 
 
@@ -215,7 +217,8 @@ adc_gain = [
     ]
 ```
 
-:::note 配置规则如下:
+:::note
+配置规则如下:
 - 第一个参数，MIC1增益，有效范围：1-10（数值越大增益越高，0表示关闭）
 - 第二个参数，MIC2增益，有效范围：1-10（数值越大增益越高，0表示关闭）
 - 第三个参数，REF1增益，有效范围：1-10（数值越大增益越高，0表示关闭）
@@ -239,7 +242,8 @@ mic_chs = [
     ]
 ```
 
-:::note 最多支持两个参数:
+:::note
+最多支持两个参数:
 1. 数组第一个参数代表mic 1对应的adc通道编号；
 2. 数组第二个参数代表mic 2对应的adc通道编号。
 :::
@@ -265,7 +269,8 @@ pwm = 0
 ch = 1
 ```
 
-:::note channel配置依赖pwm驱动端口配置:
+:::note
+channel配置依赖pwm驱动端口配置:
 - pwm0支持：channel 0、channel 1、channel 2、channel 3；
 - pwm1支持：channel 4、channel 5。
 :::
