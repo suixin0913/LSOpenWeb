@@ -17,7 +17,7 @@ slug: /
 
 -------
 
-### [CSK项目基础配置](/guides/firmware/base_config) 
+### [CSK项目基础配置](/guides/firmware/base_config)
 
 完整了解CSK项目的每一个基础配置项，包括麦克风配置、TTS配置、交互配置等。
 
@@ -58,32 +58,32 @@ CSK的硬件驱动使用示例，包含UART、PWM、GPIO、I2C等通信接口。
 
 ---------
 
-### [实验室语音效果测试](/test) 
+### [实验室语音效果测试](/test)
 
 本篇介绍如何通过语音实验室评估语音效果。包含语音实验室搭建，测试用例准备，测试环境布置，自动测试工具使用和测试结果统计。
 
 
 
 
-### [入门调优与自动调优](/auto_optimize) 
+### [入门调优与自动调优](/auto_optimize)
 本篇介绍什么是语音效果调优，如何使用LStudio自动调优与测试。
 
 
 
-### [阈值调节技巧](/optimize_skills) 
+### [阈值调节技巧](/optimize_skills)
 
 本篇介绍如何对语音效果进行调优。包含测试报告分析，以及常用的调优思路和调优方法。
 
 
 
-### [配置application](/application_config) 
+### [配置application](/application_config)
 
 通过application.toml，你可以迅速适配自己的硬件板型，具体包括：产测配置、业务配置、硬件配置、驱动配置。
 
 
 
 
-### [CSK GDB使用说明](/guides_index)
+### [CSK GDB使用说明](/)
 
 
 :::note 文档建设中
@@ -92,13 +92,13 @@ CSK的硬件驱动使用示例，包含UART、PWM、GPIO、I2C等通信接口。
 
 
 
-### [产测开发](/factory_config) 
+### [产测开发](/factory_config)
 
 本篇介绍如何在LStudio中配置CSK项目的产测流程。
 
 
 
-## 上位机通讯编程 
+## 上位机通讯编程
 
 --------
 
@@ -108,7 +108,7 @@ CSK的硬件驱动使用示例，包含UART、PWM、GPIO、I2C等通信接口。
 
 
 
-### [OTA](/guides_index)
+### [OTA](/)
 
 :::note 文档建设中
 :::
@@ -116,7 +116,7 @@ CSK的硬件驱动使用示例，包含UART、PWM、GPIO、I2C等通信接口。
 
 
 
-<!-- ## LISA API 
+<!-- ## LISA API
 
 --------------
 

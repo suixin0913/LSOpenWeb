@@ -1,11 +1,11 @@
 ---
-id: application_config 
+id: application_config
 title: 配置application.toml
 slug: /application_config
 ---
 
 **通过application.toml，你可以迅速适配自己的硬件板型。本章介绍业务配置、硬件配置、驱动配置的使用。**<br/>
-**application.toml 中关于产测的配置，请在[产测开发](/guides_index)中查阅。**
+**application.toml 中关于产测的配置，请在[产测开发](/)中查阅。**
 
 ## 1.业务配置 business
 
@@ -67,12 +67,12 @@ exit_asr = [
 **配置通讯方式**
 
 ```toml
-cmd_send_mode = 1 
+cmd_send_mode = 1
 ```
 
 :::note
 - 1:仅串口通讯
-- 2:仅红外通讯 
+- 2:仅红外通讯
 - 3:串口和红外同时通讯
 :::
 
@@ -208,10 +208,10 @@ adc_type = "es7210"
 
 ```toml
 adc_gain = [
-      10.0,             
-      10.0,             
-      3.0,              
-      3.0               
+      10.0,
+      10.0,
+      3.0,
+      3.0
     ]
 ```
 
@@ -234,7 +234,7 @@ adc_gain = [
 
 ```toml
 mic_chs = [
-      1.0,              
+      1.0,
       2.0
     ]
 ```
