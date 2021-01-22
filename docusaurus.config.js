@@ -18,11 +18,6 @@ module.exports = {
       },
       items: [
         {
-          to: "/guides_index",
-          label: '快速开发指南',
-          position: 'left'
-        },
-        {
           to: "/csksdk_api",
           label: 'API',
           position: 'left'

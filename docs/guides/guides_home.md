@@ -1,7 +1,7 @@
 ---
 id: guides_index
 title: CSK项目开发指南
-slug: /guides_index
+slug: /
 ---
 
 ## 从这里开始
@@ -11,7 +11,6 @@ slug: /guides_index
 ### [快速入门CSK项目开发](/getting_start)
 
 从0到1完成你的第一个CSK项目。
-
 
 
 ## 固件基础知识
