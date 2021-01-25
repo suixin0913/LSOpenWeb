@@ -11,9 +11,9 @@ slug: /csk_driver_demo
 
 
 
-### 1. UART
+## 1. UART
 
-#### 1.1 基本介绍
+### 1.1 基本介绍
 
 USART 驱动功能特性如下：
 
@@ -29,14 +29,14 @@ USART 驱动功能特性如下：
 
 USART 驱动提供的静态接口实例为：Driver_USART0，Driver_USART1。
 
-#### 1.2 使用场景
+### 1.2 使用场景
 
 目标机器需要使用通讯串口与上位机进行通讯。
 
-#### 1.3 接口说明
+### 1.3 接口说明
 > 串口初始化接口：用于初始化通讯串口，同时会初始化一个串口ringbuffer来存储接收的数据
 
-```c
+```js
 // csk uart
 /**
  * @brief 串口的初始化，同时会初始化一个串口ringbuffer来存储接收的数据
@@ -47,7 +47,7 @@ void csk_uart_init(void);
 ```
 串口接收接口：用于接收串口数据
 
-```c
+```js
 /**
  * @brief 从串口ringbuffer里面读取数据
  * @param  dat              接收数据的指针
@@ -60,7 +60,7 @@ int csk_uart_recv(void *dat, int len, int ms);
 ```
  串口发送接口：用于发送串口数据
 
-```c
+```js
 /**
  * @brief 通过串口发送数据
  * @param  dat              要发送的数据指针
@@ -71,49 +71,55 @@ int csk_uart_recv(void *dat, int len, int ms);
 int csk_uart_send(void *dat, int len, int ms);
 
 ```
-#### 1.4 硬件配置
+### 1.4 硬件配置
 
 **引脚配置**
 
-```json
-"peripheral": {
-        "uart": [
-            {},
-            {},
-            {
-                "txd": {
-                    "pin": 60,
-                    "mux": 1
-                },
-                "rxd": {
-                    "pin": 19,
-                    "mux": 2
-                }
-            }
-        ]
+在硬件配置资源`hardware.toml`中配置通讯串口（uart2）的Pin脚以及功能。
+
+```js
+[peripheral]
+
+  [[peripheral.uart]]
+
+  [[peripheral.uart]]
+
+  [[peripheral.uart]]
+
+    [peripheral.uart.txd]
+    pin = 4
+    mux = 2
+
+    [peripheral.uart.rxd]
+    pin = 5
+    mux = 2
 ```
-在硬件配置资源hardware.json中配置通讯串口（uart2）的Pin脚以及功能。
+
 
 **软件配置**
-```json
-"driver": {
-        "uart_ctrl": 
-        {
-            "uart": 2,
-            "baudrate": 115200
-        }
+
+在应用配置资源`application.toml`中配置通讯串口(uart2)的驱动接口配置。
+
+```js
+[driver]
+
+  [driver.uart_ctrl]
+  uart = 2
+  baudrate = 115200
+
 ```
-在应用配置资源application.json中配置通讯串口(uart2)的驱动接口配置。
 
-#### 1.5 应用实现
 
-实现通讯串口的初始化和数据接收
+### 1.5 应用实现
+
+**实现通讯串口的初始化和数据接收**
 
 代码清单：
  - app_main.c
 
 构建一个通讯串口的数据接收任务初始化接口：
-```c
+
+```js
 static void
 uart_init(void)
 {
@@ -125,7 +131,8 @@ uart_init(void)
 ```
 
 完成通讯串口数据接收任务的实现：
-```c
+
+```js
 static void
 uart_task_proc(void *arg)
 {
@@ -149,7 +156,8 @@ uart_task_proc(void *arg)
 ```
 
 在用户的应用入口*app_main*中调用**uart_init**进行通讯串口的初始化：
-```c
+
+```js
 void
 app_main(void)
 {
@@ -163,8 +171,10 @@ app_main(void)
 	// 如使用 UART，解除下面这一行的注释
 	uart_init();
 ```
+
 在识别回调接口中，将回调的数据通过ScriptEngine注册的mruby接口透传用户回调数据：
-```c
+
+```js
 static void
 cb_esr_recognition(keyword_attrs_t *key_attrs)
 {
@@ -176,13 +186,14 @@ cb_esr_recognition(keyword_attrs_t *key_attrs)
 
 ```
 
-实现mruby业务
+**实现mruby业务**
 
 代码清单：
  - intents.rb <br/>
 
 在ruby代码中进行业务的部署，根据关键字的的意图进行业务实现：
-```ruby
+
+```js
 on_intent "打开空调" do
   EngineCore.logger.info "打开空调"
   num = EngineCore.storage.get(:open) || 0
@@ -206,12 +217,12 @@ end
 
 ```
 
-#### 1.6 测试
+### 1.6 测试
 通过"**小美小美**"进行语音唤醒，然后呼唤命令词"**打开空调**"。
 
 从通讯串口的接收中可以看到，已经正确接收到了发送的数据"**PWR ON**"。
 
-```shell
+```js
 2021-01-21 21:27:09.379	PWR ON
 2021-01-21 21:28:34.295	
 2021-01-21 21:28:34.296	
