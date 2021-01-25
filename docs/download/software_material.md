@@ -1,6 +1,6 @@
 ---
 id: software_material
-title: 软件资料
+title: 软件材料
 slug: /software_material
 ---
 

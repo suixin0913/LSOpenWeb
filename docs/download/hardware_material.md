@@ -1,6 +1,6 @@
 ---
 id: hardware_material
-title: 软件资料
+title: 硬件材料
 slug: /hardware_material
 ---
 

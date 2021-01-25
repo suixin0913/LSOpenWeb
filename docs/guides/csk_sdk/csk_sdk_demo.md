@@ -18,10 +18,10 @@ slug: /csk_sdk_demo
 
 ## 1. SDK文件目录说明
 
-- app/csk_callback.h：回调接口头文件
-- app/csk_controller.h：控制接口头文件
-- app/app_main.c：自定义业务逻辑主函数
-- app/scripts/intents.rb：EngineCore业务处理
+- `app/csk_callback.h`回调接口头文件
+- `app/csk_controller.h`控制接口头文件
+- `app/app_main.c`自定义业务逻辑主函数
+- `app/scripts/intents.rb`EngineCore业务处理
 
 ## 2. 回调事件使用示例
 
@@ -46,6 +46,7 @@ app_main(void)
 ## 3. 业务控制接口使用示例
 
 ### 3.1 获取播放器状态
+
 ```js
 csk_player_status_e csk_player_get_status(void);
 
@@ -57,7 +58,9 @@ typedef enum {
 ```
 
 ### 3.2 串口接收/发送使用示例
-初始化串口
+
+**初始化串口**
+
 ```js
 static void
 uart_init(void)
@@ -76,7 +79,8 @@ app_main(void)
 }
 ```
 
-创建串口接收任务
+**创建串口接收任务**
+
 ```js
 static void
 uart_task_proc(void *arg)
@@ -94,10 +98,13 @@ uart_task_proc(void *arg)
 ```
 
 ## 4. EngineCore使用示例
+
 [什么是EngineCore？](https://open.listenai.com/guides/EngineCore/getting_started)
 
 ### 4.1 EngineCore接口调用方法
-调用脚本引擎EngineCore中的intent方法
+
+**调用脚本引擎EngineCore中的intent方法**
+
 ```js
 void csk_script_handle_intent(char *keyword)
 ```
@@ -112,11 +119,12 @@ cb_esr_recognition(keyword_attrs_t *key_attrs)
 }
 ```
 
-调用脚本引擎EngineCore中的on_uart方法：
+**调用脚本引擎EngineCore中的on_uart方法**
+
 ```js
 void csk_script_handle_uart(uint8_t *data, uint16_t size)
 ```
-使用示例：在app_main.c中调用csk_script_handle_uart方法，将串口接收数据传到EngineCore中处理。
+**使用示例：在app_main.c中调用csk_script_handle_uart方法，将串口接收数据传到EngineCore中处理。**
 
 ```js
 static void
@@ -137,7 +145,8 @@ uart_task_proc(void *arg)
 }
 ```
 ### 4.2 如何在EngineCore中做业务处理？
-文件位置：app/scripts/intents.rb
+
+文件位置`app/scripts/intents.rb`
 ```js
 on_intent "打开空调" do
   EngineCore.logger.info "打开空调"

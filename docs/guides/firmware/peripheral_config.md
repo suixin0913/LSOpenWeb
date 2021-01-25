@@ -153,3 +153,64 @@ hardware.toml 中需要用到以下字段：
     mux = 1
 ```
 
+### 4.4 spi示例
+
+<!-- 根据硬件需求，要用到使用两组 `i2s`，Datasheet对应引脚为 `33`~ `37` 5个引脚。
+
+在 hardware.toml 配置 `peripheral.i2s` ：
+1. `peripheral.i2s.mclk`中，`pin`设为 `37` ， `mux` 设为 `1` ；
+2. `peripheral.i2s.bclk` 中，`pin`设为 `34` ， `mux` 设为 `1` ；
+3. `peripheral.i2s.lrck` 中，`pin`设为 `33` ， `mux` 设为 `1` ；
+4. `peripheral.i2s.dout` 中，`pin`设为 `35` ， `mux` 设为 `1` ；
+5. `peripheral.i2s.din0` 中，`pin`设为 `36` ， `mux` 设为 `1` 。 -->
+
+
+```js
+[[peripheral.spi]]
+  [peripheral.spi.sclk]
+  pin = 4
+  mux = 1
+  
+  [peripheral.spi.miso]
+  pin = 4
+  mux = 1
+  
+  [peripheral.spi.mosi]
+  pin = 4
+  mux = 1
+  
+  [peripheral.spi.cs]
+  pin = 4
+  mux = 1
+```
+
+### 4.5 gpio示例
+
+<!-- 根据硬件需求，要用到使用两组 `i2s`，Datasheet对应引脚为 `33`~ `37` 5个引脚。
+
+在 hardware.toml 配置 `peripheral.i2s` ：
+1. `peripheral.i2s.mclk`中，`pin`设为 `37` ， `mux` 设为 `1` ；
+2. `peripheral.i2s.bclk` 中，`pin`设为 `34` ， `mux` 设为 `1` ；
+3. `peripheral.i2s.lrck` 中，`pin`设为 `33` ， `mux` 设为 `1` ；
+4. `peripheral.i2s.dout` 中，`pin`设为 `35` ， `mux` 设为 `1` ；
+5. `peripheral.i2s.din0` 中，`pin`设为 `36` ， `mux` 设为 `1` 。 -->
+
+
+```js
+[[peripheral.gpio]]
+  tag = "rdy"
+  pin = 13
+  mux = 0
+  dir = true
+  def = false
+  rev = true
+
+[[peripheral.gpio]]
+  tag = "amp"
+  pin = 14
+  mux = 0
+  dir = true
+  def = true
+  rev = true
+```
+
