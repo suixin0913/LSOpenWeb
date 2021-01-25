@@ -34,22 +34,7 @@ slug: /
 
 
 
-## CSK开发示例
 
---------
-
-### [SDK使用示例](/csk_sdk_demo)
-
-CSK SDK API的使用示例，包括事件回调、业务接口等，及自定义业务逻辑的方法。
-
-
-
-
-
-### [硬件驱动使用示例](/csk_driver_demo)
-
-
-CSK的硬件驱动使用示例，包含UART、PWM、GPIO、I2C等通信接口。
 
 
 
@@ -96,6 +81,25 @@ CSK的硬件驱动使用示例，包含UART、PWM、GPIO、I2C等通信接口。
 ### [产测开发](/factory_config)
 
 本篇介绍如何在LStudio中配置CSK项目的产测流程。
+
+
+
+## CSK开发示例
+
+--------
+
+### [SDK使用示例](/csk_sdk_demo)
+
+CSK SDK API的使用示例，包括事件回调、业务接口等，及自定义业务逻辑的方法。
+
+
+
+
+
+### [硬件驱动使用示例](/csk_driver_demo)
+
+
+CSK的硬件驱动使用示例，包含UART、PWM、GPIO、I2C等通信接口。
 
 
 
