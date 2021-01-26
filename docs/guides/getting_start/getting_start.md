@@ -61,7 +61,7 @@ slug: /getting_start
 
 ### 2.1 创建项目
 
-![](./files/newproject.png)
+![](./files/20210126132720.png)
 
 创建一个新的项目，流程如下：
 1. 输入工程名称：CSK4002风扇

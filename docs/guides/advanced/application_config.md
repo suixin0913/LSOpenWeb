@@ -1,32 +1,17 @@
 ---
 id: application_config
-title: 配置application.toml
+title: 配置 application.toml
 slug: /application_config
 ---
 
-**通过application.toml，你可以迅速适配自己的硬件板型。本章介绍业务配置、硬件配置、驱动配置的使用。**<br/>
-**application.toml 中关于产测的配置，请在[产测开发](/)中查阅。**
+>通过 `application.toml`，你可以迅速适配自己的硬件板型。本章介绍业务配置、硬件配置、驱动配置的使用。
+文件中关于产测的配置，本篇不会说明，请前往[产测开发](/)中查阅。
 
-## 1.业务配置 business
-
-### 1.1 基础配置
+## 1.退出识别模式
 
 | 字段 | 取值 | 说明 |示例 |
 | - | - | - | - |
-| `sys_mode` | - public<br/>- private<br/> - custome<br/>| - 聆思公版串口协议<br/>- 私有协议：适用于演示demo或带单工业务场景<br/>- 自定义开发模式：适用于双工业务场景 | `sys_mode = "private"` |
-| `welcome` |音频ID数组 | 开机提示音会随机播放数组中的一条音频。 | `welcome = [501,502]` |
-| `play_vol` |整数1-10 | 值越大播放音量越大，0表示关闭语音 | `play_vol = 7` |
-
-
-### 1.2 识别配置 business.asr
-
-| 字段 | 取值 | 说明 |示例 |
-| - | - | - | - |
-| `enter_asr` | 唤醒词ID| 配置触发进入识别模式的唤醒词id | `enter_asr = [501]` |
 | `exit_asr` | 命令词ID| 触发退出识别模式的命令词id | `exit_asr = [502]` |
-| `timeout` | int| 识别超时时间，超时后进入待唤醒状态，单位为秒。 | `timeout = 20` |
-| `cmd_send_mode` | 1<br/>2<br/>3|仅串口通讯<br/>仅红外通讯<br/>串口与红外同时通讯  | `cmd_send_mode = 1` |
-
 
 
 ## 2.硬件配置 hw_config
@@ -63,12 +48,6 @@ slug: /application_config
 `custom_enable` 只有在 `uac_in_enable = false` 时可效
 :::
 
-### 2.3 麦克风配置 hw_config.mic
-
-| 字段 | 取值 | 说明 |示例 |
-| - | - | - | - |
-| `type` | `amic`<br/>`dmic`| 使用模拟麦<br/>使用数字麦 | `type = "amic"` |
-| `dist` | 35-110| 麦克风距离，单位为mm<br/>小于35mm设为35<br/>大于110mm设为110 | `dist = 35` |
 
 ## 3.驱动配置 driver
 
@@ -86,7 +65,7 @@ slug: /application_config
 | 字段 | 取值 | 说明 |示例 |
 | - | - | - | - |
 | `uart` | <br/>`0`<br/>`1`<br/>`2`| **选择通讯串口端口：**<br/>预留的第1组uart<br/>预留的第2组uart<br/>预留的第3组uart | `uart = 1` |
-| `baudrate` | 2400/4800/9600/<br/>19200/38400/57600/<br/>115200/345600| 波特率 | `baudrate = 115200` |
+| `baudrate` | 2400/4800/9600/<br/>19200/38400/57600/<br/>115200/345600<br/>**此处配置无效！以基础配置 **<br/>`config/base.csk`** 为准**| 波特率 | `baudrate = 115200` |
 
 ### 3.3 声卡配置 driver.codec
 
@@ -110,9 +89,41 @@ slug: /application_config
 | - | - | - | - |
 | `pwm` | `0`<br/>`1`| 选择0号pwm端口<br/>选择1号pwm端口 | `pwm = 0` |
 | `ch` | 整型`0-5`| channel配置`ch`依赖`pwm`:<br/>当`pwm = 0`，支持channel 0-channel 3<br/>当`pwm = 1`，支持channel 4-channel 5 | `ch = 1` |
-| `freq` | 整型| 配置红外发射频率，单位为Hz | `freq = 38000` |
+| `freq` | 整型| 配置红外发射频率，单位为Hz<br/>**此处配置无效！以基础配置 **<br/>`config/base.csk`** 为准** | `freq = 38000` |
 | `resend` | 整型| 单条命令连续发送次数，可用于设计重试次数 | `resend = 8` |
 | `duty` | 整型| 红外信号pwm占空比 | `duty = 160` |
+
+## 4.其他无法生效的配置
+
+:::tip 以下配置修改无法生效
+在CSK项目中，`./config/base.csk` 与 `./config/interact.csk` 的配置优先级高于 `application.toml` 中的相同配置。所以下列 `application.toml` 中的配置修改无法生效。你可以在以下指南页面查看优先级更高的图形化配置：
+- [CSK项目基础配置](/guides/firmware/base_config)
+- [自定义词表与回复语](/vui)
+:::
+
+
+### 4.1 business
+
+| 字段 | 取值 | 说明 |示例 |
+| - | - | - | - |
+| `sys_mode` | - public<br/>- private<br/> - custome<br/>| - 聆思公版串口协议<br/>- 私有协议：适用于演示demo或带单工业务场景<br/>- 自定义开发模式：适用于双工业务场景 | `sys_mode = "private"` |
+| `welcome` |音频ID数组 | 开机提示音会随机播放数组中的一条音频。 | `welcome = [501,502]` |
+| `play_vol` |整数1-10 | 值越大播放音量越大，0表示关闭语音 | `play_vol = 7` |
+| `enter_asr` | 唤醒词ID| 配置触发进入识别模式的唤醒词id | `enter_asr = [501]` |
+| `exit_asr` | 命令词ID| 触发退出识别模式的命令词id | `exit_asr = [502]` |
+| `timeout` | int| 识别超时时间，超时后进入待唤醒状态，单位为秒。 | `timeout = 20` |
+| `cmd_send_mode` | 1<br/>2<br/>3|仅串口通讯<br/>仅红外通讯<br/>串口与红外同时通讯| `cmd_send_mode = 1` |
+
+### 4.3 hw_config.mic
+
+
+| 字段 | 取值 | 说明 |示例 |
+| - | - | - | - |
+| `type` | `amic`<br/>`dmic`| 使用模拟麦<br/>使用数字麦 | `type = "amic"` |
+| `dist` | 35-110| 麦克风距离，单位为mm<br/>小于35mm设为35<br/>大于110mm设为110 | `dist = 35` |
+
+
+
 
 
 
