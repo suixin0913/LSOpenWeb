@@ -9,6 +9,9 @@ slug: /peripheral_config
 - 在什么地方可以完成配置。
 - hardware.toml 有哪些引脚配置参数及其含义。
 
+<!-- 可以参考星宇这个整理的材料
+https://www.tapd.cn/65128374/prong/stories/view/1165128374001011213 -->
+
 
 ## 1.需求分析与确认
 
@@ -58,35 +61,34 @@ hardware.toml 中需要用到以下字段：
 
 ### 4.1 i2c示例
 
-根据硬件需求，模组仅使用一组 `i2c`，选用 `29` 与 `30` 两个引脚。可参照Datasheet的引脚功能：
+根据硬件需求，仅使用第二组 `i2c`，对应 `29` 与 `30` 两个引脚（可参照Datasheet的引脚功能）：
 
 ![](./files/20210121144320.png)
 
 在 hardware.toml 配置 `peripheral.i2c` ：
-1. 使用第一组，第二组留空；
+1. 第一组留空，使用第二组；
 2. `peripheral.i2c.scl` 中，`pin`设为 `29` ， `mux` 设为 `2` ；
 3. `peripheral.i2c.sda` 中，`pin`设为 `39` ， `mux` 设为 `2` 。
 
 ```js
 [[peripheral.i2c]]
 
-    [peripheral.i2c.scl]
+[[peripheral.i2c]]
+  [peripheral.i2c.scl]
     pin = 29
     mux = 2
 
-    [peripheral.i2c.sda]
+  [peripheral.i2c.sda]
     pin = 30
     mux = 2
-
-[[peripheral.i2c]]
 ```
 
 ### 4.2 uart示例
 
-根据硬件需求，模组仅使用两组 `uart`，选用 `4` 、 `5` 、`55`、`56`4个引脚。
+根据硬件需求，模组仅使用第二第三组 `uart`，第二组`uart`可用`55`、`56`2个引脚，第三组`uart`可用`4` 、 `5`2个引脚。
 
 在 hardware.toml 配置 `peripheral.uart` ：
-1. 使用第二组，第三组uart；
+1. 第一组留空，使用第二组，第三组uart；
 2. 第2组，`peripheral.uart.txd` 中，`pin`设为 `55` ， `mux` 设为 `2` ；
 3. 第2组，`peripheral.uart.rxd` 中，`pin`设为 `56` ， `mux` 设为 `2` ；
 4. 第3组，`peripheral.uart.txd` 中，`pin`设为 `4` ， `mux` 设为 `2` ；
@@ -153,16 +155,16 @@ hardware.toml 中需要用到以下字段：
     mux = 1
 ```
 
-### 4.4 spi示例
+<!-- ### 4.4 spi示例
 
-<!-- 根据硬件需求，要用到使用两组 `i2s`，Datasheet对应引脚为 `33`~ `37` 5个引脚。
+根据硬件需求，要用到使用两组 `i2s`，Datasheet对应引脚为 `33`~ `37` 5个引脚。
 
 在 hardware.toml 配置 `peripheral.i2s` ：
 1. `peripheral.i2s.mclk`中，`pin`设为 `37` ， `mux` 设为 `1` ；
 2. `peripheral.i2s.bclk` 中，`pin`设为 `34` ， `mux` 设为 `1` ；
 3. `peripheral.i2s.lrck` 中，`pin`设为 `33` ， `mux` 设为 `1` ；
 4. `peripheral.i2s.dout` 中，`pin`设为 `35` ， `mux` 设为 `1` ；
-5. `peripheral.i2s.din0` 中，`pin`设为 `36` ， `mux` 设为 `1` 。 -->
+5. `peripheral.i2s.din0` 中，`pin`设为 `36` ， `mux` 设为 `1` 。
 
 
 ```js
@@ -182,7 +184,7 @@ hardware.toml 中需要用到以下字段：
   [peripheral.spi.cs]
   pin = 4
   mux = 1
-```
+``` -->
 
 ### 4.5 gpio示例
 
@@ -195,6 +197,7 @@ hardware.toml 中需要用到以下字段：
 4. `peripheral.i2s.dout` 中，`pin`设为 `35` ， `mux` 设为 `1` ；
 5. `peripheral.i2s.din0` 中，`pin`设为 `36` ， `mux` 设为 `1` 。 -->
 
+**系统就绪的io输出引脚配置**
 
 ```js
 [[peripheral.gpio]]
@@ -204,7 +207,11 @@ hardware.toml 中需要用到以下字段：
   dir = true
   def = false
   rev = true
+```
 
+**PA的使能引脚配置**
+
+```js
 [[peripheral.gpio]]
   tag = "amp"
   pin = 14
