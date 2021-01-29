@@ -5,7 +5,6 @@ slug: /audio_transmission
 ---
 
 > 读完本文后，你将学习到：
-
 - 如何配置使CSK正常录音。
 - 如何使CSK输出音频。
 - 如何送音频至CSK播放
@@ -14,7 +13,7 @@ slug: /audio_transmission
 
 :::important
 
-在开始探索之前，你需要关注一个配置文件： [**application.toml**](http://open.listenai.com/application_config) ，录音和音频输出的配置都在该文件中
+在开始探索之前，你需了解： [**application.toml**](http://open.listenai.com/application_config) 的使用，录音和音频输出的配置都在该文件中。
 
 :::
 
@@ -22,43 +21,28 @@ slug: /audio_transmission
 
 ## 1.配置CSK录音
 
-首先，你需要在 LSTudio 中新建/打开 CSK4002 项目，并找到 application.toml 配置文件，文件具体路径如下：
-`./config/environment/hardware.toml`
+首先，你需要在 LStudio 中新建/打开 CSK4002 项目，并找到 `application.toml` 配置文件，文件具体路径如下：
+`./config/environment/application.toml`
 
 
 
 ### 1.1 配置系统工作模式
 
-打开配置文件，首先配置系统工作模式。
-```
-sys_mode = "public"
-```
+打开`application.toml`，配置系统工作模式： `sys_mode = "public"` 。
 
-| 字段名   | 类型   | 取值说明                                                     |
-| -------- | ------ | ------------------------------------------------------------ |
-| sys_mode | String | 默认取值 `Public` 该取值能使 CSK 链接上位机后，由上位机控制录音 。其他取值可参考 application_config |
+如此配置后， CSK 链接上位机后，将由上位机控制录音 。
 
 
 
 ### 1.2 配置ADC信息
 
-    adc: {
-    adc_type = "nau85l40"
-    adc_gain = [
-      3,             
-      3,             
-      10,              
-      10               
-    ]
-    mic_chs = [
-      3,             
-      4
-    ]
-    ref_chs = [
-      1,
-      1
-    ]
-    }
+```js
+adc_type = "es7210"
+adc_gain = [10,10,3,3]
+mic_chs = [3,4]
+ref_chs = [1,1]
+```
+
 
 | 字段名   | 类型           | 取值说明                                                     |
 | -------- | -------------- | ------------------------------------------------------------ |
@@ -71,22 +55,26 @@ sys_mode = "public"
 
 ## 2.配置 CSK 音频输出信息
 
-```
+```js
   [hw_config]
-  [hw_config.usb_mode]
-  uac_in_enable = false
-  uac_in_channel = 3
-  custom_enable = true
-  [hw_config.mic]
+    
+    i2s_out_enable = true
+    
+    i2s_out_chs = [1,2,5,6]
+
+    [hw_config.usb_mode]
+
+    uac_in_enable = false
+
+    uac_in_channel = 3
+
+    custom_enable = true
+
+    [hw_config.mic]
+
     type = "amic" 
+
     dist = 35
-  i2s_out_enable = true
-  i2s_out_chs = [
-    1,
-    2,
-    5,
-    6
-  ]
 ```
 
 | 字段名         | 类型           | 取值说明                                                     |

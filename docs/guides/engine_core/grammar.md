@@ -6,9 +6,9 @@ slug: /guides/EngineCore/grammar
 
 > 本文介绍实现业务的常用语法
 
-## 类型转换
+## 1.类型转换
 
-### 数值转字符串
+### 1.1 数值转字符串
 
 ```ruby
 num1 = 1
@@ -21,7 +21,7 @@ EngineCore.logger.info(str1) # => "1"
 EngineCore.logger.info(str2) # => "1.5"
 ```
 
-### 字符串转数值
+### 1.2 字符串转数值
 
 ```ruby
 str1 = "1"
@@ -36,9 +36,9 @@ EngineCore.logger.info(num2) # => 1
 EngineCore.logger.info(num3) # => 1.5
 ```
 
-## 字符串操作
+## 2.字符串操作
 
-### 字符串插值
+### 2.1 字符串插值
 
 ```ruby
 name = "john"
@@ -46,7 +46,7 @@ str = "my name is #{name}, hello"
 EngineCore.logger.info(str) # => "my name is john, hello"
 ```
 
-### 字符串拼接
+### 2.2 字符串拼接
 
 ```ruby
 str1 = "this is"
@@ -55,7 +55,7 @@ str = str1 + str2
 EngineCore.logger.info(str) # => "this is docs"
 ```
 
-## 数值运算
+## 3.数值运算
 
 ```ruby
 1 + 1 # => 2
@@ -66,7 +66,7 @@ EngineCore.logger.info(str) # => "this is docs"
 5.to_f / 3 # => 1.66667
 ```
 
-## 数组
+## 4.数组
 
 ```ruby
 arr = [1, 2, 3]
@@ -80,7 +80,7 @@ arr << 4
 EngineCore.logger.info(arr) # => [1, 2, 3, 4]
 ```
 
-## 哈希
+## 5.哈希
 
 ```ruby
 hash_1 = { a: 1, b: 2 }
@@ -98,9 +98,9 @@ val_3 = hash_1[:c]
 EngineCore.logger.info(val_3) # => 10
 ```
 
-## 流程控制
+## 6.流程控制
 
-### if..else
+### 6.1 if..else
 
 ```ruby
 a = 1
@@ -115,7 +115,7 @@ else
 end
 ```
 
-### unless
+### 6.2 unless
 
 ```ruby
 a = 1
@@ -127,7 +127,7 @@ else
 end
 ```
 
-### case..when
+### 6.3 case..when
 
 ```ruby
 a = 10
@@ -142,9 +142,9 @@ else
 end
 ```
 
-## 循环
+## 7.循环
 
-### 指定范围循环
+### 7.1 指定范围循环
 
 ```ruby
 sum1 = 0
@@ -163,7 +163,7 @@ EngineCore.logger.info(sum1) # => 6
 EngineCore.logger.info(sum2) # => 9
 ```
 
-### 数组循环
+### 7.2 数组循环
 
 ```ruby
 sentence = ''

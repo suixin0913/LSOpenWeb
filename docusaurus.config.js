@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'LSCloud|文档中心',
+  title: '聆思文档中心',
   tagline: 'LSOpen资料库',
   url: 'http://open.listenai.com/',
   baseUrl: '/',
@@ -12,7 +12,7 @@ module.exports = {
     navbar: {
       title: '聆思文档中心',
       logo: {
-        href: '/guides_index',
+        href: '/',
         alt: 'LSOpen Logo',
         src: 'img/logo.png',
       },
