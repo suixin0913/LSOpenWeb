@@ -8,29 +8,29 @@ slug: /
 
 --------------
 
-### [快速入门CSK项目开发](/getting_start)
+### [快速入门 CSK 项目开发](/getting_start)
 
-从0到1完成你的第一个CSK项目。
+从0到1完成你的第一个 CSK 项目。
 
 
 ## 固件基础知识
 
 -------
 
-### [CSK项目基础配置](/guides/firmware/base_config)
+### [CSK 项目基础配置](/guides/firmware/base_config)
 
-完整了解CSK项目的每一个基础配置项，包括麦克风配置、TTS配置、交互配置等。
+完整了解 CSK 项目的每一个基础配置项，包括麦克风配置、TTS 配置、交互配置等。
 
 
 
 ### [自定义词表与回复语](/vui)
 
-本篇介绍CSK项目的语音交互配置。包含交互模板使用、自定义命令词词条和回复语提示音，也会介绍如何设计合适的命令词词条，并根据词条检测结果对命令词词条进行修改。
+本篇介绍 CSK 项目的语音交互配置。包含交互模板使用、自定义命令词词条和回复语提示音，也会介绍如何设计合适的命令词词条，并根据词条检测结果对命令词词条进行修改。
 
 
 ### [外围引脚配置](/peripheral_config)
 
-本篇介绍如何根据硬件需求在hardware.toml中配置CSK项目中的引脚，包含uart、i2c、i2s、spi、gpio等接口。
+本篇介绍如何根据硬件需求在 hardware.toml 中配置 CSK 项目中的引脚，包含UART、I2C、I2S、GPIO 等接口。
 
 
 
@@ -51,7 +51,7 @@ slug: /
 
 
 ### [入门调优与自动调优](/auto_optimize)
-本篇介绍什么是语音效果调优，如何使用LStudio自动调优与测试。
+本篇介绍什么是语音效果调优，如何使用 LStudio 自动调优与测试。
 
 
 
@@ -63,7 +63,7 @@ slug: /
 
 ### [配置application](/application_config)
 
-通过application.toml，你可以迅速适配自己的硬件板型，具体包括：产测配置、业务配置、硬件配置、驱动配置。
+通过 application.toml，你可以迅速适配自己的硬件板型，具体包括：产测配置、业务配置、硬件配置、驱动配置。
 
 
 
@@ -80,7 +80,7 @@ slug: /
 
 ### [产测开发](/factory_config)
 
-本篇介绍如何在LStudio中配置CSK项目的产测流程。
+本篇介绍如何在 LStudio 中配置CSK项目的产测流程。
 
 
 
@@ -90,7 +90,7 @@ slug: /
 
 ### [SDK使用示例](/csk_sdk_demo)
 
-CSK SDK API的使用示例，包括事件回调、业务接口等，及自定义业务逻辑的方法。
+CSK SDK API 的使用示例，包括事件回调、业务接口等，及自定义业务逻辑的方法。
 
 
 
@@ -99,7 +99,7 @@ CSK SDK API的使用示例，包括事件回调、业务接口等，及自定义
 ### [硬件驱动使用示例](/csk_driver_demo)
 
 
-CSK的硬件驱动使用示例，包含UART、PWM、GPIO、I2C等通信接口。
+CSK 的硬件驱动使用示例，包含 UART、PWM、GPIO、I2C 等通信接口。
 
 
 
@@ -109,7 +109,7 @@ CSK的硬件驱动使用示例，包含UART、PWM、GPIO、I2C等通信接口。
 
 ### [音频传输](/audio_transmission)
 
-本篇介绍如何配置使CSK正常录音；如何使CSK输出音频；如何送音频至CSK播放。
+本篇介绍如何配置使 CSK 正常录音；如何使 CSK 输出音频；如何送音频至 CSK 播放。
 
 
 
@@ -151,28 +151,28 @@ LISA API代码示例。 -->
 
 
 
-## 业务引擎EngineCore
+## 业务引擎 EngineCore
 
 --------
 
 ### [快速实现业务逻辑](/guides/EngineCore/getting_started)
 
-本篇通过具体示例介绍如何使用EngineCore快速实现业务逻辑。
+本篇通过具体示例介绍如何使用 EngineCore 快速实现业务逻辑。
 
 
 
 ### [快速熟悉常用语法](/guides/EngineCore/grammar)
 
-从0到1搭建自己的业务引擎，熟悉LScript常用语法。
+从0到1搭建自己的业务引擎，熟悉 EngineCore 常用语法。
 
 
 ## 硬件基础知识
 
 -------------------
 
-### [快速设计CSK硬件](/hardware_guide)
+### [快速设计 CSK 硬件](/hardware_guide)
 
-本篇针对CSK产品中结构设计、硬件设计提供设计指南与参考。
+本篇针对 CSK 产品中结构设计、硬件设计提供设计指南与参考。
 
 
 ## 技术支持

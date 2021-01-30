@@ -7,19 +7,17 @@ slug: /getting_start
 ---
 
 
-> 本篇介绍你如何快速上手使用集成开发环境（LStudio）创建项目并制作一个语音小风扇固件。固件烧录到开发板（LSKits）成功运行后，你将能够通过语音命令与LSKits进行语音交互,完成第一个CSK项目。
->
-> 看完本篇你将了解到：
->
-> 1. 如何使用LStuido创建项目并进行简单的交互配置。
->
-> 2. 如何使用LStuido打包并烧录固件，实现一个小风扇产品demo并能够语音唤醒和离线命令词控制。
+> 通过本篇你将通过一系列具体的示例操作了解到：
+1. 如何完成 LStuido 环境配置；
+2. 如何使用 LStuido 创建项目并完成简单的固件配置；
+3. 如何使用 LStuido 把固件烧录到 LSKits，得到一个小风扇语音交互 demo；
+4. 如何使用简洁语法实现：在获取回调后，定义 GPIO 控制外围器件。
 
 ## 1. 做好准备
 
-### 1.1 下载安装LStudio
+### 1.1 下载安装 LStudio
 
-点击[此处](https://castor.iflyos.cn/castor/v3/lstudio/download)下载安装包，依次点击 “下一步” 直至安装完成。
+点击[此处](https://castor.iflyos.cn/castor/v3/lstudio/download)下载 LStudio 安装包，依次点击 “下一步” 直至安装完成。
 
 ### 1.2 登录
 
@@ -40,28 +38,28 @@ slug: /getting_start
 
 ### 1.5 安装git
 
-进入LStudio界面后，请按照右下角提示安装git客户端，如下图所示。
+如果当前电脑未安装 git，在进入 LStudio 界面后，请按照右下角提示安装 git 客户端，如下图所示：
 
 ![](./files/git.png)
 
-使用默认选项一路点击NEXT直至安装完成。
-为确保git安装完成，重启LStduio后在控制台输入 `git --version` 如果显示以下信息表示安装成功。
+使用默认选项一路点击 NEXT 直至安装完成。
+为确保 git 安装完成，重启 LStduio 后在控制台输入 `git --version` ，显示以下信息表示安装成功。
 
 ![](./files/git_check.png)
 
 
-### 1.6 获取LSKits开发板
+### 1.6 获取 LSKits 开发板
 
-你需要拿到一个聆思官方的开发板，请关注聆思科技公众号（LISTENAI）进行购买获取。
+你需要拿到一个聆思官方的开发板，请关注聆思科技公众号（LISTENAI）或联系聆思商务团队获取。
 
 
-## 2. 开始制作第一个CSK固件
+## 2. 制作第一个 CSK 固件
 
-你将马上学会动手创建一个CSK固件，实现该部分的最佳方法是参考文档进行操作。该部分不需要编写代码或者其他操作。
+你将学会动手创建一个 CSK 固件，请按照文档说明逐步操作。
 
 ### 2.1 创建项目
 
-![](./files/20210126132720.png)
+![](./files/20210130124702.png)
 
 创建一个新的项目，流程如下：
 1. 输入工程名称：CSK4002风扇
@@ -84,9 +82,9 @@ slug: /getting_start
 
 ### 2.3 资源配置
 
-上面我们已经为LSKits配置好了基础配置信息，为了能与之交互，我们需要添加自定义唤醒词和命令词。为方便开发者快速实现产品开发，我们提供了近20个常用设备场景模板，品类涵盖冰箱、空调和风扇等，当然该部分仍在不断丰富中。在此我们直接选择	`小风扇`模板然后点击“保存”。如下图所示。
+基础配置信息配置好了，为了能与之交互，你需要添加自定义唤醒词和命令词。为方便开发者快速实现产品开发，我们提供了近20个常用设备场景模板，品类涵盖冰箱、空调和风扇等（持续丰富中）。请直接选择`小风扇`模板然后点击“保存”。如下图所示：
 
-![](./files/config3.png)
+![](./files/20210130170255.png)
 
 ### 2.4 固件打包
 
@@ -94,7 +92,7 @@ slug: /getting_start
 
 ![](./files/package1.png)
 
-1. 点击LStudio上方工具栏的固件打包。
+1. 点击 LStudio 上方工具栏的固件打包。
 
 ![](./files/package2.png)
 
@@ -108,50 +106,75 @@ slug: /getting_start
 
 :::tip
 
-打包过程中请不要关闭LStudio。
+打包过程中请不要关闭 LStudio。
 
 :::
 
 ### 2.5 固件烧录
 
-最后一步，我们需要将打包好的固件烧录进LSKits。
+最后，你需要将打包好的固件烧录进 LSKits。你可以先查看演示视频：[聆思开发板LSKits固件烧录说明](https://www.bilibili.com/video/BV18T4y1P7Pm)。
 
 ![](./files/20210122044713.png)
 
-1.  使用usb数据线连接LSKits与电脑，关闭上图所示开关，关机后按住update键再打开开关。
+1. 使用usb数据线连接 LSKits 与电脑，关闭 LSKits 开关（左拨）；
+2. 按住LSKits上的`update`键，再打开开关（右拨），**先不要松开 update 键**；
 
 ![](./files/burn2.png)
 
-2. 点击工点击具栏-烧录，页面提示进入烧录模式后松开update键。
+2. 点击`LStudio-工具栏-烧录`，页面提示进入烧录模式后，可以松开update键；
 
 ![](./files/burn3.png)
 
-3. 等待固件烧录（20s），烧录完成后会显示PASS并关闭烧录界面。
+3. 等待固件烧录（20s），烧录完成后会显示`PASS`并关闭烧录界面；
 
-4. 烧录完成后，关闭CSK开关，重新开机，即可进行体验。
+4. 烧录完成后，按击 LSKits 的`reset`键，新烧录的固件即可生效。
 
-:::tip
+![](./files/20210130170827.png)
 
-若烧录失败，请检查：
-1. 是否已准确执行上方烧录流程。
-2. 是否已按1.4步安装相关驱动。
-3. 请确保LSKits上的芯片是4002。
-4. 若连续烧录失败，请联系FAE/提交工单寻求帮助。
 
+:::tip 若烧录失败，请检查：
+1. 是否已准确执行上方烧录流程；
+2. 是否已按1.4步安装相关驱动；
+3. 请确保 LSKits 上的芯片型号是4002；
+4. 烧录或者重启的时候，需要把串口拔掉。硬件上串口电源会倒灌，可能引起无法重启或者烧录；
+5. 若连续烧录失败，请联系FAE/提交工单寻求帮助。
 :::
 
 ### 2.6 “你好哈利！”
 
-恭喜你完成了第一个固件的制作。现在你可以使用唤醒词`你好哈利`和`交互配置中的命令词`与LSKits进行交互了。
+恭喜你得到了第一个固件。现在你可以使用唤醒词`你好哈利`和`交互配置中的命令词`与 LSKits 进行交互了。
+
+你也在 LStudio 集成的串口终端中查看语音交互过程中的日志：
+
+![](./files/20210130175945.png)
 
 
-## 3. 点亮LED灯
 
-经过以上步骤，相信你已经能够体验到风扇demo的语音应答了，但好像并不能真正实现风扇控制。在项目开发中我们需要根据被控设备芯片通信协议（一般是IO操作，如UART/I2S/PWM等）进行开发。为表示与被控设备通信，我们通过点亮LSKits上一个LED灯来模拟通信方式。
+## 3. 点亮 LED 灯
 
-### 3.1 注册回调事件并配置GPIO口（LED20引脚）
+相信你已经能够体验到风扇 demo 的语音交互了，但好像还不能真正实现风扇控制。在项目开发中，我们需要根据被控设备芯片通信协议（如 UART/I2S/PWM 等）进行开发。为演示与被控设备通信，我们通过点亮 LSKits 上一个 LED 灯来展示通信方式的实现。
 
-展开工程目录找到`app/app_main.c`文件，如下所示:
+### 3.1 注册回调事件并配置引脚
+
+在项目目录找到 `app/app_main.c` 文件，先解除几个注释：
+
+1. 解除 `csk_script_handle_intent(key_attrs->txt);` 的注释，打开 `ScriptEngine` 处理；
+
+```js
+static void
+cb_esr_recognition(keyword_attrs_t *key_attrs)
+{
+	CLOGD("[APP]ESR Recognition: kid=%d", key_attrs->kid);
+
+	// 如需在 ScriptEngine 中处理指令，解除下面这一行的注释
+	csk_script_handle_intent(key_attrs->txt);
+}
+```
+2. 解除 `csk_handler_register(CSK_EVENT_WAKE_UP, cb_wake_up);` 的注释，注册唤醒回调；
+
+3. 解除 `csk_handler_register(CSK_EVENT_ESR_RECOGNITION, cb_esr_recognition);` 的注释，注册识别回调；
+
+4. 解除 `pinmux_config(42, 0);` 的注释，配置 LSKits LED20 引脚与功能；
 
 ```js
 void
@@ -176,39 +199,71 @@ app_main(void)
 }
 ```
 
-### 3.2 GPIO口操作实现LED20 控制
 
-LStudio支持使用轻量级语法实现业务配置，具体可查看[CSK SDK使用示例](https://open.listenai.com/csk_sdk_demo) 。
+### 3.2 GPIO 口操作实现 LED20 控制
 
-修改 `app/scripts/intents.rb`为以下内容:
+**捕获命令词 `打开风扇` 后，点亮 LED20**
+
+你可以在 `app/scripts/intents.rb` 定义业务逻辑。先修改第一个示例方法：
+1. 把 `on_intent` 后的命令词修改为需要捕获的`打开风扇`；
+2. 同步修改日志打印内容 `EngineCore.logger.info "打开风扇"`;
+3. 解除 `IO.set 42, :low` 的注释，实现点亮 LED20；
 
 ```js
 on_intent "打开风扇" do
   EngineCore.logger.info "打开风扇"
+  num = EngineCore.storage.get(:open) || 0
+  EngineCore.logger.info("count: #{num}")
+  EngineCore.storage.set(:open, num + 1)
+  UART.transmit "PWR ON"
 
   # 点亮 LED20
   IO.set 42, :low
 end
+```
 
+**捕获命令词 `关闭风扇` 后，熄灭 LED20**
+
+然后修改第二个示例方法，定义捕获`关闭风扇`后的交互。
+
+```js
 on_intent "关闭风扇" do
   EngineCore.logger.info "关闭风扇"
+  UART.transmit "PWR OFF"
 
   # 熄灭 LED20
   IO.set 42, :high
 end
-
-default_intent do |intent|
-  EngineCore.logger.info "default_intent: #{intent}"
-end
 ```
 
+你可以在LStudio 使用轻量级语法实现业务配置，可以查看[CSK SDK使用示例](https://open.listenai.com/csk_sdk_demo) 。
 
-### 3.3 重新打包烧录
+还有更详尽的API文档，你可以查看[EngineCore API](https://open.listenai.com/csksdk/csk4002/mruby/table_of_contents.html)。
 
-再次固件打包进行体验。如果一切正常，你会发现当你用`打开风扇`控制时，LSKits开发板LED20灯光打开，`关闭风扇`时灯光关闭。
+### 3.3 体验新的效果
+
+在完成以上代码修改后，重新依次进行`固件编译`、`固件打包`、`固件烧录`。
+
+烧录完成后重启开发套件，当命中`打开风扇`后，LED20 灯光会同步亮起；当命中`关闭风扇`后，LED20 灯光会同步熄灭。
+
+![](./files/20210130174852.png)
+
+你也可以在串口终端查看到通过  `ScriptEngine` 定义出的日志，如 `[I][SCRIPT]打开风扇 `。
+
+![](./files/20210130183040.png)
 
 
-## 4. 学习更多开发知识
+
+## 了解更多
+
+你可以通过以下材料进一步了解 LSKits：
+
+- [LSKits硬件使用指导手册.pdf](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FLSKits%E7%A1%AC%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC%E6%89%8B%E5%86%8C.pdf)
+
+- [下载 LSKits 参考设计](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FLSKits%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1.zip)
+
+- [LSKits BOM.zip](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FLSKits%20BOM.zip)
+
 
 为了快速定制扩展语音项目，你可能对以下内容也感兴趣：
 
@@ -218,7 +273,7 @@ end
 
 - [如何使用LStudio修改基础配置](https://open.listenai.com/guides/firmware/base_config) 
 
-在项目开发过程中如果需要帮助，可以通过工单系统向我们获取技术支持。
+在项目开发过程中如果需要帮助，可以通过工单系统向我们获取技术支持：
 
 - [工单系统](https://open.listenai.com/cloud_project) 
 
