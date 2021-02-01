@@ -16,9 +16,9 @@ slug: /datasheet
 
 | 文件| 更新时间 | 操作 |
 | ----| ---- | ---- |
-| **CSK3001 datasheet V1.5(chipsky version).pdf** | 2021.01.21 |[下载](https://open.listenai.com/resource/open/doc_resource%2FCSK%20Datasheet%2FCastor3001%20datasheet%20V1.5(chipsky%20version).pdf)|
-| **CSK3002 datasheet V1.9(chipsky version).pdf** | 2021.01.21 |[下载](https://open.listenai.com/resource/open/doc_resource%2FCSK%20Datasheet%2FCastor3002%20datasheet%20V1.9(chipsky%20version).pdf)|
-| **CSK4002 datasheet V1.9(chipsky version).pdf** | 2021.01.21 |[下载](https://open.listenai.com/resource/open/doc_resource%2FCSK%20Datasheet%2FCastor4002%20datasheet%20V1.9(chipsky%20version).pdf)|
+| **Castor3001 datasheet V1.6(chipsky version).pdf** | 2021.01.30 |[下载](https://open.listenai.com/resource/open/doc_resource%2FCSK%20Datasheet%2F20210130%2FCastor3001%20datasheet%20V1.6(chipsky%20version).pdf)|
+| **Castor3002 datasheet V2.0(chipsky version).pdf** | 2021.01.30 |[下载](https://open.listenai.com/resource/open/doc_resource%2FCSK%20Datasheet%2F20210130%2FCastor3002%20datasheet%20V2.0(chipsky%20version).pdf)|
+| **Castor4002 datasheet V2.0(chipsky version).pdf** | 2021.01.30 |[下载](https://open.listenai.com/resource/open/doc_resource%2FCSK%20Datasheet%2F20210130%2FCastor4002%20datasheet%20V2.0(chipsky%20version).pdf)|
 
 ## 产品规格书
 
