@@ -156,13 +156,12 @@ slug: /getting_start
 
 ### 3.1 注册回调事件并配置引脚
 
-> 在这一小节中，你将学会在用户主程序中注册感兴趣的系统回调，在回调中进行意图的发送。
+> 在这一小节中，你将实现在用户主程序中注册系统回调，在回调中完成意图发送。
 
 在项目目录找到 `app/app_main.c` 文件:
 
 1. 在识别回调`cb_esr_recognition`中使用`csk_script_handle_intent`发送当前的意图给 `ScriptEngine` 处理;
 
-**代码片** 
 ```c
 static void
 cb_esr_recognition(keyword_attrs_t *key_attrs)
@@ -182,7 +181,6 @@ cb_esr_recognition(keyword_attrs_t *key_attrs)
 * 使用`pinmux_config`配置芯片管脚的功能; 
    * 配置芯片管脚`PIN42`为GPIO功能，输出方向;
   
-**代码片**
 ```c
 void
 app_main(void)
@@ -201,7 +199,7 @@ app_main(void)
 
 ### 3.2 驱动GPIO进行LED控制
 
-> 在这一小节中，你将学会使用轻量级语法，在脚本中捕获意图, 进行GPIO的控制
+> 在这一小节中，你将使用轻量级语法，在脚本中捕获意图, 并进行GPIO的控制。
 
 **捕获命令词 `打开风扇` 后，点亮 LED20**
 
@@ -210,8 +208,7 @@ app_main(void)
 2. 同步修改日志打印内容 `EngineCore.logger.info "打开风扇"`;
 3. 取消 `IO.set 42, :low` 的注释，实现点亮 LED20；
 
-**代码片**
-```ruby
+```js
 on_intent "打开风扇" do
   EngineCore.logger.info "打开风扇"
   
@@ -224,8 +221,7 @@ end
 
 然后修改第二个示例方法，定义捕获`关闭风扇`后的交互。
 
-**代码片**
-```ruby
+```js
 on_intent "关闭风扇" do
   EngineCore.logger.info "关闭风扇"
 
