@@ -156,67 +156,65 @@ slug: /getting_start
 
 ### 3.1 注册回调事件并配置引脚
 
-在项目目录找到 `app/app_main.c` 文件，先解除几个注释：
+> 在这一小节中，你将学会在用户主程序中注册感兴趣的系统回调，在回调中进行意图的发送。
 
-1. 解除 `csk_script_handle_intent(key_attrs->txt);` 的注释，打开 `ScriptEngine` 处理；
+在项目目录找到 `app/app_main.c` 文件:
 
-```js
+1. 在识别回调`cb_esr_recognition`中使用`csk_script_handle_intent`发送当前的意图给 `ScriptEngine` 处理;
+
+**代码片** 
+```c
 static void
 cb_esr_recognition(keyword_attrs_t *key_attrs)
 {
 	CLOGD("[APP]ESR Recognition: kid=%d", key_attrs->kid);
 
-	// 如需在 ScriptEngine 中处理指令，解除下面这一行的注释
+	// 如需在 ScriptEngine 中处理指令，取消下面这一行的注释
 	csk_script_handle_intent(key_attrs->txt);
 }
 ```
-2. 解除 `csk_handler_register(CSK_EVENT_WAKE_UP, cb_wake_up);` 的注释，注册唤醒回调；
+2. 在`app_main`中
+   
+* 使用`csk_handler_register`注册唤醒回调;
+   
+* 使用`csk_handler_register`注册识别回调；
 
-3. 解除 `csk_handler_register(CSK_EVENT_ESR_RECOGNITION, cb_esr_recognition);` 的注释，注册识别回调；
-
-4. 解除 `pinmux_config(42, 0);` 的注释，配置 LSKits LED20 引脚与功能；
-
-```js
+* 使用`pinmux_config`配置芯片管脚的功能; 
+   * 配置芯片管脚`PIN42`为GPIO功能，输出方向;
+  
+**代码片**
+```c
 void
 app_main(void)
 {
 	CLOGD("[APP]Hello world");
 
-	// 唤醒和命令词相关回调，解除注释使用
-	 csk_handler_register(CSK_EVENT_WAKE_UP, cb_wake_up);
-	 csk_handler_register(CSK_EVENT_ESR_RECOGNITION, cb_esr_recognition);
-	// csk_handler_register(CSK_EVENT_ESR_TIMEOUT, cb_esr_timeout);
-
-	// 语音播报相关回调，解除注释使用
-	// csk_handler_register(CSK_EVENT_PLAYER_START, cb_player_start);
-	// csk_handler_register(CSK_EVENT_PLAYER_FINISH, cb_player_finish);
-
-	// 如使用 UART，解除下面这一行的注释
-	// uart_init();
-
-	// 如使用 LED20，解除下面这一行的注释
+	// 唤醒和命令词相关回调，取消注释使用
+	csk_handler_register(CSK_EVENT_WAKE_UP, cb_wake_up);
+	csk_handler_register(CSK_EVENT_ESR_RECOGNITION, cb_esr_recognition);
+	
+	// 如使用 PIN42的GPIO功能来驱动LED20，取消下面这一行的注释
 	pinmux_config(42, 0);  // LED20
 }
 ```
 
 
-### 3.2 GPIO 口操作实现 LED20 控制
+### 3.2 驱动GPIO进行LED控制
+
+> 在这一小节中，你将学会使用轻量级语法，在脚本中捕获意图, 进行GPIO的控制
 
 **捕获命令词 `打开风扇` 后，点亮 LED20**
 
 你可以在 `app/scripts/intents.rb` 定义业务逻辑。先修改第一个示例方法：
 1. 把 `on_intent` 后的命令词修改为需要捕获的`打开风扇`；
 2. 同步修改日志打印内容 `EngineCore.logger.info "打开风扇"`;
-3. 解除 `IO.set 42, :low` 的注释，实现点亮 LED20；
+3. 取消 `IO.set 42, :low` 的注释，实现点亮 LED20；
 
-```js
+**代码片**
+```ruby
 on_intent "打开风扇" do
   EngineCore.logger.info "打开风扇"
-  num = EngineCore.storage.get(:open) || 0
-  EngineCore.logger.info("count: #{num}")
-  EngineCore.storage.set(:open, num + 1)
-  UART.transmit "PWR ON"
-
+  
   # 点亮 LED20
   IO.set 42, :low
 end
@@ -226,10 +224,10 @@ end
 
 然后修改第二个示例方法，定义捕获`关闭风扇`后的交互。
 
-```js
+**代码片**
+```ruby
 on_intent "关闭风扇" do
   EngineCore.logger.info "关闭风扇"
-  UART.transmit "PWR OFF"
 
   # 熄灭 LED20
   IO.set 42, :high
