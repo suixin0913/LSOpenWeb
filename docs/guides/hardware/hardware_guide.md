@@ -11,17 +11,19 @@ slug: /hardware_guide
 - 进行语音模组量产的注意事项。
 
 
+
 ## 1.结构设计
 
 语音唤醒与识别能力除了与软件的算法相关外，还与产品的结构设计息息相关。为了保证良好的声学效果，我们建议结构设计先于硬件设计。
 
 | 文件                             | 更新时间   | 操作                                                         |
 | -------------------------------- | ---------- | ------------------------------------------------------------ |
-| **麦克风阵列设计参考V1.4.pdf**     | 2021.01.21 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2F%E9%BA%A6%E5%85%8B%E9%A3%8E%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83V1.4.pdf) |
-| **麦克风阵列录音标准.pdf**       | 2021.01.21 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2F%E9%BA%A6%E5%85%8B%E9%A3%8E%E9%98%B5%E5%88%97%E5%BD%95%E9%9F%B3%E6%A0%87%E5%87%86.pdf) |
+| **麦克风阵列设计参考手册_v1.4.pdf** | 2021.02.03 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E9%BA%A6%E5%85%8B%E9%A3%8E%E9%98%B5%E5%88%97%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C_v1.4.pdf)|
+| **麦克风阵列录音标准实施指导手册_v1.0.pdf** | 2021.02.03 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E9%BA%A6%E5%85%8B%E9%A3%8E%E9%98%B5%E5%88%97%E5%BD%95%E9%9F%B3%E6%A0%87%E5%87%86%E5%AE%9E%E6%96%BD%E6%8C%87%E5%AF%BC%E6%89%8B%E5%86%8C_v1.0.pdf)|
 
 
-## 2. PCBA设计
+
+## 2. 原理图/PCBA设计
 
 ### 2.1 准备工作
 
@@ -59,13 +61,27 @@ slug: /hardware_guide
 | Y | [CSK4002+ES7210+XR872AT+AC6956C+功放](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK4002%2BES7210%2BXR872%2BBT6956C_%E9%9F%B3%E7%AE%B1%E7%B1%BB%E6%A0%87%E6%A1%88%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1.zip)<br/> [CSK4002+ES7210+BK7251(WIFI/BT)+功放](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK4002%2BBK7251.zip)|
 
 
-### 2.3 checklist
+### 2.3 自检与评审支持
 
-[点击下载CSK芯片硬件设计审核_checklist](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCastor%E8%AF%AD%E9%9F%B3%E6%96%B9%E6%A1%88%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%AE%A1%E6%A0%B8%20checklist%20V0.91.xlsx)
+#### 2.3.1 相关文档
 
-:::note
-为了避免不必要的沟通，造成项目延期，请在提交硬件审核前，先根据checklist检查自己的设计
-:::
+硬件评审过程中可能存在以下问题：
+1. 资料缺失、需求不明确、采用物料在参考设计中没有等问题；
+2. 设计的原理和PCB资料事先没有自检，存在基础问题错误，如单网络、重命名网络、未连接网络、安全间距问题；
+3. 送样协助调试验证的样品，物料配备不齐，事先未有基本功能验证等等。
+
+**为了达成设计有效、快速落地、降低人力沟通成本，同时兼顾到一次设计的正确性、完整性、可生产性，我们拟出硬件评审指南保证硬件设计工作顺利完成。请硬件工程师务必阅读:**
+
+| 文件| 更新时间 | 操作 |
+| ----| ---- | ---- |
+| **硬件评审指南.pdf** | 2021.02.03 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E7%A1%AC%E4%BB%B6%E8%AF%84%E5%AE%A1%E6%8C%87%E5%8D%97.pdf)|
+| **Castor语音方案硬件设计审核 checklist V0.91.xlsx** | 2021.01.20 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCastor%E8%AF%AD%E9%9F%B3%E6%96%B9%E6%A1%88%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%AE%A1%E6%A0%B8%20checklist%20V0.91.xlsx)|
+
+
+#### 2.3.2 线上获取硬件评审支持
+
+你可以登录[LSCloud](https://cloud.listenai.com/)创建硬件评审工单，获取结构设计、原理图设计、PCB设计评审支持。你可以阅读[创建工单获取技术支持](https://open.listenai.com/cloud_project)了解工单功能。
+
 
 ### 2.4 量产准备
 
