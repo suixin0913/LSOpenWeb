@@ -74,7 +74,7 @@ slug: /hardware_guide
 
 | 文件| 更新时间 | 操作 |
 | ----| ---- | ---- |
-| **硬件评审指南.pdf** | 2021.02.03 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E7%A1%AC%E4%BB%B6%E8%AF%84%E5%AE%A1%E6%8C%87%E5%8D%97.pdf)|
+| **硬件评审指南.pdf** | 2021.02.06 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E7%A1%AC%E4%BB%B6%E8%AF%84%E5%AE%A1%E6%8C%87%E5%8D%97.pdf)|
 | **Castor语音方案硬件设计审核 checklist V0.91.xlsx** | 2021.01.20 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCastor%E8%AF%AD%E9%9F%B3%E6%96%B9%E6%A1%88%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%AE%A1%E6%A0%B8%20checklist%20V0.91.xlsx)|
 
 

@@ -22,3 +22,7 @@ slug: /download
 
 下载聆思语音效果测试相关材料。
 
+### [品类体验固件](/firm_download)
+
+下载可直接烧录至LSKits的品类固件。
+
