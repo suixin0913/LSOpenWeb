@@ -106,7 +106,7 @@ slug: /guides/firmware/base_config
 
 ![](./files/base.png)
 
-你也可以点击项目左侧工程树 **config/gui/base.csk** ，打开项目的基础配置项。
+你也可以点击项目左侧工程树 **config/base.csk** ，打开项目的基础配置项。
 
 ![](./files/base_csk.png)
 
@@ -174,11 +174,15 @@ slug: /guides/firmware/base_config
 
 - 【识别持续时间】：唤醒设备后保持识别状态的时间。如设备在规定的时间内未收到有效的语音请求，设备会退出识别状态。如需再次发起请求，请重新唤醒。
 - 【交互指令】：语音硬件模组对外发送指令。指令包括：
-  - CSK通用指令：聆思智能制定的标准指令，通过 **UART** 进行输出。需要在上位机适配CSK芯片发送的指令。
+  - CSK通用指令：聆思智能制定的标准指令，通过 **UART** 进行输出。需要在上位机适配CSK芯片发送的指令。CSK通用指令说明，请查看文末拓展材料。
   - 自定义指令：在上位机已支持特定指令的情况下，指定CSK芯片输出对应指令，上位机无需进行二次开发。
 - 【交互方式】：目前自定义指令支持 **UART** 和 **PWM** 两种传输方式。
   - **UART** 指令可选择发送的波特率和串口指令格式。请根据 **UART** 对接的芯片情况进行配置选择。
   - **PWM** 指令可选择发送的频率、占空比和传输次数。请根据 **PWM** 对接的芯片情况进行配置选择。
 
 ![](./files/interact_set.png)
+
+## 拓展材料下载
+
+- [CSK标准UART串口通信协议文档](https://open.listenai.com/resource/open/doc_resource%2F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%2FCSK%E6%A0%87%E5%87%86UART%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E6%96%87%E6%A1%A3V1.2.pdf)
 
