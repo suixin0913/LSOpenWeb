@@ -8,9 +8,9 @@ slug: /getting_start
 
 
 > 通过本篇你将通过一系列具体的示例操作了解到：
-1. 如何完成 LStuido 环境配置；
-2. 如何使用 LStuido 创建项目并完成简单的固件配置；
-3. 如何使用 LStuido 把固件烧录到 LSKits，得到一个小风扇语音交互 demo；
+1. 如何完成 LStudio 环境配置；
+2. 如何使用 LStudio 创建项目并完成简单的固件配置；
+3. 如何使用 LStudio 把固件烧录到 LSKits，得到一个小风扇语音交互 demo；
 4. 如何使用简洁语法实现：在获取回调后，定义 GPIO 控制外围器件。
 
 ## 1. 做好准备
@@ -42,8 +42,10 @@ slug: /getting_start
 
 ![](./files/git.png)
 
-使用默认选项一路点击 NEXT 直至安装完成。
-为确保 git 安装完成，重启 LStduio 后在控制台输入 `git --version` ，显示以下信息表示安装成功。
+使用默认选项一路点击 NEXT 直至安装完成，安装完成后请重启 LStudio。
+
+
+为确保 git 安装完成，可以打开命令行终端（顶部菜单-终端-新终端）。在终端输入 `git --version` ，显示以下信息表示安装成功。
 
 ![](./files/git_check.png)
 
@@ -67,7 +69,7 @@ slug: /getting_start
 1. 输入工程名称：CSK4002风扇
 2. 选择工程目录。
 3. 选择芯片型号：4002。
-4. 选择基础固件版本：选择最新版，目前是3.0.2。
+4. 选择基础固件版本：3.0.2。
 5. 选择板型模板：聆思开发板V1.0。
 
 :::tip
@@ -78,7 +80,7 @@ slug: /getting_start
 
 ### 2.2 基础配置
 
-接下来，点击工具栏左上角的“基础配置”来选择你想使用的配置，如下图，在交互配置-交互指令中选择“自定义指令”，其它暂时使用默认配置。当然在这里你也可以通过修改该页面下的“TTS配置”和“交互配置”等实现个性化效果。
+接下来请如下图，点击工具栏左上角的「基础配置」，在交互配置-交互指令中选择「自定义指令」，其它暂时使用默认配置。你也可以通过修改该页面下的「TTS配置」和「交互配置」等实现个性化效果。
 
 ![](./files/config1.png)
 
@@ -118,12 +120,12 @@ slug: /getting_start
 
 ![](./files/20210122044713.png)
 
-1. **请准备 usb 数据线**（不是圆口电源线），使用 usb 数据线连接 LSKits 与电脑，关闭 LSKits 开关（左拨）；
-2. **按住** LSKits 上的**update**键，再打开开关（右拨），**先不要松开 update 键**；
+1. **请准备 micro-usb 数据线**（请注意不是圆口电源线），使用 usb 数据线连接 LSKits 与电脑，关闭 LSKits 开关（左拨）；
+2. **按住** LSKits 上的 **update** 键，再打开开关（右拨），**先不要松开 update 键**；
 
 ![](./files/burn2.png)
 
-2. 点击**LStudio-工具栏-烧录**，页面提示进入烧录模式后，可以松开update键；
+2. 点击**LStudio-工具栏-烧录**，页面提示进入烧录模式后，可以松开 update 键；
 
 ![](./files/burn3.png)
 
@@ -136,7 +138,7 @@ slug: /getting_start
 
 :::tip 若烧录失败，请检查：
 1. 是否已准确执行上方烧录流程；
-2. 是否已按1.4步安装相关驱动；
+2. 是否已安装烧录驱动；
 3. 请确保 LSKits 上的芯片型号是4002；
 4. 烧录或者重启的时候，需要把串口拔掉。硬件上串口电源会倒灌，可能引起无法重启或者烧录；
 5. 若连续烧录失败，请联系FAE/提交工单寻求帮助。
@@ -146,7 +148,15 @@ slug: /getting_start
 
 恭喜你得到了第一个固件。现在你可以使用唤醒词**你好哈利**和**交互配置中的命令词**与 LSKits 进行交互了。
 
-在插入串口后，你也在 LStudio 集成的串口终端中查看语音交互过程中的日志：
+你也在 LStudio 集成的串口工具中查看语音交互过程中的日志。你需要先自备串口连接电脑与 LSKits。
+
+如下图，**串口 RXD** 接 **LSKits TX1**，**串口 GND** 接 **LSKits GND**。
+
+
+![](./files/20210226132255.png)
+
+
+在串口完成对接后，打开 LStudio 串口工具，打开检测到的串口：
 
 ![](./files/20210130175945.png)
 
@@ -162,7 +172,7 @@ slug: /getting_start
 
 在项目目录找到 `app/app_main.c` 文件:
 
-1. 在识别回调 `cb_esr_recognition` 中使用 `csk_script_handle_intent` 发送当前的意图给 `ScriptEngine` 处理;
+1. 在识别回调函数 `cb_esr_recognition` 中使用函数 `csk_script_handle_intent` ，发送当前的意图给 `ScriptEngine` 处理（可通过取消源码注释打开功能）;
 
 ```c
 static void
@@ -174,15 +184,16 @@ cb_esr_recognition(keyword_attrs_t *key_attrs)
 	csk_script_handle_intent(key_attrs->txt);
 }
 ```
-2. 在`app_main`中
+
+2. 继续在`app_main`中进行修改（可通过取消源码注释打开功能）
    
-* 使用`csk_handler_register`注册唤醒回调;
+* 使用`csk_handler_register(CSK_EVENT_WAKE_UP, cb_wake_up)`注册唤醒回调;
    
-* 使用`csk_handler_register`注册识别回调；
+* 使用`csk_handler_register(CSK_EVENT_ESR_RECOGNITION, cb_esr_recognition)`注册识别回调；
 
 * 使用 `pinmux_config` 配置芯片管脚的功能; 
 
-	* 配置芯片管脚`PIN42`为GPIO功能，输出方向。
+	* 配置使用芯片管脚 `PIN42` ，选用功能2（GPIO 功能），输出方向。
   
 ```c
 void
@@ -239,7 +250,9 @@ end
 
 ### 3.3 体验新的效果
 
-在完成以上代码修改后，重新依次进行**固件编译、固件打包、固件烧录**。
+
+由于上述步骤已经修改了 `./app` 中的代码，请务必在工具栏点击「编译」，对代码进行重新编译。
+在编译完成后，依次进行**固件打包、固件烧录**。
 
 烧录完成后重启开发套件，当命中**打开风扇**后，LED20 灯光会同步亮起；当命中**关闭风扇**后，LED20 灯光会同步熄灭。
 
@@ -253,14 +266,6 @@ end
 
 ## 了解更多
 
-你可以通过以下材料进一步了解 LSKits：
-
-- [LSKits硬件使用指导手册.pdf](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FLSKits%E7%A1%AC%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC%E6%89%8B%E5%86%8C.pdf)
-
-- [下载 LSKits 参考设计](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FLSKits%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1.zip)
-
-- [LSKits BOM.zip](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FLSKits%20BOM.zip)
-
 
 为了快速定制扩展语音项目，你可能对以下内容也感兴趣：
 
@@ -269,6 +274,14 @@ end
 - [如何使用LStudio实现自定义业务开发](http://open.listenai.com/csk_sdk_demo) 
 
 - [如何使用LStudio修改基础配置](https://open.listenai.com/guides/firmware/base_config) 
+
+你可以通过以下材料进一步了解 LSKits：
+
+- [LSKits硬件使用指导手册.pdf](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FLSKits%E7%A1%AC%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC%E6%89%8B%E5%86%8C.pdf)
+
+- [下载 LSKits 参考设计](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FLSKits%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1.zip)
+
+- [LSKits BOM.zip](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FLSKits%20BOM.zip)
 
 在项目开发过程中如果需要帮助，可以通过工单系统向我们获取技术支持：
 
