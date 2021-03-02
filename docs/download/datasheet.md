@@ -8,7 +8,6 @@ slug: /datasheet
 
 | 文件| 更新时间 | 操作 |
 | ----| ---- | ---- |
-| **产品宣传页_v1.5.pdf** | 2021.01.20 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D%2F%E4%BA%A7%E5%93%81%E5%AE%A3%E4%BC%A0%E9%A1%B5_v1.5.pdf)|
 | **聆思智能公司介绍_v2.pdf** | 2021.01.20 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D%2F%E8%81%86%E6%80%9D%E6%99%BA%E8%83%BD%E5%85%AC%E5%8F%B8%E4%BB%8B%E7%BB%8D_v2.pdf)|
 | **聆思智能销售PPT_v8.pdf** | 2021.01.20 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D%2F%E8%81%86%E6%80%9D%E6%99%BA%E8%83%BD%E9%94%80%E5%94%AEPPT_v8.pdf)|
 
