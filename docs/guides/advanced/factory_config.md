@@ -202,7 +202,7 @@ check_gpios_delay = 2
 
 产线烧录流程包括`固件烧录`和`SN烧录`，均在`CastorFactoryTool`量产工具上完成。
 
-### 3.1 获取量产包
+### 4.1 获取量产包
 
 用户可从LStudio工程根目录`release`目录获取到量产包`release.zip`
 ![](./files/factory_config/1614685884552.png)
@@ -212,24 +212,24 @@ check_gpios_delay = 2
 ![](./files/factory_config/1614763016767.png)
 
 
-### 3.2 打开量产烧录工具
+### 4.2 打开量产烧录工具
 
 ![](./files/factory_config/1614686136267.png)
 
-### 3.3 安装USB驱动
+### 4.3 安装USB驱动
 
 ![](./files/factory_config/1614686244775.png)
 ![](./files/factory_config/1614686264149.png)
 
-### 3.4 选择USB烧录
+### 4.4 选择USB烧录
 
 ![](./files/factory_config/1614686289984.png)
 
-### 3.5 选择并导入量产固件包
+### 4.5 选择并导入量产固件包
 
 ![](./files/factory_config/1614762594992.png)
 
-### 3.6 准备SN序列号文件
+### 4.6 准备SN序列号文件
 
 SN序列号列表文件格式说明如下:
 
@@ -267,22 +267,22 @@ SN=0002;,0
 
 :::
 
-### 3.7 导入SN序列号文件
+### 4.7 导入SN序列号文件
 
 ![](./files/factory_config/1614686772552.png)
 ![](./files/factory_config/1614687997155.png)
 
-### 3.8 填写SN烧录地址
+### 4.8 填写SN烧录地址
 
 - 3002的SN烧录地址为`0x3ff000`(4M Flash中最后一页，共计4K空间)
-- 4002的SN烧录地址为`0x7fe000`(8M Flash中最后两页，共计8K空间)
+- 4002的SN烧录地址为`0x7ff000`(8M Flash中最后一页，共计4K空间)
 
-### 3.9 开始烧录
+### 4.9 开始烧录
 
 ![](./files/factory_config/1614688581999.png)
 ![](./files/factory_config/1614688617339.png)
 
-### 3.10 烧录完成
+### 4.10 烧录完成
 
 ![](./files/factory_config/1614688651062.png)
 
