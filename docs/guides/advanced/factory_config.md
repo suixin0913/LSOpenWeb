@@ -204,8 +204,13 @@ check_gpios_delay = 2
 
 ### 3.1 获取量产包
 
-用户可从LStudio工程根目录`release`目录获取到量产烧录包`release.zip`
+用户可从LStudio工程根目录`release`目录获取到量产包`release.zip`
 ![](./files/factory_config/1614685884552.png)
+
+将`release.zip`解压，解压后的目录中找到量产固件包，量产固件包的命名规则为`项目名-版本号-factory.csk`
+
+![](./files/factory_config/1614763016767.png)
+
 
 ### 3.2 打开量产烧录工具
 
@@ -222,7 +227,7 @@ check_gpios_delay = 2
 
 ### 3.5 选择并导入量产固件包
 
-![](./files/factory_config/1614686548000.png)
+![](./files/factory_config/1614762594992.png)
 
 ### 3.6 准备SN序列号文件
 
