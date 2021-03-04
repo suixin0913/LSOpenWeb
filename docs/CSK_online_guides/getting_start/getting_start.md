@@ -1,8 +1,8 @@
 ---
 
-id: getting_start
+id: online_getting_start
 title: 快速上手 CSK 离在线项目
-slug:/CSK_online_guides/getting_start
+slug: /CSK_online_guides/getting_start
 
 ---
 
@@ -98,7 +98,7 @@ LSTudio 主要用于 CSK 固件配置与烧录，在 CSK 项目开发指南中�
 
 ### 2.1.制作CSK4002固件
 
-LSTudio 目前暂未支持适配 BK7251 芯片的 CSK固件（即将支持），可[点击此处]([下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%AD%A6%E5%99%A8%E5%BA%93%2FCSK4002%E5%9B%BA%E4%BB%B6%EF%BC%88%E9%80%82%E9%85%8Dbk7251%EF%BC%89.zip))下载CSK固件。
+LSTudio 目前暂未支持适配 BK7251 芯片的 CSK固件（即将支持），可[点击此处](https://open.listenai.com/resource/open/doc_resource%2F%E6%AD%A6%E5%99%A8%E5%BA%93%2FCSK4002%E5%9B%BA%E4%BB%B6%EF%BC%88%E9%80%82%E9%85%8Dbk7251%EF%BC%89.zip)下载CSK固件。
 
 ### 2.2.固件烧录
 
@@ -111,7 +111,8 @@ LSTudio 目前暂未支持适配 BK7251 芯片的 CSK固件（即将支持），
 - 将电脑与开发版通过 USB 连接，烧录工具会自动开始固件烧录；
 - 烧录完成后，在烧录工具中选择【停止烧录】，之后松开开发板的【自锁按键】。
 
-<img src="./files/csk_burn.png" alt="70" style="zoom:67%;" />
+![](./files/csk_burn.png)
+
 
 ### 2.3.固件运行
 
@@ -129,13 +130,14 @@ LSTudio 目前暂未支持适配 BK7251 芯片的 CSK固件（即将支持），
 
 登录 LSCloud ，找到 BK7251 代码库并下载至电脑，路径如下图；Windows 下的 rtthread 编译工具为 env ；可在代码目录的 \tool\ 下找到 env_released_0.7.1.7z，如下图。将编译工具解压至代码库同一文件目录下。
 
-<img src="./files/git_path.png" alt="100" style="zoom:100%;" />
+![](./files/git_path.png)
+
 
 进入 \env_released_0.7.1\env\ 下打开 env.exe （免安装）。即可进入env控制台，界面如下图：
 
 ![](./files/env_cmd.png)
 
-:::tips
+:::tip
 
 \tool\env_released_0.7.1\env 目录下有一张 Add_Env_To_Right-click_Menu.png  (添加 env 至右键菜单.png) 的图片，根据图片上的步骤操作，就可以在任意文件夹下通过右键菜单来启动 env 控制台。
 
@@ -193,31 +195,33 @@ LSTudio 目前暂未支持适配 BK7251 芯片的 CSK固件（即将支持），
 
 - 编译，可输入 `scons -j4` 执行编译，编译完成后随即生成 rtt 固件 rtthread.bin。如下图：
 
-  <img src="./files/compile.png" alt="67" style="zoom:67%;" />
+![](./files/compile.png)
+  
 
 - 清除，可输入 `scons -c` 执行清除，清除完毕提示如下图：
 
-  <img src="./files/clean.png" alt="67" style="zoom:67%;" />
+![](./files/clean.png)
+  
 
 - 打包，在SDK 路径下 \tool\lisa_packager\ 下执行 `beken_packager.exe` 或 `beken_packager.bat` ，即可。
 
-  <img src="./files/package.png" style="zoom:35%;" />
+![](./files/package.png)
+  
 
 ### 3.4.固件烧录
 
 BK7251 组件主要分为 boot+app+其他分区组件（例如本地提示⾳）。**全组件需使⽤ SPI 烧录，单独 APP 使⽤ UART 烧录⽅式。通常来说刚拿到芯片时，boot 分区都是未曾烧录的，需要开发者使用 SPI 烧录器为芯片烧录全组件。SPI 烧录器需要另外购买，有需要可联系聆思商务。**boot 分区一经烧录，后续烧录均可通过 UART 的方式进行。下图标注了 SPI 烧录与 UART 烧录的入口。
 
-<img src="./files/bk7251_burn.png" alt="67" style="zoom:60%;" />
+![](./files/bk7251_burn.png)
+
 
 #### SPI烧录
 
 首先需要准备 SPI 烧录器，如下图：
 
-<img src="./files/spi_boot.png" alt="67" style="zoom:67%;" />
+![](./files/spi_boot.png)
 
-随后，在 \tool\lisa_tool\download tool_spi 目录下找到烧录软件 HID Flash Download Tool(1).exe。将 SPI 烧录器的硬件 SPI 烧录接⼝插到开发板上的 BK7521 SPI 烧录⼝，此时注意需要让开发板的 CSK ⾃锁按键处于**抬起状态**；
-
-最后打开烧录软件，按照下图操作进行烧录即可。
+随后，在 \tool\lisa_tool\download tool_spi 目录下找到烧录软件 HID Flash Download Tool(1).exe。将 SPI 烧录器的硬件 SPI 烧录接⼝插到开发板上的 BK7521 SPI 烧录⼝，此时注意需要让开发板的 CSK ⾃锁按键处于**抬起状态**；最后打开烧录软件，按照下图操作进行烧录即可。
 
 ![](./files/SPI_boot_1.png)
 
@@ -231,13 +235,13 @@ BK7251 组件主要分为 boot+app+其他分区组件（例如本地提示⾳）
 
 在源码目录 \tool\lisa_tool\download tool_uart 下找到烧录软件 bk_writer_V1.52.exe ，选择固件并烧录。如下图
 
-<img src="./files/UART.png" alt="50" style="zoom:67%;" />
+![](./files/UART.png)
 
 #### 写入 Device_id
 
 如果开发板第一次烧录固件，或你之前通过命令行、SPI烧录软件擦除了固件中的 `Device_id`。在烧录固件后，你需要为固件写入 `Device_id` 。可在串口工具中输入命令行：`lisa_perst set string device_id   {id内容}` 完成写入（注意空格）。`Device_id` 可在 iFLYOS平台导入，在1.3中已做讲解，此处不做过多讲解。
 
-:::tips
+:::tip
 
 如果烧录前 bk7251 开发板的串口没能正常工作，则需要重启开发板使串口进入正常工作。
 
@@ -273,7 +277,7 @@ BK7251 组件主要分为 boot+app+其他分区组件（例如本地提示⾳）
 
 “小飞小飞，帮我定个三点的闹钟。“
 
-:::tips
+:::tip
 
 音乐属于付费资源，需要单独付费，如果希望在开发板上体验音乐，可联系聆思商务开通音乐权限。
 
@@ -285,17 +289,17 @@ BK7251 组件主要分为 boot+app+其他分区组件（例如本地提示⾳）
 
 你可以阅读以下文档，快速理解CSK离在线方案原理：
 
-- [开发者指引]( /CSK_online_guides/developer_guides)
+- **[开发者指引](/CSK_online_guides/developer_guides)**
 
 如果你有其他WiFi芯片，想要接入CSK离在线方案，你可以参考：
 
-- [LISA API](https://open.listenai.com/resource/open/doc_resource%2F%E9%87%8F%E4%BA%A7%E6%8C%87%E5%8D%97%2F%E6%A8%A1%E7%BB%84%E7%83%A7%E5%BD%95%2Fcastor-factory-tool-setup-v1.0.0.10.exe) 
+- **[LISA API](https://open.listenai.com/resource/open/doc_resource%2F%E9%87%8F%E4%BA%A7%E6%8C%87%E5%8D%97%2F%E6%A8%A1%E7%BB%84%E7%83%A7%E5%BD%95%2Fcastor-factory-tool-setup-v1.0.0.10.exe)**
 
 如果需要进行固件开发
 
-- [上位机固件常用功能二次开发](/CSK_online_guides/secondary_development)
+- **[上位机固件常用功能二次开发](/CSK_online_guides/secondary_development)**
 
 在项目开发过程中如果需要帮助，可以通过工单系统向我们获取技术支持：
 
-- [工单系统](https://open.listenai.com/cloud_project) 
+- **[工单系统](https://open.listenai.com/cloud_project)** 
 

@@ -2,7 +2,7 @@
 
 id: developer_guides
 title: 开发指引
-slug:/CSK_online_guides/developer_guides
+slug: /CSK_online_guides/developer_guides
 
 ---
 
@@ -22,7 +22,8 @@ slug:/CSK_online_guides/developer_guides
 
 ## 2.方案架构特点
 
-<img src="./files/LISA_API.png" alt="80" styles="zoom:80%;" />
+![](./files/LISA_API.png)
+
 
 方案具备如下特点：               
 
@@ -48,13 +49,15 @@ slug:/CSK_online_guides/developer_guides
 
 下图详细描述了离在线方案各个环节的运行机制，开发者可通过该流程图，快速了解方案整体运行逻辑。
 
-<img src="./files/frame.png" alt="frame90" styles="zoom:100%;" />
+![](./files/frame.png)
+
 
 ### 3.1.CSK音频处理
 
 设备端音频处理链路如下图所示，麦克风拾取人声后，将原始音频送至 ADC 。ADC 将模拟信号转换为数字信号后的音频传送至 CSK 芯片做前端声学处理，经过处理后将输出8路音频。
 
-<img src="./files/Audio_transmission.png" alt="80" styles="zoom:100%;" />
+![](./files/Audio_transmission.png)
+
 
 **本地识别**
 

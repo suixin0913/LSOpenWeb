@@ -18,6 +18,16 @@ module.exports = {
       },
       items: [
         {
+          to: "/",
+          label: 'CSK开发指南',
+          position: 'left'
+        },
+        {
+          to: "/CSK_online_guides_home",
+          label: '离在线开发指南',
+          position: 'left'
+        },
+        {
           to: "/csksdk_api",
           label: 'API',
           position: 'left'

@@ -1,8 +1,8 @@
 ---
 
 id: secondary_development
-title:上位机固件二次开发
-slug:/CSK_online_guides /secondary_development
+title: 上位机固件二次开发
+slug: /CSK_online_guides/secondary_development
 
 ---
 
@@ -36,7 +36,7 @@ slug:/CSK_online_guides /secondary_development
 
 第一步，在 iFLYOS 平台的【设备能力】-【热点配网】-【 Wi-Fi 】热点前缀处修改，在此处修改并保存后，小飞在线 APP 端将实时生效。配网时，APP 端将根据你在 iFLYOS 平台设置的前缀寻找热点并连接。
 
-<img src="./files/AP_CONECCT.png" alt="60" styles="zoom:40%;" />
+![](./files/AP_CONECCT.png)
 
 第二步，在固件代码中修改前缀 ，位于 **evs_netconfig.c**，如下。修改完成并烧录固件后，设备进入配网模式，广播时的热点前缀将变为自定义前缀。
 
@@ -453,4 +453,4 @@ bk7251_sdk_relase\tool\rtt_ota 目录下。
 
 完成二次开发并编译固件后，你可在 iFLYOS 设备接入平台——【产品认证】中选择【下载模板】，下载平台测试用例，对设备进行功能自测。
 
-<img src="./files/test_case.png" alt="80" styles="zoom:45%;" />
+![](./files/test_case.png)

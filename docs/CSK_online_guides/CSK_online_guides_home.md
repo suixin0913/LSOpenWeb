@@ -1,22 +1,18 @@
 ---
-
 id: csk_online_guides_index
-title: 离在线项目开发指南
-slug: /
-
+title: CSK 离在线项目开发指南
+slug: /CSK_online_guides_home
 ---
 
-## 从这里开始
+## 开发前必读
+-------------
 
 ### [快速上手 CSK 离在线项目](/CSK_online_guides/getting_start)
 
 基于 CSK+BK7251 开发板，从固件制作、编译、烧录，到配网、简单体验，带你0到1完成第一个离在线项目。
 
-
-
-
-
-## 开发前必读
+<!-- ## 开发前必读
+------------------ -->
 
 ### [开发者指引](/CSK_online_guides/developer_guides)
 
@@ -27,14 +23,15 @@ slug: /
 
 
 ## 进阶知识
+---------------
 
-### [CSK固件二次开发](/)
+### [CSK固件二次开发](/CSK_online_guides_home)
 
 :::note
 文档建设中
 :::
 
-### [上位机固件二次开发](/CSK_online_guides /secondary_development)
+### [上位机固件二次开发](/CSK_online_guides/secondary_development)
 
 本篇介绍上位机固件的二次开发方法，包括Client_id、AP 热点前缀、灯光、按键的修改、自定义技能的设备端实现、以及本地 TTS 文件的集成。
 
@@ -42,7 +39,7 @@ slug: /
 
 本篇介绍如何从0到1实现 iFLYOS 自定义语音技能。
 
-### [新上位机如何接入离在线方案]()
+### [新上位机如何接入离在线方案](/CSK_online_guides_home)
 
 :::note
 文档建设中
@@ -53,6 +50,7 @@ slug: /
 
 
 ## 其他
+----------
 
 ### 硬件参考设计
 
