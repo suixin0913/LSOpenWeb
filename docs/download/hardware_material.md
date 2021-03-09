@@ -18,7 +18,7 @@ slug: /hardware_material
 | ----| ---- | ---- |
 | **CSK300X+ES7202离线模块-标案参考设计.zip** | 2021.01.21 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK300X%2BES7202%E7%A6%BB%E7%BA%BF%E6%A8%A1%E5%9D%97-%E6%A0%87%E6%A1%88%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1.zip)|
 | **CSK300X+ES7243标准离线模块_标案参考设计.zip** | 2021.01.21 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK300X%2BES7243%E6%A0%87%E5%87%86%E7%A6%BB%E7%BA%BF%E6%A8%A1%E5%9D%97_%E6%A0%87%E6%A1%88%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1.zip)|
-| **CSK4002+BK7251.zip** | 2021.01.21 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK4002%2BBK7251.zip)|
+| **CSK4002+BK7251.zip** | 2021.03.09 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK4002%2BBK7251.zip)|
 | **CSK4002+ES7210+XR872+BT6956C_音箱类标案参考设计.zip** | 2021.01.21 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK4002%2BES7210%2BXR872%2BBT6956C_%E9%9F%B3%E7%AE%B1%E7%B1%BB%E6%A0%87%E6%A1%88%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1.zip)|
 | **CSK4002+ES7210+XR872_在离线模块类标案参考设计.zip** | 2021.01.21 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK4002%2BES7210%2BXR872_%E5%9C%A8%E7%A6%BB%E7%BA%BF%E6%A8%A1%E5%9D%97%E7%B1%BB%E6%A0%87%E6%A1%88%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1.zip)|
 | **CSK4002+ES7210标准离线模块_标案参考设计.zip** | 2021.01.21 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK4002%2BES7210%E6%A0%87%E5%87%86%E7%A6%BB%E7%BA%BF%E6%A8%A1%E5%9D%97_%E6%A0%87%E6%A1%88%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1.zip)|
@@ -31,9 +31,9 @@ slug: /hardware_material
 | ----| ---- | ---- |
 | **硬件评审指南.pdf** | 2021.03.04 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E7%A1%AC%E4%BB%B6%E8%AF%84%E5%AE%A1%E6%8C%87%E5%8D%97.pdf)|
 | **CSK语音方案 HW Design Notes.pdf** | 2021.01.20 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK%E8%AF%AD%E9%9F%B3%E6%96%B9%E6%A1%88%20HW%20Design%20Notes.pdf)|
-| **Castor语音方案硬件设计审核 checklist V0.91.xlsx** | 2021.01.20 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCastor%E8%AF%AD%E9%9F%B3%E6%96%B9%E6%A1%88%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%AE%A1%E6%A0%B8%20checklist%20V0.91.xlsx)|
+| **Castor语音方案硬件设计审核 checklist V0.91.xlsx** | 2021.03.09 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCastor%E8%AF%AD%E9%9F%B3%E6%96%B9%E6%A1%88%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%AE%A1%E6%A0%B8%20checklist%20V0.91.xlsx)|
 | **01 CSK PCB设计离线基础篇.pdf** | 2021.03.04 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2F01%20CSK%20PCB%E8%AE%BE%E8%AE%A1%E7%A6%BB%E7%BA%BF%E5%9F%BA%E7%A1%80%E7%AF%87.pdf)|
-| **02 CSK PCB设计离在线进阶篇.pdf** | 2021.03.04 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2F02%20CSK%20PCB%E8%AE%BE%E8%AE%A1%E7%A6%BB%E5%9C%A8%E7%BA%BF%E8%BF%9B%E9%98%B6%E7%AF%87.pdf)|
+| **02 CSK PCB设计离在线进阶篇.pdf** | 2021.03.09 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2F02%20CSK%20PCB%E8%AE%BE%E8%AE%A1%E7%A6%BB%E5%9C%A8%E7%BA%BF%E8%BF%9B%E9%98%B6%E7%AF%87.pdf)|
 
 ## 芯片封装
 
@@ -47,5 +47,5 @@ slug: /hardware_material
 | 文件| 更新时间 | 操作 |
 | ----| ---- | ---- |
 | **模组烧录.zip** | 2021.01.21 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E9%87%8F%E4%BA%A7%E6%8C%87%E5%8D%97%2F%E6%A8%A1%E7%BB%84%E7%83%A7%E5%BD%95.zip)|
-| **芯片烧录.zip** | 2021.01.21 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E9%87%8F%E4%BA%A7%E6%8C%87%E5%8D%97%2F%E8%8A%AF%E7%89%87%E7%83%A7%E5%BD%95.zip)|
+| **芯片烧录.zip** | 2021.03.09 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E9%87%8F%E4%BA%A7%E6%8C%87%E5%8D%97%2F%E8%8A%AF%E7%89%87%E7%83%A7%E5%BD%95.zip)|
 
