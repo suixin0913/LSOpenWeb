@@ -1,4 +1,5 @@
 ---
+ota
 
 id: secondary_development
 title: 上位机固件二次开发
@@ -8,11 +9,13 @@ slug: /CSK_online_guides/secondary_development
 
 > 本文主要介绍离在线方案运行逻辑，帮助开发者快速理解方案架构。阅读本文后，你将了解到：
 >
-> 1.如何在上位机固件中修改 Client_id、OTA_SECRET、AP热点前缀、按键、灯光、本地TTS；
+> 1.了解 XR872AT 的开发环境编译与配置；
 >
-> 2.如何在固件端实现自定义技能；
+> 2.了解上位机固件的业务源码结构；
 >
-> 3.如何在完成二次开发后进行验证。
+> 3.如何自定义 Client_id、OTA_SECRET、AP热点前缀、按键、灯光、本地TTS；
+>
+> 4.如何在完成二次开发后进行验证；
 
 :::important
 
@@ -20,15 +23,177 @@ slug: /CSK_online_guides/secondary_development
 
 :::
 
+## 1.XR872AT开发环境配置
+
+在进入二次开发之前，可先了解XR872AT的固件开发环境与编译方法，方便你在进行二次开发后，编译自己的固件产物。
+
+### 开发环境搭建
+
+- 详细内容见[XRADIO_Quick_Start_Guide-CN.pdf]() 1.1、1.2、1.3章节
+
+### 编译工具链地址
+
+- Windows版本
+  - 链接： https://pan.baidu.com/s/1Ugs8lRApyA3ONs91yXOWbg
+  - 提取码：w4gr
+- Linux版本
+  - 链接： https://pan.baidu.com/s/1BsnmhgXx2zZjIVtJ49ICYQ
+  - 提取码：z45o
+
+### 快速编译
+
+#### 编译
+
+- 详细内容见[XRADIO_Quick_Start_Guide-CN.pdf]() 2章节sdk编译
+
+#### 编译示例
+
+- 对 "listenai_castor_xr872" 工程进行代码编译和镜像创建的常规过程，举例如下：
+
+  ```c
+  # 切换到工程编译目录
+  $ cd project/listenai_castor_xr872/gcc/
+  # 执行 SDK 基础配置， 选择芯片型号为“XR872”， 高频晶振为“40M”
+  $ make config
+  **
+  XRADIO SDK Configuration
+  *C
+  hip
+  1. XR872
+  2. XR808
+  choice[1-2]: 1
+  External high speed crystal oscillator
+  1. 24M
+  2. 26M
+  3. 40M
+  choice[1-3]: 3
+  # 删除所有 SDK 编译中间文件
+  # 该命令为可选命令。 如果没有修改编译选项， 也没有切换工程目录， 可不执行该命令。
+  $ make build_clean
+  # 编译代码并生成镜像文件
+  # 生成的镜像文件为“project/listenai_castor_xr872/image/xr872/xr_system.img”
+  $ make build
+  ```
+
+#### 编译路径和固件路径
+
+- 编译目录和生成img文件目录如下所示
+
+  ```c
+  ├── bin
+  ├── chip.mk
+  ├── gcc.mk
+  ├── include
+  ├── lib
+  ├── project
+  │	├── listenai_castor_xr872
+  │  	│	├── gcc						# 编译目录
+  │ 	│	├── image
+  │  	│	│	├── xr872
+  │  	│	│	│	├── xr_system.img	# 编译后生成img文件
+  │  	│	│	│	├── ......
+  │  	│	│	├── ......
+  │  	│   ├── .......
+  │   ├── .......
+  ├── src
+  ├── ......
+  ├── tools
+    
+  ```
 
 
-### 1.更换 Client_id 、OTA_SECRET
 
-修改方式：更改源码目录下 **bk7251_sdk_relase/applications/lisa/lisa_app/lisa_evs/evs_opts.h**  中 `Client_id`、`OTA_SECRET` 的宏定义。
+## 2.业务源码说明
+
+### evs源码路径
+
+- **/project/listenai_castor_xr872/listenai_sdk/modules/listenai_evs**
+
+### 目录结构
+
+- 代码目录结构及说明
+
+```c
+├── listenai_evs
+│	├── evs_alertplayer.c		
+│	├── evs_alertplayer.h		// 云端闹钟播放管理，解析和播放下发的RING类型的audio_out指令
+│	├── evs_aplinker.c
+│	├── evs_aplinker.h			// AP配网模块
+│	├── evs_audiomgr.c
+│	├── evs_audiomgr.h			// 焦点管理模块，负责维护音乐、tts、本地提示音、闹钟、识别焦点
+│	├── evs_audioplayer.c
+│	├── evs_audioplayer.h		// 音乐播放管理，解析和播放云端下发的PLAYBACK类型audio_out指令
+│	├── evs_audiorecorder.c
+│	├── evs_audiorecorder.h		// 录音模块以及唤醒结果回调
+│	├── evs_auth.c
+│	├── evs_auth.h				// evs认证模块
+│	├── evs_capaudioplayer.c
+│	├── evs_capaudioplayer.h	// 解析分发云端下发的audio_out指令
+│	├── evs_client.c
+│	├── evs_client.h			// 负责唤醒事件处理，各个模块初始化，websocket链接维护
+│	├── evs_event.c				
+│	├── evs_event.h				// 消息队列，负责消息分发管理
+│	├── evs_flash.c
+│	├── evs_flash.h				// 持久化接口
+│	├── evs_log.h				// 日志工具
+│	├── evs_interceptor.c
+│	├── evs_interceptor.h		// 负责处理按键事件，网络连接管理，evs最外层入口
+│	├── evs_mediaplayer.c	
+│	├── evs_mediaplayer.h		// 负责适配底层播放器，供evs_audioplayer使用
+│	├── evs_netmonitor.c
+│	├── evs_netmonitor.h		// 网络检测模块
+│	├── evs_opts.h				// client_id配置项
+│	├── evs_ota.c
+│	├── evs_ota.h				// ota模块
+│	├── evs_pref.c
+│	├── evs_pref.h				// 持久化工具，
+│	├── evs_recognizer.c
+│	├── evs_recognizer.h		// 识别模块，负责处理语音和文本请求
+│	├── evs_response.c			 
+│	├── evs_response.h			// 解析云端下发消息
+│	├── evs_shortplayer.c		
+│	├── evs_shortplayer.h		// 短提示音播放管理，只用来播放唤醒提示音
+│	├── evs_soundplayer.c
+│	├── evs_soundplayer.h		// 本地提示音播放管理
+│	├── evs_speaker.c
+│	├── evs_speaker.h			// 音量调节模块，处理本地和云端音量调节
+│	├── evs_system.c
+│	├── evs_system.h			// 系统相关，负责云端链接心跳维护、状态同步、时间同步
+│	├── evs_time.c
+│	├── evs_time.h				// 时间同步模块
+│	├── evs_timer.c
+│	├── evs_timer.h				// 计时器工具
+│	├── evs_tone.c
+│	├── evs_tone.h				// 获取本地提示音工具
+│	├── evs_ttsplayer.c
+│	├── evs_ttsplayer.h			// tts播放管理，解析和播放下发的TTS类型的audio_out指令
+│	├── evs_utils.c
+│	├── evs_utils.h				// 内存池和消息队列工具
+│	├── evs_uuid.c
+│	├── evs_uuid.h				// UUID生成工具
+│	├── evs_websocket.c
+│	├── evs_websocket.h			// 云端websocket链接
+│	├── evs_wifimgr.c
+│	├── evs_wifimgr.h			// wifi管理工具
+│	├── ......
+```
+
+### evs协议地址
+
+- https://doc.iflyos.cn/device/evs/reference/recognizer.html#context
 
 
 
-### 2.修改热点前缀
+## 3.更换 Client_id 、OTA_SECRET
+
+当你在 iFLYOS 设备接入平台创建自己的设备后，会获取属于该设备的 client_id。client_id 将会被 iFLYOS 用于判定设备型号，一个型号的设备都会使用相同的 client_id。在二次开发前，你需要替换掉 Castor_EVB 固件中的默认 client_id 。替换后，你在 iFLYOS 平台中的个性化配置将会在固件端生效。修改方式如下：
+
+- 更改 **project/listenai_castor_xr872/listenai_sdk/modules/listenai_evs/evs_opts.h**  中 client_id 宏定义
+- 更换 client_id 后，还需要更换对应的 OTA_SECRET，该字段主要用于固件OTA时的校验，可在【设备能力】-【自动更新】-【加密密钥】中获取。与 client_id 在同一文件中，对应宏定义为  OTA_SECRET.
+
+
+
+## 4.修改热点前缀
 
 在修改热点前缀之前，请先了解[ AP 配网流程](https://doc.iflyos.cn/device/network/ap.html#ap-%E9%85%8D%E7%BD%91)。
 
@@ -79,7 +244,7 @@ evs_net_config_begin(evs_net_config_t *handle)
 
 
 
-### 3.按键
+## 5.自定义按键
 
 CSK 离在线开发套件中已配备四个功能按键和一个硬件控制复位按键，四个功能按键分别是禁麦|开麦、音量+、音量-、播放|暂停。开发者可根据自身产品需求，自定义按键功能。支持单按键与组合键触发，触发方式包括单击与长按。
 
@@ -134,7 +299,7 @@ extern void listenai_key_callback(key_press_callback pressCb, key_longpress_call
 
 
 
-### 4.灯光
+## 6.自定义灯光
 
 在产品实际使用过程中，上电、配网、语音交互等业务逻辑都会以灯光的形式提示用户，合适的灯光提示对于智能语音设备来说不可或缺。
 
@@ -239,7 +404,7 @@ evs_led_mgr_create()
 
 
 
-## 5.自定义本地TTS
+## 7.自定义本地TTS
 
 固件中预置了表示设备状态的TTS，包括联网成功|失败、断网、开|禁麦等状态的的提示音，开发者可根据自己的产品自行定义 TTS 内容。
 
@@ -251,205 +416,97 @@ evs_led_mgr_create()
 
 ### TTS文件说明
 
-**1.格式要求**
+#### 提示音打包工具
 
-提示音播放目前只支持 mp3 和 wav 格式。
+- Windows版本 **tone_tool.exe**
+- Linux版本 **tone_tool**
 
-**2.空间要求**
+#### 提示音打包工具源码
 
-提示音总大小不能超过2328K。
+Windows版本和Linux版本提示音打包工具源码均为**main.c**。
 
-### 打包工具
+#### 打包工具说明
 
-**1.fatdisk.exe**
+- Windows版本
+  - **.\tone_tool.exe  XXXX**(提示音文件夹路径)
+  - 示例： **.\tone_tool.exe .\ring\\**
+  - 如编译失败请将**dirent.h**替换，**dirent.h**下载链接和替换说明见https://github.com/tronkko/dirent
+- Linux版本
+  - **./tone_tool XXXX**(提示音文件夹路径)
+  - 示例：**./tone_tool ring/**
 
-bk7251_sdk_relase\tool\fatdisk 目录下。
+#### 打包生成bin文件和.h文件说明
 
-**2.rt_ota_packaging_tool.exe**
+生成bin文件和.h文件在提示音文件夹目录下
 
-bk7251_sdk_relase\tool\rtt_ota 目录下。
+- 生成bin文件 **XXXX/tone.bin** 
 
-### 操作步骤
+- 生成.h文件 **XXXX/tone.h**
 
-1. 将需要打包的提示音放到 bk7251_sdk_relase\tool\fatdisk\root 路径下。
+  头文件中枚举值和提示音文件一一对应，例如**TONE_ID_0 = 0,// 000_sound_effect_ui_volume.mp3**，
 
-2. 使用`fatdisk.exe`工具在当前目录下生成 root.bin。
+  **TONE_ID_0 = 0**为枚举值，注释内容为对应的音频文件
 
-3. 使用`rt_ota_packaging_tool.exe`工具将 root.bin 打包成 root.rbl ,该文件会生成在 bk7251_sdk_relase\tool\fatdisk 目录下。
+- 固件默认音频文件说明：
 
-4. 编译打包时，会自动将 tool\fatdisk\ 目录下的 root.rbl 打包至固件。
+```c
+TONE_ID_0 = 0, // 000_sound_effect_ui_volume.mp3 音量调节提示音
+TONE_ID_1 = 1, // 001_sound_effect_ui_wakesound_1.wav 唤醒提示tts：”嗯“
+TONE_ID_2 = 2, // 002_sound_effect_ui_wakesound_2.wav 唤醒提示tts：”嗯哼“
+TONE_ID_3 = 3, // 003_sound_effect_ui_wakesound_3.wav 唤醒提示tts：”我在“
+TONE_ID_4 = 4, // 004_sound_effect_ui_wakesound_4.wav 唤醒提示tts：”在呢“
+TONE_ID_5 = 5, // 005_tts_state_is_ready.mp3 开机欢迎语：”嗨，欢迎使用iFLYOS设备，请按照说明书的提示，为我连接互联网，和我一起前往未来世界吧“ 
+TONE_ID_6 = 6, // 006_tts_state_microphone_off.mp3 禁用麦克风：”麦克风已禁用“
+TONE_ID_7 = 7, // 007_tts_state_microphone_on.mp3 启用麦克风：”麦克风已打开“
+TONE_ID_8 = 8, // 008_tts_state_network_mode_on.mp3 进入配网模式：”进入网络配置模式，请打开APP按照流程指引设置网络“
+TONE_ID_9 = 9, // 009_tts_state_upgrade_ready.mp3 检测到可用更新：”检测到可用更新，“
+TONE_ID_10 = 10, // 010_tts_state_upgrade_retry.mp3 设备升级失败：“设备升级失败，请重试”
+TONE_ID_11 = 11, // 011_tts_state_upgraded.mp3 设备升级成功：“升级成功，久等啦”
+TONE_ID_12 = 12, // 012_tts_state_upgrading.mp3 OTA时唤醒设备，目前未使用，可忽略
+TONE_ID_13 = 13, // 013_tts_system_boot_in_preparation.mp3 未配网时唤醒设备：“请打开APP按照流程指引设置网络”
+TONE_ID_14 = 14, // 014_tts_system_network_connected.mp3 联网成功：”联网成功，你可以对小辛巴说：来点音乐“
+TONE_ID_15 = 15, // 015_tts_system_network_connecting.mp3 正在联网：”收到密码，我正在努力联网“
+TONE_ID_16 = 16, // 016_tts_system_network_disconnected.mp3 设备断开WiF连接：”哎呀，我断网了，请打开APP重新帮我配网“ 
+TONE_ID_17 = 17, // 017_tts_system_network_fail_1.mp3 配网失败：”网络配置失败，请重试“
+TONE_ID_18 = 18, // 018_tts_system_network_fail_2.mp3 已连WiFi，但无法访问互联网：”网络好像有点问题，检测一下网络吧“
+TONE_ID_19 = 19, // 019_tts_system_network_fail_3.mp3 弱网、请求云端超时：”网络好像有点问题，检测一下网络吧“
+TONE_ID_20 = 20, // 020_tts_system_network_wrong_password.mp3 配网时WiFi密码错误：”WiFi密码好像不对，修改后再来尝试吧“
+TONE_ID_21 = 21, // 021_tts_system_token_fail.mp3 设备token失效：“登录状态失效，请打开APP重新登录”
+TONE_ID_22 = 22, // 022_sound_effect_ui_boot.mp3 开机音效
+TONE_ID_23 = 23, // 023_record_test.mp3 产测相关
+TONE_ID_24 = 24, // 024_off_line_mode.mp3 “切换至离线模式”
+TONE_ID_25 = 25, // 025_online_mode.mp3 “切换至在线模式”
+TONE_ID_26 = 26, // 026_tts_state_wakeword_ready.mp3 唤醒词更换：”正在更换唤醒词“
+TONE_ID_27 = 27, // 027_tts_state_wakeword_retry.mp3 更换唤醒词失败：”唤醒词更换失败，请重试“
+TONE_ID_28 = 28, // 028_tts_state_wakeword_upgrade.mp3 更换唤醒词成功：”唤醒词更换成功“   
+TONE_ID_29 = 29, // 029_music_not_found.mp3 咪咕音乐兜底tts：该歌曲暂时无法播放，换一个试试吧（若设备未使用咪咕音乐，可忽略该TTS）
+TONE_ID_30 = 30, // 030_db0.mp3 产测相关
+TONE_ID_31 = 31, // 031_db-3.mp3 产测相关
+TONE_ID_32 = 32, // 032_tingyin.mp3 产测相关
+```
 
-### 软件使用
+#### bin文件替换
 
-程序运行后，音频文件会挂载在 /flash0/ 目录下，可直接以文件形式操作。
+将生成的**tone.bin**文件放到**project\listenai_castor_xr872\image\xr872**文件夹下，替换原本的**tone.bin**
+
+#### 头文件替换
+
+头文件有两处需要替换
+
+- 将生成的**tone.h**文件放到**project\listenai_castor_xr872\image\xr872**文件夹下，替换原本的**tone.h**。
+- 将生成的**tone.h**文件放到**project\listenai_castor_xr872\listenai_sdk\modules\listenai_evs**，替换原本的**tone.h**
+
+#### 通过头文件获取提示音链接
+
+通过**project\listenai_castor_xr872\listenai_sdk\modules\listenai_evs\evs_tone.h**中**char *get_tone_url(uint16_t tone_id);**函数获取提示音链接，参数为**tone.h**中的枚举值。
+
+#### 建议
+
+建议提示音打包前，使用工具清除ID3v1/v2等tag信息，以减小文件大小。例如Mp3tag，https://www.mp3tag.de/en/。
 
 
 
-## 6.自定义技能
-
-当你在 iFLYOS 技能工作室完成了交互模型以及后处理，此时你需要在设备端实现如下代码，配合云端实现自定义技能的业务逻辑。在整个流程中，云端负责解析语义、下发指令；固件端需要响应云端指令，执行对应业务逻辑。
-
-- 云端 response 接受函数
-
-  目前所有云端消息接收消息在 **evs_client.c** 中，具体代码如下
-
-  ```c
-  //云端消息分发函数
-  static void
-  _handle_ws_message(const char *msg, int len)
-  {
-  	evs_response_t *response = evs_response_create(msg);
-  	if (response == NULL) {
-  		LOGE(TAG, "response is null");
-  		return;
-  	}
-  	if (_will_drop(s_client, response->m_meta->m_request_id) == 0) {
-  		LOGI(TAG, "current recognizer request id: %s, drop old request id: %s",
-  				s_client->m_recognizer->m_cur_request_id, response->m_meta->m_request_id);
-  		evs_response_destroy(response);
-  		return;
-  	}
-  
-      // 在次处解析云端消息判断是否是自定义拦截器
-  	for (int i = 0; i < response->m_size; i++) {
-  		evs_resp_item_t *item = &response->m_responses[i];
-  		if (evs_system_process(s_client->m_system, response->m_meta, item) == 0) {
-  			continue;
-  		} else if (evs_recognizer_process(s_client->m_recognizer, response->m_meta, item) == 0) {
-  			continue;
-  		} else if (evs_speaker_process(
-  						   s_client->m_speaker, response->m_meta, item, response->m_size) == 0) {
-  			evs_system_sync_state(s_client->m_system);
-  			continue;
-  		} else if (evs_capaudioplayer_process(
-  						   s_client->m_cap_audio_player, response->m_meta, response) == 0) {
-  			break;
-  		}
-  	}
-  
-  	if (response->m_meta->m_is_last) {
-  		if (response->m_size <= 0) {
-  			LOGD(TAG, "iflyos_response size is 0");
-  			evs_audioplayer_resume(s_client->m_audio_player);
-  		}
-  		evs_recognizer_response_end(s_client->m_recognizer, response->m_meta->m_request_id);
-  	}
-  	evs_response_destroy(response);
-  }
-  ```
-
-- 实现示例
-
-  ```c
-  #define CMD_RESP_CUSTOM "interceptor.custom" // 云端定义的自定义事件
-  
-  int
-  evs_capaudioplayer_process(evs_capaudioplayer_t *handle, evs_resp_meta_t *meta, evs_response_t *resp)
-  {
-  	if (resp->m_size <= 0) {
-  		return 1;
-  	}
-  	int resp_code = 1;
-  	for (int i = 0; i < resp->m_size; i++) {
-  		evs_resp_item_t *item = &resp->m_responses[i];
-  		if (strcmp(item->m_header_name, CMD_RESP_AUDIO_OUT) == 0) {
-  			resp_code = 0;
-  			audio_out_t *audio1 = _payload_parse(item->m_payload);
-  			if (!audio1) return resp_code;
-  			if (strcmp(audio1->m_type, AUDIO_OUT_PLAYBACK) == 0) {
-  				bool has_tts = false;
-  				if ((i + 1) < resp->m_size) {
-  					evs_resp_item_t *item2 = &resp->m_responses[i + 1];
-  					audio_out_t *audio2 = _payload_parse(item2->m_payload);
-  					if (audio2 != NULL) {
-  						if (strcmp(audio2->m_type, AUDIO_OUT_TTS) == 0) {
-  							if (strcmp(audio2->m_behavior, BEHAVIOR_PARALLEL) != 0) {
-  								strcpy(handle->m_cur_dialog_id, meta->m_request_id);
-  							}
-  							handle->m_ttsPlayer->on_directive(handle->m_ttsPlayer, audio2);
-  							i++;
-  							has_tts = true;
-  						} else {
-  							evs_free(audio2);
-  						}
-  					}
-  					
-  				}
-  				if (handle->m_playback) {
-  					evs_free(handle->m_playback);
-  					handle->m_playback = NULL;
-  				}
-  				if (has_tts) {
-  					handle->m_playback = audio1;
-  				} else {
-  					handle->m_audio_player->on_directive(handle->m_audio_player, audio1);
-  				}
-  			} else if (strcmp(audio1->m_type, AUDIO_OUT_TTS) == 0) {
-  				if (strcmp(audio1->m_behavior, BEHAVIOR_PARALLEL) != 0) {
-  					strcpy(handle->m_cur_dialog_id, meta->m_request_id);
-  				}
-  				handle->m_ttsPlayer->on_directive(handle->m_ttsPlayer, audio1);
-  			} else if (strcmp(audio1->m_type, AUDIO_OUT_RING) == 0) {
-  				handle->m_alert_player->on_directive(handle->m_alert_player, audio1);
-  			} else {
-  				evs_free(audio1);
-  			}
-  		} else if (strcmp(item->m_header_name, CMD_RESP_EXPECT_REPLY) == 0) {
-  			resp_code = 0;
-  			int result = strcmp(handle->m_cur_dialog_id, meta->m_request_id);
-  			LOGD(TAG, "expect_reply reslut = %d", result);
-  			LOGD(TAG, "expect_reply reslut = %s", handle->m_cur_dialog_id);
-  
-  			cJSON *payload_obj = cJSON_Parse(item->m_payload);
-  			cJSON *payload_param = NULL;
-  			strcpy(handle->m_request_id, meta->m_request_id);
-  			payload_param = cJSON_GetObjectItem(payload_obj, "reply_key");
-  			if (payload_param != NULL) {
-  				strcpy(handle->m_reply_key, payload_param->valuestring);
-  				LOGD(TAG, "reply_key = %s", handle->m_reply_key);
-  			}
-  			payload_param = cJSON_GetObjectItem(payload_obj, "background_recognize");
-  			if (payload_param != NULL) {
-  				handle->m_background_recognize = payload_param->valueint;
-  				LOGD(TAG, "background_recognize = %d", handle->m_background_recognize);
-  			}
-  			long timeout = 8000;
-  			payload_param = cJSON_GetObjectItem(payload_obj, "timeout");
-  			if (payload_param != NULL) {
-  				timeout = payload_param->valuedouble;
-  				LOGD(TAG, "timeout = %d", timeout);
-  			}
-  			cJSON_Delete(payload_obj);
-  			if (result != 0) {
-  				evs_recognizer_expect_reply(handle->m_recognizer, meta->m_request_id,
-  						handle->m_reply_key, false, (long)timeout);
-  
-  				s_cap_audio_player->m_reply_key[0] = '\0';
-                  // s_cap_audio_player->m_request_id[0] = '\0';
-                  s_cap_audio_player->m_background_recognize = false;
-  			}
-  			
-  		} else if (strcmp(item->m_header_name, CMD_RESP_CUSTOM) == 0) { //判断是自定义拦截器
-  			resp_code = 0;
-              // 解析payload，
-  			audio_out_t *audio1 = _payload_parse(item->m_payload);
-  			if (!audio1) return resp_code;
-  			if (strcmp(audio1->m_type, AUDIO_CUSTOM) == 0) {
-                  // 解析后，此自定义消息是播放tts
-  				handle->m_ttsPlayer->on_directive(handle->m_ttsPlayer, audio1);
-  			} else {
-  				evs_free(audio1);
-  			}
-  		}
-  	}
-  	return resp_code;
-  }
-  
-  ```
-
-  
-
-## 7.自行验证
+## 8.自行验证
 
 完成二次开发并编译固件后，你可在 iFLYOS 设备接入平台——【产品认证】中选择【下载模板】，下载平台测试用例，对设备进行功能自测。
 
