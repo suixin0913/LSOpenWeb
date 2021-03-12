@@ -1,5 +1,4 @@
 ---
-ota
 
 id: secondary_development
 title: 上位机固件二次开发
