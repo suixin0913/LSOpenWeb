@@ -2,7 +2,7 @@
 
 id: getting_start
 title: 离在线语音交互初体验
-slug:/CSK_online_guides/getting_start
+slug: /CSK_online_guides/getting_start
 
 ---
 

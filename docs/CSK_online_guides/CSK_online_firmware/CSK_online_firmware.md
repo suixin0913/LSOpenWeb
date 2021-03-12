@@ -8,7 +8,7 @@ slug: /CSK_online_guides/CSK_online_firmware
 
 > 本文主要介绍离在线项目 CSK 固件的制作方法，通过阅读本文，你将了解到：
 >
-> 如何在 LSTudio 配置、打包、并烧录LSKIts离在线开发板的 CSK 固件；
+> 如何在 LSTudio 配置、打包、并烧录 LSKIts 离在线开发板的 CSK 固件；
 
 
 

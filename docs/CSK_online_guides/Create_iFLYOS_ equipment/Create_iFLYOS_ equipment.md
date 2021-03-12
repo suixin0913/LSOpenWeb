@@ -2,7 +2,7 @@
 
 id: online_getting_start
 title: 创建你的 iFLYOS 设备
-slug: /CSK_online_guides/Create_iFLYOS_ equipment
+slug: /CSK_online_guides/Create_iFLYOS_equipment
 
 ---
 

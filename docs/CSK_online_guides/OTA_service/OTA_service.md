@@ -115,7 +115,7 @@ info.txt 是一个配置文件，描述 OTA 的具体升级信息，示例如下
 
 - CSK 固件升级主要是检查 file_path 为 master.bin 的 `version`，其余子包 `version` 均为预留字段，建议 CSK 固件升级将 CSK 字段下的子包 `version` 均统一增加，如果不需要升级 CSK 固件不用添加 CSK 信息。
 
-- OS平台配置后，可通过重启设备或“小飞在线”检查更新来进行 OTA 升级。
+- OS平台配置后，可通过重启设备或【小飞在线】APP 检查更新来进行 OTA 升级。
 
 :::tips
 
