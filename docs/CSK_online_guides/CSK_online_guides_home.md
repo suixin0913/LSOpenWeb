@@ -28,7 +28,7 @@ slug: /CSK_online_guides_home
 
 本篇介绍如何在 LSTudio 中制作离在线项目的 CSK 固件。
 
-### [创建你的 iFLYOS 设备](/CSK_online_guides/Create_iFLYOS_ equipment)
+### [创建你的 iFLYOS 设备](/CSK_online_guides/Create_iFLYOS_equipment)
 
 本篇介绍如何在 iFLYOS 平台创建并配置你的设备。
 
