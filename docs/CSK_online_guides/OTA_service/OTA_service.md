@@ -105,23 +105,23 @@ info.txt 是一个配置文件，描述 OTA 的具体升级信息，示例如下
 
 ## 3.如何在 iFLYOS 上配置OTA文件
 
-你需要在iFLYOS平台的【自动更新】菜单栏上传固件包，操作说明如下：
+你需要在 iFLYOS 平台的【自动更新】菜单栏上传固件包，操作说明如下：
 
 ![](./files/iFLYOS_OTA.png)
 
-- 配置 OTA 固件时，索引配置文件必须命名为**info.txt**。
+- 配置 OTA 固件时，索引配置文件必须命名为 **info.txt**。
 
 - 平台配置 OTA，info.txt 中 file_path 必须为 **files/文件名** 的形式。
 
-- CSK 固件升级主要是检查 file_path为master.bin 的 version，其余子包 version 均为预留字段，建议 CSK 固件升级将 CSK 字段下的子包 version 均统一增加，如果不需要升级 CSK 固件不用添加 CSK 信息。
+- CSK 固件升级主要是检查 file_path 为 master.bin 的 `version`，其余子包 `version` 均为预留字段，建议 CSK 固件升级将 CSK 字段下的子包 `version` 均统一增加，如果不需要升级 CSK 固件不用添加 CSK 信息。
 
-- OS平台配置后，可通过重启设备或“小飞在线”检查更新来进行OTA升级。
+- OS平台配置后，可通过重启设备或“小飞在线”检查更新来进行 OTA 升级。
 
 :::tips
 
 1.OTA 服务是可选项，如果你有自己的 OTA 服务，也可自行实现 OTA 功能。
 
-2.请确保固件中的 OTA_SECRET 字段与 iFLYOS 中保持一致，否则即使云端有可用更新，也会因校验不通过而 OTA 失败。
+2.请确保固件中的 `OTA_SECRET` 字段与 iFLYOS 中保持一致，否则即使云端有可用更新，也会因校验不通过而 OTA 失败。
 
 :::
 
@@ -129,11 +129,11 @@ info.txt 是一个配置文件，描述 OTA 的具体升级信息，示例如下
 
 ## 4.OTA SDK 使用说明
 
-接下来为你介绍OTA相关接口，有助于你实现OTA模块的二次开发。
+接下来为你介绍 OTA 相关接口，有助于你实现 OTA 模块的二次开发。
 
 - **EVS OTA接口**
 
-固件源码中，与 iFLYOS 平台OTA服务交互的相关逻辑在 listenai_sdk/modules/listenai_evs/evs_ota.c 中，主要包括以下功能接口
+固件源码中，与 iFLYOS 平台 OTA 服务交互的相关逻辑在 `listenai_sdk/modules/listenai_evs/evs_ota.c` 中，主要包括以下功能接口
 
 | **函数名**                 | **功能说明**                                             | **参数与备注**                                               |
 | -------------------------- | -------------------------------------------------------- | ------------------------------------------------------------ |
@@ -141,28 +141,28 @@ info.txt 是一个配置文件，描述 OTA 的具体升级信息，示例如下
 | evs_ota_check_version      | 检查版本，可获取具体检查结 果                            |                                                              |
 | evs_ota_update_new_version | 检查版本，通过回调的形式通 知是否需要升级                |                                                              |
 | evs_ota_start_update       | 开始升级， evs_ota_update_new_version 后可通过此接口升级 | 与 evs_ota_update_new_version 搭配使用，分开是为了在检查和升级中  有一些自定义动作，可控流程 |
-| evs_ota_get_state          | 获取当前OTA状态                                          |                                                              |
+| evs_ota_get_state          | 获取当前 OTA 状态                                        |                                                              |
 | evs_ota_destroy            | 销毁                                                     |                                                              |
 
 以下为OTA接口调用的过程中，一些回调通知事件
 
-| **事件名**             | **功能说明**            | **备注**                                        |
-| ---------------------- | ----------------------- | ----------------------------------------------- |
-| OTA_EVENT_NEW_VERSION  | 检查到新版本            | evs_ota_update_new_version接口调 用后通知的事件 |
-| OTA_EVENT_START        | 开始升级                | evs_ota_start_update接口调用后通 知的事件       |
-| OTA_EVENT_START_FAILED | 开始升级失败            | evs_ota_start_update接口调用后通 知的事件       |
-| OTA_EVENT_SUCCESS      | 升级流程成功            | evs_ota_start_update接口调用后通 知的事件       |
-| OTA_EVENT_FAILED       | 升级失败                | evs_ota_start_update接口调用后通 知的事件       |
-| OTA_EVENT_UPGRADE_OK   | 重启后检查确认 升级成功 | 重启后检查升级成功通知的事件                    |
-| OTA_EVENT_NONE         | 无新版本                | evs_ota_update_new_version接口调 用后通知的事件 |
+| **事件名**             | **功能说明**            | **备注**                                         |
+| ---------------------- | ----------------------- | ------------------------------------------------ |
+| OTA_EVENT_NEW_VERSION  | 检查到新版本            | evs_ota_update_new_version 接口调用后通知的事件  |
+| OTA_EVENT_START        | 开始升级                | evs_ota_start_update 接口调用后通知的事件        |
+| OTA_EVENT_START_FAILED | 开始升级失败            | evs_ota_start_update 接口调用后通知的事件        |
+| OTA_EVENT_SUCCESS      | 升级流程成功            | evs_ota_start_update 接口调用后通知的事件        |
+| OTA_EVENT_FAILED       | 升级失败                | evs_ota_start_update 接口调用后通知的事件        |
+| OTA_EVENT_UPGRADE_OK   | 重启后检查确认 升级成功 | 重启后检查升级成功通知的事件                     |
+| OTA_EVENT_NONE         | 无新版本                | evs_ota_update_new_version 接口调 用后通知的事件 |
 
 **Castor_EVB** **OTA接口**
 
-Castor_EVB 整套通用 OTA 方案，包括 XR872AT 和 CSK 升级，代码在 listenai_sdk/drivers/listenai_ota/evs_castor_ota.c中，主要包含以下接口
+Castor_EVB 整套通用 OTA 方案，包括 XR872AT 和 CSK 升级，代码在 `listenai_sdk/drivers/listenai_ota/evs_castor_ota.c` 中，主要包含以下接口
 
 | **函数名**                    | **功能说明**                     | **参数与备注**                                               |
 | ----------------------------- | -------------------------------- | ------------------------------------------------------------ |
-| evs_ota_process               | OTA 升级接口                     | 参数为OTA配置文件的url地址，调用此接 口便可通过配置信息进行 OTA 升级。返回 -1 表示检查配置失败，返回 -2 表示不需要更新 |
+| evs_ota_process               | OTA 升级接口                     | 参数为OTA配置文件的 url 地址，调用此接口便可通过配置信息进行 OTA 升级。返回 -1 表示检查配置失败，返回 -2 表示不需要更新 |
 | evs_xr872_get_info            | 通过配置文件获取XR872AT 固件信息 |                                                              |
 | evs_castor_get_info           | 通过配文件获取 CSK 固件信息      |                                                              |
 | evs_castor_flashboot_get_info | 通过配置文件获取 CSK 固件信息    |                                                              |
@@ -182,10 +182,10 @@ Castor_EVB 整套通用 OTA 方案，包括 XR872AT 和 CSK 升级，代码在 l
 
 XR872AT 固件升级接口，代码在 listenai_sdk/drivers/listenai_ota/evs_xr872_ota.c 中，主要包含以下 接口
 
-| **函数名**            | **功能说明**            | 参数与备注**                                   |
-| --------------------- | ----------------------- | ---------------------------------------------- |
-| evs_xr872_ota_http    | XR872AT http升级接  口  | 参数为 XR872AT 固件包 url，返回-1表示升 级失败 |
-| evs_xr872_get_version | XR872AT 当前固件版 本号 |                                                |
+| **函数名**            | **功能说明**           | 参数与备注**                                   |
+| --------------------- | ---------------------- | ---------------------------------------------- |
+| evs_xr872_ota_http    | XR872AT http升级接口   | 参数为 XR872AT 固件包 url，返回-1表示升 级失败 |
+| evs_xr872_get_version | XR872AT 当前固件版本号 |                                                |
 
 **Castor_EVB 版本号信息**
 

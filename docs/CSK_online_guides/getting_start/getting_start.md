@@ -97,9 +97,9 @@ Cool ！，你已经成功为开发板配网。接下来你可以通过【小飞
 
 ### 4.1.XR872AT固件烧录
 
-- 下载 [XR872AT 固件]()
+- 下载 [XR872AT 固件](/CSK_online_guides_home)
 
-- 下载 [XR872AT 固件烧录工具]()
+- 下载 [XR872AT 固件烧录工具](/CSK_online_guides_home)
 
 - 将XR872AT核心板底部的开关封贴撕开，将开关1，2上拨，3，4下拨；如下图：
 
@@ -130,7 +130,7 @@ Cool ！，你已经成功为开发板配网。接下来你可以通过【小飞
 
 ### 4.2.CSK固件烧录
 
-- 下载[CSK固件]()。
+- 下载[CSK固件](/CSK_online_guides_home)。
 
 - 接通LSKits电源，同时按住底板的【XR872 BOOT】和【CSK UPDATE】键。如下图：
 

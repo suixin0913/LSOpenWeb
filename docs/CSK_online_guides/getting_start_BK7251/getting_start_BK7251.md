@@ -137,7 +137,7 @@ LSTudio 目前暂未支持适配 BK7251 芯片的 CSK固件（即将支持），
 
 :::tip
 
-\tool\env_released_0.7.1\env 目录下有一张 Add_Env_To_Right-click_Menu.png  (添加 env 至右键菜单.png) 的图片，根据图片上的步骤操作，就可以在任意文件夹下通过右键菜单来启动 env 控制台。
+`\tool\env_released_0.7.1\env` 目录下有一张 Add_Env_To_Right-click_Menu.png  (添加 env 至右键菜单.png) 的图片，根据图片上的步骤操作，就可以在任意文件夹下通过右键菜单来启动 env 控制台。
 
 :::
 
@@ -145,9 +145,9 @@ LSTudio 目前暂未支持适配 BK7251 芯片的 CSK固件（即将支持），
 
 在编译固件前，你需要修改固件的基础关键信息，保证烧录后的固件可用。
 
-- 根据目录  **/applications/lisa/lisa_app/lisa_evs/evs_opts.h**  找到固件中默认的 Client_id 与 SECRET_OTA ，将参数值修改为 **1.2** 中 iFLYOS 产品对应的值。
+- 根据目录  `/applications/lisa/lisa_app/lisa_evs/evs_opts.h`  找到固件中默认的 `Client_id` 与 `SECRET_OTA` ，将参数值修改为 **1.2** 中 iFLYOS 产品对应的值。
 
-- 修改热点前缀，需要将固件中的 WiFi 热点前缀，与你在iFLYOS中设置的保持一致。可在 **evs_netconfig.c** 文件中修改，如下：
+- 修改热点前缀，需要将固件中的 WiFi 热点前缀，与你在 iFLYOS 中设置的保持一致。可在 `evs_netconfig.c` 文件中修改，如下：
 
   ```c
   void
@@ -189,7 +189,7 @@ LSTudio 目前暂未支持适配 BK7251 芯片的 CSK固件（即将支持），
 
 ### 3.3.固件编译
 
-在env环境下进⼊ SDK 根⽬录后，可通过命令实现固件编译、清除、打包。
+在 env 环境下进⼊ SDK 根⽬录后，可通过命令实现固件编译、清除、打包。
 
 - 编译，可输入 `scons -j4` 执行编译，编译完成后随即生成 rtt 固件 rtthread.bin。如下图：
 
@@ -201,7 +201,7 @@ LSTudio 目前暂未支持适配 BK7251 芯片的 CSK固件（即将支持），
 ![](./files/clean.png)
 
 
-- 打包，在SDK 路径下 \tool\lisa_packager\ 下执行 `beken_packager.exe` 或 `beken_packager.bat` ，即可。
+- 打包，在SDK 路径下 `\tool\lisa_packager\` 下执行 `beken_packager.exe` 或 `beken_packager.bat` ，即可。
 
 ![](./files/package.png)
 
@@ -219,7 +219,7 @@ BK7251 组件主要分为 boot+app+其他分区组件（例如本地提示⾳）
 
 ![](./files/spi_boot.png)
 
-随后，在 \tool\lisa_tool\download tool_spi 目录下找到烧录软件 HID Flash Download Tool(1).exe。将 SPI 烧录器的硬件 SPI 烧录接⼝插到开发板上的 BK7521 SPI 烧录⼝，此时注意需要让开发板的 CSK ⾃锁按键处于**抬起状态**；最后打开烧录软件，按照下图操作进行烧录即可。
+随后，在 `\tool\lisa_tool\download tool_spi` 目录下找到烧录软件 HID Flash Download Tool(1).exe。将 SPI 烧录器的硬件 SPI 烧录接⼝插到开发板上的 BK7521 SPI 烧录⼝，此时注意需要让开发板的 CSK ⾃锁按键处于**抬起状态**；最后打开烧录软件，按照下图操作进行烧录即可。
 
 ![](./files/SPI_boot_1.png)
 
@@ -231,13 +231,13 @@ BK7251 组件主要分为 boot+app+其他分区组件（例如本地提示⾳）
 
 ![](./files/CH340.png)
 
-在源码目录 \tool\lisa_tool\download tool_uart 下找到烧录软件 bk_writer_V1.52.exe ，选择固件并烧录。如下图
+在源码目录 `\tool\lisa_tool\download tool_uart` 下找到烧录软件 bk_writer_V1.52.exe ，选择固件并烧录。如下图
 
 ![](./files/UART.png)
 
 #### 写入 Device_id
 
-如果开发板第一次烧录固件，或你之前通过命令行、SPI烧录软件擦除了固件中的 `Device_id`。在烧录固件后，你需要为固件写入 `Device_id` 。可在串口工具中输入命令行：`lisa_perst set string device_id   {id内容}` 完成写入（注意空格）。`Device_id` 可在 iFLYOS平台导入，在1.3中已做讲解，此处不做过多讲解。
+如果开发板第一次烧录固件，或你之前通过命令行、SPI 烧录软件擦除了固件中的 `Device_id`。在烧录固件后，你需要为固件写入 `Device_id` 。可在串口工具中输入命令行：`lisa_perst set string device_id   {id内容}` 完成写入（注意空格）。`Device_id` 可在 iFLYOS 平台导入，在 **1.3** 中已做讲解，此处不做过多讲解。
 
 :::tip
 

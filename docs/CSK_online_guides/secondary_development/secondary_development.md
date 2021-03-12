@@ -29,7 +29,7 @@ slug: /CSK_online_guides/secondary_development
 
 ### 开发环境搭建
 
-- 详细内容见[XRADIO_Quick_Start_Guide-CN.pdf]() 1.1、1.2、1.3章节
+- 详细内容见[XRADIO_Quick_Start_Guide-CN.pdf](/CSK_online_guides_home) 1.1、1.2、1.3章节
 
 ### 编译工具链地址
 
@@ -44,7 +44,7 @@ slug: /CSK_online_guides/secondary_development
 
 #### 编译
 
-- 详细内容见[XRADIO_Quick_Start_Guide-CN.pdf]() 2章节sdk编译
+- 详细内容见[XRADIO_Quick_Start_Guide-CN.pdf](/CSK_online_guides_home) 2章节sdk编译
 
 #### 编译示例
 
@@ -107,7 +107,7 @@ slug: /CSK_online_guides/secondary_development
 
 ### evs源码路径
 
-- **/project/listenai_castor_xr872/listenai_sdk/modules/listenai_evs**
+- `/project/listenai_castor_xr872/listenai_sdk/modules/listenai_evs`
 
 ### 目录结构
 
@@ -188,8 +188,8 @@ slug: /CSK_online_guides/secondary_development
 
 当你在 iFLYOS 设备接入平台创建自己的设备后，会获取属于该设备的 client_id。client_id 将会被 iFLYOS 用于判定设备型号，一个型号的设备都会使用相同的 client_id。在二次开发前，你需要替换掉 Castor_EVB 固件中的默认 client_id 。替换后，你在 iFLYOS 平台中的个性化配置将会在固件端生效。修改方式如下：
 
-- 更改 **project/listenai_castor_xr872/listenai_sdk/modules/listenai_evs/evs_opts.h**  中 client_id 宏定义
-- 更换 client_id 后，还需要更换对应的 OTA_SECRET，该字段主要用于固件OTA时的校验，可在【设备能力】-【自动更新】-【加密密钥】中获取。与 client_id 在同一文件中，对应宏定义为  OTA_SECRET.
+- 更改 `project/listenai_castor_xr872/listenai_sdk/modules/listenai_evs/evs_opts.h` 中 `Client_id` 宏定义。
+- 更换 `Client_id` 后，还需要更换对应的 `OTA_SECRET`，该字段主要用于固件OTA时的校验，可在【设备能力】-【自动更新】-【加密密钥】中获取。与 `Client_id` 在同一文件中，对应宏定义为  `OTA_SECRET`。
 
 
 
@@ -203,7 +203,7 @@ slug: /CSK_online_guides/secondary_development
 
 ![](./files/AP_CONECCT.png)
 
-第二步，在固件代码中修改前缀 ，位于 **evs_netconfig.c**，如下。修改完成并烧录固件后，设备进入配网模式，广播时的热点前缀将变为自定义前缀。
+第二步，在固件代码中修改前缀 ，位于 `evs_netconfig.c`，如下。修改完成并烧录固件后，设备进入配网模式，广播时的热点前缀将变为自定义前缀。
 
 ```c
 void
@@ -248,7 +248,7 @@ evs_net_config_begin(evs_net_config_t *handle)
 
 CSK 离在线开发套件中已配备四个功能按键和一个硬件控制复位按键，四个功能按键分别是禁麦|开麦、音量+、音量-、播放|暂停。开发者可根据自身产品需求，自定义按键功能。支持单按键与组合键触发，触发方式包括单击与长按。
 
-1、按键事件注册入口 **evs_interceptor.c** 
+1、按键事件注册入口 `evs_interceptor.c`
 
 ```c
 evs_interceptor_t *
@@ -272,7 +272,7 @@ evs_interceptor_create()
 }
 ```
 
-2、按键事件定义 **evs_key_event.h**
+2、按键事件定义 `evs_key_event.h`
 
 ```c
 typedef enum _KEY_EVENT { 
@@ -375,7 +375,7 @@ evs_led_mgr_create()
 
 2、具体灯光实现
 
-- 灯光基类 **base_light.h**
+- 灯光基类 `base_light.h`
 
   ```c
   typedef struct base_light_s {
@@ -392,7 +392,7 @@ evs_led_mgr_create()
   } base_light_t;
   ```
 
-- 具体灯效实现，具体的灯光效果在以下文件里 open close 方法实现
+- 具体灯效实现，具体的灯光效果在以下文件里 `open close` 方法实现
 
   ```c
   ├── listenai_led
@@ -487,22 +487,22 @@ TONE_ID_32 = 32, // 032_tingyin.mp3 产测相关
 
 #### bin文件替换
 
-将生成的**tone.bin**文件放到**project\listenai_castor_xr872\image\xr872**文件夹下，替换原本的**tone.bin**
+将生成的**tone.bin**文件放到 `project\listenai_castor_xr872\image\xr872` 文件夹下，替换原本的**tone.bin**
 
 #### 头文件替换
 
 头文件有两处需要替换
 
-- 将生成的**tone.h**文件放到**project\listenai_castor_xr872\image\xr872**文件夹下，替换原本的**tone.h**。
-- 将生成的**tone.h**文件放到**project\listenai_castor_xr872\listenai_sdk\modules\listenai_evs**，替换原本的**tone.h**
+- 将生成的**tone.h**文件放到 `project\listenai_castor_xr872\image\xr872` 文件夹下，替换原本的**tone.h**。
+- 将生成的**tone.h**文件放到 `project\listenai_castor_xr872\listenai_sdk\modules\listenai_evs`，替换原本的**tone.h**
 
 #### 通过头文件获取提示音链接
 
-通过**project\listenai_castor_xr872\listenai_sdk\modules\listenai_evs\evs_tone.h**中**char *get_tone_url(uint16_t tone_id);**函数获取提示音链接，参数为**tone.h**中的枚举值。
+通过 `project\listenai_castor_xr872\listenai_sdk\modules\listenai_evs\evs_tone.h` 中 `char *get_tone_url(uint16_t tone_id)`；函数获取提示音链接，参数为**tone.h**中的枚举值。
 
 #### 建议
 
-建议提示音打包前，使用工具清除ID3v1/v2等tag信息，以减小文件大小。例如Mp3tag，https://www.mp3tag.de/en/。
+建议提示音打包前，使用工具清除 ID3v1/v2 等 tag 信息，以减小文件大小。例如 Mp3tag，https://www.mp3tag.de/en/。
 
 
 
