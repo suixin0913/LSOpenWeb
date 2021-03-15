@@ -12,7 +12,7 @@ slug: /download
 
 ### [软件资料](/software_material)
 
-下载聆软件相关材料。
+下载聆思软件相关材料。
 
 ### [硬件资料](/hardware_material)
 
