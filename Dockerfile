@@ -3,7 +3,7 @@ WORKDIR /app
 ADD . /app
 RUN npm config set registry https://registry.npm.taobao.org && \
     npm install -g cnpm && \
-    cnpm install && \
+    npm install && \
     npm run replaceRoute && \
     npm run build
 
