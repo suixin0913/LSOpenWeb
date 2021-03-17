@@ -52,6 +52,9 @@ module.exports = {
       style: 'dark',
       links: [],
       copyright: `Copyright © 安徽聆思智能科技有限公司皖ICP备05001217号`,
+    },
+    googleAnalytics:{
+      trackingID:'121'
     }
   },
   presets: [
@@ -74,6 +77,8 @@ module.exports = {
   ],
   plugins: [
     // ... Your other plugins.
+    'plugin-google-analytics',
+    // '@docusaurus/plugin-google-analytics',
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
