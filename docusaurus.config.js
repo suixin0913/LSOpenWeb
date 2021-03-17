@@ -77,7 +77,7 @@ module.exports = {
   ],
   plugins: [
     // ... Your other plugins.
-    'plugin-google-analytics',
+    'plugin-google-analytics1',
     // '@docusaurus/plugin-google-analytics',
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),

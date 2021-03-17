@@ -30,10 +30,9 @@ module.exports = function (context) {
   const isProd = process.env.NODE_ENV === 'production';
 
   return {
-    name: 'docusaurus-plugin-google-analytics',
+    name: 'docusaurus-plugin-google-analytics1',
 
     getClientModules() {
-      console.log(8888)
       return !isProd ? [path.resolve(__dirname, './analytics')] : [];
     },
 

@@ -20,7 +20,7 @@
     "axios": "^0.21.1",
     "clsx": "^1.1.1",
     "nodejieba": "2.4.2",
-    "plugin-google-analytics": "file:src/plugin-google-analytics",
+    "plugin-google-analytics1": "file:src/plugin-google-analytics",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },

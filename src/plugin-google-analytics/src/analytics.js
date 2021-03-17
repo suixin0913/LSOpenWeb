@@ -8,7 +8,7 @@ const axios = require('axios')
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 async function upload(location,origin){
   const {pathname} = location
-  console.log('upload',pathname,origin)
+  console.log('upload1',pathname,origin)
   try {
     const response = await axios({
       method: 'post',
