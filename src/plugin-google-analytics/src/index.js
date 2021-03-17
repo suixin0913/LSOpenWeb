@@ -33,7 +33,7 @@ module.exports = function (context) {
     name: 'docusaurus-plugin-google-analytics',
 
     getClientModules() {
-      console.log(9990)
+      console.log(8888)
       return !isProd ? [path.resolve(__dirname, './analytics')] : [];
     },
 
