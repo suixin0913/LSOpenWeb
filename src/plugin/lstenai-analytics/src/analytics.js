@@ -15,7 +15,7 @@ async function upload(location, origin) {
       url: `${origin}/event_upload`,
       data: {
         event_type: "lsopen_pageview",
-        title: "",
+        title: pathname,
         url: origin + pathname,
       },
     });
