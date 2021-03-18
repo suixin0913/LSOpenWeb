@@ -19,6 +19,13 @@ slug: /datasheet
 | **Castor3002 datasheet V2.0(chipsky version).pdf** | 2021.01.30 |[下载](https://open.listenai.com/resource/open/doc_resource%2FCSK%20Datasheet%2F20210130%2FCastor3002%20datasheet%20V2.0(chipsky%20version).pdf)|
 | **Castor4002 datasheet V2.0(chipsky version).pdf** | 2021.01.30 |[下载](https://open.listenai.com/resource/open/doc_resource%2FCSK%20Datasheet%2F20210130%2FCastor4002%20datasheet%20V2.0(chipsky%20version).pdf)|
 
+## 芯片报告
+
+| 文件| 更新时间 | 操作 |
+| ----| ---- | ---- |
+| **CASTOR ROHS报告.pdf** | 2021.03.18 |[下载](https://open.listenai.com/resource/open/doc_resource%2FCSK%20Datasheet%2FCASTOR%20ROHS%E6%8A%A5%E5%91%8A.pdf)|
+| **REACH 检测报告.PDF** | 2021.03.18 |[下载](https://open.listenai.com/resource/open/doc_resource%2FCSK%20Datasheet%2FREACH%20%E6%A3%80%E6%B5%8B%E6%8A%A5%E5%91%8A.PDF)|
+
 ## 产品规格书 Brief
 
 | 文件| 更新时间 | 操作 |
