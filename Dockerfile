@@ -1,11 +1,11 @@
 FROM node:12-buster as builder
 WORKDIR /app
 ADD . /app
-RUN npm config set registry https://registry.npm.taobao.org && \
-    npm install -g cnpm && \
-    npm install && \
-    npm run replaceRoute && \
-    npm run build
+
+RUN npm install  --registry=https://registry.npm.taobao.org
+RUN npm run replaceRoute
+RUN npm run build
+
 
 FROM jboesl/docker-nginx-headers-more:1.11.4-0.31
 RUN rm -rf /etc/nginx/conf.d
