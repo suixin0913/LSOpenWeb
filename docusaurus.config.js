@@ -74,6 +74,7 @@ module.exports = {
   ],
   plugins: [
     // ... Your other plugins.
+    'lstenai-analytics',
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
