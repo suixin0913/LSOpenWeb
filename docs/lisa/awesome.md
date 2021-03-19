@@ -1,15 +1,16 @@
 ---
 id: awesome
-title: LPM
+title: 关于 LISA
 slug: /awesome
 ---
 
-**LPM(Listenai Package Manager)**是聆思智能的私有软件包管理服务。LPM 上的软件包可通过聆思智能的统一命令行工具 `lisa` 进行安装使用。
+**LISA(Listenai Software Architecture)**是聆思智能提供的软件框架，支持客户通过命令行工具使用并管理聆思提供的软件包。
+**LPM(Listenai Package Manager)**是聆思智能的私有软件包管理服务。LPM 上的软件包可通过统一的命令行工具进行安装使用。
 
 
-## LPM软件包
+## LPM 软件包
 
-### Lisa软件包
+### Lisa 软件包
 
 - [@listenai/lisa](https://lpm.listenai.com/package/@listenai/lisa)：lisa 命令行原始工具
 - [@@listenai/lisa_core](https://lpm.listenai.com/package/@listenai/lisa_core)：lisa 核心包，用于制作 LPM 包
