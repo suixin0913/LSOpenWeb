@@ -27,7 +27,7 @@ PS C:\Users\oralzl\项目文件夹> lisa -v
 @listenai/lisa/1.3.4 win32-x64 node-v12.21.0
 ```
 
-你也可以不依赖 LStudio 搭建 LISA 环境，具体请查看[这里]。(http://open.listenai.com/lisa_tutorial#%E6%96%B9%E5%BC%8F%E4%BA%8C%EF%BC%9A%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83)
+你也可以不依赖 LStudio 搭建 LISA 环境，具体请查看[这里](http://open.listenai.com/lisa_tutorial#%E6%96%B9%E5%BC%8F%E4%BA%8C%EF%BC%9A%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83)
 
 
 ## 3.使用 LISA
