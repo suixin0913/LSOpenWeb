@@ -12,6 +12,17 @@ slug: /awesome
 2. 对开发项目的软件依赖、软件版本管理更清晰，提升问题定位与解决的效率。
 3. 支持针对软件包进行热更新，平滑提升产品效果、修复软件缺陷。
 
+## 使用 LISA
+
+### - [使用 LISA 创建 CSK 项目](/lisa_create)
+
+### - [LISA命令行功能详解](https://lpm.listenai.com/package/@listenai/lisa)
+
+### - 为旧项目烧录固件(马上更新)
+
+### - 使用 Lisa 开发(马上更新)
+
+
 
 ## Lisa 软件包
 
@@ -53,16 +64,6 @@ slug: /awesome
 - [@tool/csk-old-build](https://lpm.listenai.com/package/@tool/csk-old-build)：针对 CSK 旧项目，进行 build 的相关操作，可 package lpk
 - [@tool/mini-esr-tool](https://lpm.listenai.com/package/@tool/mini-esr-tool)：可把阈值txt转成bin
 
-## 使用 LISA
-
-### 配置 LISA 环境
-
-下载 LStudio 船新版本
-lisa -v
-
-### 使用 LISA 创建 CSK 项目
-
-### 
 
 
 

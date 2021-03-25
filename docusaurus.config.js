@@ -38,6 +38,11 @@ module.exports = {
           position: 'left'
         },
         {
+          to: '/awesome',
+          label: 'Hello Lisa',
+          position: 'left'
+        },
+        {
           href: "https://cloud.listenai.com",
           label: "LSCloud",
           position: 'right'
