@@ -29,7 +29,7 @@ slug: /lisa_tutorial
 
 完成这篇教程有两种方式：可以直接在LStudio中开发，也可以在你电脑上搭建lisa的开发环境。
 
-### 方式一：在LStudio中进行开发<span style={{color: "var(--ifm-color-info)"}}>（推荐）</span>
+### 方式一：在LStudio中进行开发（推荐）
 
 这是上手最快的一种方式了！LStudio内置了所有所需要的环境以及开发工具。我们也强烈推荐你直接使用LStudio来进行开发。
 
@@ -57,23 +57,31 @@ npm install @listenai/lisa -g
 
 <ShowToken></ShowToken>
 
+import BrowserOnly from '@docusaurus/BrowserOnly';
+
 export const ShowToken = ({children, color}) => {
   
-  function getCookie(cname){
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) 
-    {
-      var c = ca[i].trim();
-      if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
-    }
-    return "";
-  }
-  const token = getCookie('token')
   return (
-    <span>
-      你的LISA_ACCESS_TOKEN为：{token}
-    </span>
+    <BrowserOnly
+      fallback={<div>The fallback content to display on prerendering</div>}>
+      {() => {
+        // Something that should be excluded during build process prerendering.
+        function getCookie(cname){
+          var name = cname + "=";
+          var ca = window.document.cookie.split(';');
+          for(var i=0; i<ca.length; i++) 
+          {
+            var c = ca[i].trim();
+            if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+          }
+          return "";
+        }
+        const token = getCookie('token')
+        return (
+          <span>你的LISA_ACCESS_TOKEN为：{token}</span>
+        )
+      }}
+    </BrowserOnly>
   )
 };
 
