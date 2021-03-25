@@ -6351,6 +6351,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+"lstenai-analytics@file:src/plugin/lstenai-analytics":
+  version "2.0.0-alpha.70"
+  dependencies:
+    "@docusaurus/core" "2.0.0-alpha.70"
+
 lunr-languages@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npm.taobao.org/lunr-languages/download/lunr-languages-1.4.0.tgz#42abb12aa81447d1ece5aa35676adcdf40a3e8a8"
