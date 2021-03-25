@@ -38,7 +38,7 @@ module.exports = {
           position: 'left'
         },
         {
-          to: '/awesome',
+          to: '/lisa',
           label: 'Hello Lisa',
           position: 'left'
         },

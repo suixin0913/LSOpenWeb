@@ -6,7 +6,7 @@ slug: /lisa_create
 
 ## 获取LISA环境
 
-下载并安装LStudio 2.3.1 版本，即可以完成配置所有运行 LISA 所需的环境配置。[点击这里下载](https://iflyos-external.oss-cn-shanghai.aliyuncs.com/public/lstudio/alpha/LStudioInstaller-2.3.1.exe)
+下载并安装LStudio 2.3.1 版本，即可以完成配置所有运行 LISA 所需的环境配置。[点击这里下载](https://iflyos-external.oss-cn-shanghai.aliyuncs.com/public/lstudio/alpha/LStudioInstaller-2.3.1-beta.exe)
 
 
 如果之前已经在更早版本的 LStudio 登录过，安装新版本后**请重新登录**。
@@ -15,7 +15,7 @@ slug: /lisa_create
 **检查 LISA**
 1. 在 LStudio 打开终端
 2. 输入命令行 `lisa -v`，看到 LISA 版本号，代表 LISA 环境正常
-```command
+```shell
 PS C:\Users\oralzl\项目文件夹> lisa -v
 @listenai/lisa/1.3.4 win32-x64 node-v12.21.0
 ```
@@ -28,7 +28,7 @@ PS C:\Users\oralzl\项目文件夹> lisa -v
 
 `lisa create` 会在当前命令行所指定的路径创建项目。所以在创建项目之前请使用 `cd` 命令指定路径。
 
-```command
+```shell
 PS C:\Users\oralzl\> cd C:\Users\oralzl\项目文件夹
 PS C:\Users\oralzl\项目文件夹> 
 ```
@@ -43,7 +43,7 @@ PS C:\Users\oralzl\项目文件夹>
 
 输入创建命令之后，创建模板会提供架手架配置项目所需的资源
 
-```command
+```shell
 PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件> lisa create newProject -t @generator/csk
   √ 项目创建准备
   √ 初始化安装依赖
@@ -103,12 +103,14 @@ PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件> lisa create newProje
 ### 使用 LISA 构建固件
 
 在当前项目中，打开命令行终端，输入 `lisa build` ，触发固件构建流程。
-```
+
+```shell
 PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件\newProject> lisa build
   √ 固件编译
   √ 编译respak.bin
   √ 打包lpk包
 ```
+
 **lpk是最终构建产物，可用于 lisa 烧录**
 
 ### 使用 LISA 烧录固件
@@ -117,7 +119,7 @@ PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件\newProject> lisa buil
 
 关于 LSKits的相关操作，可以参考[这份文档](https://open.listenai.com/getting_start#25-%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95)。
 
-```
+```shell
 PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件\newProject> lisa flash
   √ 解压LPK文件
   √ 解析配置文件

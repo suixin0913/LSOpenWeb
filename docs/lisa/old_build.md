@@ -15,7 +15,7 @@ slug: /build_old_project
 
 在旧项目使用 LISA 命令前，请在旧项目目录下执行 `lisa init` 命令，对项目进行 LISA 初始化。该操作不会破坏项目结构，原有所有项目中的操作都可以保留。
 
-```
+```shell
 PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件\cskProject> lisa init
   √ 文件初始化
   √ 安装lisa核心库
@@ -27,7 +27,7 @@ PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件\cskProject> lisa init
 
 在项目目录下执行 `lisa install @tool/csk-old-build` ，安装 `@tool/csk-old-build`。
 
-```
+```shell
 PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件\cskProject> lisa install @tool/csk-old-build
 安装依赖... 成功
 ```
@@ -38,7 +38,7 @@ PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件\cskProject> lisa inst
 
 确保旧项目已经打包后，在命令执行 `lisa task oldBuild:package`
 
-```
+```shell
 PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件\cskproject1> lisa task oldBuild:package
   √ 打包lpk包
 ```
@@ -49,7 +49,7 @@ PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件\cskproject1> lisa tas
 
 在当前项目中，打开命令行终端，输入 `lisa flash` ，触发固件烧录流程。
 
-```
+```shell
 PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件\cskproject1> lisa flash
   √ 解压LPK文件
   √ 解析配置文件

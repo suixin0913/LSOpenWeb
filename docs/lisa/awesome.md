@@ -7,30 +7,30 @@ slug: /lisa
 **LISA(Listenai Software Architecture)**是聆思智能提供的软件框架，支持客户通过命令行工具使用并管理聆思提供的软件包。
 [**LPM(Listenai Package Manager)**](https://lpm.listenai.com/)是聆思智能的私有软件包管理服务。LPM 上的软件包可通过统一的命令行工具进行安装使用。
 
-## LISA 的优势
+## 1.LISA 的优势
 
 1. 以软件包的形式，更便捷获取聆思提供的固件源码、算法模型、固件配置、开发工具等。
 2. 对开发项目的软件依赖、软件版本管理更清晰，提升问题定位与解决的效率。
 3. 支持针对软件包进行热更新，平滑提升产品效果、修复软件缺陷。
 
-## 使用 LISA
+## 2.使用 LISA
 
-### - [使用 LISA 创建 CSK 项目](/lisa_create)
+###  [使用 LISA 创建 CSK 项目](/lisa_create)
 
-### - [为旧项目烧录固件](/build_old_project)
+###  [为旧项目烧录固件](/build_old_project)
 
-### - [LISA命令行功能详解](https://lpm.listenai.com/package/@listenai/lisa)
+###  [LISA 命令行功能详解](https://lpm.listenai.com/package/@listenai/lisa)
 
-### - [开发者教程：从零开发一个lisa包](/lisa_tutorial)
+###  [开发者教程：从零开发一个 LISA 包](/lisa_tutorial)
 
 
 
-## Lisa 软件包
+## 3.Lisa 软件包
 
 ### 基础软件包
 
-- [@listenai/lisa](https://lpm.listenai.com/package/@listenai/lisa)：lisa 命令行原始工具
-- [@@listenai/lisa_core](https://lpm.listenai.com/package/@listenai/lisa_core)：lisa 核心包，用于制作 LPM 包
+- [@listenai/lisa](https://lpm.listenai.com/package/@listenai/lisa)：LISA 命令行原始工具
+- [@@listenai/lisa_core](https://lpm.listenai.com/package/@listenai/lisa_core)：LISA 核心包，用于制作 LISA 软件包
 
 
 ### CSK源码@source
