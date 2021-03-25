@@ -5,9 +5,10 @@ slug: /awesome
 ---
 
 **LISA(Listenai Software Architecture)**是聆思智能提供的软件框架，支持客户通过命令行工具使用并管理聆思提供的软件包。
-**LPM(Listenai Package Manager)**是聆思智能的私有软件包管理服务。LPM 上的软件包可通过统一的命令行工具进行安装使用。
+[**LPM(Listenai Package Manager)**](https://lpm.listenai.com/)是聆思智能的私有软件包管理服务。LPM 上的软件包可通过统一的命令行工具进行安装使用。
 
 ## LISA 的优势
+
 1. 以软件包的形式，更便捷获取聆思提供的固件源码、算法模型、固件配置、开发工具等。
 2. 对开发项目的软件依赖、软件版本管理更清晰，提升问题定位与解决的效率。
 3. 支持针对软件包进行热更新，平滑提升产品效果、修复软件缺陷。
@@ -35,9 +36,9 @@ slug: /awesome
 ### CSK源码@source
 
 - [@source/csk4002](https://lpm.listenai.com/package/@source/csk4002)：CSK4002 源码
-- [@source/csk4002nc](https://lpm.listenai.com/package/@source/csk4002nc)：CSK4002NC 源码
+<!-- - [@source/csk4002nc](https://lpm.listenai.com/package/@source/csk4002nc)：CSK4002NC 源码 -->
 - [@source/csk3002](https://lpm.listenai.com/package/@source/csk3002)：CSK3002 源码
-- [@source/csk3001nn](https://lpm.listenai.com/package/@source/csk3001nn)：CSK3001NN源码
+<!-- - [@source/csk3001nn](https://lpm.listenai.com/package/@source/csk3001nn)：CSK3001NN源码 -->
 
 
 ### 项目模板@generator
