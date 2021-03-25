@@ -6,8 +6,6 @@ slug: /lisa_tutorial
 
 <p style={{color: "#6d6d6d", fontSize: "24px"}}>阅读该教程不需要你预先掌握任何 lisa 知识。</p>
 
-**课程视频链接：**https://www.bilibili.com/video/bv1Pb4y1X7qY
-
 ## 课前准备
 
 我们将会在这个教程中开发一个小工具包。你将在该教程中学到如何使用lisa去创建并开发实现一个lpm包，以及使用者如何使用该lpm包。掌握这些知识后，你将初步了解到lisa的一些功能和使用。
