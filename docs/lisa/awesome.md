@@ -1,7 +1,7 @@
 ---
-id: awesome
+id: lisa
 title: 关于 LISA
-slug: /awesome
+slug: /lisa
 ---
 
 **LISA(Listenai Software Architecture)**是聆思智能提供的软件框架，支持客户通过命令行工具使用并管理聆思提供的软件包。
@@ -17,11 +17,11 @@ slug: /awesome
 
 ### - [使用 LISA 创建 CSK 项目](/lisa_create)
 
+### - [为旧项目烧录固件](/build_old_project)
+
 ### - [LISA命令行功能详解](https://lpm.listenai.com/package/@listenai/lisa)
 
-### - 为旧项目烧录固件(马上更新)
-
-### - 使用 Lisa 开发(马上更新)
+### - [开发者教程：从零开发一个lisa包](/lisa_tutorial)
 
 
 

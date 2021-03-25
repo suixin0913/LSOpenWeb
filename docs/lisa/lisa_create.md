@@ -62,7 +62,7 @@ PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件> lisa create newProje
 
 ### 项目结构简介
 
- **`./config` 文件夹含有项目所需要的配置文件，包括:**
+ **`.\config` 文件夹含有项目所需要的配置文件，包括:**
 - `application.lini` 与固件源码配套的应用配置，已全面支持可视化配置
 - `hardware.lini` 硬件引脚配置文件，已支持可视化配置
 - `interact.lini` 语音交互配置
@@ -71,7 +71,7 @@ PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件> lisa create newProje
 
 **`alias` 与 `thresholds` 文件夹已移动到 `deps` 文件夹中**
 
-**`./.lisa` 文件夹会记录 lisa 产生的日志**
+**`.\.lisa` 文件夹会记录 lisa 产生的日志**
 
 **`package.json` 可以看到项目中的相关依赖**
 ```
@@ -96,7 +96,7 @@ PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件> lisa create newProje
 
 ### 配置词表资源
 
-- 打开 `./config/interact.lini`
+- 打开 `.\config\interact.lini`
 - 选择**小风扇**模板
 - 点击保存
 
@@ -115,7 +115,7 @@ PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件\newProject> lisa buil
 
 在当前项目中，打开命令行终端，输入 `lisa flash` ，触发固件烧录流程。
 
-关于 LSKits的相关操作，可以参考[这份文档](http://localhost:3000/getting_start#25-%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95)。
+关于 LSKits的相关操作，可以参考[这份文档](https://open.listenai.com/getting_start#25-%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95)。
 
 ```
 PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件\newProject> lisa flash
