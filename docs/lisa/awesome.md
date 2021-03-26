@@ -33,7 +33,7 @@ PS C:\Users\oralzl\项目文件夹> lisa -v
 ## 3.使用 LISA
 
 ###  [使用 LISA 创建 CSK 项目](/lisa_create)
-本文介绍如何使用 LISA 把各类软件包组织成全新的 CSK 项目。并介绍 LISA CSK 新增的图形化配置功能。
+本文介绍如何使用 LISA 把各类软件包组织成全新的 CSK 项目，如何使用 LISA 完成固件构建与烧录，并介绍 LISA CSK 新增的图形化配置功能。
 
 ###  [为旧项目烧录固件](/build_old_project)
 本文介绍如何在旧项目中使用 LISA，直接体验软件包的安装机制（lisa install）与任务运行机制（lisa task）。
