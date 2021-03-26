@@ -67,7 +67,7 @@ CSK 可通过 I2S 或 UAC 协议将音频传递至上位机。
 
 通过 AP 、BLE 等方式成功连接互联网，并通过 Websocket 与 iFLYOS 云保持通讯。
 
-**EVS设备端实现**
+**EVS 设备端实现**
 
 以 EVS 协议为基础，实现设备端业务逻辑。包括语音识别器、音频播放器、闹钟、扬声器控制等，具体参考 LSCloud 中对应的上位机源码。为了保证更好的用户体验，聆思还实现了比较复杂的设备逻辑（如焦点管理等），具体可参考[《 EVS设备体验参考规范 》](https://doc.iflyos.cn/device/evs/appointment.html#evs%E8%AE%BE%E5%A4%87%E4%BD%93%E9%AA%8C%E5%8F%82%E8%80%83%E8%A7%84%E8%8C%83)。
 

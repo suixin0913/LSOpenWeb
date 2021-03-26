@@ -83,6 +83,3 @@ slug: /CSK_online_guides/Create_iFLYOS_equipment
 干的漂亮！通过上述操作，相信你对 iFLYOS 操作系统有了初步的了解。并在 iFLYOS 上成功创建了属于你的设备，可以[点击此处](https://doc.iflyos.cn/device/)，了解更多 iFLYOS 设备接入信息。
 
 接下来，需要了解固件开发相关知识。让云端配置在固件端生效。
-
-
-
