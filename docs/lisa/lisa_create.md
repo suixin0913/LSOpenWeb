@@ -1,6 +1,6 @@
 ---
 id: lisa_create
-title: 使用LISA创建CSK项目
+title: 使用 LISA 创建 CSK 项目
 slug: /lisa_create
 ---
 
@@ -41,14 +41,14 @@ PS C:\Users\oralzl\项目文件夹>
 - `-t` 代表使用模板（template）创建项目
 - `@generator/csk` 是CSK语音交互项目的标准模板
 
-输入创建命令之后，创建模板会提供架手架配置项目所需的资源
+输入创建命令之后，创建模板会提供架手架配置项目所需其他软件包。
 
 ```shell
 PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件> lisa create newProject -t @generator/csk
   √ 项目创建准备
   √ 初始化安装依赖
 ? 选择芯片方案 @source/csk4002
-? 选择基础固件版本 3.1.3-beta.2
+? 选择基础固件版本 3.1.4
 ? 选择板型模版 @board/lskits-csk4002
 ? 选择算法模  @algo/csk4002-cae-mlp
   √ 创建csk开发项目目录/文件
@@ -131,6 +131,26 @@ bin list > flashboot(0),master(0x10000),script(0xf0000),respak(0x100000)
 烧录分区 4｜ ████████████████████████████████████████ | 4370.25 KB/4370.25 KB | respak(0x100000)
 烧录完成
 ```
+
+## LISA CSK 项目的新功能
+
+通过 `lisa create` 创建的新 CSK 项目，可以使用到以下新功能。
+
+### application 图形化配置
+
+- 支持对 `application.lini` 进行图形化配置（默认）
+- 点击右上角切换按钮可以回到代码模式进行编辑
+
+![](./files/lisa_create/application.png)
+
+
+### hardware 图形化配置
+
+- 支持对 `hardware.lini` 进行图形化配置（默认）
+- 图形化配置提供的配置规则检查与提醒，有效防止误操作
+- 点击右上角切换按钮可以回到代码模式进行编辑
+
+![](./files/lisa_create/hardware.png)
 
 
 
