@@ -95,9 +95,9 @@ Cool ！，你已经成功为开发板配网。接下来你可以通过【小飞
 
 ### 4.1.XR872AT固件烧录
 
-- 下载 [XR872AT 固件](/CSK_online_guides_home)
+- 下载 [XR872AT 固件](https://open.listenai.com/resource/open/doc_resource%2F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%2F%E7%A6%BB%E5%9C%A8%E7%BA%BF%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%2F%E7%A6%BB%E5%9C%A8%E7%BA%BF%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95%2Fxr_system.img)
 
-- 下载 [XR872AT 固件烧录工具](/CSK_online_guides_home)
+- 下载 [XR872AT 固件烧录工具]https://open.listenai.com/resource/open/doc_resource%2F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%2F%E7%A6%BB%E5%9C%A8%E7%BA%BF%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%2F%E7%A6%BB%E5%9C%A8%E7%BA%BF%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95%2Fxradio_phoenixMC_v3.1.0909b.zip()
 
 - 将XR872AT核心板底部的开关封贴撕开，将开关1，2上拨，3，4下拨；如下图：
 
@@ -124,7 +124,7 @@ Cool ！，你已经成功为开发板配网。接下来你可以通过【小飞
 
   ![](./files/XR872AT_burn.png)
 
-:::tips
+:::tip
 
 1.固件开始烧录后，不要急于松开【XR872 BOOT】键，需要等进度条超过3%后再松开。
 
@@ -136,7 +136,7 @@ Cool ！，你已经成功为开发板配网。接下来你可以通过【小飞
 
 ### 4.2.CSK固件烧录
 
-- 下载[CSK固件](/CSK_online_guides_home)。
+- 下载[CSK固件](https://open.listenai.com/resource/open/doc_resource%2F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%2F%E7%A6%BB%E5%9C%A8%E7%BA%BF%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%2F%E7%A6%BB%E5%9C%A8%E7%BA%BF%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95%2Fcsk4002.zip)。
 
 - 接通 LSKits 电源，同时按住底板的【XR872 BOOT】和【CSK UPDATE】键。如下图：
 
