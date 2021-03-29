@@ -60,4 +60,4 @@ LSTudio 主要用于 CSK 固件配置与烧录，在 CSK 项目开发指南中�
 
 ![](./files/packaging.png)
 
-点击打包，并等待打包过程完毕。之后将 LSKIts 与电脑通过 USB 线连接，同时按住 LSKIts 上的【CSK UPDATE】键，最后点击 LSTudio 上的【烧录】键，进入固件烧录模式，等待固件烧录完毕后，重启 LSKIts 即可。
+点击打包，并等待打包过程完毕。之后将 LSKits 与电脑通过 USB 线连接，同时按住 LSKits 上的【CSK UPDATE】键，最后点击 LSTudio 上的【烧录】键，进入固件烧录模式，等待固件烧录完毕后，重启 LSKits 即可。
