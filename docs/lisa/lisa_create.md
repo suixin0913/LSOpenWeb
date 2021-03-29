@@ -111,7 +111,7 @@ PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件\newProject> lisa buil
   √ 打包lpk包
 ```
 
-**lpk是最终构建产物，可用于 lisa 烧录**
+**LPK 文件是最终构建产物，可用于 LISA 烧录**
 
 ### 使用 LISA 烧录固件
 

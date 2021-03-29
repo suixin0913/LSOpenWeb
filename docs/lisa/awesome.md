@@ -79,13 +79,15 @@ LISA 生态离不开各类软件包的不断丰富，以下列出目前推荐使
 
 ### CSK板型模板@board
 
-- [@board/lskits](https://lpm.listenai.com/package/@board/lskits)：LSKits 的板型模板
+- [@board/lskits-csk4002](https://lpm.listenai.com/package/@board/lskits-csk4002)：LSkits CSK4002核心板 硬件板型模板
+- [@board/lskits-csk3002](https://lpm.listenai.com/package/@board/lskits-csk3002)：LSkits CSK3002核心板 硬件板型模板
+
 
 
 ### 常用工具@tool
 
-- [@tool/cskburn](https://lpm.listenai.com/package/@tool/cskburnp)：CSK 芯片烧录工具
-- [@tool/csk-old-build](https://lpm.listenai.com/package/@tool/csk-old-build)：针对 CSK 旧项目，进行 build 的相关操作，可 package lpk
+- [@tool/cskburn](https://lpm.listenai.com/package/@tool/cskburn)：CSK 芯片烧录工具
+- [@tool/csk-old-build](https://lpm.listenai.com/package/@tool/csk-old-build)：支持 CSK 旧项目构建出 LPK文件
 - [@tool/mini-esr-tool](https://lpm.listenai.com/package/@tool/mini-esr-tool)：可把阈值txt转成bin
 
 
