@@ -18,9 +18,9 @@ slug: /CSK_online_guides/getting_start
 
 ## 1.做好准备
 
-### 1.1.准备LSKits离在线开发板
+### 1.1.准备LSKits离在线开发套件
 
-你需要拿到一个聆思官方的开发板，请关注聆思科技公众号（LISTENAI）或联系聆思商务团队获取。获取后，将底板与 CSK+XR872AT 核心板通过插针组装，如下图：
+首先，你需要准备一个聆思官方退出的简易开发套件，请在[讯飞AI服务市场](https://www.aifuwus.com/onstage/cmddetail?product_type=2466)或关注聆思科技公众号（LISTENAI）获取。拿到开发套件后，将底板与 CSK+XR872AT 核心板通过插针拼接在一起，如下图：
 
 ![](./files/LSKits_XR872AT.jpg)
 
@@ -91,15 +91,13 @@ Cool ！，你已经成功为开发板配网。接下来你可以通过【小飞
 
 ## 4.尝试烧录固件
 
-虽然 LSKits 在出厂时已烧录固件，但为了确保你能够顺利进行二次开发，我们建议你尝试烧录固件。
-
-离在线固件包括 CSK 固件与 XR872AT 固件。
+虽然 LSKits 在出厂时已烧录固件，但为了确保你能够顺利进行二次开发，我们建议你尝试烧录固件。包括 CSK 固件与 XR872AT 固件。
 
 ### 4.1.XR872AT固件烧录
 
-- 下载 [XR872AT 固件](/CSK_online_guides_home)
+- 下载 [XR872AT 固件](https://open.listenai.com/resource/open/doc_resource%2F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%2F%E7%A6%BB%E5%9C%A8%E7%BA%BF%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%2F%E7%A6%BB%E5%9C%A8%E7%BA%BF%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95%2Fxr_system.img)
 
-- 下载 [XR872AT 固件烧录工具](/CSK_online_guides_home)
+- 下载 [XR872AT 固件烧录工具](https://open.listenai.com/resource/open/doc_resource%2F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%2F%E7%A6%BB%E5%9C%A8%E7%BA%BF%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%2F%E7%A6%BB%E5%9C%A8%E7%BA%BF%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95%2Fxradio_phoenixMC_v3.1.0909b.zip)
 
 - 将XR872AT核心板底部的开关封贴撕开，将开关1，2上拨，3，4下拨；如下图：
 
@@ -120,19 +118,27 @@ Cool ！，你已经成功为开发板配网。接下来你可以通过【小飞
   - 将串口波特率设置为921600。
   - 找到串口并勾选。若未显示串口，可在设备管理器中查看是否有USB设备，若没有，则尝试重新插拔串口；若有设备，查看是否需要安装驱动，若需要，安装驱动即可。
   - 选择已下载好的固件
-  - 点击升级固件，此时需要保持LSKits的【XR872 BOOT】键一直处于按压状态
+  - 点击升级固件，此时需要保持 LSKits 的【XR872 BOOT】键一直处于按压状态
   - 当进度条开始变化时，松开【XR872 BOOT】键
-  - 待烧录完成后，重新为LSKits上电，若开机时播报提示音，则说明固件烧录成功且运行正常。
+  - 待烧录完成后，重新为 LSKits 上电，若开机时播报提示音，则说明固件烧录成功且运行正常。
 
   ![](./files/XR872AT_burn.png)
+
+:::tip
+
+1.固件开始烧录后，不要急于松开【XR872 BOOT】键，需要等进度条超过3%后再松开。
+
+2.切勿一直长按【XR872 BOOT】键，长按将会导致固件烧录失败。
+
+:::
 
 
 
 ### 4.2.CSK固件烧录
 
-- 下载[CSK固件](/CSK_online_guides_home)。
+- 下载[CSK固件](https://open.listenai.com/resource/open/doc_resource%2F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%2F%E7%A6%BB%E5%9C%A8%E7%BA%BF%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%2F%E7%A6%BB%E5%9C%A8%E7%BA%BF%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95%2Fcsk4002.zip)。
 
-- 接通LSKits电源，同时按住底板的【XR872 BOOT】和【CSK UPDATE】键。如下图：
+- 接通 LSKits 电源，同时按住底板的【XR872 BOOT】和【CSK UPDATE】键。如下图：
 
 ![](./files/csk_boot.png)
 

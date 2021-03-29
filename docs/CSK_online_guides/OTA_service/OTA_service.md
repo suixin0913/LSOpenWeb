@@ -1,6 +1,6 @@
 ---
 
-id: developer_guides
+id: OTA_service
 title: OTA服务
 slug: /CSK_online_guides/OTA_service
 

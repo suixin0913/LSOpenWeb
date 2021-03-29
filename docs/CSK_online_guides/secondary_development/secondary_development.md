@@ -1,5 +1,6 @@
 ---
 
+
 id: secondary_development
 title: 上位机固件二次开发
 slug: /CSK_online_guides/secondary_development
@@ -22,9 +23,9 @@ slug: /CSK_online_guides/secondary_development
 
 :::
 
-## 1.XR872AT开发环境配置
+## 1.XR872AT 开发环境配置
 
-在进入二次开发之前，可先了解XR872AT的固件开发环境与编译方法，方便你在进行二次开发后，编译自己的固件产物。
+在进入二次开发之前，可先了解 XR872AT 的固件开发环境与编译方法，方便你在进行二次开发后，编译自己的固件产物。
 
 ### 开发环境搭建
 
@@ -185,7 +186,7 @@ slug: /CSK_online_guides/secondary_development
 
 ## 3.更换 Client_id 、OTA_SECRET
 
-当你在 iFLYOS 设备接入平台创建自己的设备后，会获取属于该设备的 client_id。client_id 将会被 iFLYOS 用于判定设备型号，一个型号的设备都会使用相同的 client_id。在二次开发前，你需要替换掉 Castor_EVB 固件中的默认 client_id 。替换后，你在 iFLYOS 平台中的个性化配置将会在固件端生效。修改方式如下：
+当你在 iFLYOS 设备接入平台创建自己的设备后，会获取属于该设备的 `Client_id`。`Client_id` 将会被 iFLYOS 用于判定设备型号，一个型号的设备都会使用相同的 `Client_id`。在二次开发前，你需要替换掉上位机固件中的默认 `Client_id` 。替换后，你在 iFLYOS 平台中的个性化配置将会在固件端生效。修改方式如下：
 
 - 更改 `project/listenai_castor_xr872/listenai_sdk/modules/listenai_evs/evs_opts.h` 中 `Client_id` 宏定义。
 - 更换 `Client_id` 后，还需要更换对应的 `OTA_SECRET`，该字段主要用于固件OTA时的校验，可在【设备能力】-【自动更新】-【加密密钥】中获取。与 `Client_id` 在同一文件中，对应宏定义为  `OTA_SECRET`。
