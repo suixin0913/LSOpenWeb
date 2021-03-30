@@ -8,8 +8,8 @@ slug: /datasheet
 
 | 文件| 更新时间 | 操作 |
 | ----| ---- | ---- |
-| **聆思智能公司介绍_v2.pdf** | 2021.01.20 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D%2F%E8%81%86%E6%80%9D%E6%99%BA%E8%83%BD%E5%85%AC%E5%8F%B8%E4%BB%8B%E7%BB%8D_v2.pdf)|
-| **聆思智能销售PPT_v8.pdf** | 2021.01.20 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D%2F%E8%81%86%E6%80%9D%E6%99%BA%E8%83%BD%E9%94%80%E5%94%AEPPT_v8.pdf)|
+| **聆思智能销售PPT_v8.pdf** | 2021.03.30 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D%2F%E8%81%86%E6%80%9D%E6%99%BA%E8%83%BD%E9%94%80%E5%94%AEPPT_v8.pdf)|
+| **CSK芯片介绍-7折页-v2.4.pdf** | 2021.03.30 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D%2FCSK%E8%8A%AF%E7%89%87%E4%BB%8B%E7%BB%8D-7%E6%8A%98%E9%A1%B5-v2.4.pdf)|
 
 ## CSK Datasheet
 
