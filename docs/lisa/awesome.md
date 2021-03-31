@@ -14,7 +14,7 @@ slug: /lisa
 
 ## 2.获取 LISA 环境
 
-下载并安装LStudio 2.3.1 版本，即可以完成配置所有运行 LISA 所需的环境配置。[点击这里下载](https://iflyos-external.oss-cn-shanghai.aliyuncs.com/public/lstudio/alpha/LStudioInstaller-2.3.1-beta.exe)
+下载并安装LStudio 2.3.1 版本，即可以完成配置所有运行 LISA 所需的环境配置。[点击这里下载](https://iflyos-external.oss-cn-shanghai.aliyuncs.com/public/lstudio/alpha/LStudioInstaller-2.3.1-beta5.exe)
 
 如果之前已经在更早版本的 LStudio 登录过，安装新版本后**请重新登录**。
 
@@ -53,7 +53,7 @@ LISA 生态离不开各类软件包的不断丰富，以下列出目前推荐使
 ### 基础软件包
 
 - [@listenai/lisa](https://lpm.listenai.com/package/@listenai/lisa)：LISA 命令行原始工具
-- [@@listenai/lisa_core](https://lpm.listenai.com/package/@listenai/lisa_core)：LISA 核心包，用于制作 LISA 软件包
+- [@listenai/lisa_core](https://lpm.listenai.com/package/@listenai/lisa_core)：LISA 核心包，用于制作 LISA 软件包
 
 
 ### CSK源码@source
