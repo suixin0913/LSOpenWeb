@@ -88,7 +88,7 @@ slug: /application_config
 | 字段 | 取值 | 说明 |示例 |
 | - | - | - | - |
 | `pwm` | `0`<br/>`1`| 选择0号pwm端口<br/>选择1号pwm端口 | `pwm = 0` |
-| `ch` | 整型`0-5`| channel配置`ch`依赖`pwm`:<br/>当`pwm = 0`，支持channel 0-channel 3<br/>当`pwm = 1`，支持channel 4-channel 5 | `ch = 1` |
+| `ch` | 整型`0-3`| pwm=0，ch=1，使用channel1<br/>pwm=0，ch=2，实际channel2<br/>pwm=0，ch=3，实际channel3<br/>pwm=1，ch=0，实际channel4<br/>pwm=1，ch=1，实际channel5 | `ch = 1` |
 | `freq` | 整型| 配置红外发射频率，单位为Hz<br/>**此处配置无效！以基础配置 **<br/>`config/base.csk`** 为准** | `freq = 38000` |
 | `resend` | 整型| 单条命令连续发送次数，可用于设计重试次数 | `resend = 8` |
 | `duty` | 整型| 红外信号pwm占空比 | `duty = 160` |
