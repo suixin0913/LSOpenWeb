@@ -19,7 +19,8 @@ slug: /hardware_guide
 | 文件                             | 更新时间   | 操作                                                         |
 | -------------------------------- | ---------- | ------------------------------------------------------------ |
 | **麦克风阵列设计参考手册_v1.4.pdf** | 2021.02.03 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E9%BA%A6%E5%85%8B%E9%A3%8E%E9%98%B5%E5%88%97%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C_v1.4.pdf)|
-| **麦克风阵列录音标准实施指导手册_v1.0.pdf** | 2021.02.03 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E9%BA%A6%E5%85%8B%E9%A3%8E%E9%98%B5%E5%88%97%E5%BD%95%E9%9F%B3%E6%A0%87%E5%87%86%E5%AE%9E%E6%96%BD%E6%8C%87%E5%AF%BC%E6%89%8B%E5%86%8C_v1.0.pdf)|
+
+<!-- | **麦克风阵列录音标准实施指导手册_v1.0.pdf** | 2021.02.03 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E9%BA%A6%E5%85%8B%E9%A3%8E%E9%98%B5%E5%88%97%E5%BD%95%E9%9F%B3%E6%A0%87%E5%87%86%E5%AE%9E%E6%96%BD%E6%8C%87%E5%AF%BC%E6%89%8B%E5%86%8C_v1.0.pdf)| -->
 
 
 
