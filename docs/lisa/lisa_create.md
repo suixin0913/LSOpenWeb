@@ -6,7 +6,7 @@ slug: /lisa_create
 
 ## 获取LISA环境
 
-下载并安装LStudio 最新版本，即可以完成配置所有运行 LISA 所需的环境配置。[点击这里下载](https://castor.iflyos.cn/castor/v3/lstudio/download)
+下载并安装LStudio 2.3.1 版本，即可以完成配置所有运行 LISA 所需的环境配置。[点击这里下载](https://iflyos-external.oss-cn-shanghai.aliyuncs.com/public/lstudio/alpha/LStudioInstaller-2.3.1-beta13.exe)
 
 
 如果之前已经在更早版本的 LStudio 登录过，安装新版本后**请重新登录**。
