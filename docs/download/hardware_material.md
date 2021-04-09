@@ -51,6 +51,6 @@ slug: /hardware_material
 
 | 文件| 更新时间 | 操作 |
 | ----| ---- | ---- |
+| **芯片烧录.zip** | 2021.04.09 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E9%87%8F%E4%BA%A7%E6%8C%87%E5%8D%97%2F%E8%8A%AF%E7%89%87%E7%83%A7%E5%BD%95.zip)|
 | **模组烧录.zip** | 2021.01.21 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E9%87%8F%E4%BA%A7%E6%8C%87%E5%8D%97%2F%E6%A8%A1%E7%BB%84%E7%83%A7%E5%BD%95.zip)|
-| **芯片烧录.zip** | 2021.03.09 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E9%87%8F%E4%BA%A7%E6%8C%87%E5%8D%97%2F%E8%8A%AF%E7%89%87%E7%83%A7%E5%BD%95.zip)|
 
