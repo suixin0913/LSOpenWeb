@@ -36,7 +36,7 @@ slug: /school
 - [开发篇05：硬件驱动使用示例-UART](https://www.bilibili.com/video/BV1iy4y1x7ye)
 - [开发篇06：使用LISA创建LStudio工程](https://www.bilibili.com/video/BV1Ri4y1w78E)
 
-## 4.生产测试篇
+## 4.生产产测篇
 
 - [纯离线模块产测教程](https://www.bilibili.com/video/BV12K411F7ND)
 
