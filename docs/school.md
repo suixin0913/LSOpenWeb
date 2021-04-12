@@ -2,7 +2,7 @@
 
 id: lSschool
 title: 视频教程
-slug: /lSschool
+slug: /school
 
 ---
 
