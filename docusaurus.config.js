@@ -43,6 +43,11 @@ module.exports = {
           position: 'left'
         },
         {
+          to: '/school',
+          label: '视频教程',
+          position: 'left'
+        },
+        {
           href: "https://cloud.listenai.com",
           label: "LSCloud",
           position: 'right'
