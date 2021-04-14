@@ -19,13 +19,13 @@ slug: /school
 
 - [硬件篇01：声学结构设计](https://www.bilibili.com/video/BV1Gb4y1D7bi)
 - [硬件篇02：CSK 硬件基本功能确认讲解](https://www.bilibili.com/video/BV1C64y1S7Lb)
-- [硬件篇03：PCB离线设计讲解](https://www.bilibili.com/video/BV1PK4y1K7H2)
-- [硬件篇04：CSK4002+ES7210设计要点讲解](https://www.bilibili.com/video/BV1Q54y1b7xY)
-- [硬件篇05：PCB离在线设计讲解](https://www.bilibili.com/video/BV18h411U7g4)
-- [硬件篇06：CSK4002+BK7251设计要点讲解](https://www.bilibili.com/video/BV11X4y1g7Vr)
-- [硬件篇07：硬件常见问题讲解](https://www.bilibili.com/video/BV1yB4y1w7um)
-- [硬件篇08：UAC 会议降噪方案设计讲解](https://www.bilibili.com/video/BV17V411H7u9)
-- [硬件篇09：CV云台方案讲解](https://www.bilibili.com/video/BV1aU4y1h7Fr)
+- [硬件篇03：CSK4002+ES7210设计要点讲解](https://www.bilibili.com/video/BV1Q54y1b7xY)
+- [硬件篇04：PCB离线设计讲解](https://www.bilibili.com/video/BV1PK4y1K7H2)
+- [硬件篇05：CSK4002+BK7251设计要点讲解](https://www.bilibili.com/video/BV11X4y1g7Vr)
+- [硬件篇06：PCB离在线设计讲解](https://www.bilibili.com/video/BV18h411U7g4)
+- [硬件篇07：UAC 会议降噪方案设计讲解](https://www.bilibili.com/video/BV17V411H7u9)
+- [硬件篇08：CV云台方案讲解](https://www.bilibili.com/video/BV1aU4y1h7Fr)
+- [硬件篇09：硬件常见问题讲解](https://www.bilibili.com/video/BV1yB4y1w7um)
 
 ## 3.软件开发篇
 
