@@ -115,6 +115,13 @@ PS C:\Users\oralzl\Desktop\芯片业务\项目工程文件\newProject> lisa buil
 
 ### 使用 LISA 烧录固件
 
+**烧录前准备**
+- 安装驱动：可点击 LStudio 顶部工具栏-常用工具-安装驱动
+- 准备数据线：确保数据线可以用于数据传输
+
+
+**烧录流程说明**
+
 在当前项目中，打开命令行终端，输入 `lisa flash` ，触发固件烧录流程。
 
 关于 LSKits的相关操作，可以参考[这份文档](https://open.listenai.com/getting_start#25-%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95)。
@@ -143,6 +150,8 @@ bin list > flashboot(0),master(0x10000),script(0xf0000),respak(0x100000)
 
 ![](./files/lisa_create/application.png)
 
+详细介绍请阅读：[源码应用配置](/config_application)
+
 
 ### hardware 图形化配置
 
@@ -151,6 +160,8 @@ bin list > flashboot(0),master(0x10000),script(0xf0000),respak(0x100000)
 - 点击右上角切换按钮可以回到代码模式进行编辑
 
 ![](./files/lisa_create/hardware.png)
+
+详细介绍请阅读：[芯片引脚功能配置](/config_hardware)
 
 
 
