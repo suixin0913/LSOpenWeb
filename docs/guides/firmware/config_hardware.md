@@ -33,9 +33,9 @@ slug: /config_hardware
 ## 5 与 application.lini 联动生效的配置
 
 以下引脚功能需要 `application.lini` 中的相关配置才可以生效，在配置过程中请务必关注：
-- [USB配置](/config_application#USB配置)
-- [UART配置](/config_application#UART配置)
-- [I2C配置](/config_application#I2C配置)
+- [USB配置](/config_application#usb配置)
+- [UART配置](/config_application#uart配置)
+- [I2C配置](/config_application#i2c配置)
 - [PWM-红外配置](/config_application#红外配置)
 
 ## 6 使用代码模式配置
