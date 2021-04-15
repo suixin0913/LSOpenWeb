@@ -8,6 +8,8 @@ slug: /config_application
 1. 使用版本号 2.3.1 以上 LStudio 进行开发
 2. 工程项目是使用 `lisa` 创建的 CSK 项目（文档参考：[使用 lisa 创建项目](/lisa_create)）
 
+**温馨提示**： LStudio 旧项目的基础配置使用说明请查看：[CSK项目基础配置](/guides/firmware/base_config)
+
 
 ## 1 关于 application 文件
 
@@ -120,7 +122,7 @@ CSK 芯片只预留了2组 I2C 功能（端口编号分别为0、1）。请务�
 
 ## 5. 产测配置
 
-另外一个页面专项说明...
+产测相关的配置请阅读：[产测开发指南](/factory_config)
 
 
 

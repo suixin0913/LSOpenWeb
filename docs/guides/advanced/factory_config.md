@@ -1,6 +1,6 @@
 ---
 id: advanced_factory_config 
-title: 产测配置
+title: 产测开发
 slug: /factory_config
 ---
 ## 1.说明

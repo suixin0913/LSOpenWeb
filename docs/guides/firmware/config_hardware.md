@@ -8,6 +8,8 @@ slug: /config_hardware
 1. 使用版本号 2.3.1 以上 LStudio 进行开发
 2. 工程项目是使用 `lisa` 创建的 CSK 项目（文档参考：[使用 lisa 创建项目](/lisa_create)）
 
+**温馨提示**： LStudio 旧项目的引脚配置使用说明请查看：[外围引脚配置](/peripheral_config)
+
 ## 1 关于 hardware 文件
 
 `hardware.lini` 用于定义芯片引脚功能，配合固件实现电控业务逻辑。LStudio 会对 `hardware.lini` 中的可配置内容进行可视化渲染。**为了避免配置错误，推荐使用可视化界面完成配置的编辑。**如果想要查看或直接修改配置代码，可以点击可视化界面右上角的切换按钮进行编辑模式切换。
@@ -48,7 +50,7 @@ slug: /config_hardware
 
 ## 7 产测功能配置
 
-`hardware.lini` 含有产测相关的配置，具体请阅读：[产测配置文档](/factory_config)
+`hardware.lini` 含有产测相关的配置，具体请阅读：[产测开发指南](/factory_config)
 
 
 

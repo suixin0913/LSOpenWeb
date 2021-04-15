@@ -14,7 +14,12 @@ slug: /csk_sdk_demo
 > 3. 业务控制接口的使用示例。
 > 4. EngineCore接口的使用示例。
 
-本文档仅作示例说明，具体请查看 [CSK SDK API详细文档](https://open.listenai.com/csksdk_api)
+本文档仅作示例说明，具体请查看： [CSK SDK API详细文档](https://open.listenai.com/csksdk_api)
+
+在正式开发前，请在 `application.lini` 配置文件中把**协议模式**选定为**自定义双工协议** `sys_mode = "custom"`
+
+![](./files/custom.png)
+
 
 ## 1. SDK文件目录说明
 
