@@ -128,15 +128,15 @@ CSK作为协处理器时，通过串口通信，为外围模块提供封装的AI
 
 命令帧:设置播音音量为 7 级，RDY 高电平：
 
-~~~
+```
 58 46 0E 00 00 54 F0 00 01 07 AA 0A 00 54
-~~~
+```
 
 响应帧：命令帧正确反馈
 
-~~~
+```
 58 46 0B 00 08 4F FF 00 01 10 F0
-~~~
+```
 
 > 查看[响应帧：0x01 命令帧反馈](#0x01命令帧反馈)
 
@@ -170,18 +170,19 @@ CSK作为协处理器时，通过串口通信，为外围模块提供封装的AI
 :::note使用示例
 命令帧:设置波特率为 115200
 
-~~~
+```
 58 46 0B 00 00 57 F0 00 02 03 0B
-~~~
+```
 
 响应帧：命令帧正确反馈
 
-~~~
+```
 58 46 0B 00 02 55 FF 00 01 10 F0
-~~~
+```
 
 > 查看[响应帧：0x01 命令帧反馈](#0x01命令帧反馈)
-> :::
+
+:::
 
 ### 0x03版本查询（已弃用）
 
@@ -212,17 +213,19 @@ CSK作为协处理器时，通过串口通信，为外围模块提供封装的AI
 58 46 0A 00 00 58 F0 00 04 0C
 
 响应帧：
+
+
 命令帧正确反馈：
 
-~~~
+```
 58 46 0B 00 04 53 FF 00 01 10 F0
-~~~
+```
 
 运行状态反馈：
 
-~~~
+```
 58 46 0B 00 05 52 FF 00 03 10 EE
-~~~
+```
 
 > 查看[响应帧：0x01 命令帧反馈](#0x01命令帧反馈)
 >
@@ -256,15 +259,15 @@ CSK作为协处理器时，通过串口通信，为外围模块提供封装的AI
 :::note使用示例
 命令帧: 停止所有模块
 
-~~~
+```
 58 46 0A 00 00 58 F0 00 10 00
-~~~
+```
 
 响应帧：命令帧正确反馈
 
-~~~
+```
 58 46 0B 00 08 4F FF 00 01 10 F0
-~~~
+```
 
 > 查看[响应帧：0x01 命令帧反馈](#0x01命令帧反馈)
 
@@ -319,32 +322,33 @@ CSK作为协处理器时，通过串口通信，为外围模块提供封装的AI
 
 命令帧:
 
-<table border='0' cellpadding='0' cellspacing='0' width='1404' style='border-collapse: 
- collapse;table-layout:fixed;width:1053pt'>
- <col width='172' style='mso-width-source:userset;width:129pt'>
- <col width='61' span='2' style='mso-width-source:userset;width:45.75pt'>
- <col width='72' span='5' style='width:54pt'>
- <col width='189' style='mso-width-source:userset;width:141.75pt'>
- <col width='129' style='mso-width-source:userset;width:96.75pt'>
- <col width='72' span='6' style='width:54pt'>
+<table border='0' cellpadding='0' cellspacing='0' width='1404' style={{borderCollapse: 'collapse',tableLayout:'fixed',width:'553pt'}}>
+ <col width='172' style={{msoWidthSource:'userset', width:'129pt'}}></col>
+ <col width='61' span='2' style={{msoWidthSource:'userset', width:'45.75pt'}}></col>
+ <col width='72' span='5' style={{width:'54pt'}}></col>
+ <col width='189' style={{msoWidthSource: 'userset', width:'141.75pt'}}></col>
+ <col width='129' style={{msoWidthSource: 'userset', width: '96.75pt'}}></col>
+ <col width='72' span='6' style={{width:'54pt'}}></col>
  
- <tr height='19' style='mso-height-source:userset;height:14.4pt' id='r1'>
-<td colspan='16' height='19' class='x69' style='height:14.4pt;'>命令帧结构</td>
+ <tr height='19' style={{msoHeightSource:'userset', height:'14.4pt'}} id='r1'>
+    <td colspan='16' height='19' class='x69' style={{height: '14.4pt'}}>命令帧结构</td>
  </tr>
- <tr height='20' style='mso-height-source:userset;height:15pt' id='r2'>
-<td height='20' class='x69' style='height:15pt;'>字段</td>
+ <tr height='20' style={{msoHeightSource: 'userset', height: '15pt'}} id='r2'>
+<td height='20' class='x69' style={{height: '15pt'}}>字段</td>
 <td class='x69'>类型</td>
 <td class='x69'>地址</td>
 <td class='x69'>命令字</td>
 <td colspan='2' class='x69'>提示音ID</td>
-<td class='x70' style='overflow:hidden;'><div style='margin-left:-14px'>指定识别模式是否循环</div></td>
+<td class='x70' style={{overflow: 'hidden'}}><div style={{marginLeft: '-14px'}}>指定识别模式是否循环</div></td>
 <td colspan='3' class='x70'>拾音波束</td>
 <td colspan='4' class='x69'>识别模式</td>
 <td class='x69'>超时时间</td>
-<td class='x69'><span style='display:none'></span>累加和校验</td>
+<td class='x69'><span style={{display:'none'}}></span>累加和校验</td>
  </tr>
- <tr height='19' style='mso-height-source:userset;height:14.4pt' id='r3'>
-<td height='19' class='x69' style='height:14.4pt;'>ID</td>
+ 
+
+<tr height='19' style={{msoHeightSource: 'userset', height:'14.4pt'}} id='r3'>
+<td height='19' class='x69' style={{height:'14.4pt'}}>ID</td>
 <td class='x69'>TYPE</td>
 <td class='x69'>ADDR</td>
 <td class='x69'>CMD</td>
@@ -355,8 +359,8 @@ CSK作为协处理器时，通过串口通信，为外围模块提供封装的AI
 <td class='x69'>RT</td>
 <td class='x69'>DCHK</td>
  </tr>
- <tr height='19' style='mso-height-source:userset;height:14.4pt' id='r4'>
-<td height='19' class='x69' style='height:14.4pt;'>数据位长度</td>
+ <tr height='19' style={{msoHeightSource:'userset', height:'14.4pt'}} id='r4'>
+<td height='19' class='x69' style={{height:'14.4pt;'}}>数据位长度</td>
 <td class='x69'>1 BYTE</td>
 <td class='x69'>1 BYTE</td>
 <td class='x69'>1 BYTE</td>
@@ -373,8 +377,11 @@ CSK作为协处理器时，通过串口通信，为外围模块提供封装的AI
 <td class='x69'>1 BYTE</td>
 <td class='x69'>1 BYTE</td>
  </tr>
- <tr height='19' style='mso-height-source:userset;height:14.4pt' id='r5'>
-<td height='19' class='x69' style='height:14.4pt;'>二进制</td>
+
+
+
+ <tr height='19' style={{msoHeightSource: 'userset', height: '14.4pt'}} id='r5'>
+<td height='19' class='x69' style={{height: '14.4pt'}}>二进制</td>
 <td class='x69'></td>
 <td class='x69'></td>
 <td class='x69'></td>
@@ -391,8 +398,8 @@ CSK作为协处理器时，通过串口通信，为外围模块提供封装的AI
 <td class='x69'></td>
 <td class='x69'></td>
  </tr>
- <tr height='19' style='mso-height-source:userset;height:14.4pt' id='r6'>
-<td height='19' class='x69' style='height:14.4pt;'>示例帧数据(十六进制)</td>
+ <tr height='19' style={{msoHeightSource: 'userset', height: '14.4pt'}} id='r6'>
+<td height='19' class='x69' style={{height:'14.4pt'}}>示例帧数据(十六进制)</td>
 <td class='x69'>0xF0</td>
 <td class='x69'>0x00</td>
 <td class='x69'>0x11</td>
@@ -402,35 +409,35 @@ CSK作为协处理器时，通过串口通信，为外围模块提供封装的AI
 <td class='x69'>0x14</td>
 <td class='x69'>0x57</td>
  </tr>
- <tr height='0' style='display:none'>
-  <td width='172' style='width:129pt'></td>
-  <td width='61' style='width:45.75pt'></td>
-  <td width='61' style='width:45.75pt'></td>
-  <td width='72' style='width:54pt'></td>
-  <td width='72' style='width:54pt'></td>
-  <td width='72' style='width:54pt'></td>
-  <td width='72' style='width:54pt'></td>
-  <td width='72' style='width:54pt'></td>
-  <td width='189' style='width:141.75pt'></td>
-  <td width='129' style='width:96.75pt'></td>
-  <td width='72' style='width:54pt'></td>
-  <td width='72' style='width:54pt'></td>
-  <td width='72' style='width:54pt'></td>
-  <td width='72' style='width:54pt'></td>
-  <td width='72' style='width:54pt'></td>
-  <td width='72' style='width:54pt'></td>
+ <tr height='0' style={{display:'none'}}>
+  <td width='172' style={{width:'129pt'}}></td>
+  <td width='61' style={{width:'45.75pt'}}></td>
+  <td width='61' style={{width:'45.75pt'}}></td>
+  <td width='72' style={{width:'54pt'}}></td>
+  <td width='72' style={{width:'54pt'}}></td>
+  <td width='72' style={{width:'54pt'}}></td>
+  <td width='72' style={{width:'54pt'}}></td>
+  <td width='72' style={{width:'54pt'}}></td>
+  <td width='189' style={{width:'141.75pt'}}></td>
+  <td width='129' style={{width:'96.75pt'}}></td>
+  <td width='72' style={{width:'54pt'}}></td>
+  <td width='72' style={{width:'54pt'}}></td>
+  <td width='72' style={{width:'54pt'}}></td>
+  <td width='72' style={{width:'54pt'}}></td>
+  <td width='72' style={{width:'54pt'}}></td>
+  <td width='72' style={{width:'54pt'}}></td>
  </tr>
 </table>
 
-~~~
+```
 58 46 0E 00 00 54 F0 00 11 01 00 93 14 57
-~~~
+```
 
 响应帧: 命令帧正确反馈
 
-~~~
+```
 58 46 0B 00 08 4F FF 00 01 10 F0
-~~~
+```
 
 超时后会返回识别超时的响应帧
 :::
@@ -458,7 +465,14 @@ CSK作为协处理器时，通过串口通信，为外围模块提供封装的AI
         <td rowspan="4" >命令数据</td>
         <td>VID_1</td>
         <td>2字节</td>
-        <td rowspan="4" >有效值：从 1 到 MAX（其中 MAX 取决于实际存储的音频个数，最大取值0xFE）；<br/> 0x00 作为忽略值及默认值。<br/> 特殊说明：从第1条开始，如果第N（1<=N<=4）条语音 ID 为 0x00，则该语音之后的 4-N 条语音都将被忽略。<br/> 由两个字节组成，低字节在前，高字节在后；</td>
+        <td rowspan="4" >有效值：从 1 到 MAX（其中 MAX 取决于实际存储的音频个数，最大取值0xFE）；
+         <br/> 
+            0x00 作为忽略值及默认值。
+            <br/> 
+            特殊说明：从第1条开始，如果第N（1&lt;=N&lt;=4）条语音 ID 为 0x00，则该语音之后的 4-N 条语音都将被忽略。
+            <br/> 
+            由两个字节组成，低字节在前，高字节在后；
+        </td>
     </tr>
     <tr>
         <td>VID_2</td>
@@ -478,26 +492,27 @@ CSK作为协处理器时，通过串口通信，为外围模块提供封装的AI
 
 命令帧：播放两条提示音，第 1 条为 0x01，第 2 条为 0x02，其余的两条为无效值。
 
-~~~
+```
 58 46 12 00 00 50 F0 00 12 01 00 02 00 00 00 00 00 FB
-~~~
+```
 
 响应帧：命令帧正确反馈
 
-~~~
+```
 58 46 0B 00 08 4F FF 00 01 10 F0
-~~~
+```
 
 响应帧：播音结束反馈
 
-~~~
+```
 58 46 0A 00 0D 4B FF 00 20 E1
-~~~
+```
 
 > 查看[响应帧：0x01 命令帧反馈](#0x01命令帧反馈)
 >
 > 查看[响应帧：0x20播音结束反馈](#0x20播音结束反馈)
-> :::
+
+:::
 
 ### 0x15设置I2S输出通道
 
@@ -586,12 +601,13 @@ I2S输出通道选择命令，模块支持输出四个通道信号的输出，�
 
 响应帧：正确命令帧反馈
 
-~~~
+```
 58 46 0B 00 08 4F FF 00 01 10 F0
-~~~
+```
 
 > 查看[响应帧：0x01 命令帧反馈](#0x01命令帧反馈)
-> :::
+
+:::
 
 ### 0x16设置ADC增益
 
@@ -634,18 +650,19 @@ I2S输出通道选择命令，模块支持输出四个通道信号的输出，�
 :::note使用示例
 命令帧：设置 ADC 增益为 10 级(2 路 mic 增益 8，2 路回采增益为1)
 
-~~~
+```
 58 46 0E 00 00 54 F0 00 16 08 08 01 01 E8
-~~~
+```
 
 响应帧：命令帧正确反馈
 
-~~~
+```
 58 46 0B 00 08 4F FF 00 01 10 F0
-~~~
+```
 
 > 查看[响应帧：0x01 命令帧反馈](#0x01命令帧反馈)
-> :::
+
+:::
 
 ### 0x17设置命令词识别的启停
 
@@ -688,15 +705,15 @@ I2S输出通道选择命令，模块支持输出四个通道信号的输出，�
 :::note使用示例
 命令帧：进入命令词识别状态
 
-~~~
+```
 58 46 0E 00 00 54 F0 00 17 00 00 00 00 F9
-~~~
+```
 
 响应帧：命令帧正确反馈
 
-~~~
+```
 58 46 0B 00 08 4F FF 00 01 10 F0
-~~~
+```
 
 :::
 
@@ -730,18 +747,19 @@ I2S输出通道选择命令，模块支持输出四个通道信号的输出，�
 :::note使用示例
 命令帧：输出第三路音频，用于云端识别
 
-~~~
+```
 58 46 0B 00 00 57 F0 00 18 03 F5
-~~~
+```
 
 响应帧：命令帧正确反馈
 
-~~~
+```
 58 46 0B 00 08 4F FF 00 01 10 F0
-~~~
+```
 
 > 查看[响应帧：0x01 命令帧反馈](#0x01命令帧反馈)
-> :::
+
+:::
 
 ### 0x19查询所有版本号
 
@@ -771,26 +789,27 @@ I2S输出通道选择命令，模块支持输出四个通道信号的输出，�
 :::note使用示例
 命令帧：查询固件 CAE 版本号
 
-~~~
+```
 58 46 0B 00 00 57 F0 00 19 02 F5
-~~~
+```
 
 响应帧：命令帧正确反馈
 
-~~~
+```
 58 46 0B 00 08 4F FF 00 01 10 F0
-~~~
+```
 
 响应帧：版本查询的反馈
 
-~~~
+```
 58 46 4B 00 24 F3 FF 00 04 xxxx
-~~~
+```
 
 > 查看[响应帧：0x01 命令帧反馈](#0x01命令帧反馈)
 >
 > 查看[响应帧：0x04版本查询的反馈](#0x04版本查询的反馈)
-> :::
+
+:::
 
 ### 0xFF心跳
 
@@ -820,18 +839,19 @@ CSK接收的心跳指令后，返回一个心跳“响应帧”，表示工作�
 :::note使用示例
 命令帧：心跳包
 
-~~~
+```
 58 46 0B 00 00 57 F0 00 FF 00 11
-~~~
+```
 
 响应帧：命令帧正确反馈
 
-~~~
+```
 58 46 0B 00 08 4F FF 00 01 10 F0
-~~~
+```
 
 > 查看[响应帧：0x01 命令帧反馈](#0x01命令帧反馈)
-> :::
+
+:::
 
 ---
 
@@ -863,6 +883,7 @@ CSK通过响应帧，向外围模块发送CSK的相关信息；帧数据标记�
       <td>【0x00】系统初始化成功（系统正常启动后，会主动发送该响应）<br/>【0x10】收到正确的命令<br/>【0x11】数据帧格式错误<br/>【0x12】数据帧参数错误</td>
    </tr>
 </table>
+
 > 查看[命令帧：0x01 系统设置](#0x01系统设置)
 
 ### 0x02固件版本（已弃用）
