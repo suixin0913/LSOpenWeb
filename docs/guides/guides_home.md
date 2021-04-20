@@ -84,6 +84,9 @@ CSK SDK API 的使用示例，包括事件回调、业务接口等，及自定�
 CSK 的硬件驱动使用示例，包含 UART、PWM、GPIO、I2C 等通信接口。
 
 
+### [CSK 外语资源集成说明](/foreign_resources)
+
+本篇介绍 CSK 外语资源结构与使用方式。
 
 
 

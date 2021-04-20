@@ -44,9 +44,13 @@ slug: /CSK_online_guides_home
 
 本篇介绍 iFLYOS 的智能家居服务，如果你希望了解 iFLYOS 智能家居技能支持语音控制的设备类型与语音指令；或者你有自己的 IOT 云，想要接入 iFLYOS 智能家居服务，实现语音控制你的 IOT 设备，可以阅读此文档。
 
-### [OTA服务](/CSK_online_guides/OTA_service)
+### [OTA 服务](/CSK_online_guides/OTA_service)
 
 本篇介绍如何在 iFLYOS 平台实现上位机与 CSK 固件的 OTA 功能。
+
+### [OTA 协议说明](/serial_protocol)
+
+本篇档描述了 CSK4002 的串口下载方法，通过串口的方式，将用户代码拷贝到 RAM 或者 FLASH 区域，可用于用户方案开发，并开放上位机和下位机代码以及协议解析。
 
 ### 新上位机如何接入离在线方案
 
