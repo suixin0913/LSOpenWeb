@@ -1,3 +1,7 @@
+#  @source/4002
+
+`@source/4002` 是 CSK4002 方案固件源码软件包。
+
 # 使用 lisa create 安装 @source
 
 `lisa create` 命令可以使用模板软件包 `@generator/csk` 安装 `@source` 软件包
@@ -11,7 +15,7 @@
 输入创建命令之后，创建模板会提供架手架配置项目所需软件包。请选择你需要使用的 `@source/xxx` 以及对应的版本。
 
 ```shell
-PS C:\Users\oralzl\Desktop\Demo> lisa create newProject -t @generator/csk
+> lisa create newProject -t @generator/csk
   √ 项目创建准备
   √ 初始化安装依赖
 ? 选择芯片方案 @source/csk4002
