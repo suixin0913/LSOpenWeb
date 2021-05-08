@@ -213,7 +213,7 @@ cb_esr_recognition(keyword_attrs_t *key_attrs)
 
 * 使用 `pinmux_config` 配置芯片管脚的功能; 
 
-	* 配置使用芯片管脚 `PIN42` ，选用功能2（GPIO 功能），输出方向。
+	* 配置使用芯片管脚 `PIN42` ，选用功能0（GPIO 功能）。
   
 ```c
 void
