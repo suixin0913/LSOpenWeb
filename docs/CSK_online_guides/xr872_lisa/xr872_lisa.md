@@ -1,7 +1,7 @@
 ---
 id: xr872_lisa     
 title: LISA_API 接入说明         
-slug: /xr872_lisa          
+slug: /xr872_lisa  
 ---
 
 

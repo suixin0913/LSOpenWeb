@@ -2,7 +2,7 @@
 
 id: secondary_development
 title: 上位机固件二次开发
-slug: /CSK_online_guides/secondary_development
+slug: /CSK_online_guides/xr872_evs
 
 ---
 

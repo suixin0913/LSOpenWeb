@@ -38,7 +38,7 @@ slug: /CSK_online_guides_home
 
 本篇介绍XR872固件的二次开发方法，包括自定义 Client_id、AP 热点前缀、灯光、按键，自定义技能的设备端实现，以及本地 TTS 文件的集成。你可以直接基于源码进行二次开发，也可以参考源码在其他上位机上实现相关功能。
 
-[方案二：固件通过LISA API对接语音云](/CSK_online_guides/xr872_lisa)
+[方案二：固件通过LISA API对接语音云](/xr872_lisa)
 
 本篇介绍 LISA API 对接方法，包括  Drivers（驱动）、Component（组件）、Log（日志）、OS（系统）、Modules（功能模块）五方面详的对接实现。文中以 XR872 为例，你可以直接基于源码进行上层应用开发，也可以参考对接源码在其他上位机上实现相关功能。
 
