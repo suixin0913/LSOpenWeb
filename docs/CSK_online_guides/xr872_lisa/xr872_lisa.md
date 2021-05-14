@@ -1,4 +1,9 @@
-# LISA_API 接入说明
+---
+id: xr872_lisa     
+title: LISA_API 接入说明         
+slug: /xr872_lisa          
+---
+
 
 ## 1. 概述
 
@@ -8,7 +13,7 @@
 
 ​::: tip 
 
-以下接口使用用例基于 RTthread 平台，可移植于其他 RTOS 测试。
+以下接口使用用例基于 XR872的RTOS 平台，可移植于其他平台的 RTOS 测试。
 
 :::
 
@@ -16,11 +21,11 @@
 
 适配872或者其他RTOS芯片平台，系统架构：
 
-![](\architecture.png)
+![](./architecture.png)
 
 LISA API适配层封装接口：
 
-![](\lisa_api.png)
+![](./lisa_api.png)
 
 [查看lisa api 接口文档](./lisa_api.md)
 

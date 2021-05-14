@@ -1,4 +1,9 @@
-# LISA_API 接口手册
+---
+id: lisa_api    
+title: LISA_API 接口手册         
+slug: /lisa_api         
+---
+
 
 
 ## Drivers
@@ -2596,7 +2601,12 @@ uint8_t exception_get(void)
 
 下面是某次异常的日志输出，相关信息分析
 
-![img](/Users/terrence/Desktop/wrong_type.png)
+```
+[E][APP]../../../project/listenai_[os E] vApplicationStackOverflowHook():145, task 0x22cb10(record_task) stack over flow
+use default flash chip mJedec 0x0
+[FD I]: mode: 0x4, freq: 48000000Hz, drv: 0
+PMA: mode select:e
+```
 
 
 
