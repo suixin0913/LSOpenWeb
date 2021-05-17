@@ -9,6 +9,13 @@ slug: /download
 
 下载聆思芯片Datasheet、产品规格书、介绍PPT等材料。
 
+### [品类售前胶片](/solutions)
+
+重点品类售前胶片介绍。
+
+### [品类体验固件](/firm_download)
+
+下载可直接烧录至LSKits的品类固件。
 
 ### [软件资料](/software_material)
 
@@ -22,7 +29,5 @@ slug: /download
 
 下载聆思语音效果测试相关材料。
 
-### [品类体验固件](/firm_download)
 
-下载可直接烧录至LSKits的品类固件。
 
