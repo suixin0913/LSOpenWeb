@@ -11,7 +11,7 @@ slug: /hardware_material
 | **声学器件选型Checklist.xlsx** | 2021.01.20 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2F01.CSK%E6%96%B9%E6%A1%88%E4%BA%A7%E5%93%81Checklist.xlsx)|
 | **声学结构设计指南.pdf** | 2021.04.19 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2F%E5%A3%B0%E5%AD%A6%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97.pdf)|
 | **语音产品声学结构相关测试参考方法.pdf** | 2021.04.19 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2F%E8%AF%AD%E9%9F%B3%E4%BA%A7%E5%93%81%E5%A3%B0%E5%AD%A6%E7%BB%93%E6%9E%84%E7%9B%B8%E5%85%B3%E6%B5%8B%E8%AF%95%E5%8F%82%E8%80%83%E6%96%B9%E6%B3%95.pdf)|
-| **关键器件清单.zip** | 2021.01.30 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%85%B3%E9%94%AE%E5%99%A8%E4%BB%B6%E6%B8%85%E5%8D%95.zip)|
+| **关键器件清单.zip** | 2021.05.19 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%85%B3%E9%94%AE%E5%99%A8%E4%BB%B6%E6%B8%85%E5%8D%95.zip)|
 
 ## 硬件参考设计
 
@@ -25,6 +25,9 @@ slug: /hardware_material
 | **CSK4002+ES7210+XR872_在离线模块类标案参考设计C4-18.zip** | 2021.04.19 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK4002%2BES7210%2BXR872_%E5%9C%A8%E7%A6%BB%E7%BA%BF%E6%A8%A1%E5%9D%97%E7%B1%BB%E6%A0%87%E6%A1%88%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1C4-18.zip)|
 | **CSK4002+ES7210标准离线模块_标案参考设计C4-18.zip** | 2021.04.19 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK4002%2BES7210%E6%A0%87%E5%87%86%E7%A6%BB%E7%BA%BF%E6%A8%A1%E5%9D%97_%E6%A0%87%E6%A1%88%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1C4-18.zip)|
 | **CSK4002NC+ES7148参考设计-草案.zip** | 2021.05.08 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK4002NC%2BES7148%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1-%E8%8D%89%E6%A1%88.zip)|
+| **CSK SPI摄像头 - 扫描笔.zip** | 2021.05.19 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK%20SPI%E6%91%84%E5%83%8F%E5%A4%B4%20-%20%E6%89%AB%E6%8F%8F%E7%AC%94.zip)|
+| **CSK SPI摄像头-CV云台.zip** | 2021.05.19 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK%20SPI%E6%91%84%E5%83%8F%E5%A4%B4-CV%E4%BA%91%E5%8F%B0.zip)|
+| **CSK SPI摄像头-坐姿检测.zip** | 2021.05.19 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK%20SPI%E6%91%84%E5%83%8F%E5%A4%B4-%E5%9D%90%E5%A7%BF%E6%A3%80%E6%B5%8B.zip)|
 | **LSKits参考设计.zip** | 2021.01.21 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FLSKits%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1.zip)| 
 
 
