@@ -36,11 +36,23 @@ slug: /school
 - [开发篇05：硬件驱动使用示例-UART](https://www.bilibili.com/video/BV1iy4y1x7ye)
 - [开发篇06：使用LISA创建LStudio工程](https://www.bilibili.com/video/BV1Ri4y1w78E)
 
-## 4.生产产测篇
+## 4.量产篇
 
 - [纯离线模块产测教程](https://www.bilibili.com/video/BV12K411F7ND)
 
-## 5.其他
+## 5.测试篇
+
+-[基础声学测试教学1：实验室介绍](https://www.bilibili.com/video/BV1C64y1d7ay)
+-[基础声学测试教学2：混响测量指导](https://www.bilibili.com/video/BV17Q4y1R7x3)
+-[基础声学测试教学3：场景搭建](https://www.bilibili.com/video/BV1qo4y1m7Vx)
+-[基础声学测试教学4：分贝仪介绍](https://www.bilibili.com/video/BV1o64y1d7dC)
+-[基础声学测试教学5：信噪比介绍](https://www.bilibili.com/video/BV1Sh411v7v3)
+-[基础声学测试教学6：人声分贝测量](https://www.bilibili.com/video/BV1eo4y1m7N7)
+-[基础声学测试教学7：噪音分贝测试](https://www.bilibili.com/video/BV1cK4y1R7vD)
+-[实验室任务讲解](https://www.bilibili.com/video/BV1b64y1y7Q2)
+
+
+## 6.其他
 
 - [LSCloud工单使用说明](https://www.bilibili.com/video/BV1X64y1S7y2)
 
