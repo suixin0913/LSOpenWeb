@@ -42,14 +42,14 @@ slug: /school
 
 ## 5.测试篇
 
--[基础声学测试教学1：实验室介绍](https://www.bilibili.com/video/BV1C64y1d7ay)
--[基础声学测试教学2：混响测量指导](https://www.bilibili.com/video/BV17Q4y1R7x3)
--[基础声学测试教学3：场景搭建](https://www.bilibili.com/video/BV1qo4y1m7Vx)
--[基础声学测试教学4：分贝仪介绍](https://www.bilibili.com/video/BV1o64y1d7dC)
--[基础声学测试教学5：信噪比介绍](https://www.bilibili.com/video/BV1Sh411v7v3)
--[基础声学测试教学6：人声分贝测量](https://www.bilibili.com/video/BV1eo4y1m7N7)
--[基础声学测试教学7：噪音分贝测试](https://www.bilibili.com/video/BV1cK4y1R7vD)
--[实验室任务讲解](https://www.bilibili.com/video/BV1b64y1y7Q2)
+- [基础声学测试教学1：实验室介绍](https://www.bilibili.com/video/BV1C64y1d7ay)
+- [基础声学测试教学2：混响测量指导](https://www.bilibili.com/video/BV17Q4y1R7x3)
+- [基础声学测试教学3：场景搭建](https://www.bilibili.com/video/BV1qo4y1m7Vx)
+- [基础声学测试教学4：分贝仪介绍](https://www.bilibili.com/video/BV1o64y1d7dC)
+- [基础声学测试教学5：信噪比介绍](https://www.bilibili.com/video/BV1Sh411v7v3)
+- [基础声学测试教学6：人声分贝测量](https://www.bilibili.com/video/BV1eo4y1m7N7)
+- [基础声学测试教学7：噪音分贝测试](https://www.bilibili.com/video/BV1cK4y1R7vD)
+- [实验室任务讲解](https://www.bilibili.com/video/BV1b64y1y7Q2)
 
 
 ## 6.其他
