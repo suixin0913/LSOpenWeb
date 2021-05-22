@@ -54,19 +54,21 @@ info.txt 是一个配置文件，描述 OTA 的具体升级信息，示例如下
       "file_size":18280,
       "md5":"394474A9B07DCDA2233C676CC24EFD45", 
       "file_path":"files/flashboot.bin"
-
+      "addr":"0x0"
    },
    {
        "version":1001,
        "file_size":417164,
        "md5":"5DEBA6B85BEC67ED8A0C6438BBCAE1F9",
        "file_path":"files/master.bin"
+       "addr": "0x10000"
    },
    {
       "version":1001,
       "file_size":3652226,
       "md5":"42EEFF98DD52E0189858C221330A1C85", 
       "file_path":"files/respak.bin"
+      "addr": "0x100000"  
    }
  ]
 ```
@@ -84,6 +86,7 @@ info.txt 是一个配置文件，描述 OTA 的具体升级信息，示例如下
 | castor[i].file_size | CSK 固件子包文件大小                                         |
 | castor[i].md5       | CSK 固件子包 md5                                             |
 | castor[i].file_path | CSK 固件子包路径（ files /子包文件名），需跟上传的文件名一致， 会通过 url + file_path 进行 OTA |
+| castor[i].addr      | CSK固件子包地址，烧录固件时会对子包地址进行校验，校验通过方可烧录成功 |
 
 
 

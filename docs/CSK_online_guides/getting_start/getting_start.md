@@ -136,7 +136,7 @@ Cool ！，你已经成功为开发板配网。接下来你可以通过【小飞
 
 ### 4.2.CSK固件烧录
 
-- 下载[CSK固件](https://open.listenai.com/resource/open/doc_resource%2F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%2F%E7%A6%BB%E5%9C%A8%E7%BA%BF%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%2F%E7%A6%BB%E5%9C%A8%E7%BA%BF%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95%2Fcsk4002.zip)。
+- 下载[CSK固件](https://open.listenai.com/resource/open/doc_resource%2F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%2F%E7%A6%BB%E5%9C%A8%E7%BA%BF%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%2F%E7%A6%BB%E5%9C%A8%E7%BA%BF%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95%2Fcsk4002.zip)。**（唤醒词是“小优小优”）**
 
 - 接通 LSKits 电源，同时按住底板的【XR872 BOOT】和【CSK UPDATE】键。如下图：
 
@@ -164,8 +164,9 @@ Cool ！，你已经成功为开发板配网。接下来你可以通过【小飞
 
 了解如何在 iFLYOS 创建设备，可查看
 
-- [创建你的 iFLYOS 设备](/CSK_online_guides/Create_iFLYOS_ equipment)
+- [创建你的 iFLYOS 设备](/CSK_online_guides/Create_iFLYOS_equipment)
 
 在项目开发过程中如果需要帮助，可以通过工单系统向我们获取技术支持：
 
 - [工单系统](https://open.listenai.com/cloud_project)
+
