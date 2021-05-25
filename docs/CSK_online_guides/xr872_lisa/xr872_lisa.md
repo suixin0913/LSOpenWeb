@@ -1,6 +1,6 @@
 ---
 id: xr872_lisa     
-title: LISA_API 接入说明         
+title: 上位机接入 LISA_API 说明         
 slug: /xr872_lisa  
 ---
 
@@ -13,7 +13,7 @@ slug: /xr872_lisa
 
 ​:::tip
 
-以下接口使用用例基于 XR872的RTOS 平台，可移植于其他平台的 RTOS 测试。
+以下接口使用用例基于 XR872 的 RTOS 平台，可移植于其他平台的 RTOS 测试。
 
 :::
 
