@@ -11,7 +11,7 @@ slug: /xr872_lisa
 
 此外，在接入 `lisa_api` 架构后，由于上层调用了 `lisa_api` 定义的标准接口，后续更换不同的芯片平台时，上层应用无需修改，只需做底层驱动的适配工作，这将减少平台迁移工作量，避免重复工作。
 
-​:::tip
+​:::info
 
 以下接口使用用例基于 XR872 的 RTOS 平台，可移植于其他平台的 RTOS 测试。
 
@@ -46,7 +46,7 @@ XR872 适配 lisa api代码路径
 https://cloud.listenai.com/private/xr872_lisa
 ```
 
-​:::tip
+​:::info
 
 若无权限访问，请联系FAE开通权限。
 
@@ -123,7 +123,7 @@ https://cloud.listenai.com/private/xr872_lisa
 为使开发者正确快速使用lisa接口，我们提供了一些lisa api使用demo示例，demo目录是：
 ```
 https://cloud.listenai.com/private/xr872_lisa/lisa_test
-```。
+```
 
 测试示例使用lisa_api串口命令的方式体验，具体命令如下：
 
@@ -264,7 +264,7 @@ rtc_test(int argc, char *argv[])
 
 **实际应用：**在模组配网时，需要用到这些接口配置网络。
 
-```C
+```c
 void
 hal_wifi_demo(int argc, char *argv[])
 {
@@ -325,7 +325,7 @@ hal_wifi_demo(int argc, char *argv[])
 
 **实际使用：**可用于处理多个消息任务，如处理云端返回的提示音，音乐等信息
 
-```C
+```c
 #define TAG "lisa_queue"
 #define LISA_TEST_STACK_SIZE (5 * 1024)
 
@@ -420,7 +420,7 @@ lisa_queue(int argc, char *argv[])
 
 **实际使用：**可以用于网络音频播放，tts播放，播放音量设置及获取音乐播放进度等。
 
-```C
+```c
 void
 player_test(int argc, char *argv[])
 {
@@ -523,7 +523,7 @@ player_test(int argc, char *argv[])
 
 **实际使用**：可用于显示网络状态变化，比如网络未连接，网络连接中，网络已连接。也可以用于交互状态显示，如拾音中，正在识别，播放提示音等。
 
-```C
+```c
 void
 lisa_led(int argc, char *argv[])
 {
@@ -599,7 +599,7 @@ lisa_led(int argc, char *argv[])
 
 **实际使用：**主要用于mac地址，sn号，deviceid信息存储
 
-```C
+```c
 void
 lisa_perst(int argc, char *argv[])
 {
@@ -719,7 +719,7 @@ lisa_perst(int argc, char *argv[])
 
 **实际使用：**可用于模组重启，比如异常复位，配置deviceid后重启
 
-```C
+```c
 void
 lisa_power(int argc, char *argv[])
 {
