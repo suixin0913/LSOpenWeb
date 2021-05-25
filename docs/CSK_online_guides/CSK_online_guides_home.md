@@ -29,27 +29,24 @@ slug: /CSK_online_guides_home
 
 ### [创建你的 iFLYOS 设备](/CSK_online_guides/Create_iFLYOS_equipment)
 
-本篇介绍如何在 iFLYOS 平台创建并配置你的设备。
+本篇介绍如何在 iFLYOS 平台创建并配置你的设备。若你要对接讯飞 iFLYOS 一站式语音云，请阅读本篇。
 
-### [上位机固件开发]
+### 上位机固件开发
 
-[方案一：固件直接对接iFLYOS](/CSK_online_guides/xr872_evs)
+#### [方案一：固件直接对接语音云](/CSK_online_guides/xr872_evs)
 
-本篇介绍XR872固件的二次开发方法，包括自定义 Client_id、AP 热点前缀、灯光、按键，自定义技能的设备端实现，以及本地 TTS 文件的集成。你可以直接基于源码进行二次开发，也可以参考源码在其他上位机上实现相关功能。
+聆思已完成 XR872 的上位机离在线（iFLYOS）方案的开发，你可以直接基于源码直接进行二次开发。本篇介绍XR872固件的二次开发方法，包括自定义 Client_id、AP 热点前缀、灯光、按键，自定义技能的设备端实现，以及本地 TTS 文件的集成。
 
-[方案二：固件通过LISA API对接语音云](/xr872_lisa)
+#### [方案二：固件通过LISA API对接语音云](/xr872_lisa)
 
 本篇介绍 LISA API 对接方法，包括  Drivers（驱动）、Component（组件）、Log（日志）、OS（系统）、Modules（功能模块）五方面详的对接实现。文中以 XR872 为例，你可以直接基于源码进行上层应用开发，也可以参考对接源码在其他上位机上实现相关功能。
 
-### 新上位机如何接入离在线方案
+:::tip
 
-本篇介绍如何将一颗新上位机芯片适配离在线方案架构。
-
-:::note
-
-文档建设中
+当你在一个上位机平台上适配完 LISA API 后，若你想更换芯片平台，仅需在新平台重新适配 LISA API，应用层代码无需改动。
 
 :::
+
 
 ## 进阶知识
 ---------------
@@ -75,11 +72,7 @@ slug: /CSK_online_guides_home
 ## 其他
 ----------
 
-### 开发板使用指南
-
-[CSK+BK7251 开发板上手指南](/CSK_online_guides/getting_start_BK7251)
-
 ### 硬件参考设计
 
 - [CSK4002+XR872AT](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK4002%2BES7210%2BXR872%2BBT6956C_%E9%9F%B3%E7%AE%B1%E7%B1%BB%E6%A0%87%E6%A1%88%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1C4-18.zip)
-- [CSK4002+BK7251](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK%2BBK7251%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1C4-18.zip)
+

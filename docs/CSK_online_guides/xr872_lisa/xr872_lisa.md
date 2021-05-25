@@ -11,7 +11,7 @@ slug: /xr872_lisa
 
 此外，在接入 `lisa_api` 架构后，由于上层调用了 `lisa_api` 定义的标准接口，后续更换不同的芯片平台时，上层应用无需修改，只需做底层驱动的适配工作，这将减少平台迁移工作量，避免重复工作。
 
-​::: tip 
+​:::tip
 
 以下接口使用用例基于 XR872的RTOS 平台，可移植于其他平台的 RTOS 测试。
 
@@ -31,18 +31,26 @@ LISA API适配层封装接口：
 
 ### 语音云对接
 
-我们推荐云端对接一站式语音云 iFLYOS， 但 iFlyOS 云端对接目前需要自己实现，云端交互使用EVS协议，EVS协议说明及接入方法参考[设备接入介绍](https://doc.iflyos.cn/device/)。
+我们推荐云端对接一站式语音云 iFLYOS， 但 iFLYOS 云端对接目前需要自己实现，云端交互使用EVS协议，EVS协议说明及接入方法参考[设备接入介绍](https://doc.iflyos.cn/device/)。
 
 你也可以对接其他语音云服务，如：[AIUI](https://aiui.xfyun.cn/doc/aiui/sdk/more_doc/webapi/summary.html)等。
 
 
 ## 2. 业务代码说明
 
-### 源码路径//要改
+### 源码路径
 
 XR872 适配 lisa api代码路径
 
-`/xr872_lisa/project/listenai_castor_xr872/lisa`
+```
+https://cloud.listenai.com/private/xr872_lisa
+```
+
+​:::tip
+
+若无权限访问，请联系FAE开通权限。
+
+:::
 
 ### 目录结构
 
@@ -112,7 +120,12 @@ XR872 适配 lisa api代码路径
 
 ​	为了帮助开发者更好的理解`lisa_api`，本文档将通过 Drivers（驱动）、Component（组件）、Log（日志）、OS（系统）、Modules（功能模块）五方面详细介绍 lisa_api。
 
-为使开发者正确快速使用lisa接口，我们提供了一些lisa api使用demo示例，demo目录是（//要改）：xr872_lisa\project\listenai_castor_xr872\lisa\lisa_test。测试示例使用lisa_api串口命令的方式体验，具体命令如下：
+为使开发者正确快速使用lisa接口，我们提供了一些lisa api使用demo示例，demo目录是：
+```
+https://cloud.listenai.com/private/xr872_lisa/lisa_test
+```。
+
+测试示例使用lisa_api串口命令的方式体验，具体命令如下：
 
 ```
 lisa_api rtc_test set
@@ -157,7 +170,7 @@ lisa_api player_test 1 -k 12000
 
 **实际使用：**读取flash中存储的提示音
 
-```C
+```c
 void
 lisa_flash(int argc, char *argv[])
 {
@@ -202,7 +215,7 @@ lisa_flash(int argc, char *argv[])
 
 **实际使用**：在接入evs时，需要进行云端授权，可以使用此接口同步网络时间。
 
-```C
+```c
 void
 rtc_test(int argc, char *argv[])
 {
