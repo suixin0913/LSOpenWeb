@@ -20,7 +20,7 @@ FLASH 模块用于支持 LISA 的持久化功能模块，以及对固化在 FLAS
 
 #### 1.2 接口说明
 
-```
+```c
 lisa_err_t lisa_flash_write(uint32_t addr, uint8_t *buf, uint32_t size)
 ```
 
@@ -42,7 +42,7 @@ lisa_err_t lisa_flash_write(uint32_t addr, uint8_t *buf, uint32_t size)
 
 
 
-```
+```c
 lisa_err_t lisa_flash_read(uint32_t addr, uint8_t *buf, uint32_t size)
 ```
 
@@ -64,7 +64,7 @@ lisa_err_t lisa_flash_read(uint32_t addr, uint8_t *buf, uint32_t size)
 
 
 
-```
+```c
 lisa_err_t lisa_flash_erase(uint32_t addr, uint32_t size)
 ```
 
@@ -86,7 +86,7 @@ lisa_err_t lisa_flash_erase(uint32_t addr, uint32_t size)
 
 #### 1.3 使用示例
 
-```
+```c
 #define TAG "lisa_flash"
 
 uint8_t buf[512];
@@ -137,7 +137,7 @@ lisa_flash(int argc, char *argv[])
 
 #### 2.2 接口说明
 
-```
+```c
 lisa_err_t lisa_rtc_set(lisa_time_t *time)
 ```
 
@@ -155,7 +155,7 @@ lisa_err_t lisa_rtc_set(lisa_time_t *time)
 
 
 
-```
+```c
 lisa_err_t lisa_rtc_get(lisa_time_t *time)
 ```
 
@@ -175,7 +175,7 @@ lisa_err_t lisa_rtc_get(lisa_time_t *time)
 
 #### 2.3 使用示例
 
-```
+```c
 #define TAG "lisa_rtc"
 
 void
@@ -226,7 +226,7 @@ rtc_test(int argc, char *argv[])
 
 **接口**
 
-```
+```c
 lisa_err_t lisa_wifi_init(void);
 ```
 
@@ -246,7 +246,7 @@ lisa_err_t lisa_wifi_init(void);
 
 **接口**
 
-```
+```c
 lisa_err_t lisa_wifi_connect(lisa_wifi_connect_t *connect);
 ```
 
@@ -266,7 +266,7 @@ connect     写入待连接的wifi信息，参数内容参加结构体lisa_wifi_
 
 **接口**
 
-```
+```c
 lisa_err_t lisa_wifi_disconnect(void);
 ```
 
@@ -286,7 +286,7 @@ lisa_err_t lisa_wifi_disconnect(void);
 
 **接口**
 
-```
+```c
 lisa_err_t lisa_wifi_start_ap(lisa_wifi_ap_t *ap);
 ```
 
@@ -306,7 +306,7 @@ ap     需要开启的热点信息，参考结构体lisa_wifi_ap_t定义说明
 
 **接口**
 
-```
+```c
 lisa_err_t lisa_wifi_stop_ap(void);
 ```
 
@@ -324,7 +324,7 @@ lisa_err_t lisa_wifi_stop_ap(void);
 
 
 
-```
+```c
 int lisa_wifi_set_mode(lisa_wlan_mode_t mode)
 ```
 
@@ -342,7 +342,7 @@ mode    待设置的wifi工作模式，枚举类型，参考lisa_wlan_mode_t定�
 
 
 
-```
+```c
 int lisa_wifi_get_mode(void)
 ```
 
@@ -368,13 +368,13 @@ none
 
 ​	开始搜索周围环境的 WiFi 信号
 
-```
+```c
 lisa_err_t lisa_wifi_start_scan(lisa_wifi_scan_t *scan);
 ```
 
 ​	停止搜索周围环境的 WiFi 信号
 
-```
+```c
 lisa_err_t lisa_wifi_stop_scan(void);
 ```
 
@@ -382,7 +382,7 @@ lisa_err_t lisa_wifi_stop_scan(void);
 
 **结构体定义**
 
-```
+```c
 typedef struct lisa_wifi_connect_t
 ```
 
@@ -400,7 +400,7 @@ char *password;				// 连入的密码，无密码置NULL
 
 
 
-```
+```c
 typedef struct lisa_wifi_connect_event_t 
 ```
 
@@ -472,7 +472,7 @@ LISA_WIFI_AP_DISASSOCIATED
 
 
 
-```
+```c
 typedef struct lisa_wifi_scan_t
 ```
 
@@ -530,7 +530,7 @@ LISA_WIFI_SOFTAP
 
 ​	关闭当前 WiFi 模式 hal_wifi_demo   down
 
-```
+```c
 static void
 wifi_event_callback(lisa_wifi_connect_event_t *event)
 {
@@ -592,7 +592,7 @@ MSH_CMD_EXPORT(hal_wifi_demo, hal_wifi_demo command);
 
 #### lisa_thread_create
 
-```
+```c
 lisa_thread_t *lisa_thread_create(const lisa_thread_attr_t *attr, 
 									void (*entry)(void *), 
 									void *arg)
@@ -634,7 +634,7 @@ lisa_thread_t *lisa_thread_create(const lisa_thread_attr_t *attr,
 
 #### lisa_thread_delete
 
-```
+```c
 lisa_err_t lisa_thread_delete(lisa_thread_t *thread)
 ```
 
@@ -656,7 +656,7 @@ lisa_err_t lisa_thread_delete(lisa_thread_t *thread)
 
 #### lisa_thread_yield
 
-```
+```c
 lisa_err_t lisa_thread_yield(void)
 ```
 
@@ -678,7 +678,7 @@ lisa_err_t lisa_thread_yield(void)
 
 #### lisa_thread_suspend
 
-```
+```c
 lisa_err_t lisa_thread_suspend(lisa_thread_t *thread)
 ```
 
@@ -700,7 +700,7 @@ lisa_err_t lisa_thread_suspend(lisa_thread_t *thread)
 
 #### lisa_thread_resume
 
-```
+```c
 lisa_err_t lisa_thread_resume(lisa_thread_t *thread)
 ```
 
@@ -722,7 +722,7 @@ lisa_err_t lisa_thread_resume(lisa_thread_t *thread)
 
 #### lisa_thread_delay
 
-```
+```c
 lisa_err_t lisa_thread_delay(uint32_t ticks)
 ```
 
@@ -744,7 +744,7 @@ lisa_err_t lisa_thread_delay(uint32_t ticks)
 
 #### lisa_thread_mdelay
 
-```
+```c
 lisa_err_t lisa_thread_mdelay(uint32_t ms)
 ```
 
@@ -766,7 +766,7 @@ lisa_err_t lisa_thread_mdelay(uint32_t ms)
 
 #### lisa_thread_getcurrent
 
-```
+```c
 lisa_thread_t *lisa_thread_getcurrent(void)
 ```
 
@@ -790,7 +790,7 @@ lisa_thread_t *lisa_thread_getcurrent(void)
 
 #### lisa_queue_create
 
-```
+```c
 lisa_queue_t *lisa_queue_create(uint32_t count, uint32_t item_size)
 ```
 
@@ -816,7 +816,7 @@ lisa_queue_t *lisa_queue_create(uint32_t count, uint32_t item_size)
 
 #### lisa_queue_push
 
-```
+```c
 lisa_err_t lisa_queue_push(lisa_queue_t *queue, 
 							void *item, 
 							uint32_t item_size, 
@@ -847,7 +847,7 @@ lisa_err_t lisa_queue_push(lisa_queue_t *queue,
 
 #### lisa_queue_receive
 
-```
+```c
 lisa_err_t lisa_queue_receive(lisa_queue_t *queue, 
 								void *item, 
 								uint32_t item_size, 
@@ -878,7 +878,7 @@ lisa_err_t lisa_queue_receive(lisa_queue_t *queue,
 
 #### lisa_queue_delete
 
-```
+```c
 lisa_err_t lisa_queue_delete(lisa_queue_t *queue)
 ```
 
@@ -900,7 +900,7 @@ lisa_err_t lisa_queue_delete(lisa_queue_t *queue)
 
 #### lisa_queue_available
 
-```
+```c
 uint32_t lisa_queue_available(lisa_queue_t *queue)
 ```
 
@@ -920,7 +920,7 @@ uint32_t lisa_queue_available(lisa_queue_t *queue)
 
 #### lisa_queue_waiting
 
-```
+```c
 uint32_t lisa_queue_waiting(lisa_queue_t *queue)
 ```
 
@@ -940,7 +940,7 @@ uint32_t lisa_queue_waiting(lisa_queue_t *queue)
 
 #### lisa_queue_clear
 
-```
+```c
 lisa_err_t lisa_queue_clear(lisa_queue_t *queue)
 ```
 
@@ -964,7 +964,7 @@ lisa_err_t lisa_queue_clear(lisa_queue_t *queue)
 
 #### lisa_mutex_create
 
-```
+```c
 lisa_mutex_t *lisa_mutex_create(void)
 ```
 
@@ -988,7 +988,7 @@ lisa_mutex_t *lisa_mutex_create(void)
 
 #### lisa_mutex_lock
 
-```
+```c
 lisa_err_t lisa_mutex_lock(lisa_mutex_t *mutex, int32_t block_time)
 ```
 
@@ -1012,7 +1012,7 @@ lisa_err_t lisa_mutex_lock(lisa_mutex_t *mutex, int32_t block_time)
 
 #### lisa_mutex_unlock
 
-```
+```c
 lisa_err_t lisa_mutex_unlock(lisa_mutex_t *mutex)
 ```
 
@@ -1034,7 +1034,7 @@ lisa_err_t lisa_mutex_unlock(lisa_mutex_t *mutex)
 
 #### lisa_mutex_delete
 
-```
+```c
 lisa_err_t lisa_mutex_delete(lisa_mutex_t *mutex)
 ```
 
@@ -1058,7 +1058,7 @@ lisa_err_t lisa_mutex_delete(lisa_mutex_t *mutex)
 
 #### lisa_semaphore_create
 
-```
+```c
 lisa_semaphore_t *lisa_semaphore_create(uint32_t count)
 ```
 
@@ -1082,7 +1082,7 @@ lisa_semaphore_t *lisa_semaphore_create(uint32_t count)
 
 #### lisa_semaphore_take
 
-```
+```c
 lisa_err_t lisa_semaphore_take(lisa_semaphore_t *sem, int32_t block_time)
 ```
 
@@ -1106,7 +1106,7 @@ lisa_err_t lisa_semaphore_take(lisa_semaphore_t *sem, int32_t block_time)
 
 #### lisa_semaphore_give
 
-```
+```c
 lisa_err_t lisa_semaphore_give(lisa_semaphore_t *sem)
 ```
 
@@ -1128,7 +1128,7 @@ lisa_err_t lisa_semaphore_give(lisa_semaphore_t *sem)
 
 #### lisa_semaphore_delete
 
-```
+```c
 lisa_err_t lisa_semaphore_delete(lisa_semaphore_t *sem)
 ```
 
@@ -1150,7 +1150,7 @@ lisa_err_t lisa_semaphore_delete(lisa_semaphore_t *sem)
 
 #### lisa_semaphore_getcount
 
-```
+```c
 uint32_t lisa_semaphore_getcount(lisa_semaphore_t *sem)
 ```
 
@@ -1172,7 +1172,7 @@ uint32_t lisa_semaphore_getcount(lisa_semaphore_t *sem)
 
 #### lisa_timer_create
 
-```
+```c
 lisa_timer_t *lisa_timer_create(lisa_timertype type, 
 								lisa_timercb_t cb, 
 								void *arg, 
@@ -1183,7 +1183,7 @@ lisa_timer_t *lisa_timer_create(lisa_timertype type,
 
 ​	type：		定时器类型
 
-```
+```c
 	typedef enum {
         OS_TIMER_ONCE = 0,		// 单次定时器
         OS_TIMER_PERIODIC = 1,	// 周期定时器
@@ -1216,7 +1216,7 @@ lisa_timer_t *lisa_timer_create(lisa_timertype type,
 
 #### lisa_timer_delete
 
-```
+```c
 lisa_err_t lisa_timer_delete(lisa_timer_t *timer)
 ```
 
@@ -1238,7 +1238,7 @@ lisa_err_t lisa_timer_delete(lisa_timer_t *timer)
 
 #### lisa_timer_start
 
-```
+```c
 lisa_err_t lisa_timer_start(lisa_timer_t *timer)
 ```
 
@@ -1260,7 +1260,7 @@ lisa_err_t lisa_timer_start(lisa_timer_t *timer)
 
 #### lisa_timer_stop
 
-```
+```c
 lisa_err_t lisa_timer_stop(lisa_timer_t *timer)
 ```
 
@@ -1282,7 +1282,7 @@ lisa_err_t lisa_timer_stop(lisa_timer_t *timer)
 
 #### lisa_timer_change_period
 
-```
+```c
 lisa_err_t lisa_timer_change_period(lisa_timer_t *timer, uint32_t period_ms)
 ```
 
@@ -1308,7 +1308,7 @@ lisa_err_t lisa_timer_change_period(lisa_timer_t *timer, uint32_t period_ms)
 
 #### lisa_os_get_ticks
 
-```
+```c
 uint32_t lisa_os_get_ticks(void)
 ```
 
@@ -1328,7 +1328,7 @@ uint32_t lisa_os_get_ticks(void)
 
 #### lisa_os_get_time
 
-```
+```c
 uint32_t lisa_os_get_time(void)
 ```
 
@@ -1348,7 +1348,7 @@ uint32_t lisa_os_get_time(void)
 
 #### lisa_rand32
 
-```
+```c
 uint32_t lisa_rand32(void)
 ```
 
@@ -1370,7 +1370,7 @@ uint32_t lisa_rand32(void)
 
 #### lisa_mem_alloc
 
-```
+```c
 void *lisa_mem_alloc(uint32_t size);
 ```
 
@@ -1390,7 +1390,7 @@ void *lisa_mem_alloc(uint32_t size);
 
 #### lisa_mem_realloc
 
-```
+```c
 void *lisa_mem_realloc(void *ptr, uint32_t size)
 ```
 
@@ -1416,7 +1416,7 @@ void *lisa_mem_realloc(void *ptr, uint32_t size)
 
 #### lisa_mem_calloc
 
-```
+```c
 void *lisa_mem_calloc(uint32_t count, uint32_t size)
 ```
 
@@ -1442,7 +1442,7 @@ void *lisa_mem_calloc(uint32_t count, uint32_t size)
 
 #### lisa_mem_free
 
-```
+```c
 void lisa_mem_free(void *ptr)
 ```
 
@@ -1462,7 +1462,7 @@ void lisa_mem_free(void *ptr)
 
 #### lisa_strdup
 
-```
+```c
 char *lisa_strdup(const char *s)
 ```
 
@@ -1497,7 +1497,7 @@ char *lisa_strdup(const char *s)
 
 #### 1.2 接口说明
 
-```
+```c
 lisa_player_t *lisa_player_init(lisa_player_params_t *params);
 ```
 
@@ -1539,7 +1539,7 @@ lisa_player_t *lisa_player_init(lisa_player_params_t *params);
 
 
 
-```
+```c
 lisa_err_t lisa_player_prepare_url(lisa_player_t *ins, const char *url)
 ```
 
@@ -1559,7 +1559,7 @@ lisa_err_t lisa_player_prepare_url(lisa_player_t *ins, const char *url)
 
 
 
-```
+```c
 lisa_err_t lisa_player_set_callback(lisa_player_t *ins, lisa_player_cb callback)
 ```
 
@@ -1579,7 +1579,7 @@ lisa_err_t lisa_player_set_callback(lisa_player_t *ins, lisa_player_cb callback)
 
 
 
-```
+```c
 lisa_err_t lisa_player_play(lisa_player_t *ins)
 ```
 
@@ -1597,7 +1597,7 @@ lisa_err_t lisa_player_play(lisa_player_t *ins)
 
 
 
-```
+```c
 lisa_err_t lisa_player_stop(lisa_player_t *ins)
 ```
 
@@ -1615,7 +1615,7 @@ lisa_err_t lisa_player_stop(lisa_player_t *ins)
 
 
 
-```
+```c
 lisa_err_t lisa_player_pause(lisa_player_t *ins)
 ```
 
@@ -1633,7 +1633,7 @@ lisa_err_t lisa_player_pause(lisa_player_t *ins)
 
 
 
-```
+```c
 lisa_err_t lisa_player_resume(lisa_player_t *ins)
 ```
 
@@ -1651,7 +1651,7 @@ lisa_err_t lisa_player_resume(lisa_player_t *ins)
 
 
 
-```
+```c
 lisa_player_state_e lisa_player_get_state(lisa_player_t *ins)
 ```
 
@@ -1679,7 +1679,7 @@ lisa_player_state_e lisa_player_get_state(lisa_player_t *ins)
 
 
 
-```
+```c
 lisa_err_t lisa_player_seek(lisa_player_t *ins, uint32_t progress_ms)
 ```
 
@@ -1699,7 +1699,7 @@ lisa_err_t lisa_player_seek(lisa_player_t *ins, uint32_t progress_ms)
 
 
 
-```
+```c
 uint32_t lisa_player_get_progress(lisa_player_t *ins)
 ```
 
@@ -1717,7 +1717,7 @@ uint32_t lisa_player_get_progress(lisa_player_t *ins)
 
 
 
-```
+```c
 uint32_t lisa_player_get_duration(lisa_player_t *ins)
 ```
 
@@ -1735,7 +1735,7 @@ uint32_t lisa_player_get_duration(lisa_player_t *ins)
 
 
 
-```
+```c
 lisa_err_t lisa_player_set_volume(lisa_player_t *ins, uint8_t volume)
 ```
 
@@ -1755,7 +1755,7 @@ lisa_err_t lisa_player_set_volume(lisa_player_t *ins, uint8_t volume)
 
 
 
-```
+```c
 uint8_t lisa_player_get_volume(lisa_player_t *ins)
 ```
 
@@ -1775,7 +1775,7 @@ uint8_t lisa_player_get_volume(lisa_player_t *ins)
 
 #### 1.3 使用示例
 
-```
+```c
 lisa_player_t *g_player1 = NULL;
 lisa_player_t *g_player2 = NULL;
 
@@ -2011,7 +2011,7 @@ lisa_err_t lisa_keys_init(lisa_keys_on_event event_cb)
 
 ​	event_cb		注册按键回调函数
 
-```
+```c
 		
 		#define KEY_TYPE_SHORT (1 << 0)				//短按
 		#define KEY_TYPE_LONG (1 << 1)				//长按
@@ -2039,7 +2039,7 @@ lisa_err_t lisa_keys_init(lisa_keys_on_event event_cb)
 
 ​			按键4,5一起通过 adc7 检测，按键4单独按下电压检测值为1.3左右，按键5单独按下电压检测值为0.9左右；
 
-```
+```c
     button_config g_button[4] = { 
             [0] = {.type = KEY_TYPE_SHORT | KEY_TYPE_LONG,		//支持短按和长按
                     .key_index = 2,								//按键号
@@ -2073,7 +2073,7 @@ lisa_err_t lisa_keys_init(lisa_keys_on_event event_cb)
 
 需结合硬件电路设计，配置合适的 button_config
 
-```
+```c
 void
 lisa_button_cb(lisa_key_event *event)
 {
@@ -2159,7 +2159,7 @@ lisa_err_t lisa_rgbled_ctr(lisa_led_mode_e mode, uint32_t rgb, uint16_t flash_cn
 
 #### 2.3 使用示例
 
-```
+```c
 static int
 lisa_led(int argc, char *argv[])
 {
@@ -2418,7 +2418,7 @@ lisa_err_t lisa_perst_clear(void)
 
 #### 3.3 使用示例
 
-```
+```c
 static int
 lisa_perst(int argc, char *argv[])
 {
@@ -2632,7 +2632,7 @@ lisa_http_t *lisa_http_init(lisa_http_request_t *req);
 
    req    http配置参数
 
-```
+```c
 typedef enum {
 	LISA_HTTP_GET,
 	LISA_HTTP_POST,
@@ -2737,7 +2737,7 @@ typedef enum {
 
 ​		删除 http 配置并关闭 http 端口：>>lisa_http_test  cancel
 
-```
+```c
 #define HEADERS "Content-Type: application/octet-stream\r\n"
 
 lisa_http_t *test_http = NULL;
@@ -2803,7 +2803,7 @@ lisa_ws_t *lisa_ws_init(lisa_ws_request_t *req);
 
 **参数** 
 
-```
+```c
 typedef enum {
   LISA_WS_OK = 0,
   LISA_WS_COMMON_ERR,
@@ -2849,7 +2849,7 @@ typedef struct {
 
 ​		websocket 实体句柄
 
-```
+```c
 typedef struct {
 	char scheme[16];     // "ws" "wss"
 	char host[512];		 //  web的host
@@ -2991,7 +2991,7 @@ lisa_ws_err_e lisa_ws_cleanup(lisa_ws_t *ins);
 
 ​		删除 websocket 配置并关闭 websocket 端口：>>lisa_rws_test   clean
 
-```
+```c
 void
 test_ws_data_cb(lisa_ws_data_t *data)
 {

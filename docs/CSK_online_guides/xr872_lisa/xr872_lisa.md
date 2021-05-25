@@ -11,7 +11,7 @@ slug: /xr872_lisa
 
 此外，在接入 `lisa_api` 架构后，由于上层调用了 `lisa_api` 定义的标准接口，后续更换不同的芯片平台时，上层应用无需修改，只需做底层驱动的适配工作，这将减少平台迁移工作量，避免重复工作。
 
-​:::info
+:::info
 
 以下接口使用用例基于 XR872 的 RTOS 平台，可移植于其他平台的 RTOS 测试。
 
@@ -46,7 +46,7 @@ XR872 适配 lisa api代码路径
 https://cloud.listenai.com/private/xr872_lisa
 ```
 
-​:::info
+:::info
 
 若无权限访问，请联系FAE开通权限。
 
