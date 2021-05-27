@@ -44,26 +44,26 @@ slug: /firm_download
 
 ## 风扇
 
-| 文件                                  | 更新时间   | 操作                                                         |
-| ------------------------------------- | ---------- | ------------------------------------------------------------ |
-| **1156风扇-1.0.0-burner_playback.7z** | 2021.05.14 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%AD%A6%E5%99%A8%E5%BA%93%2F%E9%A3%8E%E6%89%87%2F1156%E9%A3%8E%E6%89%87-1.0.0-burner_playback.7z) |
-| **风扇固件体验指南V1.0.pdf**          | 2021.05.14 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%AD%A6%E5%99%A8%E5%BA%93%2F%E9%A3%8E%E6%89%87%2F%E9%A3%8E%E6%89%87%E5%9B%BA%E4%BB%B6%E4%BD%93%E9%AA%8C%E6%8C%87%E5%8D%97V1.0.pdf) |
+| 文件                         | 更新时间   | 操作                                                         |
+| ---------------------------- | ---------- | ------------------------------------------------------------ |
+| **风扇_3002.7z**             | 2021.05.14 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%AD%A6%E5%99%A8%E5%BA%93%2F%E9%A3%8E%E6%89%87%2F1156%E9%A3%8E%E6%89%87-1.0.0-burner_playback.7z) |
+| **风扇固件体验指南V1.0.pdf** | 2021.05.14 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%AD%A6%E5%99%A8%E5%BA%93%2F%E9%A3%8E%E6%89%87%2F%E9%A3%8E%E6%89%87%E5%9B%BA%E4%BB%B6%E4%BD%93%E9%AA%8C%E6%8C%87%E5%8D%97V1.0.pdf) |
 
 
 
 ## 空调
 
-| 文件                                      | 更新时间   | 操作                                                         |
-| ----------------------------------------- | ---------- | ------------------------------------------------------------ |
-| **1156空调_4002-1.0.0-burner_0508_01.7z** | 2021.05.14 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%AD%A6%E5%99%A8%E5%BA%93%2F%E7%A9%BA%E8%B0%83%2F1156%E7%A9%BA%E8%B0%83_4002-1.0.0-burner_0508_01.7z) |
-| **空调固件体验指南V1.0.pdf**              | 2021.05.14 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%AD%A6%E5%99%A8%E5%BA%93%2F%E7%A9%BA%E8%B0%83%2F%E7%A9%BA%E8%B0%83%E5%9B%BA%E4%BB%B6%E4%BD%93%E9%AA%8C%E6%8C%87%E5%8D%97V1.0.pdf) |
+| 文件                         | 更新时间   | 操作                                                         |
+| ---------------------------- | ---------- | ------------------------------------------------------------ |
+| **空调_4002.7z**             | 2021.05.14 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%AD%A6%E5%99%A8%E5%BA%93%2F%E7%A9%BA%E8%B0%83%2F1156%E7%A9%BA%E8%B0%83_4002-1.0.0-burner_0508_01.7z) |
+| **空调固件体验指南V1.0.pdf** | 2021.05.14 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%AD%A6%E5%99%A8%E5%BA%93%2F%E7%A9%BA%E8%B0%83%2F%E7%A9%BA%E8%B0%83%E5%9B%BA%E4%BB%B6%E4%BD%93%E9%AA%8C%E6%8C%87%E5%8D%97V1.0.pdf) |
 
 
 
 ## 冰箱
 
-| 文件                                 | 更新时间   | 操作                                                         |
-| ------------------------------------ | ---------- | ------------------------------------------------------------ |
-| **1156冰箱-1.0.0-burner_0506_01.7z** | 2021.05.14 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%AD%A6%E5%99%A8%E5%BA%93%2F%E5%86%B0%E7%AE%B1%2F1156%E5%86%B0%E7%AE%B1-1.0.0-burner_0506_01.7z) |
-| **冰箱固件体验指南V1.0.pdf**         | 2021.05.14 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%AD%A6%E5%99%A8%E5%BA%93%2F%E5%86%B0%E7%AE%B1%2F%E5%86%B0%E7%AE%B1%E5%9B%BA%E4%BB%B6%E4%BD%93%E9%AA%8C%E6%8C%87%E5%8D%97V1.0.pdf) |
+| 文件                         | 更新时间   | 操作                                                         |
+| ---------------------------- | ---------- | ------------------------------------------------------------ |
+| **冰箱_4002.7z**             | 2021.05.14 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%AD%A6%E5%99%A8%E5%BA%93%2F%E5%86%B0%E7%AE%B1%2F1156%E5%86%B0%E7%AE%B1-1.0.0-burner_0506_01.7z) |
+| **冰箱固件体验指南V1.0.pdf** | 2021.05.14 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%AD%A6%E5%99%A8%E5%BA%93%2F%E5%86%B0%E7%AE%B1%2F%E5%86%B0%E7%AE%B1%E5%9B%BA%E4%BB%B6%E4%BD%93%E9%AA%8C%E6%8C%87%E5%8D%97V1.0.pdf) |
 
