@@ -35,7 +35,7 @@ slug: /CSK_online_guides_home
 
 #### [方案一：固件直接对接语音云](/CSK_online_guides/xr872_evs)
 
-聆思已完成 XR872 的上位机离在线（iFLYOS）方案的开发，你可以直接基于源码直接进行二次开发。本篇介绍XR872固件的二次开发方法，包括自定义 Client_id、AP 热点前缀、灯光、按键，自定义技能的设备端实现，以及本地 TTS 文件的集成。
+聆思已完成 XR872 的上位机离在线（iFLYOS）方案的开发，你可以直接基于源码直接进行二次开发。本篇介绍 XR872 固件的二次开发方法，包括自定义 Client_id、AP 热点前缀、灯光、按键，自定义技能的设备端实现，以及本地 TTS 文件的集成。
 
 #### [方案二：固件通过LISA API对接语音云](/xr872_lisa)
 
@@ -59,7 +59,7 @@ slug: /CSK_online_guides_home
 
 本篇档描述了 CSK4002 的串口下载方法，通过串口的方式，将用户代码拷贝到 RAM 或者 FLASH 区域，可用于用户方案开发，并开放上位机和下位机代码以及协议解析。
 
-### [自定义技能实现](https://doc.iflyos.cn/studio/#%E6%8A%80%E8%83%BD%E5%B7%A5%E4%BD%9C%E5%AE%A4%E7%AE%80%E4%BB%8B)
+### [自定义技能实现](/CSK_online_guides/Custom_skills)
 
 本篇介绍如何实现 iFLYOS 自定义语音技能，包括在 iFLYOS 技能工作室创建技能，编写意图、语料、后处理，并在固件端实现自定义技能。
 
