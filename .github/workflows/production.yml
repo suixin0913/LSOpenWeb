@@ -1,10 +1,9 @@
-name: staging
+name: production
 
 on:
-  pull_request:
-    branches: [master]
   push:
-    branches: [master]
+    tags:
+      - "*"
 
 jobs:
   gh-release:
@@ -17,12 +16,14 @@ jobs:
           node-version: '12.x'
       - uses: webfactory/ssh-agent@v0.5.0
         with:
-          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
+          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY_PROD }}
       - name: Release to GitHub Pages
         env:
           USE_SSH: true
           GIT_USER: git
         run: |
+          cp static/CNAME_PROD static/CNAME
+          sed -i "" "s/projectName: 'LSOpenWeb'/projectName: 'LSOpenWebStatic'/" docusaurus.config.js
           git config --global user.email "docs@listenai.com"
           git config --global user.name "listenai-docs"
           if [ -e yarn.lock ]; then
