@@ -1,13 +1,14 @@
 module.exports = {
   title: '聆思文档中心',
   tagline: 'LSOpen资料库',
-  url: 'http://open.listenai.com/',
+  url: 'https://github.com/LISTENAI',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'listenai', // Usually your GitHub org/user name.
-  projectName: 'LSOpen', // Usually your repo name.
+  projectName: 'LSOpenWeb', // Usually your repo name.
+  organizationName: 'LISTENAI',
   themeConfig: {
     navbar: {
       title: '聆思文档中心',
