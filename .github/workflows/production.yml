@@ -23,7 +23,7 @@ jobs:
           GIT_USER: git
         run: |
           cp static/CNAME_PROD static/CNAME
-          sed -i "" "s/projectName: 'LSOpenWeb'/projectName: 'LSOpenWebStatic'/" docusaurus.config.js
+          sed -i "s/projectName: 'LSOpenWeb'/projectName: 'LSOpenWebStatic'/" docusaurus.config.js
           git config --global user.email "docs@listenai.com"
           git config --global user.name "listenai-docs"
           if [ -e yarn.lock ]; then
