@@ -8,6 +8,7 @@
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
+    "predeploy": "npm run replaceRoute",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
     "replaceRoute": "node docsRoute.js"
