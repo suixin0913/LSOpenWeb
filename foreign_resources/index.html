@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.70">
 <title data-react-helmet="true">CSK 外语资源集成说明 | 聆思文档中心</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docusaurus_locale" content="en"><meta data-react-helmet="true" name="docusaurus_version" content="current"><meta data-react-helmet="true" name="docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="CSK 外语资源集成说明 | 聆思文档中心"><meta data-react-helmet="true" name="description" content="1 需求确认"><meta data-react-helmet="true" property="og:description" content="1 需求确认"><meta data-react-helmet="true" property="og:url" content="https://github.com/LISTENAI/foreign_resources"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico"><link data-react-helmet="true" rel="canonical" href="https://github.com/LISTENAI/foreign_resources"><link rel="stylesheet" href="/styles.16a99837.css">
-<link rel="preload" href="/styles.a415eef2.js" as="script">
-<link rel="preload" href="/runtime~main.ffd0e795.js" as="script">
-<link rel="preload" href="/main.c2bc80b9.js" as="script">
-<link rel="preload" href="/1.7e719b23.js" as="script">
-<link rel="preload" href="/2.98e17fd9.js" as="script">
-<link rel="preload" href="/1a4e3797.fd257ed7.js" as="script">
-<link rel="preload" href="/1be78505.f297d97d.js" as="script">
-<link rel="preload" href="/74.68a36cfd.js" as="script">
-<link rel="preload" href="/73.38342841.js" as="script">
-<link rel="preload" href="/935f2afb.5bc0cba3.js" as="script">
-<link rel="preload" href="/17896441.01aee629.js" as="script">
-<link rel="preload" href="/e4cfff08.d648e40b.js" as="script">
+<link rel="preload" href="/styles.e3c91203.js" as="script">
+<link rel="preload" href="/runtime~main.6a294d59.js" as="script">
+<link rel="preload" href="/main.3fe1632a.js" as="script">
+<link rel="preload" href="/1.1e1f6025.js" as="script">
+<link rel="preload" href="/2.3f3c4cf8.js" as="script">
+<link rel="preload" href="/1a4e3797.628a2311.js" as="script">
+<link rel="preload" href="/1be78505.bffdb615.js" as="script">
+<link rel="preload" href="/122.18891566.js" as="script">
+<link rel="preload" href="/121.debea348.js" as="script">
+<link rel="preload" href="/935f2afb.42f90c1e.js" as="script">
+<link rel="preload" href="/17896441.4662e802.js" as="script">
+<link rel="preload" href="/e4cfff08.483d5621.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -26,17 +26,17 @@
 查看 <code>library.mk</code> 中 <code>LIB_MINI_ESR_VERSION</code> 的识别模型版本。
 如在源码下的 <code>library.mk</code> 中查看该字段，则SDK使用的版本为 <code>1156</code></p></li></ol><div class="mdxCodeBlock_1zKU"><div class="codeBlockContent_actS"><div tabindex="0" class="prism-code language-undefined codeBlock_tuNs thin-scrollbar"><div class="codeBlockLines_3uvA" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">LIB_MINI_ESR_VERSION := 4002.1156.v1.beta1</span></div></div></div><button type="button" aria-label="Copy code to clipboard" class="copyButton_2GIj">Copy</button></div></div><ol start="3"><li><p>固件移植和编译
 将资源中 <code>{根目录}/include</code> 和 <code>{根目录}/lib/CSK/libmini_esr.a</code> 等资源替换 CSK SDK 中的对应文件，重新生成CSK基础固件。</p></li><li><p>基础固件拷贝：将生成后的 <code>master.bin</code> 放到 LStudio 工程下 <code>{根目录}/deps/alias</code></p></li></ol><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_prK2" id="44-打包烧录"></a>4.4 打包烧录<a class="hash-link" href="#44-打包烧录" title="Direct link to heading">#</a></h3><p>使用如下命令重新打包生成固件：</p><div class="mdxCodeBlock_1zKU"><div class="codeBlockContent_actS"><div tabindex="0" class="prism-code language-undefined codeBlock_tuNs thin-scrollbar"><div class="codeBlockLines_3uvA" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">lisa task build:respak</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">lisa task build:package</span></div></div></div><button type="button" aria-label="Copy code to clipboard" class="copyButton_2GIj">Copy</button></div></div><p>使用如下命令烧录固件到对应的硬件设备中：</p><div class="mdxCodeBlock_1zKU"><div class="codeBlockContent_actS"><div tabindex="0" class="prism-code language-undefined codeBlock_tuNs thin-scrollbar"><div class="codeBlockLines_3uvA" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">lisa flash</span></div></div></div><button type="button" aria-label="Copy code to clipboard" class="copyButton_2GIj">Copy</button></div></div><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_prK2" id="45-测试"></a>4.5 测试<a class="hash-link" href="#45-测试" title="Direct link to heading">#</a></h3><p>按照需求的词表，进行唤醒和识别测试，至此外语资源集成完毕。</p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_2xL- thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-需求确认" class="table-of-contents__link">1 需求确认</a></li><li><a href="#2-沟通提交外语资源需求" class="table-of-contents__link">2 沟通/提交外语资源需求</a></li><li><a href="#3-外语资源释放" class="table-of-contents__link">3 外语资源释放</a></li><li><a href="#4-资源集成实施" class="table-of-contents__link">4 资源集成实施</a><ul><li><a href="#41-使用lstudio创建项目" class="table-of-contents__link">4.1 使用LStudio创建项目</a></li><li><a href="#42-使用lstudio-进行资源导入和集成" class="table-of-contents__link">4.2 使用LStudio 进行资源导入和集成</a></li><li><a href="#43-生成基础固件" class="table-of-contents__link">4.3 生成基础固件</a></li><li><a href="#44-打包烧录" class="table-of-contents__link">4.4 打包烧录</a></li><li><a href="#45-测试" class="table-of-contents__link">4.5 测试</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 安徽聆思智能科技有限公司皖ICP备05001217号</div></div></div></footer></div>
-<script src="/styles.a415eef2.js"></script>
-<script src="/runtime~main.ffd0e795.js"></script>
-<script src="/main.c2bc80b9.js"></script>
-<script src="/1.7e719b23.js"></script>
-<script src="/2.98e17fd9.js"></script>
-<script src="/1a4e3797.fd257ed7.js"></script>
-<script src="/1be78505.f297d97d.js"></script>
-<script src="/74.68a36cfd.js"></script>
-<script src="/73.38342841.js"></script>
-<script src="/935f2afb.5bc0cba3.js"></script>
-<script src="/17896441.01aee629.js"></script>
-<script src="/e4cfff08.d648e40b.js"></script>
+<script src="/styles.e3c91203.js"></script>
+<script src="/runtime~main.6a294d59.js"></script>
+<script src="/main.3fe1632a.js"></script>
+<script src="/1.1e1f6025.js"></script>
+<script src="/2.3f3c4cf8.js"></script>
+<script src="/1a4e3797.628a2311.js"></script>
+<script src="/1be78505.bffdb615.js"></script>
+<script src="/122.18891566.js"></script>
+<script src="/121.debea348.js"></script>
+<script src="/935f2afb.42f90c1e.js"></script>
+<script src="/17896441.4662e802.js"></script>
+<script src="/e4cfff08.483d5621.js"></script>
 </body>
 </html>

@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.70">
 <title data-react-helmet="true">快速实现业务逻辑 | 聆思文档中心</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docusaurus_locale" content="en"><meta data-react-helmet="true" name="docusaurus_version" content="current"><meta data-react-helmet="true" name="docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="快速实现业务逻辑 | 聆思文档中心"><meta data-react-helmet="true" name="description" content="本文介绍如何通过EngineCore快速实现业务逻辑"><meta data-react-helmet="true" property="og:description" content="本文介绍如何通过EngineCore快速实现业务逻辑"><meta data-react-helmet="true" property="og:url" content="https://github.com/LISTENAI/guides/EngineCore/getting_started"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico"><link data-react-helmet="true" rel="canonical" href="https://github.com/LISTENAI/guides/EngineCore/getting_started"><link rel="stylesheet" href="/styles.16a99837.css">
-<link rel="preload" href="/styles.a415eef2.js" as="script">
-<link rel="preload" href="/runtime~main.ffd0e795.js" as="script">
-<link rel="preload" href="/main.c2bc80b9.js" as="script">
-<link rel="preload" href="/1.7e719b23.js" as="script">
-<link rel="preload" href="/2.98e17fd9.js" as="script">
-<link rel="preload" href="/1a4e3797.fd257ed7.js" as="script">
-<link rel="preload" href="/1be78505.f297d97d.js" as="script">
-<link rel="preload" href="/74.68a36cfd.js" as="script">
-<link rel="preload" href="/73.38342841.js" as="script">
-<link rel="preload" href="/935f2afb.5bc0cba3.js" as="script">
-<link rel="preload" href="/17896441.01aee629.js" as="script">
-<link rel="preload" href="/ef37292f.15e972d6.js" as="script">
+<link rel="preload" href="/styles.e3c91203.js" as="script">
+<link rel="preload" href="/runtime~main.6a294d59.js" as="script">
+<link rel="preload" href="/main.3fe1632a.js" as="script">
+<link rel="preload" href="/1.1e1f6025.js" as="script">
+<link rel="preload" href="/2.3f3c4cf8.js" as="script">
+<link rel="preload" href="/1a4e3797.628a2311.js" as="script">
+<link rel="preload" href="/1be78505.bffdb615.js" as="script">
+<link rel="preload" href="/122.18891566.js" as="script">
+<link rel="preload" href="/121.debea348.js" as="script">
+<link rel="preload" href="/935f2afb.42f90c1e.js" as="script">
+<link rel="preload" href="/17896441.4662e802.js" as="script">
+<link rel="preload" href="/ef37292f.62be05a7.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -32,17 +32,17 @@
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"># 实现业务逻辑</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">on_uart_parsed do |data|</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  EngineCore.logger.info &quot;接收消息: #{data}&quot;</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  UART.transmit(&quot;打开空调&quot;)</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">end</span></div></div></div><button type="button" aria-label="Copy code to clipboard" class="copyButton_2GIj">Copy</button></div></div><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_prK2" id="53-替换自己的组件"></a>5.3 替换自己的组件<a class="hash-link" href="#53-替换自己的组件" title="Direct link to heading">#</a></h3><p>可以替换EngineCore的组件，实现自己的逻辑，在intents.rb文件开头进行配置，参考<a href="https://open.listenai.com/csksdk/csk4002/mruby/EngineCore.html" target="_blank" rel="noopener noreferrer">API文档</a>，例如：</p><div class="mdxCodeBlock_1zKU"><div class="codeBlockContent_actS"><div tabindex="0" class="prism-code language-ruby codeBlock_tuNs thin-scrollbar"><div class="codeBlockLines_3uvA" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">class MyLogger</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  def info(data)</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    log(&quot;自定义的log: #{data}&quot;)</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  end</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  def log</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    # 实现你的log逻辑</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  end</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">end</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">EngineCore.config do |core|</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  core.logger = MyLogger.new</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">end</span></div></div></div><button type="button" aria-label="Copy code to clipboard" class="copyButton_2GIj">Copy</button></div></div><p>通过EngineCore.logger调用，只要支持了原本logger的方法，业务逻辑不需要修改</p><div class="mdxCodeBlock_1zKU"><div class="codeBlockContent_actS"><div tabindex="0" class="prism-code language-ruby codeBlock_tuNs thin-scrollbar"><div class="codeBlockLines_3uvA" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">EngineCore.logger.info &quot;my log&quot;</span></div></div></div><button type="button" aria-label="Copy code to clipboard" class="copyButton_2GIj">Copy</button></div></div></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_2xL- thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1如何开始" class="table-of-contents__link">1.如何开始</a></li><li><a href="#2命令词逻辑" class="table-of-contents__link">2.命令词逻辑</a><ul><li><a href="#21-指定命令词逻辑" class="table-of-contents__link">2.1 指定命令词逻辑</a></li><li><a href="#22-默认的命令词逻辑" class="table-of-contents__link">2.2 默认的命令词逻辑</a></li></ul></li><li><a href="#3uart数据处理" class="table-of-contents__link">3.uart数据处理</a></li><li><a href="#4整合一下" class="table-of-contents__link">4.整合一下</a></li><li><a href="#5进一步使用" class="table-of-contents__link">5.进一步使用</a><ul><li><a href="#51-存储" class="table-of-contents__link">5.1 存储</a></li><li><a href="#52-自定义数据解析" class="table-of-contents__link">5.2 自定义数据解析</a></li><li><a href="#53-替换自己的组件" class="table-of-contents__link">5.3 替换自己的组件</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 安徽聆思智能科技有限公司皖ICP备05001217号</div></div></div></footer></div>
-<script src="/styles.a415eef2.js"></script>
-<script src="/runtime~main.ffd0e795.js"></script>
-<script src="/main.c2bc80b9.js"></script>
-<script src="/1.7e719b23.js"></script>
-<script src="/2.98e17fd9.js"></script>
-<script src="/1a4e3797.fd257ed7.js"></script>
-<script src="/1be78505.f297d97d.js"></script>
-<script src="/74.68a36cfd.js"></script>
-<script src="/73.38342841.js"></script>
-<script src="/935f2afb.5bc0cba3.js"></script>
-<script src="/17896441.01aee629.js"></script>
-<script src="/ef37292f.15e972d6.js"></script>
+<script src="/styles.e3c91203.js"></script>
+<script src="/runtime~main.6a294d59.js"></script>
+<script src="/main.3fe1632a.js"></script>
+<script src="/1.1e1f6025.js"></script>
+<script src="/2.3f3c4cf8.js"></script>
+<script src="/1a4e3797.628a2311.js"></script>
+<script src="/1be78505.bffdb615.js"></script>
+<script src="/122.18891566.js"></script>
+<script src="/121.debea348.js"></script>
+<script src="/935f2afb.42f90c1e.js"></script>
+<script src="/17896441.4662e802.js"></script>
+<script src="/ef37292f.62be05a7.js"></script>
 </body>
 </html>
