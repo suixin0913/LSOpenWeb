@@ -7,12 +7,10 @@
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "predeploy": "npm run replaceRoute",
+    "predeploy": "node cloneElseDocs.js && node docsRoute.js",
     "deploy": "docusaurus deploy",
-    "predeploy": "npm run replaceRoute",
     "serve": "docusaurus serve",
-    "clear": "docusaurus clear",
-    "replaceRoute": "node docsRoute.js"
+    "clear": "docusaurus clear"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.70",
