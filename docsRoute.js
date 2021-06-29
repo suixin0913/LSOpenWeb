@@ -17,6 +17,10 @@ function getAllRoute(dir) {
       var slug = strSubstr('slug: ', '\n', content)
       if (slug) {
         allRoute.push(slug)
+      } else {
+        if (targetPath.endsWith('.md')) {
+          allRoute.push(targetPath.replace(path.resolve('./docs'), '').replace('.md', ''))
+        }
       }
     }
   })
@@ -35,6 +39,7 @@ function strSubstr(start, end, str) {
 }
 
 function replaceRoutePath(routes) {
+  console.log(routes)
   var content = fs.readFileSync(path.resolve('./docusaurus.config.js')).toString()
   content = content.replace('docsRouteBasePath: []', `docsRouteBasePath: ${JSON.stringify(routes)}`)
   fs.writeFileSync(path.resolve('./docusaurus.config.js'), content)
