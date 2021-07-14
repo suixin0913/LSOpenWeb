@@ -1,3 +1,6 @@
+const isProd = process.env.NODE_ENV === 'production';
+const debug = !isProd
+
 module.exports = {
   title: '聆思文档中心',
   tagline: 'LSOpen资料库',
@@ -11,53 +14,91 @@ module.exports = {
   organizationName: 'LISTENAI',
   themeConfig: {
     navbar: {
-      title: '聆思文档中心',
       logo: {
         href: '/',
         alt: 'LSOpen Logo',
-        src: 'img/logo.png',
+        src: 'img/logo.svg',
+        srcDark: 'img/logo_dark.svg'
       },
       items: [
-        // {
-        //   to: "/",
-        //   label: 'CSK开发指南',
-        //   position: 'left'
-        // },
         {
-          to: "/CSK_online_guides_home",
-          label: '离在线开发指南',
+          to: "/CSK_online_guides",
+          label: '开始',
           position: 'left'
         },
         {
           to: "/csksdk_api",
-          label: 'API',
+          label: '芯片',
+          position: 'left'
+        },
+        {
+          to: "/csksdk_api",
+          label: 'SDK',
           position: 'left'
         },
         {
           to: '/download',
-          label: '下载中心',
+          label: '工具',
           position: 'left'
         },
         {
           to: '/lisa',
-          label: 'Hello Lisa',
+          label: 'AI应用',
           position: 'left'
         },
         {
           to: '/school',
-          label: '视频教程',
+          label: '行业解决方案',
+          position: 'left'
+        },
+        {
+          to: '/school',
+          label: 'FAQ',
           position: 'left'
         },
         {
           href: "https://cloud.listenai.com",
           label: "LSCloud",
-          position: 'right'
+          position: 'left'
         }
       ],
     },
+    subNavbar: [
+      {
+        dirName: '/CSK_online_guides',
+        items: [
+          {
+            to: "/CSK_online_guides",
+            label: '文档导读',
+          },
+          {
+            to: "/csksdk_api",
+            label: '学习路径',
+          },
+          {
+            to: "/csksdk_api",
+            label: '快速入门',
+          },
+          {
+            to: '/download',
+            label: '术语',
+          }
+        ],
+      }
+    ],
     colorMode: {
       defaultMode: 'light',
-      disableSwitch: false
+      disableSwitch: false,
+      switchConfig: {
+        darkIcon: {
+          light: 'img/undark.svg',
+          dark: 'img/dark.svg' 
+        },
+        lightIcon: {
+          light: 'img/light.svg',
+          dark: 'img/unlight.svg',
+        },
+      }
     },
     footer: {
       style: 'dark',
@@ -67,7 +108,8 @@ module.exports = {
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      // '@docusaurus/preset-classic',
+      require.resolve("./src/preset/index.js"),
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
@@ -83,9 +125,13 @@ module.exports = {
       },
     ],
   ],
+  // themes: [
+  //   [require.resolve('@docusaurus/theme-classic'), {
+  //     customCss: require.resolve('./src/css/custom.css'),
+  //   }],
+  // ],
+
   plugins: [
-    // ... Your other plugins.
-    'lstenai-analytics',
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
@@ -99,7 +145,31 @@ module.exports = {
         language: ["en", "zh"],
         // ```
         // When applying `zh` in language, please install `nodejieba` in your project.
+        translations: {
+          search_placeholder: "搜索"
+        }
       },
     ],
+    // [
+    //   require.resolve('@docusaurus/plugin-content-docs'),
+    //   {
+    //     sidebarPath: require.resolve('./sidebars.js'),
+    //     routeBasePath: '/'
+    //     // Please change this to your repo.
+    //     // editUrl:
+    //     //   'https://github.com/facebook/docusaurus/edit/master/website/',
+    //   },
+    // ],
+    // [
+    //   require.resolve('@docusaurus/plugin-content-pages'),
+    //   {},
+    // ],
+    // debug && require.resolve('@docusaurus/plugin-debug'),
+    // isProd && [
+    //   require.resolve('@docusaurus/plugin-sitemap'),
+    //   {},
+    // ],
+    // // ... Your other plugins.
+    // 'lstenai-analytics',
   ],
 };

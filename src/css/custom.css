@@ -15,7 +15,153 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
+
+  /* Add by geekZzboom. ---- start ---- */
+  --ifm-navbar-height: 64px;
+  --ifm-subnavbar-height: 64px;
+  --ifm-navbar-padding-horizontal: 24px;
+  --ifm-navbar-item-padding-horizontal: 16px;
+  --ifm-navbar-link-hover-color: #333333;
+  --ifm-navbar-link-color: #808080;
+  --ifm-navbar-search-input-background-color: #f2f2f2;
+  --ifm-navbar-search-input-icon: url('data:image/svg+xml;utf8,<svg fill="currentColor" stroke="gray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="16px" width="16px"><path d="M7,1.33333333 C10.1296136,1.33333333 12.6666667,3.87038642 12.6666667,7 C12.6666667,8.3848265 12.1699156,9.65363056 11.3448824,10.6379431 L14.3535534,13.6464466 C14.5488155,13.8417088 14.5488155,14.1582912 14.3535534,14.3535534 C14.1760423,14.5310644 13.8982666,14.5472018 13.7025256,14.4019655 L13.6464466,14.3535534 L10.6379431,11.3448824 C9.65363056,12.1699156 8.3848265,12.6666667 7,12.6666667 C3.87038642,12.6666667 1.33333333,10.1296136 1.33333333,7 C1.33333333,3.87038642 3.87038642,1.33333333 7,1.33333333 Z M7,2.33333333 C4.42267117,2.33333333 2.33333333,4.42267117 2.33333333,7 C2.33333333,9.57732883 4.42267117,11.6666667 7,11.6666667 C9.57732883,11.6666667 11.6666667,9.57732883 11.6666667,7 C11.6666667,4.42267117 9.57732883,2.33333333 7,2.33333333 Z" /></svg>');
+  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="rgba(0,0,0,0.5)" d="M6.91074435,4.41074435 C6.61034105,4.71114765 6.5872331,5.1838402 6.84142051,5.51074954 L6.91074435,5.58925565 L11.3208333,10 L6.91074435,14.4107443 C6.61034105,14.7111477 6.5872331,15.1838402 6.84142051,15.5107495 L6.91074435,15.5892557 C7.21114765,15.889659 7.6838402,15.9127669 8.01074954,15.6585795 L8.08925565,15.5892557 L13.0892557,10.5892557 C13.389659,10.2888523 13.4127669,9.8161598 13.1585795,9.48925046 L13.0892557,9.41074435 L8.08925565,4.41074435 C7.76381874,4.08530744 7.23618126,4.08530744 6.91074435,4.41074435 Z"></path></svg>');
+  --ifm-menu-link-padding-vertical: 5px;
+  --ifm-menu-color: #333333;   
+  --ls-navbar-bottom-color: #E6E6E6;
+  
+  /* Add by geekZzboom. ---- end ---- */
 }
+
+/* Add by geekZzboom. ---- start ---- */
+
+html[data-theme='dark'] {
+  --ifm-navbar-search-input-background-color: #333333;
+  --ifm-navbar-search-input-color: #999999;
+  --ls-navbar-bottom-color: #333333;
+}
+
+[data-theme='dark'] .navbar__link {
+  color: #999999;
+}
+
+[data-theme='dark'] .navbar__link--active .mobile__navbar__link--active {
+  color: #fff;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--ls-navbar-bottom-color);
+  box-shadow: inherit;
+}
+
+.navbar__item {
+  font-size: 15px;
+}
+
+.sub-navbar {
+  box-shadow: var(--ifm-navbar-shadow);
+}
+
+.navbar__brand {
+  height: inherit;  /* 修改logo的高度为svg默认高度 */
+  margin-right: 64px;
+}
+.navbar__logo {
+  margin-right: 0;
+}
+.navbar__link {
+  font-weight: var(--ifm-font-weight-normal);
+}
+.navbar__link--active, .mobile__navbar__link--active {
+  font-weight: bold;
+}
+.navbar__link--active::after {
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+  left: 0;
+  margin: auto;
+  border-radius: 1px;
+  content: "";
+  height: 2px;
+  width: 16px;
+  background: var(--ifm-color-primary);
+}
+.mobile__navbar__link--active::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 1px;
+  content: "";
+  height: 100%;
+  width: 2px;
+  background: var(--ifm-color-primary);
+}
+.navbar__exlink {
+  color: var(--ifm-color-primary);
+}
+.navbar__search-input {
+  width: 320px;
+  outline: none;
+}
+
+.subnavbar--fixed-top {
+  position: sticky;
+  top: 64px;
+  z-index: 100;
+}
+
+.menu__list-item {
+  margin-top: 0;
+}
+
+.menu__link {
+  font-size: 14px;
+  line-height: 2.25;
+}
+.menu__link[type="first"] {
+  font-size: 15px;
+  font-weight: var(--ifm-font-weight-bold);
+}
+/* .menu__link--active[type="first"] {
+  
+} */
+.menu__link--active:not(.menu__link--sublist) {
+  background: inherit;
+}
+.menu__link--sublist:after {
+  /* height:20px;
+  min-width: 20px; */
+  background: var(--ifm-menu-link-sublist-icon) 100% / 20px 20px;
+  position: absolute;
+  right: 16px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotateZ(90deg);
+}
+
+.menu__list-item--collapsed .menu__link--sublist:after {
+  transform: inherit;
+}
+
+.table-of-contents__link {
+  font-size: 13px;
+}
+
+.table-of-contents__link--active::after {
+  position: absolute;
+  left: 0;
+  margin: auto;
+  border-radius: 1px;
+  content: "";
+  height: 23px;
+  width: 3px;
+  background: var(--ifm-color-primary);
+}
+
+/* Add by geekZzboom. ---- end ---- */
 
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
@@ -56,3 +202,9 @@ h2 {
 .white{
   color:#fff!important;
 }
+
+/* 
+[data-theme='dark']
+.react-toggle .react-toggle-track-x, .react-toggle--checked .react-toggle-track-x {
+  opacity: 1 !important;
+} */

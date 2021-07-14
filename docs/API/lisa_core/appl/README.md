@@ -1,4 +1,7 @@
-@listenai/lisa_core / [Exports](modules.md)
+---
+sidebar_label: 我排第二噢
+sidebar_position: 2
+---
 
 # Lisa Core
 
