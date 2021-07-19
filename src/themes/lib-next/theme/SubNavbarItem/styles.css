@@ -1,0 +1,27 @@
+.subnavbar__item {
+  min-width: 96px;
+  height: 32px;
+  background: rgba(128, 128, 128, 0.1);
+  border-radius: 16px;
+  color: #333333;
+  font-size: 14px;
+  text-align: center;
+  line-height: 32px;
+  margin-right: 8px;
+}
+
+[data-theme='dark'] .subnavbar__item {
+  color: #cccccc;
+}
+
+.subnavbar__item:hover {
+  background: #1D99FF;
+  color: #fff;
+  text-decoration: none;
+}
+
+.subnavbar__link--active {
+  background: #1D99FF;
+  color: #fff !important;
+  font-weight: var(--ifm-font-weight-semibold);
+}
