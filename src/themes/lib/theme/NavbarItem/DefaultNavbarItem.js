@@ -46,8 +46,10 @@ function NavLink({
 }) {
   // TODO all this seems hacky
   // {to: 'version'} should probably be forbidden, in favor of {to: '/version'}
-  const toUrl = (0, _useBaseUrl.default)(to);
-  const activeBaseUrl = (0, _useBaseUrl.default)(activeBasePath);
+  const toUrl = (0, _useBaseUrl.default)(to); // const prefixUrl = useBaseUrl(prefix)
+  // const activeBaseUrl = useBaseUrl(activeBasePath);
+  // const activeBaseUrl = useBaseUrl(prefix);
+
   const normalizedHref = (0, _useBaseUrl.default)(href, {
     forcePrependBaseUrl: true
   });
@@ -60,7 +62,7 @@ function NavLink({
     activeClassName,
     to: toUrl,
     ...(activeBasePath || activeBaseRegex ? {
-      isActive: (_match, location) => activeBaseRegex ? new RegExp(activeBaseRegex).test(location.pathname) : location.pathname.startsWith(activeBaseUrl)
+      isActive: (_match, location) => activeBaseRegex ? new RegExp(activeBaseRegex).test(location.pathname) : location.pathname.startsWith(activeBasePath)
     } : null)
   }} {...props}>
       {isExternalLink ? <span className="navbar__exlink">

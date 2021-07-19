@@ -37,7 +37,7 @@
   color: var(--ifm-color-primary);
 }
 
-@media only screen and (max-width: 996px) {
+@media only screen and (max-width: 1200px) {
   .sidebar {
     display: none;
   }

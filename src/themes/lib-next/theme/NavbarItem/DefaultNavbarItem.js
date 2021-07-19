@@ -26,8 +26,10 @@ function NavLink({
 }) {
   // TODO all this seems hacky
   // {to: 'version'} should probably be forbidden, in favor of {to: '/version'}
-  const toUrl = useBaseUrl(to);
-  const activeBaseUrl = useBaseUrl(activeBasePath);
+  const toUrl = useBaseUrl(to); // const prefixUrl = useBaseUrl(prefix)
+  // const activeBaseUrl = useBaseUrl(activeBasePath);
+  // const activeBaseUrl = useBaseUrl(prefix);
+
   const normalizedHref = useBaseUrl(href, {
     forcePrependBaseUrl: true,
   });
@@ -48,7 +50,7 @@ function NavLink({
                   isActive: (_match, location) =>
                     activeBaseRegex
                       ? new RegExp(activeBaseRegex).test(location.pathname)
-                      : location.pathname.startsWith(activeBaseUrl),
+                      : location.pathname.startsWith(activeBasePath),
                 }
               : null),
           })}

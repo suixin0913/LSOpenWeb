@@ -1,0 +1,204 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #1D99FF;
+  --ifm-color-primary-dark: #1B66A3;
+  --ifm-color-primary-darker: #1B405F;
+  --ifm-color-primary-darkest: #1A2631;
+  --ifm-color-primary-light: #77C2FF;
+  --ifm-color-primary-lighter: #BBE0FF;
+  --ifm-color-primary-lightest: #E8F4FF;
+  --ifm-color-info: #1D99FF;
+  --ifm-color-info-lightest: #E8F4FF;
+  --ifm-color-success: #00DBCB;
+  --ifm-color-success-lightest: #E5FBF9;
+  --ifm-color-warning: #FFA253;
+  --ifm-color-warning-lightest: #FFF5ED;
+  --ifm-color-danger: #FF4B5F;
+  --ifm-color-danger-lightest: #FFECEF;
+  --ifm-color-secondary: #F2F2F2;
+  --ifm-color-secondary-light: #F7F7F7;
+  --ifm-color-secondary-dark: #E6E6E6;
+  --ifm-alert-color: #333333;
+  --ifm-heading-color: #1A1A1A;
+  --ifm-table-head-color: #1a1a1a;
+  --ifm-font-color-base: #333333;
+  --ifm-blockquote-color: #808080;
+  --ifm-font-size-base: 15px;
+  --ifm-line-hight-base: 1.7;
+  --ifm-heading-font-weight: 600;
+  --ifm-code-font-size: 95%;
+}
+
+html[data-theme ='dark'] {
+  --ifm-color-info-lightest: #1A2631;
+  --ifm-color-success-lightest: #172D2B;
+  --ifm-color-warning-lightest: #31271F;
+  --ifm-color-danger-lightest: #311E21;
+  --ifm-color-secondary: #262626;
+  --ifm-color-secondary-light: #212121;
+  --ifm-color-secondary-dark: #333333;
+  --ifm-alert-color: #CCCCCC;
+  --ifm-heading-color: #E6E6E6;
+  --ifm-table-head-color: #E6E6E6;
+  --ifm-font-color-base: #CCCCCC;
+  --ifm-blockquote-color: #999999;
+}
+
+.padding-bottom--lg, .padding-vert--lg {
+  padding-bottom: 80px !important;
+}
+
+.padding-top--md, .padding-verg--md {
+  padding-top: 80px !important;
+}
+
+.h1Heading_node_modules-\@docusaurus-theme-classic-lib-next-theme-Heading-styles-module {
+  font-size: 40px !important;
+  line-height: 52px !important;
+  margin-bottom: 56px !important;
+}
+
+.markdown>h2 {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 32px;
+  margin-top: 56px;
+}
+
+.markdown>h3 {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 16px;
+  margin-top: 40px;
+}
+
+.markdown>h4 {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+
+.markdown>p {
+  margin: 0 0 12px;
+}
+
+ul, ol {
+  margin:0 0 16px;
+}
+
+img {
+  margin-top: 8px;
+}
+
+.alert {
+  padding: 23px;
+}
+
+.admonition-icon svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}
+
+.admonition h5 {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 16px;
+}
+
+.admonition-content {
+  margin-left: 27px;
+}
+
+.alert--info {
+  --ifm-alert-background-color: var(--ifm-color-info-lightest);
+  --ifm-alert-border-color: var(--ifm-color-info-lightest);
+}
+
+.alert--info .admonition-icon svg {
+  fill: var(--ifm-color-info);
+}
+
+.alert--success{
+  --ifm-alert-background-color: var(--ifm-color-success-lightest);
+  --ifm-alert-border-color: var(--ifm-color-success-lightest);
+}
+
+.alert--success .admonition-icon svg {
+  fill: var(--ifm-color-success);
+}
+
+.alert--warning{
+  --ifm-alert-background-color: var(--ifm-color-warning-lightest);
+  --ifm-alert-border-color: var(--ifm-color-warning-lightest);
+}
+
+.alert--warning .admonition-icon svg {
+  fill: var(--ifm-color-warning);
+}
+
+.alert--danger{
+  --ifm-alert-background-color: var(--ifm-color-danger-lightest);
+  --ifm-alert-border-color: var(--ifm-color-danger-lightest);
+}
+
+.alert--danger .admonition-icon svg {
+  fill: var(--ifm-color-danger);
+}
+
+.alert--secondary{
+  --ifm-alert-color: var(--ifm-font-color-base);
+}
+
+.alert--secondary .admonition-icon svg {
+  fill: var(--ifm-font-color-base);
+}
+
+
+blockquote {
+  border-left: 6px solid var(--ifm-color-secondary-dark);
+  background-color: var(--ifm-color-secondary-light);
+  border-radius: 0 6px 6px 0;
+  font-size: 15px;
+  padding: 24px 24px 24px 18px;
+  margin: 0 0 16px;
+}
+
+table {
+  margin-bottom: 16px;
+}
+
+table thead tr {
+  border-bottom-width: 1px;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  line-height: 1.4;
+}
+
+
+.docusaurus-highlight-code-line {
+  background-color: rgb(72, 77, 91);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+.table-of-contents {
+  font-size: 0.9rem !important;
+}
+.white{
+  color:#fff!important;
+}

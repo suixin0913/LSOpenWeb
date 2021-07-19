@@ -7,15 +7,6 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #1D99FF;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
-  --ifm-code-font-size: 95%;
-
   /* Add by geekZzboom. ---- start ---- */
   --ifm-navbar-height: 64px;
   --ifm-subnavbar-height: 64px;
@@ -29,7 +20,6 @@
   --ifm-menu-link-padding-vertical: 5px;
   --ifm-menu-color: #333333;   
   --ls-navbar-bottom-color: #E6E6E6;
-  
   /* Add by geekZzboom. ---- end ---- */
 }
 
@@ -162,49 +152,3 @@ html[data-theme='dark'] {
 }
 
 /* Add by geekZzboom. ---- end ---- */
-
-.docusaurus-highlight-code-line {
-  background-color: rgb(72, 77, 91);
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
-}
-
-.alert--danger {
-  /* --ifm-alert-background-color: var(--ifm-color-danger); */
-  --ifm-alert-background-color: #4a4a4a;
-  /* --ifm-alert-border-color: var(--ifm-color-danger); */
-  --ifm-alert-border-color: #4a4a4a;
-}
-
-.alert--success {
-  /* --ifm-alert-background-color: var(--ifm-color-danger); */
-  --ifm-alert-background-color: #4a803c;
-  /* --ifm-alert-border-color: var(--ifm-color-danger); */
-  --ifm-alert-border-color: #4a803c;
-}
-
-/* header > h1 {
-  font-size: 40px !important;
-} */
-
-h1 {
-  font-size: 40px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-.table-of-contents {
-  font-size: 0.9rem !important;
-}
-.white{
-  color:#fff!important;
-}
-
-/* 
-[data-theme='dark']
-.react-toggle .react-toggle-track-x, .react-toggle--checked .react-toggle-track-x {
-  opacity: 1 !important;
-} */

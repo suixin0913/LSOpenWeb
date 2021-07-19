@@ -1,0 +1,29 @@
+.pip-card {
+    width: 1200px;
+    height: 200px;
+    background: #F7F7F7;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+[data-theme='dark'] .pip-card {
+    background: #212121;
+}
+
+.pip-card__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+[data-theme='dark'] .pip-card__title {
+    color: #e6e6e6;
+}
+
+.pip-card__title img {
+    margin-right: 25px;
+}
