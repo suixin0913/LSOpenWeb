@@ -34,8 +34,6 @@ function NavLink({
   });
   const isExternalLink = label && href && !isInternalUrl(href); // const isDropdownLink = activeClassName === dropdownLinkActiveClass;
 
-  console.log('navlink', props);
-  console.log(activeBaseUrl);
   return (
     <Link
       {...(href
@@ -219,7 +217,6 @@ function NavItemMobile({
 
 function SubNavbarItem({mobile = false, ...props}) {
   const Comp = mobile ? NavItemMobile : NavItemDesktop;
-  console.log('subnavbar', props);
   return <Comp {...props} />;
 }
 

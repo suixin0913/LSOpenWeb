@@ -66,7 +66,6 @@ const DocSidebarItems = (0, _react.memo)(function DocSidebarItems({
   items,
   ...props
 }) {
-  console.log('DocSidebarItems--->', props);
   return items.map((item, index) => <DocSidebarItem key={index} // sidebar is static, the index does not change
   item={item} {...props} />);
 });

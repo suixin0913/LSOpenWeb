@@ -42,7 +42,6 @@ const isActiveSidebarItem = (item, activePath) => {
 // TODO this triggers whole sidebar re-renders on navigation
 
 const DocSidebarItems = memo(function DocSidebarItems({items, ...props}) {
-  console.log('DocSidebarItems--->', props);
   return items.map((item, index) => (
     <DocSidebarItem
       key={index} // sidebar is static, the index does not change

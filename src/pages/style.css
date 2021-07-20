@@ -94,23 +94,27 @@
     max-width: 1248px;
     padding: 0 24px;
     margin: auto;
-    display: flex;
+    overflow-x: hidden;
+}
+
+.collection__content {
+    width: calc(100% + 24px);
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 .collection-block {
-    flex: 1;
     background: #F7F7F7;
     border-radius: 12px;
-    max-width: 588px;
-    padding: 24px;
+    width: calc(50% - 24px);
+    padding: 24px 24px 10px;
+    margin: 0 12px;
 }
 
 [data-theme='dark'] .collection-block {
     background: #212121;
-}
-
-.collection-block:first-child {
-    margin-right: 24px;
 }
 
 .collection-block__title {
@@ -128,6 +132,22 @@
     display: flex;
 }
 
+@media screen and (max-width: 960px) {
+    .collection-block__block {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 556px) {
+    .collection-block__block {
+        flex-direction: inherit;
+    }
+    .collection-block {
+        width: calc(100% - 24px);
+        margin-bottom: 24px;
+    }
+}
+
 .collection-block__block ul {
     flex: 1;
     list-style: none;
@@ -137,16 +157,8 @@
 
 .collection-block__block ul li {
     font-size: 15px;
-    color: #333333;
+    
     margin-bottom: 14px;
-}
-
-[data-theme='dark'] .collection-block__block ul li {
-    color: #cccccc;
-}
-
-.collection-block__block ul li:last-child {
-    margin-bottom: 0;
 }
 
 .r_arrow__link {
@@ -155,7 +167,12 @@
     background-position-x: right;
     background-position-y: 2px;
     padding-right: 16px;
+    color: #333333;
     cursor: pointer;
+}
+
+[data-theme='dark'] .r_arrow__link {
+    color: #cccccc;
 }
 
 .r_arrow__link:hover {
@@ -175,6 +192,40 @@
     background: #212121;
 }
 
+.dev-block__content {
+    width: calc(100% + 24px);
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.dev-block__link {
+    width: calc(33% - 24px);
+    height: 80px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    font-size: 20px;
+    padding: 0 24px;
+    line-height: 80px;
+    color: #1A1A1A;
+    display: inline-block;
+    cursor: pointer;
+
+    margin: 0 12px;
+
+    background: url('/img/r_angle_light.svg');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+}
+
+.dev-block__link:hover {
+    text-decoration: none;
+}
+
 .index-footer {
     height: 120px;
     background: #fff;
@@ -188,4 +239,16 @@
     background: #1a1a1a;
     color: #808080;
     border-top: 1px solid #333333;
+}
+
+@media screen and (max-width: 1008px) {
+    .dev-block__link {
+        width: calc(50% - 24px);
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .dev-block__link {
+        width: calc(100% - 24px);
+    }
 }

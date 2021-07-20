@@ -1,0 +1,285 @@
+{
+    "hotSearch": [
+        {
+            "label": "SDK",
+            "to": "/"
+        },
+        {
+            "label": "芯片选型",
+            "to": "/"
+        }
+    ],
+
+    "collections": [
+        {
+            "title": "热门链接",
+            "items": [
+                [
+                    {
+                        "label": "芯片选型指南",
+                        "to": "/"
+                    },
+                    {
+                        "label": "语音交互设计指南",
+                        "to": "/"
+                    },
+                    {
+                        "label": "入门教程",
+                        "to": "/"
+                    }
+                ],
+                [
+                    {
+                        "label": "命令词选择",
+                        "to": "/"
+                    },
+                    {
+                        "label": "LISA",
+                        "to": "/"
+                    },
+                    {
+                        "label": "SDK quick start",
+                        "to": "/"
+                    }
+                ]
+            ]
+        },
+        {
+            "title": "常见FAQ",
+            "items": [
+                [
+                    {
+                        "label": "无法编译",
+                        "to": "/"
+                    },
+                    {
+                        "label": "如何更换命令词",
+                        "to": "/"
+                    },
+                    {
+                        "label": "3002和4002的功能区别",
+                        "to": "/"
+                    }
+                ],
+                [
+                    {
+                        "label": "无法使用LStudio",
+                        "to": "/"
+                    },
+                    {
+                        "label": "如何做效果调优",
+                        "to": "/"
+                    },
+                    {
+                        "label": "如何自定义串口逻辑",
+                        "to": "/"
+                    }
+                ]
+            ]
+        }
+    ],
+
+    "paragraphs": [
+        {
+            "title": "AI应用方案",
+            "desc": "快速上手语音交互、通话降噪等AI应用开发",
+            "cards": [
+                {
+                    "icon": {
+                        "src": "img/h_interact_light.svg",
+                        "srcDark": "img/h_interact_dark.svg"
+                    },
+                    "title": "离线语音交互",
+                    "pipes": [
+                        {
+                            "label": "上手",
+                            "to": "/"
+                        },
+                        {
+                            "label": "硬件设计",
+                            "to": "/"
+                        },
+                        {
+                            "label": "软件开发",
+                            "to": "/"
+                        },
+                        {
+                            "label": "测试指导",
+                            "to": "/"
+                        },
+                        {
+                            "label": "量产指导",
+                            "to": "/"
+                        }
+                    ],
+                    "btns": [
+                        {
+                            "label": "基本介绍",
+                            "to": "/"
+                        },
+                        {
+                            "label": "快速开始",
+                            "to": "/"
+                        } 
+                    ]
+                },
+                {
+                    "icon": {
+                        "src": "img/h_noise_light.svg",
+                        "srcDark": "img/h_noise_dark.svg"
+                    },
+                    "title": "通话降噪",
+                    "pipes": [
+                        {
+                            "label": "上手",
+                            "to": "/"
+                        },
+                        {
+                            "label": "硬件设计",
+                            "to": "/"
+                        },
+                        {
+                            "label": "软件开发",
+                            "to": "/"
+                        },
+                        {
+                            "label": "测试指导",
+                            "to": "/"
+                        },
+                        {
+                            "label": "量产指导",
+                            "to": "/"
+                        }
+                    ],
+                    "btns": [
+                        {
+                            "label": "基本介绍",
+                            "to": "/"
+                        },
+                        {
+                            "label": "快速开始",
+                            "to": "/"
+                        } 
+                    ]
+                },
+                {
+                    "icon": {
+                        "src": "img/h_voice_light.svg",
+                        "srcDark": "img/h_voice_dark.svg"
+                    },
+                    "title": "DSP前端声学",
+                    "pipes": [
+                        {
+                            "label": "上手",
+                            "to": "/"
+                        },
+                        {
+                            "label": "硬件设计",
+                            "to": "/"
+                        },
+                        {
+                            "label": "软件开发",
+                            "to": "/"
+                        },
+                        {
+                            "label": "测试指导",
+                            "to": "/"
+                        },
+                        {
+                            "label": "量产指导噢",
+                            "to": "/jj"
+                        }
+                    ],
+                    "btns": [
+                        {
+                            "label": "基本介绍",
+                            "to": "/"
+                        },
+                        {
+                            "label": "快速开始",
+                            "to": "/"
+                        } 
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "行业解决方案",
+            "desc": "现成行业解决方案，供项目快速落地",
+            "cards": [
+                {
+                    "icon": {
+                        "src": "img/h_interact_light.svg",
+                        "srcDark": "img/h_interact_dark.svg"
+                    },
+                    "title": "离线语音交互",
+                    "pipes": [
+                        {
+                            "label": "上手",
+                            "to": "/"
+                        },
+                        {
+                            "label": "硬件设计",
+                            "to": "/"
+                        },
+                        {
+                            "label": "软件开发",
+                            "to": "/"
+                        },
+                        {
+                            "label": "测试指导",
+                            "to": "/"
+                        }
+                    ],
+                    "btns": [
+                        {
+                            "label": "基本介绍",
+                            "to": "/"
+                        },
+                        {
+                            "label": "快速开始",
+                            "to": "/"
+                        } 
+                    ]
+                }
+            ]
+        }
+    ],
+
+    "projects": [
+        {
+            "label": "选择合适你的芯片",
+            "to": "/"
+        },
+        {
+            "label": "快速入门开发",
+            "to": "/"
+        },
+        {
+            "label": "快速入门开发",
+            "to": "/"
+        },
+        {
+            "label": "快速入门开发",
+            "to": "/"
+        },
+        {
+            "label": "快速入门开发",
+            "to": "/"
+        },
+        {
+            "label": "快速入门开发",
+            "to": "/"
+        },
+        {
+            "label": "快速入门开发",
+            "to": "/"
+        },
+        {
+            "label": "快速入门开发",
+            "to": "/"
+        }
+    ]
+
+
+}

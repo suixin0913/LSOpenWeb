@@ -11,10 +11,12 @@ import {useThemeConfig} from '@docusaurus/theme-common';
 import useLockBodyScroll from '@theme/hooks/useLockBodyScroll';
 import useWindowSize, {windowSizes} from '@theme/hooks/useWindowSize';
 import SubNavbarItem from '@theme/SubNavbarItem';
+import {useLocation} from 'react-router-dom';
 import './styles.css';
 
 function SubNavbar() {
   const {subNavbar} = useThemeConfig();
+  const location = useLocation();
   const [sidebarShown, setSidebarShown] = useState(false); // const {isDarkTheme, setLightTheme, setDarkTheme} = useThemeContext();
 
   useLockBodyScroll(sidebarShown);
@@ -30,7 +32,7 @@ function SubNavbar() {
         <div className="navbar__inner subnavbar__inner">
           <div className="navbar__items">
             {subNavbar.map((sub) => {
-              if (window.location.pathname.indexOf(sub.dirName || '') >= 0) {
+              if (location.pathname.indexOf(sub.dirName || '') >= 0) {
                 return sub.items.map((item, i) => (
                   <SubNavbarItem dirname={sub.dirName} {...item} key={i} />
                 ));

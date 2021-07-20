@@ -17,6 +17,8 @@ var _useWindowSize = _interopRequireWildcard(require("@theme/hooks/useWindowSize
 
 var _SubNavbarItem = _interopRequireDefault(require("@theme/SubNavbarItem"));
 
+var _reactRouterDom = require("react-router-dom");
+
 require("./styles.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -36,6 +38,7 @@ function SubNavbar() {
   const {
     subNavbar
   } = (0, _themeCommon.useThemeConfig)();
+  const location = (0, _reactRouterDom.useLocation)();
   const [sidebarShown, setSidebarShown] = (0, _react.useState)(false); // const {isDarkTheme, setLightTheme, setDarkTheme} = useThemeContext();
 
   (0, _useLockBodyScroll.default)(sidebarShown);
@@ -50,7 +53,7 @@ function SubNavbar() {
         <div className="navbar__inner subnavbar__inner">
           <div className="navbar__items">
             {subNavbar.map(sub => {
-            if (window.location.pathname.indexOf(sub.dirName || '') >= 0) {
+            if (location.pathname.indexOf(sub.dirName || '') >= 0) {
               return sub.items.map((item, i) => <_SubNavbarItem.default dirname={sub.dirName} {...item} key={i} />);
             } else {
               return <></>;

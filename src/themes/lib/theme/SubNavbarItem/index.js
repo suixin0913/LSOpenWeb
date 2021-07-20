@@ -55,8 +55,6 @@ function NavLink({
   });
   const isExternalLink = label && href && !(0, _isInternalUrl.default)(href); // const isDropdownLink = activeClassName === dropdownLinkActiveClass;
 
-  console.log('navlink', props);
-  console.log(activeBaseUrl);
   return <_Link.default {...href ? {
     href: prependBaseUrlToHref ? normalizedHref : href
   } : {
@@ -204,7 +202,6 @@ function SubNavbarItem({
   ...props
 }) {
   const Comp = mobile ? NavItemMobile : NavItemDesktop;
-  console.log('subnavbar', props);
   return <Comp {...props} />;
 }
 

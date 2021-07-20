@@ -1,6 +1,5 @@
 .pip-card {
-    width: 1200px;
-    height: 200px;
+    max-width: 1200px;
     background: #F7F7F7;
     border-radius: 12px;
     padding: 24px;
@@ -18,6 +17,7 @@
     line-height: 1;
     display: flex;
     align-items: center;
+    margin-bottom: 24px;
 }
 
 [data-theme='dark'] .pip-card__title {
@@ -26,4 +26,76 @@
 
 .pip-card__title img {
     margin-right: 25px;
+}
+
+.pip-card__links__pips {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 56px;
+    margin-bottom: 12px;
+}
+
+.pip-card__links__pips__item {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.pip-card__links__pips__item__link {
+    min-width: 136px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #4C4C4C;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    color: #333333;
+}
+
+[data-theme='dark'] .pip-card__links__pips__item__link {
+    border: 1px solid #B2B2B2;
+    color: #CCCCCC;
+}
+
+
+.pip-card__links__pips__item__link:hover {
+    border: 1px solid #333333;
+    background: #333333;
+    color: #CCCCCC;
+    text-decoration: none;
+}
+
+[data-theme='dark'] .pip-card__links__pips__item__link:hover {
+    background: #B2B2B2;
+    color: #333333;
+}
+
+
+.pip-card__links__btns {
+    padding-left: 56px;
+}
+
+.pip-card__links__btns__item {
+    width: 96px;
+    height: 32px;
+    background: rgba(128, 128, 128, 0.1);
+    border-radius: 16px;
+    display: inline-block;
+    color: #333333;
+    text-align: center;
+    line-height: 32px;
+    margin-right: 8px;
+}
+
+[data-theme='dark'] .pip-card__links__btns__item {
+    background: rgba(128, 128, 128, 0.1);
+    color: #CCCCCC;
+}
+
+.pip-card__links__btns__item:hover {
+    color: #333333;
+    text-decoration: none;
+}
+
+[data-theme='dark'] .pip-card__links__btns__item:hover {
+    color: #CCCCCC;
 }

@@ -7,75 +7,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import ThemedImage from '@theme/ThemedImage';
 import './style.css';
 
+import MockData from './mock.json'
+
 function Hello() {
-
-    const hotSearch = [
-        {
-            label: 'SDK',
-            to: useBaseUrl('/')
-        },
-        {
-            label: '芯片选型',
-            to: useBaseUrl('/')
-        }
-    ]
-
-    const collections = [
-        {
-            title: '热门链接',
-            items: [
-                [
-                    {
-                        label: '芯片选型指南'
-                    },
-                    {
-                        label: '语音交互设计指南'
-                    },
-                    {
-                        label: '入门教程'
-                    }
-                ],
-                [
-                    {
-                        label: '命令词选择'
-                    },
-                    {
-                        label: 'LISA'
-                    },
-                    {
-                        label: 'SDK quick start'
-                    }
-                ]
-            ]
-        },
-        {
-            title: '常见FAQ',
-            items: [
-                [
-                    {
-                        label: '无法编译'
-                    },
-                    {
-                        label: '如何更换命令词'
-                    },
-                    {
-                        label: '3002和4002的功能区别'
-                    }
-                ],
-                [
-                    {
-                        label: '无法使用LStudio'
-                    },
-                    {
-                        label: '如何做效果调优'
-                    },
-                    {
-                        label: '如何自定义串口逻辑'
-                    }
-                ]
-            ]
-        }
-    ]
 
     const collectionBlock = (block, index) => {
         return (
@@ -88,7 +22,7 @@ function Hello() {
                                 {
                                     list.map((item, index) => (
                                         <li key={index}>
-                                            <span className="r_arrow__link">{item.label}</span> 
+                                            <a className="r_arrow__link" href={useBaseUrl(item.to)}>{item.label}</a> 
                                         </li>
                                     ))
                                 }
@@ -108,7 +42,11 @@ function Hello() {
                     <p className="main__title">聆思文档中心</p>
                     <p className="main__desc">您可以在这里找到最新有关聆思芯片的产品和技术资源，以及方案开发教程。</p>
                     <div className="main__search">
-                        <input placeholder="搜索你的问题" />
+                        <input placeholder="搜索你的问题" onKeyPress={(event) => {
+                            if(event.key === 'Enter'){
+                                location.href = `/search?q=${event.target.value}`
+                              }
+                        }} />
                         <ThemedImage
                             className="main__search__prefix"
                             sources={{
@@ -121,8 +59,8 @@ function Hello() {
                         <p className="main__quicklink">
                             <span>热门搜索：</span>
                             {
-                                hotSearch.map((item, index) => (
-                                    <a className="main__link" key={index} href={item.to}>{item.label}</a>
+                                MockData.hotSearch.map((item, index) => (
+                                    <a className="main__link" key={index} href={useBaseUrl(item.to)}>{item.label}</a>
                                 ))
                             }
                         </p>
@@ -135,49 +73,38 @@ function Hello() {
                 </div>
 
                 <div className="collection" style={{marginBottom: '100px'}}>
-                    {
-                        collections.map((item, index) => {
-                            return collectionBlock(item, index)
-                        })
-                    }
+                    <div className="collection__content">
+                        {
+                            MockData.collections.map((item, index) => {
+                                return collectionBlock(item, index)
+                            })
+                        }
+                    </div>
                 </div>
 
-                <Paragraph title="AI应用方案" desc="快速上手语音交互、通话降噪等AI应用开发">
-                    <PipCard {...{
-                        icon: {
-                            src: 'img/h_interact_light.svg',
-                            srcDark: 'img/h_interact_dark.svg'
-                        },
-                        title: '离线语音交互'
-                    }} />
-                    <PipCard {...{
-                        icon: {
-                            src: 'img/h_noise_light.svg',
-                            srcDark: 'img/h_noise_dark.svg'
-                        },
-                        title: '通话降噪'
-                    }} />
-                    <PipCard {...{
-                        icon: {
-                            src: 'img/h_voice_light.svg',
-                            srcDark: 'img/h_voice_dark.svg'
-                        },
-                        title: 'DSP前端声学'
-                    }} />
-                </Paragraph>
+                {
+                    MockData.paragraphs.map((paragraph, index) => (
+                        <Paragraph title={paragraph.title} desc={paragraph.desc} key={index}>
+                            {
+                                paragraph.cards.map((pipe, index) => (
+                                    <PipCard {...pipe} key={index} />
+                                ))
+                            }
+                        </Paragraph>
+                    ))
+                }
 
-                <Paragraph title="行业解决方案" desc="现成行业解决方案，供项目快速落地">
-                    <PipCard {...{
-                        icon: {
-                            src: 'img/h_interact_light.svg',
-                            srcDark: 'img/h_interact_dark.svg'
-                        },
-                        title: '离线语音交互'
-                    }} />
-                </Paragraph>
-            
                 <div className="dev-block">
                     <Paragraph title="开发专题" desc="各式各样的开发专题">
+                        <div className="dev-block__content">
+                            {
+                                MockData.projects.map((project, index) => (
+                                    <a className="dev-block__link" key={index} href={useBaseUrl(project.to)}>
+                                        {project.label}
+                                    </a>
+                                ))
+                            }
+                        </div>
                         
                     </Paragraph>
                 </div>
