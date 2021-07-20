@@ -222,7 +222,7 @@ module.exports = {
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
         indexPages: true,
-        docsRouteBasePath: "/",
+        docsRouteBasePath: [],
         // For Docs using Chinese, The `language` is recommended to set to:
         // ```
         language: ["en", "zh"],
