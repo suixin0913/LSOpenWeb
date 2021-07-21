@@ -223,8 +223,7 @@ module.exports = {
         hashed: true,
         indexPages: true,
         docsRouteBasePath: [],
-        // For Docs using Chinese, The `language` is recommended to set to:
-        // ```
+        
         language: ["en", "zh"],
         // ```
         // When applying `zh` in language, please install `nodejieba` in your project.
