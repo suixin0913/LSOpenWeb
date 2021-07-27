@@ -181,7 +181,7 @@ module.exports = {
       }
     },
     footer: {
-      style: 'dark',
+      // style: 'dark',
       links: [],
       copyright: `Copyright © 安徽聆思智能科技有限公司皖ICP备05001217号`,
     }

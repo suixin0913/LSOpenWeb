@@ -9,11 +9,11 @@
   --collapse-button-bg-color-dark: #2e333a;
 }
 
-@media (min-width: 997px) {
+@media (min-width: 1256px) {
   .sidebar {
     display: flex;
     flex-direction: column;
-    max-height: 100vh;
+    max-height: calc(100vh - var(--ifm-subnavbar-height));
     height: 100%;
     position: sticky;
     top: 0;

@@ -39,8 +39,8 @@ function Hello() {
             <Navbar />
             <div>
                 <div className="main">
-                    <p className="main__title">聆思文档中心</p>
-                    <p className="main__desc">您可以在这里找到最新有关聆思芯片的产品和技术资源，以及方案开发教程。</p>
+                    <p className="main__title">{MockData.title}</p>
+                    <p className="main__desc">{MockData.description}</p>
                     <div className="main__search">
                         <input placeholder="搜索你的问题" onKeyPress={(event) => {
                             if(event.key === 'Enter'){
@@ -66,9 +66,11 @@ function Hello() {
                         </p>
                     </div>
                     <div>
-                        <a className="main__btn">芯片选型</a>
-                        <a className="main__btn">快速入门</a>
-                        <a className="main__btn">离线语音开发</a>
+                        {
+                            MockData.hotSearchBtns.map((item, index) => (
+                                <a className="main__btn" key={index} href={useBaseUrl(item.to)}>{item.label}</a>
+                            ))
+                        }
                     </div>
                 </div>
 

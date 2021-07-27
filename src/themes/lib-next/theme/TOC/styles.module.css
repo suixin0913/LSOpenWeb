@@ -12,7 +12,7 @@
   top: calc(var(--ifm-navbar-height) + var(--ifm-subnavbar-height) + 1rem);
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1255px) {
   .tableOfContents {
     display: none;
   }

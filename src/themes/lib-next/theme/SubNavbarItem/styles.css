@@ -1,13 +1,15 @@
 .subnavbar__item {
   min-width: 96px;
   height: 32px;
-  background: rgba(128, 128, 128, 0.1);
+  background: rgba(128, 128, 128, 0.15);
   border-radius: 16px;
   color: #333333;
   font-size: 14px;
   text-align: center;
   line-height: 32px;
   margin-right: 8px;
+  padding: 0 20px;
+  transition: 0.3s ease-in-out;
 }
 
 [data-theme='dark'] .subnavbar__item {
@@ -15,13 +17,22 @@
 }
 
 .subnavbar__item:hover {
-  background: #1D99FF;
-  color: #fff;
+  background: rgba(128, 128, 128, 0.1);
+  color: #333333;
   text-decoration: none;
+}
+
+[data-theme='dark'] .subnavbar__item:hover {
+  color: #cccccc;
 }
 
 .subnavbar__link--active {
   background: #1D99FF;
   color: #fff !important;
   font-weight: var(--ifm-font-weight-semibold);
+}
+
+.subnavbar__link--active:hover {
+  background: #1D99FF;
+  text-decoration: none;
 }

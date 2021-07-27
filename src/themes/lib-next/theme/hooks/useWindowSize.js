@@ -6,7 +6,7 @@
  */
 import {useEffect, useState} from 'react';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
-const desktopThresholdWidth = 1200;
+const desktopThresholdWidth = 1255;
 const windowSizes = {
   desktop: 'desktop',
   mobile: 'mobile',

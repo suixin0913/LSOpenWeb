@@ -15,7 +15,7 @@
   font-size: smaller;
 }
 
-@media only screen and (min-width: 997px) {
+@media only screen and (min-width: 1256px) {
   .docItemCol {
     max-width: 75% !important;
   }
