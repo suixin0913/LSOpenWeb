@@ -34,10 +34,10 @@ sidebar_position: 3
 ## 5 与 application.lini 联动生效的配置
 
 以下引脚功能需要 `application.lini` 中的相关配置才可以生效，在配置过程中请务必关注：
-- [USB配置](/config_application#usb配置)
-- [UART配置](/config_application#uart配置)
-- [I2C配置](/config_application#i2c配置)
-- [PWM-红外配置](/config_application#红外配置)
+- [USB配置](/tools/LStudio/previewer/application#usb配置)
+- [UART配置](/tools/LStudio/previewer/application#uart配置)
+- [I2C配置](/tools/LStudio/previewer/application#i2c配置)
+- [PWM-红外配置](/tools/LStudio/previewer/application#红外配置)
 
 ## 6 使用代码模式配置
 
@@ -45,11 +45,11 @@ sidebar_position: 3
 1. 需要复用以往项目配置，可直接覆盖 `hardware.lini` 当前配置，可通过图形化渲染进行检查
 2. 图形化配置无法满足当前需求，需要直接修改代码
 
-`hardware.lini` 代码使用 TOML 语法实现，具体可参考：[外围引脚配置文档](/peripheral_config)
+`hardware.lini` 代码使用 TOML 语法实现，具体可参考：[外围引脚配置文档](/)
 
 ## 7 产测功能配置
 
-`hardware.lini` 含有产测相关的配置，具体请阅读：[产测开发指南](/factory_config)
+`hardware.lini` 含有产测相关的配置，具体请阅读：[产测开发指南](/)
 
 
 

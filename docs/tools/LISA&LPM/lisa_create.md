@@ -148,7 +148,7 @@ bin list > flashboot(0),master(0x10000),script(0xf0000),respak(0x100000)
 
 ![](./files/lisa_create/application.png)
 
-详细介绍请阅读：[源码应用配置](/config_application)
+详细介绍请阅读：[源码应用配置](/tools/LStudio/previewer/application)
 
 
 ### hardware 图形化配置
@@ -159,7 +159,7 @@ bin list > flashboot(0),master(0x10000),script(0xf0000),respak(0x100000)
 
 ![](./files/lisa_create/hardware.png)
 
-详细介绍请阅读：[芯片引脚功能配置](/config_hardware)
+详细介绍请阅读：[芯片引脚功能配置](/tools/LStudio/previewer/hardware)
 
 
 
