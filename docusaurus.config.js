@@ -40,7 +40,7 @@ module.exports = {
         },
         {
           activeBasePath: "/tools",
-          to: '/tools/LStudio/introduction',
+          to: '/tools/LStudio',
           label: '工具',
           position: 'left'
         },
@@ -113,11 +113,13 @@ module.exports = {
         dirName: '/tools',//对应的一级目录
         items: [
           {
-            to: "/tools/LStudio/introduction",//跳转哪个目录
+            activeBasePath: "/tools/LStudio",
+            to: "/tools/LStudio",
             label: 'LStudio',
           },
           {
-            to: "/tools/LISA&LPM/introduction",//跳转哪个目录
+            activeBasePath: "/tools/LISA&LPM",
+            to: "/tools/LISA&LPM/awesome",//跳转哪个目录
             label: 'LISA&LPM',
           },
           {

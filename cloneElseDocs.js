@@ -9,7 +9,7 @@ const REMOTE_BRANCH_PREFIX = 'git@github.com:LISTENAI/'
 const ELSE_DOCS_LIST = [
     {
         projectName: 'lisa-core',
-        targetDir: './docs/API/lisa_core'
+        targetDir: './docs/tools/LISA&LPM/lisa-core'
     }
 ]
 

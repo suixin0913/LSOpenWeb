@@ -1,0 +1,5 @@
+label: '插件'
+# 排序
+position: 3
+# 是否默认展开
+# collapsed: false 
