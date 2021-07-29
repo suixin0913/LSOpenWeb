@@ -118,8 +118,8 @@ module.exports = {
             label: 'LStudio',
           },
           {
-            activeBasePath: "/tools/LISA&LPM",
-            to: "/tools/LISA&LPM/awesome",//跳转哪个目录
+            activeBasePath: "/tools/LISA_LPM",
+            to: "/tools/LISA_LPM/awesome",//跳转哪个目录
             label: 'LISA&LPM',
           },
           {
