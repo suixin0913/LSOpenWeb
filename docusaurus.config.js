@@ -94,17 +94,17 @@ module.exports = {
 //            label: '芯片选型指南',
 //          },
           {
-            activeBasePath: "/chips/4002",
+            activeBasePath: "/chips/4002/",
             to: "/chips/4002/Chip_information_4002",
             label: '4002',
           },
           {
-            activeBasePath: "/chips/4002NC",
+            activeBasePath: "/chips/4002NC/",
             to: "/chips/4002NC/Chip_information_4002NC",
             label: '4002NC',
           },
           {
-            activeBasePath: "/chips/300X",
+            activeBasePath: "/chips/300X/",
             to: "/chips/300X/Chip_information_300X",
             label: '300X',
           },
