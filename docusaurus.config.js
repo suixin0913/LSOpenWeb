@@ -3,7 +3,7 @@ const debug = !isProd
 
 module.exports = {
   title: '聆思文档中心',
-  tagline: 'LSOpen资料库',
+  tagline: '聆思文档中心',
   url: 'https://github.com/LISTENAI',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -21,24 +21,24 @@ module.exports = {
         srcDark: 'img/logo_dark.svg'
       },
       items: [
-        {
-          activeBasePath: "/start",
-          to: "/start/introduction",
-          label: '开始',
-          position: 'left'
-        },
+//        {
+//          activeBasePath: "/start",
+//          to: "/start/introduction",
+//          label: '开始',
+//          position: 'left'
+//        },
         {
           activeBasePath: "/chips",
-          to: "/chips/selection_guide", //跳转哪个目录
+          to: "/chips/4002/Chip_information_4002", //跳转哪个目录
           label: '芯片', 
           position: 'left'
         },
         {
-          to: "/SDK/SDK/introduction",
-          label: 'SDK',
-          position: 'left'
-        },
-        {
+//          to: "/SDK/SDK/introduction",
+//          label: 'SDK',
+//          position: 'left'
+//        },
+//        {
           activeBasePath: "/tools",
           to: '/tools/LStudio',
           label: '工具',
@@ -46,24 +46,29 @@ module.exports = {
         },
         {
           activeBasePath: "/AIsolution",
-          to: '/AIsolution/ESR/quicklystart/quicklystart',
-          label: 'AI应用',
+          to: '/AIsolution/ESR/Quick_start/Scheme_introduction',
+          label: 'AI应用方案',
           position: 'left'
         },
+//        {
+//          to: '/Industrysolution/Smartairconditioning/quicklystart/quicklystart',
+//          label: '行业解决方案',
+//          position: 'left'
+//        },
         {
-          to: '/Industrysolution/Smartairconditioning/quicklystart/quicklystart',
-          label: '行业解决方案',
-          position: 'left'
-        },
-        {
-          to: '/FAQ/FAQ/introduction',
-          label: 'FAQ',
-          position: 'left'
+//          to: '/FAQ/FAQ/gongdan',
+//          label: 'FAQ',
+//          position: 'right'
+//        },
+//        {
+          to: 'https://open.listenai.com/school',
+          label: '视频课程',
+          position: 'right'
         },
         {
           href: "https://cloud.listenai.com",
-          label: "LSCloud",
-          position: 'left'
+          label: "工单",
+          position: 'right'
         }
       ],
     },
@@ -84,18 +89,23 @@ module.exports = {
       {
         dirName: '/chips',//对应的一级目录
         items: [
-          {
-            to: "/chips/selection_guide",//跳转哪个目录
-            label: '芯片选型指南',
-          },
+//          {
+//            to: "/chips/selection_guide",//跳转哪个目录
+//            label: '芯片选型指南',
+//          },
           {
             activeBasePath: "/chips/4002",
-            to: "/chips/4002/chip_Introduction",
+            to: "/chips/4002/Chip_information_4002",
             label: '4002',
           },
           {
+            activeBasePath: "/chips/4002NC",
+            to: "/chips/4002NC/Chip_information_4002NC",
+            label: '4002NC',
+          },
+          {
             activeBasePath: "/chips/300X",
-            to: "/chips/300X/chip_Introduction",
+            to: "/chips/300X/Chip_information_300X",
             label: '300X',
           },
         ],
@@ -121,12 +131,7 @@ module.exports = {
             activeBasePath: "/tools/LISA_LPM",
             to: "/tools/LISA_LPM/awesome",//跳转哪个目录
             label: 'LISA&LPM',
-          },
-          {
-            activeBasePath: "/tools/tools",
-            to: "/tools/tools/Mass_production/tools1",//跳转哪个目录
-            label: '轻工具',
-          },
+          }
         ],
       },
       {
@@ -134,18 +139,18 @@ module.exports = {
         items: [
           {
             activeBasePath: "/AIsolution/ESR",
-            to: "/AIsolution/ESR/quicklystart/quicklystart",//跳转哪个目录
+            to: "/AIsolution/ESR/Quick_start/Scheme_introduction",//跳转哪个目录
             label: '离线语音',
           },
+//          {
+//            activeBasePath: "/AIsolution/NC",
+//            to: "/AIsolution/NC/quicklystart/quicklystart",//跳转哪个目录
+//            label: '通话降噪',
+//          },
           {
-            activeBasePath: "/AIsolution/NC",
-            to: "/AIsolution/NC/quicklystart/quicklystart",//跳转哪个目录
-            label: '通话降噪',
-          },
-          {
-            activeBasePath: "/AIsolution/DSP",
-            to: "/AIsolution/DSP/quicklystart/quicklystart",//跳转哪个目录
-            label: 'DSP声学前端',
+            activeBasePath: "/AIsolution/dsp",
+            to: "/AIsolution/dsp/readme",//跳转哪个目录
+            label: '离在线语音',
           },
         ],
       },
@@ -163,7 +168,7 @@ module.exports = {
         items: [
           {
             to: "/FAQ/FAQ/introduction",//跳转哪个目录
-            label: '常见FAQ',
+            label: '常见问题',
           },
         ],
       },

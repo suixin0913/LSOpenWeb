@@ -1,29 +1,26 @@
----
-sidebar_label: 硬件参考设计
----
 
->本篇介绍如果进行CSK芯片的硬件设计。
-读完本文后，你将学习到：
+# 硬件参考设计
+
+>通过本篇文章你将了解到：
 - 声学结构设计。
 - 如何进行 CSK 硬件选型和设计。
 - 进行语音模组量产的注意事项。
 
+## 结构设计与器件选型
 
-
-## 1.结构设计
-
-语音唤醒与识别能力除了与软件的算法相关外，还与产品的结构设计息息相关。为了保证良好的声学效果，我们建议结构设计先于硬件设计。
-
-| 文件                             | 更新时间   | 操作                                                         |
-| -------------------------------- | ---------- | ------------------------------------------------------------ |
+| 文件| 更新时间 | 操作 |
+| ----| ---- | ---- |
+| **声学器件选型Checklist.xlsx** | 2021.01.20 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2F01.CSK%E6%96%B9%E6%A1%88%E4%BA%A7%E5%93%81Checklist.xlsx)|
 | **声学结构设计指南.pdf** | 2021.04.19 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2F%E5%A3%B0%E5%AD%A6%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97.pdf)|
 | **语音产品声学结构相关测试参考方法.pdf** | 2021.04.19 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2F%E8%AF%AD%E9%9F%B3%E4%BA%A7%E5%93%81%E5%A3%B0%E5%AD%A6%E7%BB%93%E6%9E%84%E7%9B%B8%E5%85%B3%E6%B5%8B%E8%AF%95%E5%8F%82%E8%80%83%E6%96%B9%E6%B3%95.pdf)|
+| **关键器件清单.zip** | 2021.05.19 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%85%B3%E9%94%AE%E5%99%A8%E4%BB%B6%E6%B8%85%E5%8D%95.zip)|
 
 
 
-## 2. 原理图/PCBA设计
 
-### 2.1 准备工作
+## 原理图/PCBA设计
+
+### 准备工作
 
 | 文件            | 更新时间   | 操作                                                         |
 | --------------- | ---------- | ------------------------------------------------------------ |
@@ -35,7 +32,7 @@ sidebar_label: 硬件参考设计
 
 
 
-### 2.2 需求判断与参考方案选择
+### 需求判断与参考方案选择
 
 :::note
 点击可下载参考设计
@@ -61,9 +58,9 @@ sidebar_label: 硬件参考设计
 | Y | [CSK4002+ES7210+XR872AT+AC6956C+功放](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK4002%2BES7210%2BXR872%2BBT6956C_%E9%9F%B3%E7%AE%B1%E7%B1%BB%E6%A0%87%E6%A1%88%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1C4-18.zip)<br/> [CSK4002+ES7210+BK7251(WIFI/BT)+功放](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCSK%2BBK7251%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1C4-18.zip)|
 
 
-### 2.3 自检与评审支持
+### 自检与评审支持
 
-#### 2.3.1 相关文档
+####  相关文档
 
 硬件评审过程中可能存在以下问题：
 1. 资料缺失、需求不明确、采用物料在参考设计中没有等问题；
@@ -78,12 +75,12 @@ sidebar_label: 硬件参考设计
 | **Castor语音方案硬件设计审核 checklist V0.91.xlsx** | 2021.03.09 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%8E%9F%E7%90%86%E5%9B%BE%26PCB%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83%2FCastor%E8%AF%AD%E9%9F%B3%E6%96%B9%E6%A1%88%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%AE%A1%E6%A0%B8%20checklist%20V0.91.xlsx)|
 
 
-#### 2.3.2 线上获取硬件评审支持
+#### 线上获取硬件评审支持
 
 你可以登录[LSCloud](https://cloud.listenai.com/)创建硬件评审工单，获取结构设计、原理图设计、PCB设计评审支持。你可以阅读[创建工单获取技术支持](https://open.listenai.com/cloud_project)了解工单功能。
 
 
-### 2.4 量产准备
+### 量产准备
 
 | 文件                                        | 更新时间   | 操作                                                         |
 | ------------------------------------------- | ---------- | ------------------------------------------------------------ |
@@ -92,9 +89,12 @@ sidebar_label: 硬件参考设计
 | **Soundcheck使用说明.pdf**                  | 2021.01.21 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E9%87%8F%E4%BA%A7%E6%8C%87%E5%8D%97%2F%E6%A8%A1%E7%BB%84%E7%83%A7%E5%BD%95%2FSoundcheck%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.pdf) |
 | **castor-factory-tool-setup-v1.0.0.10.exe** | 2021.01.20 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E9%87%8F%E4%BA%A7%E6%8C%87%E5%8D%97%2F%E6%A8%A1%E7%BB%84%E7%83%A7%E5%BD%95%2Fcastor-factory-tool-setup-v1.0.0.10.exe)|
 | **产测工具使用指导手册.docx** | 2021.01.20 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E9%87%8F%E4%BA%A7%E6%8C%87%E5%8D%97%2F%E6%A8%A1%E7%BB%84%E7%83%A7%E5%BD%95%2F%E4%BA%A7%E6%B5%8B%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC%E6%89%8B%E5%86%8C.docx)|
+| **芯片烧录.zip** | 2021.04.09 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E9%87%8F%E4%BA%A7%E6%8C%87%E5%8D%97%2F%E8%8A%AF%E7%89%87%E7%83%A7%E5%BD%95.zip)|
+| **模组烧录.zip** | 2021.01.21 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E9%87%8F%E4%BA%A7%E6%8C%87%E5%8D%97%2F%E6%A8%A1%E7%BB%84%E7%83%A7%E5%BD%95.zip)|
 
 
-### 拓展材料下载
+
+## 拓展材料下载
 
 - [关键元器件参考清单](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%85%B3%E9%94%AE%E5%99%A8%E4%BB%B6%E6%B8%85%E5%8D%95.zip)
 
