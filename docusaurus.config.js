@@ -167,7 +167,7 @@ module.exports = {
         dirName: '/FAQ',//对应的一级目录
         items: [
           {
-            to: "/FAQ/FAQ/introduction",//跳转哪个目录
+            to: "/FAQ/FAQ/gongdan",//跳转哪个目录
             label: '常见问题',
           },
         ],

@@ -7,7 +7,7 @@ sidebar_position: 1
 
 >本篇介绍如何在 `application.lini` 完成源码功能应用的配置。完全使用 `application.lini` 实现应用配置需满足以下条件：
 1. 使用版本号 2.3.1 以上 LStudio 进行开发
-2. 工程项目是使用 `lisa` 创建的 CSK 项目（文档参考：[使用 lisa 创建项目](/lisa_create)）
+2. 工程项目是使用 `lisa` 创建的 CSK 项目（文档参考：[使用 lisa 创建项目](/tools/LISA_LPM/lisa_create)）
 
 
 ## 1 关于 application 文件
