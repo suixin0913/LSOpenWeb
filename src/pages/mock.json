@@ -211,15 +211,19 @@
 
     "projects": [
         {
-            "label": "选择合适你的芯片",
+            "label": "芯片介绍",
             "to": "https://www.bilibili.com/video/BV1n64y1v7sC"
         },
         {
-            "label": "快速入门开发",
+            "label": "了解CSK4002芯片",
+            "to": "/chips/4002/Chip_information_4002"
+        },
+        {
+            "label": "开发快速入门",
             "to": "/AIsolution/ESR/Quick_start/Quick_start"
         },
         {
-            "label": "SDK开发",
+            "label": "使用SDK自定义开发",
             "to": "/AIsolution/ESR/softwaredevelopment/Advanced_development/csk_sdk_demo"
         },
         {
@@ -231,7 +235,7 @@
             "to": "/tools/LStudio"
         },
         {
-            "label": "基于LISA的开发体系介绍",
+            "label": "LISA介绍",
             "to": "/tools/LISA_LPM/awesome"
         },
         {

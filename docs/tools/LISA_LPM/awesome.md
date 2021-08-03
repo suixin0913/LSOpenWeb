@@ -2,7 +2,7 @@
 title: 关于 LISA
 ---
 
-**LISA(Listenai Software Architecture)**是聆思智能提供的软件框架，支持客户通过命令行工具使用并管理聆思提供的软件包。[**LPM(Listenai Package Manager)**](https://lpm.listenai.com/)是聆思智能的私有软件包管理服务。LPM 上的软件包可通过统一的命令行工具进行安装使用。
+**LISA(Listenai Independent Software Architecture)**是聆思智能提供的软件框架，支持客户通过命令行工具使用并管理聆思提供的软件包。[**LPM(Listenai Package Manager)**](https://lpm.listenai.com/)是聆思智能的私有软件包管理服务。LPM 上的软件包可通过统一的命令行工具进行安装使用。
 
 ## 1.LISA 的优势
 
