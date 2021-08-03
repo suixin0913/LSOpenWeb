@@ -61,7 +61,7 @@ module.exports = {
 //          position: 'right'
 //        },
 //        {
-          to: 'https://open.listenai.com/school',
+          to: '/school/school',
           label: '视频课程',
           position: 'right'
         },
@@ -96,18 +96,18 @@ module.exports = {
           {
             activeBasePath: "/chips/4002/",
             to: "/chips/4002/Chip_information_4002",
-            label: '4002',
+            label: 'CSK4002',
           },
-          {
-            activeBasePath: "/chips/4002NC/",
-            to: "/chips/4002NC/Chip_information_4002NC",
-            label: '4002NC',
-          },
-          {
-            activeBasePath: "/chips/300X/",
-            to: "/chips/300X/Chip_information_300X",
-            label: '300X',
-          },
+//          {
+//            activeBasePath: "/chips/4002NC/",
+//            to: "/chips/4002NC/Chip_information_4002NC",
+//            label: '4002NC',
+//          },
+//          {
+//            activeBasePath: "/chips/300X/",
+//            to: "/chips/300X/Chip_information_300X",
+//            label: '300X',
+//          },
         ],
       },
       {
@@ -160,6 +160,15 @@ module.exports = {
           {
             to: "/Industrysolution/Smartairconditioning/quicklystart/quicklystart",//跳转哪个目录
             label: '智能语音空调',
+          },
+        ],
+      },
+      {
+        dirName: '/school',//对应的一级目录
+        items: [
+          {
+            to: "/school/school",//跳转哪个目录
+            label: '视频课程',
           },
         ],
       },
