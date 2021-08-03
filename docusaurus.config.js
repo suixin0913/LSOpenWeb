@@ -14,11 +14,11 @@ module.exports = {
   organizationName: 'LISTENAI',
   themeConfig: {
     navbar: {
+      title: '聆思文档中心',
       logo: {
         href: '/',
         alt: 'LSOpen Logo',
-        src: 'img/logo.svg',
-        srcDark: 'img/logo_dark.svg'
+        src: 'img/logo.png'
       },
       items: [
 //        {

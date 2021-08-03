@@ -57,12 +57,17 @@ html[data-theme='dark'] {
 }
 
 .navbar__brand {
-  height: 26px;  /* 修改logo的高度为svg默认高度 */
-  margin-right: 64px;
+  height: 32px; 
+  margin-right: 32px;
 }
+.navbar__title {
+  color: var(--ifm-heading-color);
+  font-size: 16px;
+}
+/*
 .navbar__logo {
   margin-right: 0;
-}
+} */
 .navbar__link {
   font-weight: var(--ifm-font-weight-normal);
 }
