@@ -66,7 +66,7 @@ module.exports = {
           position: 'right'
         },
         {
-          href: "https://cloud.listenai.com",
+          href: "/workorder/workorder",
           label: "工单",
           position: 'right'
         }
@@ -169,6 +169,15 @@ module.exports = {
           {
             to: "/school/school",//跳转哪个目录
             label: '视频课程',
+          },
+        ],
+      },
+      {
+        dirName: '/workorder',//对应的一级目录
+        items: [
+          {
+            to: "/workorder/workorder",//跳转哪个目录
+            label: '提交工单',
           },
         ],
       },
