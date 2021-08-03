@@ -6,11 +6,11 @@ sidebar_position: 1
 
 # 入门
 
-LStudio 是一个基于轻量级的Visual Studio Code，集成聆思生态开发者所需的基础环境，功能强大的编辑器IDE，可在您的桌面上运行，目前适用于 Windows。是除了具备 Visual Studio Code 的强大的生态扩展功能外，还内置了开箱即用的 Node.js 和 Lisa 支持，并为聆思开发（如：csk工程开发，测试工程开发等）提供了丰富的扩展生态系统。
+LStudio是一款基于Visual Studio Code的CSK芯片一站式开发工具，除了具备VSC强大的编辑和扩展功能外，还内置了开箱即用的 Node.js 和 Lisa 支持，开发者可通过LStudio完成CSK工程的配置、开发、调优、编译、烧录等工作。
 
 ## 获取
 
-点击[此处](https://castor.iflyos.cn/castor/v3/lstudio/download)下载 LStudio 安装包，一次点击“下一步”直至安装完成。
+点击[此处](https://castor.iflyos.cn/castor/v3/lstudio/download)下载 LStudio 安装包，一直点击“下一步”直至安装完成。
 
 ## 引导
 

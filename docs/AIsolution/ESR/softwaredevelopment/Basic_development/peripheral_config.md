@@ -6,10 +6,10 @@ sidebar_position: 3
 
 # 外围引脚配置
 
->本篇介绍如何在 hardware.toml 完成外围器件的引脚配置。读完本文后，你将学习到：
+>本篇介绍如何在 hardware.lini 完成外围器件的引脚配置。读完本文后，你将学习到：
 - 如何确认引脚配置需求。
 - 在什么地方可以完成配置。
-- hardware.toml 有哪些引脚配置参数及其含义。
+- hardware.lini 有哪些引脚配置参数及其含义。
 
 <!-- 可以参考星宇这个整理的材料
 https://www.tapd.cn/65128374/prong/stories/view/1165128374001011213 -->
@@ -134,15 +134,15 @@ https://www.tapd.cn/65128374/prong/stories/view/1165128374001011213 -->
 
 在需求明确之后，可以开始在 CSK 项目中进行外围引脚配置。 -->
 
-## 2.找到 hardware.toml
+## 2.找到 hardware.lini
 
-在创建 CSK 项目后，你可以在项目中找到用于配置引脚的 hardware.toml，具体路径是：
+在创建 CSK 项目后，你可以在项目中找到用于配置引脚的 hardware.lini，具体路径是：
 
-`./config/environment/hardware.toml`
+`./config/environment/hardware.lini`
 
-## 3.toml 语法简介
+## 3.lini 语法简介
 
-CSK项目中使用 hardware.toml 实现引脚配置，结合实际使用情况，下面提供一组简单示例对比 json 与 toml 关于表/数组表的语法。
+CSK项目中使用 hardware.lini 实现引脚配置，结合实际使用情况，下面提供一组简单示例对比 json 与 toml 关于表/数组表的语法。
 
 **json 示例**
 
@@ -179,9 +179,9 @@ y = "d"
 ```
 > 拓展阅读：[TOML 完整规范](https://toml.io/cn/v1.0.0)
 
-## 3.hardware.toml 字段说明
+## 3.hardware.lini 字段说明
 
-hardware.toml 中需要用到以下字段：
+hardware.lini 中需要用到以下字段：
 
 | 键名 | 键值 | 说明 | 
 | - | - | - | 
@@ -195,7 +195,7 @@ hardware.toml 中需要用到以下字段：
 
 ## 4.配置示例
 
-在明确需求与字段含义后，核对当前 hardware.toml 配置与需求的差异，并根据需求调整配置。
+在明确需求与字段含义后，核对当前 hardware.lini 配置与需求的差异，并根据需求调整配置。
 
 ### 4.1 I2C 示例
 
@@ -203,7 +203,7 @@ hardware.toml 中需要用到以下字段：
 
 ![](./files/20210121144320.png)
 
-在 hardware.toml 配置 `peripheral.i2c` ：
+在 hardware.lini 配置 `peripheral.i2c` ：
 1. 第一组留空，使用第二组；
 2. `peripheral.i2c.scl` 中，`pin`设为 `29` ， `mux` 设为 `2` ；
 3. `peripheral.i2c.sda` 中，`pin`设为 `39` ， `mux` 设为 `2` 。
@@ -225,7 +225,7 @@ hardware.toml 中需要用到以下字段：
 
 根据硬件需求，模组仅使用第二第三组 `uart`，第二组`uart`可用`55`、`56`2个引脚，第三组`uart`可用`4` 、 `5`2个引脚。
 
-在 hardware.toml 配置 `peripheral.uart` ：
+在 hardware.lini 配置 `peripheral.uart` ：
 1. 第一组留空，使用第二组，第三组uart；
 2. 第2组，`peripheral.uart.txd` 中，`pin`设为 `55` ， `mux` 设为 `2` ；
 3. 第2组，`peripheral.uart.rxd` 中，`pin`设为 `56` ， `mux` 设为 `2` ；
@@ -261,7 +261,7 @@ hardware.toml 中需要用到以下字段：
 
 根据硬件需求，要用到使用两组 `i2s`，Datasheet对应引脚为 `33`~ `37` 5个引脚。
 
-在 hardware.toml 配置 `peripheral.i2s` ：
+在 hardware.lini 配置 `peripheral.i2s` ：
 1. `peripheral.i2s.mclk`中，`pin`设为 `37` ， `mux` 设为 `1` ；
 2. `peripheral.i2s.bclk` 中，`pin`设为 `34` ， `mux` 设为 `1` ；
 3. `peripheral.i2s.lrck` 中，`pin`设为 `33` ， `mux` 设为 `1` ；
@@ -297,7 +297,7 @@ hardware.toml 中需要用到以下字段：
 
 根据硬件需求，要用到使用两组 `i2s`，Datasheet对应引脚为 `33`~ `37` 5个引脚。
 
-在 hardware.toml 配置 `peripheral.i2s` ：
+在 hardware.lini 配置 `peripheral.i2s` ：
 1. `peripheral.i2s.mclk`中，`pin`设为 `37` ， `mux` 设为 `1` ；
 2. `peripheral.i2s.bclk` 中，`pin`设为 `34` ， `mux` 设为 `1` ；
 3. `peripheral.i2s.lrck` 中，`pin`设为 `33` ， `mux` 设为 `1` ；
@@ -328,7 +328,7 @@ hardware.toml 中需要用到以下字段：
 
 <!-- 根据硬件需求，要用到使用两组 `i2s`，Datasheet对应引脚为 `33`~ `37` 5个引脚。
 
-在 hardware.toml 配置 `peripheral.i2s` ：
+在 hardware.lini 配置 `peripheral.i2s` ：
 1. `peripheral.i2s.mclk`中，`pin`设为 `37` ， `mux` 设为 `1` ；
 2. `peripheral.i2s.bclk` 中，`pin`设为 `34` ， `mux` 设为 `1` ；
 3. `peripheral.i2s.lrck` 中，`pin`设为 `33` ， `mux` 设为 `1` ；

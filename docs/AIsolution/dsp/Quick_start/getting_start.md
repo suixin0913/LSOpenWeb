@@ -155,15 +155,15 @@ Cool ！，你已经成功为开发板配网。接下来你可以通过【小飞
 
 干的漂亮！你已经学会了如何为开发板配网，并能够熟练烧录固件。接下来，你可以通过阅读以下文章，加深对离在线方案的了解：
 
-- [方案介绍](/)
+- [方案介绍](/AIsolution/dsp/Quick_start/developer_guides)
 
 如果想了解离在线方案中 CSK 固件的制作，可查看：
 
-- [制作离在线项目的 CSK 固件](/)
+- [制作离在线项目的 CSK 固件](/AIsolution/dsp/firmware_development/CSK_online_firmware)
 
 了解如何在 iFLYOS 创建设备，可查看
 
-- [创建你的 iFLYOS 设备](/)
+- [创建你的 iFLYOS 设备](/AIsolution/dsp/firmware_development/Create_iFLYOS_equipment)
 
 在项目开发过程中如果需要帮助，可以通过工单系统向我们获取技术支持：
 

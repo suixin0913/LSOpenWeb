@@ -8,7 +8,7 @@
 
 | id | 类型  | 中文词条   | 外语词条                   | tones                   |
 |----|-----|--------|------------------------|-------------------------|
-| 0  | 唤醒词 | 涂鸦智能   | hello tuya smart       | 咚(特殊音效)                 |
+| 0  | 唤醒词 | 你好小美  | hello little beauty       | 咚(特殊音效)                 |
 | 1  | 命令词 | 增大音量   | turn up volume         | OK, Volume up           |
 | 2  | 命令词 | 减小音量   | turn down volume       | OK, Volume down         |
 | 3  | 命令词 | 打开声音   | open the sound         | OK, the sound is on     |

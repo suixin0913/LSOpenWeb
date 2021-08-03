@@ -50,7 +50,7 @@ sidebar_position: 2
 CSK项目的创建依赖 LISA 环境。
 
 :::tip 什么是LISA
-LISA(Listenai Software Architecture)是聆思智能提供的软件框架，支持客户通过命令行工具使用并管理聆思提供的软件包。 
+LISA（Listenai Independent Software Architecture）是聆思智能提供的软件框架，支持客户通过命令行工具使用并管理聆思提供的软件包。 
 :::
 
 在终端输入命令行 `lisa -v`，看到 LISA 版本号，代表 LISA 准备就绪

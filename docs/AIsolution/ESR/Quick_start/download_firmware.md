@@ -11,7 +11,7 @@ sidebar_position: 3
 
 1. 硬件准备：LSKit购买与组装。
 
-- [LSkit购买链接](https://fuwu.xfyun.cn/onstage/cmddetail?id=2466)
+- [LSkit购买链接](https://fuwu.xfyun.cn/onstage/cmddetail?id=2466)（暂已下架）
 
 - [LSkit组装教程](https://www.bilibili.com/video/BV1po4y1d7fB)
 
@@ -21,7 +21,7 @@ sidebar_position: 3
 
 2. 软件安装环境准备：
 
-- [LStudio安装](https://open.listenai.com/getting_start)
+- [LStudio下载](/tools/LStudio)
 
 
 

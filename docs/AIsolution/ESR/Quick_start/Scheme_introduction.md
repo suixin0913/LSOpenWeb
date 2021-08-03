@@ -86,7 +86,6 @@ sidebar_position: 1
 - 误唤醒率：连续电视冲击<1次/72H；
 - 睡眠场景，0次/7*24H
 :::
-![](./files_new/files_Scheme_introduction/algorithm2.png)
 
 ## 聆思单双麦方案对比
 

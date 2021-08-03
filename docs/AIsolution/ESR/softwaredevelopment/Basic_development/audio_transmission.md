@@ -14,7 +14,7 @@ sidebar_position: 10
 
 :::important
 
-在开始探索之前，你需了解： [**application.toml**](http://open.listenai.com/application_config) 的使用，录音和音频输出的配置都在该文件中。
+在开始探索之前，你需了解： [**application.lini**](http://open.listenai.com/application_config) 的使用，录音和音频输出的配置都在该文件中。
 
 :::
 
@@ -22,14 +22,14 @@ sidebar_position: 10
 
 ## 1.配置CSK录音
 
-首先，你需要在 LStudio 中新建/打开 CSK4002 项目，并找到 `application.toml` 配置文件，文件具体路径如下：
-`./config/environment/application.toml`
+首先，你需要在 LStudio 中新建/打开 CSK4002 项目，并找到 `application.lini` 配置文件，文件具体路径如下：
+`./config/environment/application.lini`
 
 
 
 ### 1.1 配置系统工作模式
 
-打开`application.toml`，配置系统工作模式： `sys_mode = "public"` 。
+打开`application.lini`，配置系统工作模式： `sys_mode = "public"` 。
 
 如此配置后， CSK 链接上位机后，将由上位机控制录音 。
 

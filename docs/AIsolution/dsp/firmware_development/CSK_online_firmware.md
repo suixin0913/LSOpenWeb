@@ -12,7 +12,7 @@ sidebar_position: 1
 
 ### 1.下载 LSTudio
 
-LSTudio 主要用于 CSK 固件配置与烧录，在 CSK 项目开发指南中的[《快速入门CSK项目开发》](https://open.listenai.com/getting_start)已详细说明如何下载安装 LStudio，此处不再做过多描述。
+LSTudio 主要用于 CSK 固件配置与烧录，在 CSK 项目开发指南中的[《快速入门CSK项目开发》](AIsolution/ESR/Quick_start/Quick_start)已详细说明如何下载安装 LStudio，此处不再做过多描述。
 
 
 
@@ -32,7 +32,7 @@ LSTudio 主要用于 CSK 固件配置与烧录，在 CSK 项目开发指南中�
 
 ### 3.音频输出配置
 
-项目创建成功后，找到 `application.toml` 配置文件，文件具体路径如下： `./config/environment/application.toml`；
+项目创建成功后，找到 `application.lini` 配置文件，文件具体路径如下： `./config/environment/application.lini`；
 
 首先，你需要设置固件的协议模式，在文件中找到  `sys_mode` 字段，并将值设置为 `public`  。如下图：
 
@@ -46,7 +46,7 @@ LSTudio 主要用于 CSK 固件配置与烧录，在 CSK 项目开发指南中�
 
 ### 4.交互配置
 
-进入交互配置，由于目前离在线项目中，尚不支持离线识别，所有交互都为在线交互。且播放器由上位机控制，CSK不直接播放音频，所以此处可不设置离线命令词以及对应回复语。如何在上位机设置自定义回复语，可参考[《上位机固件二次开发文档》](/)。
+进入交互配置，由于目前离在线项目中，尚不支持离线识别，所有交互都为在线交互。且播放器由上位机控制，CSK不直接播放音频，所以此处可不设置离线命令词以及对应回复语。如何在上位机设置自定义回复语，可参考[《上位机固件二次开发文档》](/AIsolution/dsp/firmware_development/xr872_evs)。
 
 ![](./files/interact.png)
 

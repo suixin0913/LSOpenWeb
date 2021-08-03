@@ -75,7 +75,7 @@ int csk_uart_send(void *dat, int len, int ms);
 
 **引脚配置**
 
-在硬件配置资源`hardware.toml`中配置通讯串口（uart2）的Pin脚以及功能。
+在硬件配置资源`hardware.lini`中配置通讯串口（uart2）的Pin脚以及功能。
 
 ```js
 [peripheral]
@@ -98,7 +98,7 @@ int csk_uart_send(void *dat, int len, int ms);
 
 **软件配置**
 
-在应用配置资源`application.toml`中配置通讯串口(uart2)的驱动接口配置。
+在应用配置资源`application.lini`中配置通讯串口(uart2)的驱动接口配置。
 
 ```js
 [driver]

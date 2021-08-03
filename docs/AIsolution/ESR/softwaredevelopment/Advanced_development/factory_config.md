@@ -21,7 +21,7 @@ CSK芯片检测分为音频检测和硬件连通性检测。
 
 :::note
 
-`4002纯离线方案`与`3002纯离线方案`产测项有所不同
+`4002离线语音方案`与`3002离线语音方案`产测项有所不同
 
    - `4002音频检测`：包括MIC频率检测结果，MIC一致性检测结果，REF 信号检测结果。
 
@@ -33,20 +33,20 @@ CSK芯片检测分为音频检测和硬件连通性检测。
 
 提供了可供用户配置的产测配置，来适应不同的产测需求。
 
-`hardware.toml`：可通过该硬件配置文件，配置产测涉及的芯片硬件引脚，如：
+`hardware.lini`：可通过该硬件配置文件，配置产测涉及的芯片硬件引脚，如：
 
 - 产测触发引脚
 - 音频检测结果输出引脚
 - 和其他 GPIO 引脚
 
-`application.toml`：可通过该软件配置文件，配置产测涉及的产测开关和触发电平，如：
+`application.lini`：可通过该软件配置文件，配置产测涉及的产测开关和触发电平，如：
 
 - 产测检测开关
 - 产测触发有效电平
 
-### 3.1 hardware.toml
+### 3.1 hardware.lini
 
-`hardware.toml` 文件的`factory_gpio`字段就是产测引脚的硬件配置，包含下表 3 个字段:
+`hardware.lini` 文件的`factory_gpio`字段就是产测引脚的硬件配置，包含下表 3 个字段:
 
 
 | 引脚分类 | 说明 |
@@ -67,7 +67,7 @@ CSK芯片检测分为音频检测和硬件连通性检测。
 | `def` | `true`<br/>`false` | 当引脚设为输出时，输出的逻辑电平为高<br/>当pin脚设为输出时，输出的逻辑电平为低 |
 | `rev` | `true`<br/>`false` | 逻辑电平和物理电平一致<br/>逻辑电平和物理电平相反 |
 
-`hardware.toml` 的`factory_gpio`字段示例如下：
+`hardware.lini` 的`factory_gpio`字段示例如下：
 
 ```js
 [factory_gpio]
@@ -180,9 +180,9 @@ CSK芯片检测分为音频检测和硬件连通性检测。
   rev = false
 ```
 
-### 3.2 application.toml
+### 3.2 application.lini
 
-`application.toml` 的`factory`字段包含了`产测开关`以及`产测触发电平`的配置，如下图：
+`application.lini` 的`factory`字段包含了`产测开关`以及`产测触发电平`的配置，如下图：
 
 ```js
 #产测配置

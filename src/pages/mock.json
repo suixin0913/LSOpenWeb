@@ -19,22 +19,22 @@
             "to": "/AIsolution/ESR/softwaredevelopment/Advanced_development/csk_sdk_demo"
         },
         {
-            "label": "如何调优",
+            "label": "语音效果调优",
             "to": "/AIsolution/ESR/Optimization_and_testing/auto_optimize"
         }
     ],
     "hotSearchBtns": [
         {
-            "label": "芯片选型",
-            "to": "/" 
+            "label": "CSK芯片介绍",
+            "to": "https://www.bilibili.com/video/BV1n64y1v7sC" 
         },
         {
             "label": "快速入门",
-            "to": "/" 
+            "to": "/AIsolution/ESR/Quick_start/Quick_start" 
         },
         {
-            "label": "离线语音开发",
-            "to": "/" 
+            "label": "使用LStudio",
+            "to": "/tools/LStudio" 
         }
     ],
     "collections": [
@@ -47,8 +47,8 @@
                         "to": "/chips/4002/Chip_information_4002"
                     },
                     {
-                        "label": "LStudio使用教程",
-                        "to": "/"
+                        "label": "通过LStudio创建项目",
+                        "to": "/tools/LStudio/guide/create"
                     },
                     {
                         "label": "体验上手体验离线语音交互demo",
@@ -66,7 +66,7 @@
                     },
                     {
                         "label": "LISA开发入门",
-                        "to": "/"
+                        "to": "/tools/LISA_LPM/awesome"
                     }
                 ]
             ]
@@ -99,7 +99,7 @@
                     },
                     {
                         "label": "什么是LISA和LPM？",
-                        "to": "/"
+                        "to": "/tools/LISA_LPM/awesome"
                     }
                 ]
             ]
@@ -149,16 +149,12 @@
                             "to": "/AIsolution/ESR/Quick_start/Scheme_introduction"
                         },
                         {
-                            "label": "硬件设计",
-                            "to": "AIsolution/ESR/Hardwaredevelopment/hardware_guide"
-                        },
-                        {
                             "label": "串口协议",
                             "to": "/AIsolution/ESR/softwaredevelopment/Basic_development/public_uart_protocol"
                         },
                         {
-                            "label": "实验室测试",
-                            "to": "/AIsolution/ESR/Optimization_and_testing/test"
+                            "label": "自动调优",
+                            "to": "/AIsolution/ESR/Optimization_and_testing/auto_optimize"
                         }
                     ]
                 },
@@ -232,15 +228,15 @@
         },
         {
             "label": "使用LStudio开发",
-            "to": "/"
+            "to": "/tools/LStudio"
         },
         {
-            "label": "使用LISA",
-            "to": "/"
+            "label": "基于LISA的开发体系介绍",
+            "to": "/tools/LISA_LPM/awesome"
         },
         {
             "label": "开发LPM包",
-            "to": "/"
+            "to": "/tools/LISA_LPM/tutorial"
         },
         {
             "label": "配置源码应用",
