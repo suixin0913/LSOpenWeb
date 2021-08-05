@@ -26,6 +26,6 @@
 
 | 文件                   | 更新时间   | 操作                                                         |
 | ---------------------- | ---------- | ------------------------------------------------------------ |
-| **CSK ROHS报告.pdf**   | 2021.06.30 | [下载](https://open.listenai.com/resource/open/doc_resource%2FCSKDatasheet%2FCSKROHS报告.pdf) |
-| **REACH 检测报告.PDF** | 2021.03.26 | [下载](https://open.listenai.com/resource/open/doc_resource%2FCSKDatasheet%2FREACH检测报告.PDF) |
+| **CSK ROHS报告.pdf**   | 2021.06.30 | [下载](https://open.listenai.com/resource/open/doc_resource%2FCSK%20Datasheet%2FCSK%20ROHS%E6%8A%A5%E5%91%8A.pdf) |
+| **REACH 检测报告.PDF** | 2021.03.26 |[下载](https://open.listenai.com/resource/open/doc_resource%2FCSK%20Datasheet%2FREACH%20%E6%A3%80%E6%B5%8B%E6%8A%A5%E5%91%8A.PDF)|
 
