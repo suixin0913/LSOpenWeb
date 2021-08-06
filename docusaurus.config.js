@@ -131,6 +131,11 @@ module.exports = {
             activeBasePath: "/tools/LISA_LPM",
             to: "/tools/LISA_LPM/awesome",//跳转哪个目录
             label: 'LISA&LPM',
+          },
+          {
+            activeBasePath: "/tools/mass_production",
+            to: "/tools/mass_production/readme",//跳转哪个目录
+            label: '量产工具',
           }
         ],
       },
