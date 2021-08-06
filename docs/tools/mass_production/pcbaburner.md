@@ -104,7 +104,11 @@ sidebar_position: 3
 
 ④Hub（可选，1拖4及以下不需要配置）：京东购买链接：https://item.m.jd.com/product/62280475705.html?gx=RnFiwGFdPDeLwtRP--tzVUaeLn90-OEAjYN0&ad_od=share&utm_source=androidapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends
 
-注：Hub可能会影响烧录稳定性，请谨慎选择，如无特殊需求请按以上链接购买
+:::info 
+
+Hub可能会影响烧录稳定性，请谨慎选择，如无特殊需求请按以上链接购买。
+
+:::
 
 ### 2.2 软件配置
 
@@ -118,7 +122,11 @@ sidebar_position: 3
 
  balenaEtcher下载链接：[balenaEtcher](https://www.balena.io/etcher) （windows请选择Windows X86|x64版本）
 
-  注：如烧录失败，请更换读卡器或更换USB口重新烧写，多次重试
+:::info 
+  
+如烧录失败，请更换读卡器或更换USB口重新烧写，多次重试。
+  
+:::
 
   ![](./files/image-20210722195929166.png)
 
@@ -126,7 +134,11 @@ sidebar_position: 3
 
 ![](./files/image-20210803184341393.png)
 
-注：如烧录失败，请更换读卡器或更换USB口重新烧写，多试几次
+:::info 
+  
+如烧录失败，请更换读卡器或更换USB口重新烧写，多次重试。
+  
+:::
 
 #### 2.2.2 自检程序、烧录包配置
 
@@ -179,7 +191,16 @@ sidebar_position: 3
 
 ![](./files/image-20210726210043769.png)
 
-- 将文件中的“**Wi-Fi名称**”和"**Wi-Fi密码**"分别替换为调试现场或工厂的WiFi名称和密码。
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      color: color,
+}}>
+    {children}
+  </span>
+);
+
+- 将文件中的“<Highlight color="#1877F2">Wi-Fi名称</Highlight>”和"<Highlight color="#1877F2">Wi-Fi密码</Highlight>"分别替换为调试现场或工厂的WiFi名称和密码。
 
   修改示例：
 

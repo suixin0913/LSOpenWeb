@@ -29,7 +29,7 @@ sidebar_position: 2
 
 ### 1.3 使用方法
 
-​		将树莓派作为多个烧录器的控制设备，并将烧录器搭载于烧录机台上，启动烧录机台。机械臂将芯片放置在烧录座子中，烧录器自动开始烧录。烧录结束后，烧录器将烧录结果通过电平信号传递给机台。接到烧录结果后，机台机械臂自动更换芯片，开始下一轮烧录。详细接线与实现方法请查看[2.4 上机调试](#上机调试)。
+​		将树莓派作为多个烧录器的控制设备，并将烧录器搭载于烧录机台上，启动烧录机台。机械臂将芯片放置在烧录座子中，烧录器自动开始烧录。烧录结束后，烧录器将烧录结果通过电平信号传递给机台。接到烧录结果后，机台机械臂自动更换芯片，开始下一轮烧录。详细接线与实现方法请查看[2.4 上机调试](/tools/mass_production/chipburner#2.4上机调试)。
 
 <div  align="center"><img
   src={require('./files/image-20210722173608296.png').default}
@@ -133,7 +133,11 @@ sidebar_position: 2
 
 ⑤Hub（可选，1拖4及以下不需要配置 接在树莓派上）：京东购买链接：https://item.m.jd.com/product/62280475705.html?gx=RnFiwGFdPDeLwtRP--tzVUaeLn90-OEAjYN0&ad_od=share&utm_source=androidapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends
 
-注：Hub可能会影响烧录稳定性，请谨慎选择，如无特殊需求请按以上链接购买
+:::info 
+
+Hub可能会影响烧录稳定性，请谨慎选择，如无特殊需求请按以上链接购买。
+
+:::
 
 ### 2.2 软件配置
 
@@ -153,7 +157,11 @@ sidebar_position: 2
   
   ![](./files/image-20210803184341393.png)
   
-  注：如烧录失败，请更换读卡器或更换USB口重新烧写，多试几次
+:::info 
+  
+如烧录失败，请更换读卡器或更换USB口重新烧写，多次重试。
+  
+:::
 
 #### 2.2.2 自检程序、烧录包配置
 
@@ -183,7 +191,11 @@ sidebar_position: 2
 
 ![](./files/image-20210722200921125.png)
 
-​	如需更换烧录包，将该目录下的烧录包删除，并存放新的烧录包即可。
+:::info 
+
+如需更换烧录包，将该目录下的烧录包删除，并存放新的烧录包即可。
+
+:::
 
 ##### 放置/更换自检程序
 
@@ -205,7 +217,16 @@ sidebar_position: 2
 
 ![](./files/image-20210726210043769.png)
 
-- 将文件中的“**Wi-Fi名称**”和"**Wi-Fi密码**"分别替换为调试现场或工厂的WiFi名称和密码。
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      color: color,
+}}>
+    {children}
+  </span>
+);
+
+- 将文件中的“<Highlight color="#1877F2">Wi-Fi名称</Highlight>”和"<Highlight color="#1877F2">Wi-Fi密码</Highlight>"分别替换为调试现场或工厂的WiFi名称和密码。
 
   修改示例：
 
@@ -347,7 +368,7 @@ TF 卡镜像中的软件可能已经过时，需要手动更新到最新版本�
   alt="Example banner"
 /></div>
 
-- 方法二：使用PC打开[LSCloud网页](https://cloud.listenai.com/)，进入您制作芯片烧录包时填写的LSCloud项目，点击左侧边栏`日志`，并设置正确的时间区间，即可在烧录完成后查看烧录日志，如图：
+- 方法二：使用PC打开[LSCloud](https://cloud.listenai.com/)，进入您制作芯片烧录包时填写的LSCloud项目，点击左侧边栏`日志`，并设置正确的时间区间，即可在烧录完成后查看烧录日志，如图：
 
   ![](./files/image-20210727233318384.png)
   
