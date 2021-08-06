@@ -15,7 +15,7 @@ sidebar_position: 1
 
 #### 3 入口
 
-- 通过[cloud.listenai.com](cloud.listenai.com)打开LSCloud（首次使用该工具前请重新登录LSCloud）
+- 通过[cloud.listenai.com](https://cloud.listenai.com/)打开LSCloud（首次使用该工具前请重新登录LSCloud）
 - 打开需要制作烧录包的LSCloud项目（如未新建过LSCloud项目，需要新建后使用），通过项目侧边栏菜单进入，如图
 
 <div  align="center"><img
