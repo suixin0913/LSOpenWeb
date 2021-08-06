@@ -254,7 +254,12 @@ module.exports = {
         // ```
         // When applying `zh` in language, please install `nodejieba` in your project.
         translations: {
-          search_placeholder: "搜索"
+          search_placeholder: "搜索",
+          see_all_results: "查看所有结果",
+          no_results: "无查询结果",
+          search_results_for: "搜索关键字 \"{{ keyword }}\" 的结果",
+          count_documents_found_plural: "共 {{ count }} 个查询结果",
+          no_documents_were_found: "无查询结果"
         }
       },
     ],
