@@ -175,12 +175,11 @@ sidebar_position: 3
 
 #### 2.2.3 配网
 
-- 将 TF 卡插到电脑上，将 [wpa_supplicant.conf](files\wpa_supplicant.conf) 复制到出现的 boot 分区中，如图：
-
+- 将 TF 卡插到电脑上，将 [wpa_supplicant.conf](http://pan.iflytek.com:80/#/link/010457DE846A8D7C3E6D8E21AF131BA2) (访问密码：n5Op) 复制到出现的 boot 分区中，如图：
 
 ![](./files/image-20210726210043769.png)
 
-- 将文件中的“==Wi-Fi名称==”和"==Wi-Fi密码=="分别替换为调试现场或工厂的WiFi名称和密码。
+- 将文件中的“**Wi-Fi名称**”和"**Wi-Fi密码**"分别替换为调试现场或工厂的WiFi名称和密码。
 
   修改示例：
 
@@ -377,7 +376,7 @@ TF 卡镜像中的软件可能已经过时，需要手动更新到最新版本�
 
 需要关机时，请先短接树莓派右侧第3和第5引脚（如图），维持短接状态直到烧录板上的指示灯熄灭（此时树莓派的风扇仍在工作），再按下树莓派的按钮开关断电。
 
-:::caution 注意！
+:::danger 注意！
 
 直接断电会导致TF卡损坏。
 

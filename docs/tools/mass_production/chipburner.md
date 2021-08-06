@@ -29,7 +29,7 @@ sidebar_position: 2
 
 ### 1.3 使用方法
 
-​		将树莓派作为多个烧录器的控制设备，并将烧录器搭载于烧录机台上，启动烧录机台。机械臂将芯片放置在烧录座子中，烧录器自动开始烧录。烧录结束后，烧录器将烧录结果通过电平信号传递给机台。接到烧录结果后，机台机械臂自动更换芯片，开始下一轮烧录。详细接线与实现方法请查看本章的【2.4上机调试】部分内容。
+​		将树莓派作为多个烧录器的控制设备，并将烧录器搭载于烧录机台上，启动烧录机台。机械臂将芯片放置在烧录座子中，烧录器自动开始烧录。烧录结束后，烧录器将烧录结果通过电平信号传递给机台。接到烧录结果后，机台机械臂自动更换芯片，开始下一轮烧录。详细接线与实现方法请查看[2.4 上机调试](#上机调试)。
 
 <div  align="center"><img
   src={require('./files/image-20210722173608296.png').default}
@@ -131,7 +131,7 @@ sidebar_position: 2
   alt="Example banner"
 /></div>
 
-⑤Hub（可选，1拖4及以下不需要配置，接在树莓派上）：[京东购买链接](https://item.m.jd.com/product/62280475705.html?gx=RnFiwGFdPDeLwtRP--tzVUaeLn90-OEAjYN0&ad_od=share&utm_source=androidapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends)
+⑤Hub（可选，1拖4及以下不需要配置 接在树莓派上）：京东购买链接：https://item.m.jd.com/product/62280475705.html?gx=RnFiwGFdPDeLwtRP--tzVUaeLn90-OEAjYN0&ad_od=share&utm_source=androidapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends
 
 注：Hub可能会影响烧录稳定性，请谨慎选择，如无特殊需求请按以上链接购买
 
@@ -201,11 +201,11 @@ sidebar_position: 2
 
 #### 2.2.3 配网
 
-- 将 TF 卡插到电脑上，将[wpa_supplicant.conf](files\wpa_supplicant.conf) 复制到出现的 boot 分区中，如图：
+- 将 TF 卡插到电脑上，将[wpa_supplicant.conf](http://pan.iflytek.com:80/#/link/010457DE846A8D7C3E6D8E21AF131BA2) (访问密码：n5Op) 复制到出现的 boot 分区中，如图：
 
 ![](./files/image-20210726210043769.png)
 
-- 将文件中的“==Wi-Fi名称==”和"==Wi-Fi密码=="分别替换为调试现场或工厂的WiFi名称和密码。
+- 将文件中的“**Wi-Fi名称**”和"**Wi-Fi密码**"分别替换为调试现场或工厂的WiFi名称和密码。
 
   修改示例：
 
@@ -355,7 +355,7 @@ TF 卡镜像中的软件可能已经过时，需要手动更新到最新版本�
 
 需要关机时，请先短接树莓派右侧第3和第5引脚（如图），维持短接状态直到烧录板上的指示灯熄灭（此时树莓派的风扇仍在工作），再按下树莓派的按钮开关断电。
 
-:::caution 注意！
+:::danger 注意！
 
 直接断电会导致TF卡损坏。
 
