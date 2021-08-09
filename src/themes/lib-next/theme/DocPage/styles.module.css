@@ -32,7 +32,7 @@
 
   .docSidebarContainer {
     width: var(--doc-sidebar-width);
-    margin-top: calc(-1 * var(--ifm-navbar-height));
+    margin-top: calc(-1 * (var(--ifm-navbar-height) + var(--ifm-subnavbar-height)));
     border-right: 1px solid var(--ifm-toc-border-color);
     will-change: width;
     transition: width var(--ifm-transition-fast) ease;
