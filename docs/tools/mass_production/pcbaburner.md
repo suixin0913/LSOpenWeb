@@ -104,7 +104,11 @@ sidebar_position: 3
 
 ④Hub（可选，1拖4及以下不需要配置）：京东购买链接：https://item.m.jd.com/product/62280475705.html?gx=RnFiwGFdPDeLwtRP--tzVUaeLn90-OEAjYN0&ad_od=share&utm_source=androidapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=Wxfriends
 
-注：Hub可能会影响烧录稳定性，请谨慎选择，如无特殊需求请按以上链接购买
+:::info 
+
+Hub可能会影响烧录稳定性，请谨慎选择，如无特殊需求请按以上链接购买。
+
+:::
 
 ### 2.2 软件配置
 
@@ -118,7 +122,11 @@ sidebar_position: 3
 
  balenaEtcher下载链接：[balenaEtcher](https://www.balena.io/etcher) （windows请选择Windows X86|x64版本）
 
-  注：如烧录失败，请更换读卡器或更换USB口重新烧写，多次重试
+:::info 
+  
+如烧录失败，请更换读卡器或更换USB口重新烧写，多次重试。
+  
+:::
 
   ![](./files/image-20210722195929166.png)
 
@@ -126,7 +134,11 @@ sidebar_position: 3
 
 ![](./files/image-20210803184341393.png)
 
-注：如烧录失败，请更换读卡器或更换USB口重新烧写，多试几次
+:::info 
+  
+如烧录失败，请更换读卡器或更换USB口重新烧写，多次重试。
+  
+:::
 
 #### 2.2.2 自检程序、烧录包配置
 
@@ -179,7 +191,16 @@ sidebar_position: 3
 
 ![](./files/image-20210726210043769.png)
 
-- 将文件中的“**Wi-Fi名称**”和"**Wi-Fi密码**"分别替换为调试现场或工厂的WiFi名称和密码。
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      color: color,
+}}>
+    {children}
+  </span>
+);
+
+- 将文件中的“<Highlight color="#1877F2">Wi-Fi名称</Highlight>”和"<Highlight color="#1877F2">Wi-Fi密码</Highlight>"分别替换为调试现场或工厂的WiFi名称和密码。
 
   修改示例：
 
@@ -263,9 +284,9 @@ TF 卡镜像中的软件可能已经过时，需要手动更新到最新版本�
 ![](./files/image-20210727182754917.png)
 
 - 通过烧录板的接口将模组与烧录板相连接，
-
+  
   必须接通的引脚有：PB16、GND、TX、RX
-
+  
   可选择接通的引脚：5V（可外接5V给模组供电）、3.3V、RSTN、START、BUSSY_LED、OK_LED、NG_LED
 
   接口图示：
@@ -309,6 +330,7 @@ TF 卡镜像中的软件可能已经过时，需要手动更新到最新版本�
       width="25%"
       alt="Example banner"
 />
+
 
 - 标记“0”蓝灯闪烁，表示准备就绪，等待烧录
 - 标记"1"黄灯闪烁，表示正在烧录
