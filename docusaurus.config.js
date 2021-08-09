@@ -56,11 +56,11 @@ module.exports = {
 //          position: 'left'
 //        },
         {
-//          to: '/FAQ/FAQ/gongdan',
-//          label: 'FAQ',
-//          position: 'right'
-//        },
-//        {
+          to: '/faq/faq',
+          label: 'FAQ',
+          position: 'right'
+        },
+        {
           to: '/school/school',
           label: '视频课程',
           position: 'right'
@@ -169,6 +169,15 @@ module.exports = {
         ],
       },
       {
+        dirName: '/faq',//对应的一级目录
+        items: [
+          {
+            to: "/faq/faq",//跳转哪个目录
+            label: '常见问题',
+          },
+        ],
+      },
+      {
         dirName: '/school',//对应的一级目录
         items: [
           {
@@ -185,16 +194,7 @@ module.exports = {
             label: '提交工单',
           },
         ],
-      },
-      {
-        dirName: '/FAQ',//对应的一级目录
-        items: [
-          {
-            to: "/FAQ/FAQ/gongdan",//跳转哪个目录
-            label: '常见问题',
-          },
-        ],
-      },
+      }
     ],
     colorMode: {
       defaultMode: 'light',
