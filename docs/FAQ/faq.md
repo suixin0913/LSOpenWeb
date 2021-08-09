@@ -210,7 +210,7 @@ app_main(void)
     uart_reader_init();
 }
 
-``` 
+```
 
 ### PA9作为普通IO口无法控制？
 1.hardware.lini去掉pin18 IO配置   
@@ -306,7 +306,7 @@ i2s_send_data(i2s_out_t **send)
 +   return;
 +}
 
-``` 
+```
 
 ### 4002NC如何修改USB设备默认名称？
 ```c
@@ -321,9 +321,6 @@ uac_desc_name = "LINGSI AI"
   custom_enable = false
   uac_desc_name = "LINGSI AI"
 ```
-
-
-## 合作咨询
 
 
 
