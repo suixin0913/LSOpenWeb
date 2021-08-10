@@ -14,11 +14,11 @@ module.exports = {
   organizationName: 'LISTENAI',
   themeConfig: {
     navbar: {
+      title: '聆思文档中心',
       logo: {
         href: '/',
         alt: 'LSOpen Logo',
-        src: 'img/logo.svg',
-        srcDark: 'img/logo_dark.svg'
+        src: 'img/logo.png'
       },
       items: [
 //        {
@@ -50,11 +50,11 @@ module.exports = {
           label: 'AI应用方案',
           position: 'left'
         },
-//        {
-//          to: '/Industrysolution/Smartairconditioning/quicklystart/quicklystart',
-//          label: '行业解决方案',
-//          position: 'left'
-//        },
+        {
+          to: '/Industrysolution/Scanning_pen/Scanning_pen_turnkey',
+          label: '行业解决方案',
+          position: 'left'
+        },
         {
           to: '/faq/faq',
           label: 'FAQ',
@@ -163,8 +163,8 @@ module.exports = {
         dirName: '/Industrysolution',//对应的一级目录
         items: [
           {
-            to: "/Industrysolution/Smartairconditioning/quicklystart/quicklystart",//跳转哪个目录
-            label: '智能语音空调',
+            to: "/Industrysolution/Scanning_pen/Scanning_pen_turnkey",//跳转哪个目录
+            label: '扫描笔',
           },
         ],
       },
@@ -259,7 +259,12 @@ module.exports = {
         // ```
         // When applying `zh` in language, please install `nodejieba` in your project.
         translations: {
-          search_placeholder: "搜索"
+          search_placeholder: "搜索",
+          see_all_results: "查看所有结果",
+          no_results: "无查询结果",
+          search_results_for: "搜索关键字 \"{{ keyword }}\" 的结果",
+          count_documents_found_plural: "共 {{ count }} 个查询结果",
+          no_documents_were_found: "无查询结果"
         }
       },
     ],

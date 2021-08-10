@@ -109,7 +109,7 @@
     "paragraphs": [
         {
             "title": "AI应用方案",
-            "desc": "快速上手语音交互、通话降噪等AI应用开发",
+            "desc": "快速上手语音交互等AI应用开发",
             "cards": [
                 {
                     "icon": {
@@ -204,6 +204,43 @@
                             "to": "/AIsolution/dsp/cloud_development/Custom_skills"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "title": "行业解决方案",
+            "desc": "提供Trunkey行业解决方案",
+            "cards": [
+                {
+                    "icon": {
+                        "src": "img/h_interact_light.svg",
+                        "srcDark": "img/h_interact_dark.svg"
+                    },
+                    "title": "扫描笔 Turnkey 方案",
+                    "pipes": [
+                        {
+                            "label": "概览",
+                            "to": "/Industrysolution/Scanning_pen/Scanning_pen_turnkey"
+                        },
+                        {
+                            "label": "笔头模组设计",
+                            "to": "/Industrysolution/Scanning_pen/Scanning_pen_turnkey#笔头模组"
+                        },
+                        {
+                            "label": "上位机开发",
+                            "to": "/Industrysolution/Scanning_pen/Scanning_pen_turnkey#上位机"
+                        },
+                        {
+                            "label": "整机测试",
+                            "to":"/Industrysolution/Scanning_pen/Scanning_pen_turnkey#整机测试"
+                        },
+                        {
+                            "label": "产测指导",
+                            "to": "/Industrysolution/Scanning_pen/Scanning_pen_turnkey#产测方案"
+                        }
+                    ]
+
+                    
                 }
             ]
         }
