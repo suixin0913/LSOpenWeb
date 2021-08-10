@@ -50,11 +50,11 @@ module.exports = {
           label: 'AI应用方案',
           position: 'left'
         },
-//        {
-//          to: '/Industrysolution/Smartairconditioning/quicklystart/quicklystart',
-//          label: '行业解决方案',
-//          position: 'left'
-//        },
+        {
+          to: '/Industrysolution/Scanning_pen/Scanning_pen_turnkey',
+          label: '行业解决方案',
+          position: 'left'
+        },
         {
           to: '/faq/faq',
           label: 'FAQ',
@@ -163,8 +163,8 @@ module.exports = {
         dirName: '/Industrysolution',//对应的一级目录
         items: [
           {
-            to: "/Industrysolution/Smartairconditioning/quicklystart/quicklystart",//跳转哪个目录
-            label: '智能语音空调',
+            to: "/Industrysolution/Scanning_pen/Scanning_pen_turnkey",//跳转哪个目录
+            label: '扫描笔',
           },
         ],
       },
