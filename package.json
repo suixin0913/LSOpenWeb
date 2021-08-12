@@ -19,8 +19,9 @@
     "@mdx-js/react": "^1.6.21",
     "axios": "^0.21.1",
     "clsx": "^1.1.1",
-    "nodejieba": "2.5.2",
+    "gitalk": "^1.7.2",
     "lstenai-analytics": "file:src/plugin/lstenai-analytics",
+    "nodejieba": "2.5.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },
