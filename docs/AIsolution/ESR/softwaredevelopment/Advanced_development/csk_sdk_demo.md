@@ -28,17 +28,36 @@ sidebar_position: 1
 这个示例展示如何注册和使用回调事件，CSK识别命令词后触发的回调事件，开发者可以在识别结果回调获取识别结果并处理自定义逻辑，例如播放提示音。
 
 ```js
+// 唤醒回调
+cb_wake_up(keyword_attrs_t *key_attrs, asr_beam_e beam)
+{
+	CLOGD("[APP]I'm here");
+	CLOGD("Wakeup beam : %d", beam); // 唤醒波束
+	csk_player_stop();
+	csk_player_start(1); //播放提示音1
+}
+
+// 命令词识别回调
 cb_esr_recognition(keyword_attrs_t *key_attrs)
 {
     CLOGD("[APP]ESR Recognition: kid=%d", key_attrs->kid);
     csk_player_stop();
-    csk_player_start(2);
+    csk_player_start(2); //播放提示音2
 }
+
+// 命令词识别超时回调
+cb_esr_timeout()
+{
+    CLOGD("[APP]ESR Recognition timeout");
+}
+
 
 app_main(void)
 {
 	CLOGD("[APP]Hello world");
-	csk_handler_register(CSK_EVENT_WAKE_UP, cb_wake_up);
+	csk_handler_register(CSK_EVENT_WAKE_UP, cb_wake_up); //注册唤醒回调
+	csk_handler_register(CSK_EVENT_ESR_RECOGNITION, cb_esr_recognition); //注册识别回调
+	csk_handler_register(CSK_EVENT_ESR_TIMEOUT, cb_esr_timeout); //注册识别超时回调
     ...
 }
 ```
