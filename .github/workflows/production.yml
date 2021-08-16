@@ -26,11 +26,5 @@ jobs:
           sed -i "s/projectName: 'LSOpenWeb'/projectName: 'LSOpenWebStatic'/" docusaurus.config.js
           git config --global user.email "docs@listenai.com"
           git config --global user.name "listenai-docs"
-          if [ -e yarn.lock ]; then
-          yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-          npm ci
-          else
           npm i
-          fi
           npm run deploy
