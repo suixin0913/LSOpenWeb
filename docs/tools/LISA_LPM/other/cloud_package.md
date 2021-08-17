@@ -73,36 +73,36 @@ export const ShowToken = ({children, color}) => {
 2、在LSCLoud创建一个项目。该项目请确保在正确的组下。（本指南为方便演示，会在个人组进行创建）
 
 (1)在LSCloud的右上角，点击新建项目
-![](./files/cloud_pkg/1.png)
+![](../files/cloud_pkg/1.png)
 
 (2)输入你的项目名称，选择该包所在的组，以及可见性级别选择私有。
-![](./files/cloud_pkg/2.png)
+![](../files/cloud_pkg/2.png)
 
 3、上传发布你的lisa包到LScloud。
 
 (1)在终端，按LSCloud的提示，进行推送：
 
-![](./files/cloud_pkg/3.png)
+![](../files/cloud_pkg/3.png)
 
-![](./files/cloud_pkg/4.png)
+![](../files/cloud_pkg/4.png)
 
 如果上面的命令你都能顺利通过，此时在LSCloud的项目便已经初始化好你的lisa包。
 
-![](./files/cloud_pkg/5.png)
+![](../files/cloud_pkg/5.png)
 
 4、发布一个版本。
 
 (1)在LSCloud刚推上去的项目，点击发布
 
-![](./files/cloud_pkg/6.png)
+![](../files/cloud_pkg/6.png)
 
 (2)输入版本号，这里需要填写满足semver规范的，方便我们进行版本管理
 
-![](./files/cloud_pkg/7.png)
+![](../files/cloud_pkg/7.png)
 
 (3)点击发布后，能成功看到一条该版本的发布在列表里
 
-![](./files/cloud_pkg/8.png)
+![](../files/cloud_pkg/8.png)
 
 ## 创建一个lisa项目，并使用LSCloud上的lisa包作为依赖。
 
@@ -118,7 +118,7 @@ lisa install git+https://cloud.listenai.com/listenai_zbzhao/test-lscloud-pkg.git
 
 包的地址可以在LSCloud该项目进行查看
 
-![](./files/cloud_pkg/9.png)
+![](../files/cloud_pkg/9.png)
 
 :::warning
 
@@ -130,7 +130,7 @@ lisa install git+https://cloud.listenai.com/listenai_zbzhao/test-lscloud-pkg.git
 
 3、如果上面的命令能成功执行，恭喜你，你已经能够使用该包了，可以在package.json查看你刚刚install的包。
 
-![](./files/cloud_pkg/10.png)
+![](../files/cloud_pkg/10.png)
 
 ## 更新包
 
@@ -143,7 +143,7 @@ lisa install git+https://cloud.listenai.com/listenai_zbzhao/test-lscloud-pkg.git
 git config --global -l --show-origin
 ```
 
-![](./files/cloud_pkg/11.png)
+![](../files/cloud_pkg/11.png)
 
 如图，配置文件的路径为 C:/Users/geekz/.gitconfig
 
@@ -153,7 +153,7 @@ git config --global -l --show-origin
 helper = store --file ~/.git-credential
 ```
 
-![](./files/cloud_pkg/12.png)
+![](../files/cloud_pkg/12.png)
 
 此处为了不影响原有的helper，需要手动自行添加。当存在多个helper时，git的账号验证会按照顺序加载。
 
