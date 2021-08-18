@@ -7,7 +7,7 @@ sidebar_position: 2
 
 >本篇介绍如何在 `hardware.lini` 芯片引脚功能功能。使用 `hardware.lini` 完成配置需满足以下条件：
 1. 使用版本号 2.3.1 以上 LStudio 进行开发
-2. 工程项目是使用 `lisa` 创建的 CSK 项目（文档参考：[使用 lisa 创建项目](/tools/LISA_LPM/lisa_create)）
+2. 工程项目是使用 `lisa` 创建的 CSK 项目（文档参考：[使用 lisa 创建项目](/tools/LISA_LPM/instance/lisa_create)）
 
 温馨提示： LStudio 旧项目的引脚配置使用说明请查看：[外围引脚配置文档](/AIsolution/ESR/softwaredevelopment/Basic_development/peripheral_config)
 

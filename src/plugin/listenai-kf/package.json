@@ -1,0 +1,7 @@
+{
+  "homepage": "https://github.com/facebook/docusaurus#readme",
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "listenai-kf",
+  "version": "1.0.0"
+}

@@ -289,5 +289,6 @@ module.exports = {
     // ],
     // // ... Your other plugins.
     // 'lstenai-analytics',
+    'listenai-kf',
   ],
 };

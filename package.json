@@ -24,6 +24,8 @@
     "gitalk": "^1.7.2",
     "lstenai-analytics": "file:src/plugin/lstenai-analytics",
     "nodejieba": "2.5.2",
+    "listenai-analytics": "file:src/plugin/listenai-analytics",
+    "listenai-kf": "file:src/plugin/listenai-kf",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },

@@ -182,7 +182,7 @@ lisa task oldBuild:package
 
 我们的目的是生成一个lpk包，能够让lisa对它进行烧录。首先一个lpk包，其实文件类型是一个zip文件，里面包含了烧录时所需要的bin文件和配置。下图是一个lpk包所包含的文件，以及配置文件的内容。
 
-![](./files/burner-dict.png)
+![](../files/burner-dict.png)
 
 所以我们的task需要实现的是，生成这份manifest.json配置文件，以及将对应的bin文件，打成一个zip包。
 

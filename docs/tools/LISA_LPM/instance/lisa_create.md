@@ -146,7 +146,7 @@ bin list > flashboot(0),master(0x10000),script(0xf0000),respak(0x100000)
 - 支持对 `application.lini` 进行图形化配置（默认）
 - 点击右上角切换按钮可以回到代码模式进行编辑
 
-![](./files/lisa_create/application.png)
+![](../files/lisa_create/application.png)
 
 详细介绍请阅读：[源码应用配置](/tools/LStudio/previewer/application)
 
@@ -157,7 +157,7 @@ bin list > flashboot(0),master(0x10000),script(0xf0000),respak(0x100000)
 - 图形化配置提供的配置规则检查与提醒，有效防止误操作
 - 点击右上角切换按钮可以回到代码模式进行编辑
 
-![](./files/lisa_create/hardware.png)
+![](../files/lisa_create/hardware.png)
 
 详细介绍请阅读：[芯片引脚功能配置](/tools/LStudio/previewer/hardware)
 
