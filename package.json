@@ -17,8 +17,12 @@
     "@docusaurus/preset-classic": "2.0.0-beta.2",
     "@easyops-cn/docusaurus-search-local": "^0.18.1",
     "@mdx-js/react": "^1.6.21",
+    "ant-design": "^1.0.0",
+    "antd": "^3.19.5",
     "axios": "^0.21.1",
     "clsx": "^1.1.1",
+    "gitalk": "^1.7.2",
+    "lstenai-analytics": "file:src/plugin/lstenai-analytics",
     "nodejieba": "2.5.2",
     "listenai-analytics": "file:src/plugin/listenai-analytics",
     "listenai-kf": "file:src/plugin/listenai-kf",
@@ -36,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "raw-loader": "^4.0.2"
   }
 }

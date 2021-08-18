@@ -26,5 +26,5 @@ jobs:
           sed -i "s/projectName: 'LSOpenWeb'/projectName: 'LSOpenWebStatic'/" docusaurus.config.js
           git config --global user.email "docs@listenai.com"
           git config --global user.name "listenai-docs"
-          npm i
+          npm install
           npm run deploy
