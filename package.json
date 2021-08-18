@@ -41,6 +41,8 @@
     ]
   },
   "devDependencies": {
+    "marked": "^3.0.0",
+    "prismjs": "^1.24.1",
     "raw-loader": "^4.0.2"
   }
 }
