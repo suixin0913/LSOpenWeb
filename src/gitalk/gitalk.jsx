@@ -319,8 +319,8 @@ class GitalkComponent extends Component {
   handleIssueCreateNoLogin =()=>{
     console.log('匿名创建issue')
     const {closeHandle} = this.options
+    this.getEditorComments()
     if (!this.state.comment.length) {
-      e && e.preventDefault()
       return
     }
     this.setState({ isIssueCreating: true })
@@ -347,11 +347,17 @@ class GitalkComponent extends Component {
   }
   handleIssueCreate = () => {
     this.setState({ isIssueCreating: true })
+    const {closeHandle} = this.options
+    this.getEditorComments()
+    if (!this.state.comment.length) {
+      return
+    }
+    this.setState({ isIssueCreating: true })
     this.createIssue().then(issue => {
       this.setState({
         isIssueCreating: false,
         isOccurError: false,
-        tipVisible:true
+        tipVisible:true,
       })
       closeHandle()
     }).catch(err => {

@@ -82,6 +82,31 @@ class GitalkComment extends Component{
       console.log(error);
     });
   }
+  cancelLike(type){
+    const self = this;
+    axiosLsmanger.post(`/docs/doc_infos/record_remove`,{
+        key:location.pathname,
+        type:type
+    })
+    .then(function (response) {
+      window.localStorage.setItem(location.pathname,JSON.stringify({
+        hasLike:false,
+        hasUnlike:false,
+        hasOprate:false
+      }))
+      console.log(response)
+      self.setState({
+        likeNum : response.data.like,
+        unlikeNum : response.data.unlike,
+        hasLike:false,
+        hasUnlike:false,
+        hasOprate:false
+      })
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
   likeDoc(type){
     const self = this;
     axiosLsmanger.post(`/docs/doc_infos/record`,{
@@ -125,6 +150,7 @@ class GitalkComment extends Component{
        //已经点赞过，取消点赞
        if(hasLike){
           //取消点赞
+          self.cancelLike(type)
           console.log('取消点赞')
        }else{
          message.info('你已经踩过了喔')
@@ -142,6 +168,7 @@ class GitalkComment extends Component{
       //已经点踩过，取消点踩
       if(hasUnlike){
          //取消点踩
+         self.cancelLike(type)
       }else{
         message.info('你已经赞过了喔')
       }
