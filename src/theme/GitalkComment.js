@@ -72,7 +72,6 @@ class GitalkComment extends Component{
    const self = this;
    axiosLsmanger.get(`/docs/doc_infos`,{params:{key:location.pathname}})
     .then(function (response) {
-      console.log(response.data);
       self.setState({
         likeNum : response.data.like,
         unlikeNum : response.data.unlike
@@ -94,7 +93,6 @@ class GitalkComment extends Component{
         hasUnlike:false,
         hasOprate:false
       }))
-      console.log(response)
       self.setState({
         likeNum : response.data.like,
         unlikeNum : response.data.unlike,
@@ -185,7 +183,6 @@ class GitalkComment extends Component{
 
   render(){
     const {gitalkVisble,likeNum,unlikeNum,acting,unlikeActing ,hasLike,hasUnlike} = this.state;
-    console.log(hasLike,hasUnlike)
     return (
         <div className="gitalk-wrapper">
             <ul className="gitalk-option">
