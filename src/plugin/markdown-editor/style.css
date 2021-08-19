@@ -29,6 +29,9 @@
   font-size: 16px;
   line-height: 1.6;
 }
+.editor-preview-side,.CodeMirror{
+  z-index:999!important;
+}
 .editor-preview-active-side h1,
 .editor-preview-active-side h2,
 .editor-preview-active-side h3,

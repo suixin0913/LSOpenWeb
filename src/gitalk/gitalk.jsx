@@ -20,7 +20,7 @@ import {
 } from './util'
 import Avatar from './component/avatar'
 import Button from './component/button'
-import Demo from '../components/MarkdownEditor'
+import MarkdownEditor from '../components/MarkdownEditor'
 
 import { GT_ACCESS_TOKEN, GT_COMMENT,LS_MANAGER_URL } from './const'
 import qrcodeImg from './assets/ls-qrcode.jpeg'
@@ -421,7 +421,7 @@ class GitalkComponent extends Component {
           null
         }
         <div className="gt-header-comment">
-          <Demo  
+          <MarkdownEditor  
             ref={t => { this.commentEL = t }} 
             change={this.handleCommentChange}
             blur={this.handleCommentBlur}

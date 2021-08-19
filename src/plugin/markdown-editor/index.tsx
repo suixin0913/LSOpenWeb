@@ -1,9 +1,11 @@
 import React from 'react';
-import SimpleMDE from 'simplemde';
+// import SimpleMDE from 'simplemde';
 import CodeMirror from 'codemirror';
 import Upload, { Options as UploadOptions } from './plugins/Upload';
 import 'simplemde/dist/simplemde.min.css';
 import './style.css';
+
+// const SimpleMDE: any = {}
 
 export interface SimpleMDEEditorProps {
   id?: string;

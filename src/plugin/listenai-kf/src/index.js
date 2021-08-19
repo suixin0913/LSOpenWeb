@@ -22,7 +22,17 @@ module.exports = function (context) {
             j.src ='https://qiyukf.com/script/d1c5d64b7d61c97003f611c502100008.js';
             d.body.appendChild(j);
           })(window, document, 'ysf');
-        </script>`],
+          (function (w, d, n, a, j) {
+            w[n] = w[n] || function () {
+              (w[n].a = w[n].a || []).push(arguments);
+            };
+            j = d.createElement('script');
+            j.async = true;
+            j.src ='https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js';
+            d.body.appendChild(j);
+          })(window, document, 'simplemde');
+        </script>`
+      ],
       }
     }
   };

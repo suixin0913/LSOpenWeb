@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, Modal, Button, Upload, message } from 'antd';
-import SimpleMDEEditor from '../../plugin/markdown-editor/index';
+import SimpleMDEEditor from '../../plugin/markdown-editor';
+// import 'yt-simplemde-editor/dist/style.css';
 import marked from 'marked';
 import Prism from 'prismjs';
 import 'antd/dist/antd.css'
@@ -38,28 +39,26 @@ marked.setOptions({
   }
 });
 
-
 class Editor extends React.Component {
-  formRef = React.createRef();
+
   state = {
     uploadVisible: false, // 本地上传
+    isError:false
   };
   constructor(props){
     super(props)
   }
   getValue = ()=>{
-    this.formRef.current.validateFields().then(values => {
-      return values.content
-    })
-    .catch(errorInfo => {
-    });
-    //  return  this.formRef.current.getFieldValue() && this.formRef.current.getFieldValue().content
+    const val = this.simplemde.value()
+    if(!val){
+      this.setState({isError:true})
+      return ''
+    }
+    this.setState({isError:false})
+    return val
   }
 
-  handleSubmit = () => {
-    const values = this.getValue() 
-    console.log(values)
-  };
+
 
   renderMarkdown = text => {
     let html = marked(text);
@@ -185,9 +184,10 @@ class Editor extends React.Component {
 
     return (
       <div className="normal">
-        <Form  ref={this.formRef}>
-            <FormItem {...formItemLayout}  name="content" rules={[{ required: true, message: '请输入反馈内容!' }]}>
+        <Form >
+            <FormItem {...formItemLayout}  >
                 <SimpleMDEEditor {...editorProps} />
+                {this.state.isError ? (<p style={{color:'#f34',margin:0,height:'20px',lineHeight:'20px'}}>请输入反馈内容!</p> ): '' }
             </FormItem>
             <FormItem
             wrapperCol={{
