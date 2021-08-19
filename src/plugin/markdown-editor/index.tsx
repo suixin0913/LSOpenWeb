@@ -162,6 +162,7 @@ class SimpleMDEEditor extends React.Component<SimpleMDEEditorProps, SimpleMDEEdi
     const { value, options = {}} = this.props;
     const simpleMdeOptions = ({
       ...options,
+      status: false,
       element: document.getElementById(this.id),
       initialValue: value,
     }) as SimpleMDE.Options;

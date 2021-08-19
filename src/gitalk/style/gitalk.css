@@ -1002,12 +1002,12 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-left: 1.25em;
+  /* margin-left: 1.25em; */
   max-width: 592px;
 }
 @media (max-width: 479px) {
   .gt-container .gt-header-comment {
-    margin-left: 0.875em;
+    /* margin-left: 0.875em; */
   }
 }
 .gt-container .gt-header-textarea {
@@ -1138,7 +1138,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-left: 1.25em;
+  /* margin-left: 1.25em; */
   padding: 0.75em 1em;
   background-color: #f9f9f9;
   overflow: auto;

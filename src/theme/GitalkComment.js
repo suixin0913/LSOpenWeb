@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {Modal ,message} from 'antd'
 
-import 'gitalk/dist/gitalk.css'
 import '../gitalk/index.css'
 import Gitalk from '../gitalk'
 

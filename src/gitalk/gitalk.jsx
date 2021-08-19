@@ -416,10 +416,9 @@ class GitalkComponent extends Component {
     const { user, isIssueCreating ,isIssueCreatingNologin} = this.state
     return (
       <div className="gt-header" key="header">
-        {user ?
-          <Avatar className="gt-header-avatar" src={user.avatar_url} alt={user.login} /> :
-          null
-        }
+        {/* {user ?
+          <Avatar className="gt-header-avatar" src={user.avatar_url} alt={user.login} /> : <Avatar className="gt-header-avatar" />
+        } */}
         <div className="gt-header-comment">
           <MarkdownEditor  
             ref={t => { this.commentEL = t }} 

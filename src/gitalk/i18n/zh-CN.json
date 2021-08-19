@@ -4,7 +4,7 @@
   "please-contact": "请联系 %{user} 初始化创建",
   "init-issue": "初始化 Issue",
   "init-issue-nologin" :"匿名初始化 Issue",
-  "leave-a-comment": "请详细描述你遇到的问题，或者提出我们可以改进的地方。如果问题比较紧急，可以联系商务对接。你也可以点击左下方扫码加群，和更多的开发者一起交流讨论。",
+  "leave-a-comment": "请详细描述你遇到的问题，或者提出我们可以改进的地方。如果问题比较紧急，可以联系商务对接。",
   "preview": "预览",
   "edit": "编辑",
   "comment": "发表",
