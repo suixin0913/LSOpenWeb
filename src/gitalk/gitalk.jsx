@@ -47,6 +47,7 @@ class GitalkComponent extends Component {
     isCreating: false,
     isLoading: false,
     isIssueCreating: false,
+    isIssueCreatingNologin:false,
     isInputFocused: false,
     qrcodeImg:qrcodeImg,
     isOccurError: false,
@@ -283,7 +284,7 @@ class GitalkComponent extends Component {
       title:`文档反馈：${id}`,
       // labels: labels.concat(id),
       labels: [],
-      body: `[下载](${url}) \n ${
+      body: `[文档链接](${url}) \n ${
         this.state.comment
       }`
     }, {
@@ -323,17 +324,17 @@ class GitalkComponent extends Component {
     if (!this.state.comment.length) {
       return
     }
-    this.setState({ isIssueCreating: true })
+    this.setState({ isIssueCreatingNologin: true })
     this.createIssueNoLogin().then(issue => {
       this.setState({
-        isIssueCreating: false,
+        isIssueCreatingNologin: false,
         isOccurError: false,
         tipVisible:true
       })
       closeHandle()
     }).catch(err => {
       this.setState({
-        isIssueCreating: false,
+        isIssueCreatingNologin: false,
         isOccurError: true,
         errorMsg: formatErrorMsg(err),
       })
@@ -346,7 +347,6 @@ class GitalkComponent extends Component {
     })
   }
   handleIssueCreate = () => {
-    this.setState({ isIssueCreating: true })
     const {closeHandle} = this.options
     this.getEditorComments()
     if (!this.state.comment.length) {
@@ -413,7 +413,7 @@ class GitalkComponent extends Component {
     )
   }
   header () {
-    const { user, isIssueCreating } = this.state
+    const { user, isIssueCreating ,isIssueCreatingNologin} = this.state
     return (
       <div className="gt-header" key="header">
         {user ?
@@ -447,7 +447,7 @@ class GitalkComponent extends Component {
             <Button
               className="gt-btn-preview"
               onClick={this.handleIssueCreateNoLogin}
-              isLoading={isIssueCreating}
+              isLoading={isIssueCreatingNologin}
               text='匿名发表'
               // isLoading={isPreviewing}
             />
