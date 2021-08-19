@@ -233,7 +233,8 @@ module.exports = {
           customCss: [
             require.resolve('./src/css/custom.css'),
             require.resolve('./src/css/customMd.css'),
-            'https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css',
+            require.resolve('./src/css/simplemde.min.css'),
+
           ],
         },
       },
