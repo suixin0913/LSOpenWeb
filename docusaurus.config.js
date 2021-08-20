@@ -18,7 +18,8 @@ module.exports = {
       logo: {
         href: '/',
         alt: 'LSOpen Logo',
-        src: 'img/logo.png'
+        src: 'img/logo_light.svg',
+        srcDark: 'img/logo_dark.svg',
       },
       items: [
 //        {

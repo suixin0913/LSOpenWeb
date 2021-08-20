@@ -192,25 +192,3 @@
     font-size: 15px;
     cursor: pointer;
 }
-/* dark theme */
-/* [data-theme='dark'] .gitalk-wrapper {
-    background: #1A1A1A;
-    border-color: #333333;
-} */
-/* [data-theme='dark']  .ant-modal{
-    border-color: #333!important;
-} */
-/* [data-theme='dark']  .ant-modal-content,.ant-modal-header,.ant-modal-title,.gt-container .gt-header-controls,.CodeMirror,.editor-toolbar,.ant-modal-footer{
-    background: #1A1A1A!important;
-    color:#E6E6E6!important;
-    border-color: #333!important;
-} */
-/* [data-theme='dark']  .editor-toolbar a{
-    color:#999999!important;
-}
-[data-theme='dark'] .tips-modal h3{
-    color: #E6E6E6!important;
-}
-[data-theme='dark'] .tips-modal p{
-    color: #CCCCCC!important;
-} */

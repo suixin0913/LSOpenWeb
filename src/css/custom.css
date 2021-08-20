@@ -6,6 +6,7 @@
  */
 
 /* You can override the default Infima variables here. */
+@import "antd.css";
 :root {
   /* Add by geekZzboom. ---- start ---- */
   --ifm-navbar-height: 64px;
@@ -278,4 +279,62 @@ html[data-theme='dark'] {
   }
 }
 
+
 /* Add by geekZzboom. ---- end ---- */
+
+[data-theme='dark'] .gitalk-wrapper {
+    background: #1A1A1A!important;
+    border-color: #333333;
+}
+[data-theme='dark']  .ant-modal{
+    border-color: #333!important;
+}
+[data-theme='dark']  .ant-modal .ant-modal-content{
+    background: #1A1A1A!important;
+    color:#E6E6E6!important;
+    border-color: #333!important;
+}
+/* ,[data-theme='dark'] .ant-modal .ant-modal-title,.ant-modal  .gt-container .gt-header-controls,.ant-modal  .CodeMirror,.ant-modal .editor-toolbar,.ant-modal .ant-modal-footer */
+[data-theme='dark'] .ant-modal  .ant-modal-header{
+  background: #1A1A1A!important;
+    color:#E6E6E6!important;
+    border-color: #333!important;
+}
+[data-theme='dark'] .ant-modal  .gt-header-controls{
+  background: #1A1A1A!important;
+    color:#E6E6E6!important;
+    border-color: #333!important;
+}
+[data-theme='dark'] .ant-modal   .CodeMirror{
+  background: #1A1A1A!important;
+    color:#E6E6E6!important;
+    border-color: #333!important;
+}
+[data-theme='dark'] .ant-modal   .editor-toolbar,[data-theme='dark'] .ant-modal   .ant-modal-footer{
+  background: #1A1A1A!important;
+    color:#E6E6E6!important;
+    border-color: #333!important;
+}
+[data-theme='dark'] .ant-modal-title,[data-theme='dark'] .CodeMirror-cursor{
+  border-color:#E6E6E6!important;
+  color:#E6E6E6!important;
+}
+
+ [data-theme='dark']  .editor-toolbar a{
+    color:#999999!important;
+}
+[data-theme='dark'] .tips-modal h3{
+    color: #E6E6E6!important;
+}
+[data-theme='dark'] .tips-modal p{
+    color: #CCCCCC!important;
+} 
+[data-theme='dark'] .gt-container .gt-btn-preview{
+  background: rgba(128, 128, 128, 0.15)!important;
+  color: #CCCCCC!important;
+  border:none;
+}
+[data-theme='dark']  .ant-modal-close{
+ color: #666!important;
+
+}
