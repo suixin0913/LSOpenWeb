@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Modal, Button, Upload, message } from 'antd';
 import SimpleMDEEditor from '../../plugin/markdown-editor';
-import '../../css/simplemde.min.css';
+// import '../../css/simplemde.min.css';
 import marked from 'marked';
 import Prism from 'prismjs';
 import 'antd/dist/antd.css'

@@ -1,23 +1,21 @@
 import React from 'react';
-// import SimpleMDE from 'simplemde';
 import CodeMirror from 'codemirror';
 import Upload, { Options as UploadOptions } from './plugins/Upload';
 import 'simplemde/dist/simplemde.min.css';
 import './style.css';
 
-// const SimpleMDE: any = {}
 
 export interface SimpleMDEEditorProps {
   id?: string;
   className?: string;
   label?: string;
   uploadOptions?: UploadOptions;
-  getMdeInstance?: (simplemde: TSimpleMDE) => void;
+  getMdeInstance?: (simplemde: any) => void;
   extraKeys?: CodeMirror.KeyMap;
   value?: string;
   onChange?: (value: string) => void;
   onBlur?: (value: string) => void;
-  options?: SimpleMDE.Options;
+  options?: any;
   escape?: any;
   Textcomplete?: any;
   CodemirrorEditor?: any;
@@ -27,10 +25,7 @@ export interface SimpleMDEEditorState {
   contentChanged: boolean,
 }
 
-export type TSimpleMDE = SimpleMDE & {
-  toggleFullScreen: () => void,
-  autosaveTimeoutId: number,
-};
+
 
 class SimpleMDEEditor extends React.Component<SimpleMDEEditorProps, SimpleMDEEditorState> {
   state: SimpleMDEEditorState = {
@@ -41,7 +36,7 @@ class SimpleMDEEditor extends React.Component<SimpleMDEEditorProps, SimpleMDEEdi
 
   wrapperId: string = '';
 
-  simplemde?: TSimpleMDE;
+  simplemde?: any;
 
   upload?: Upload;
 
@@ -158,15 +153,15 @@ class SimpleMDEEditor extends React.Component<SimpleMDEEditorProps, SimpleMDEEdi
     }
   };
 
-  createEditor = (): TSimpleMDE => {
+  createEditor = (): any => {
     const { value, options = {}} = this.props;
     const simpleMdeOptions = ({
       ...options,
       status: false,
       element: document.getElementById(this.id),
       initialValue: value,
-    }) as SimpleMDE.Options;
-
+    }) ;
+    const SimpleMDE = window.SimpleMDE;
     const simplemde = new SimpleMDE(simpleMdeOptions);
 
     // 同步自动保存的value
@@ -178,7 +173,7 @@ class SimpleMDEEditor extends React.Component<SimpleMDEEditorProps, SimpleMDEEdi
       }
     }
 
-    return simplemde as TSimpleMDE;
+    return simplemde ;
   };
 
 

@@ -1039,8 +1039,8 @@
 }
 .gt-container .gt-header-controls {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: -24px;
+  right: -24px;
   bottom:0;
   padding:12px 24px 0 24px;
   border-top: 1px solid #EDEDED;
