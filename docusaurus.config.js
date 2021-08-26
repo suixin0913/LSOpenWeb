@@ -76,15 +76,7 @@ module.exports = {
     subNavbar: [
       {
         dirName: '/start',
-        items: [
-          {
-            to: "/start/introduction",
-            label: '文档导读',
-          },
-          {
-            to: "/start/quickstart",
-            label: '快速入门',
-          },
+       items: [
         ],
       },
       {

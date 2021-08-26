@@ -16,8 +16,6 @@
 | **关键器件清单.zip** | 2021.05.19 |[下载](https://open.listenai.com/resource/open/doc_resource%2F%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97%2F%E5%85%B3%E9%94%AE%E5%99%A8%E4%BB%B6%E6%B8%85%E5%8D%95.zip)|
 
 
-
-
 ## 原理图/PCBA设计
 
 ### 准备工作

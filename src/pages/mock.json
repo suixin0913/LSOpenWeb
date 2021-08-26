@@ -43,8 +43,8 @@
             "items": [
                 [
                     {
-                        "label": "4002datasheet",
-                        "to": "/chips/4002/Chip_information_4002"
+                        "label": "获取基础资料包",
+                        "to": "/start/jichuziliaobao/jichuziliaobao"
                     },
                     {
                         "label": "通过LStudio创建项目",
