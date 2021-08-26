@@ -131,7 +131,7 @@ function DocPageContent({currentDocRoute, versionMetadata, children}) {
           })}>
           <div
             className={clsx(
-              'container padding-top--md padding-bottom--lg',
+              'container padding-top--md padding-bottom--lg center-container',
               styles.docItemWrapper,
               {
                 [styles.docItemWrapperEnhanced]: hiddenSidebarContainer,

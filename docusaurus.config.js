@@ -207,7 +207,8 @@ module.exports = {
       // style: 'dark',
       links: [],
       copyright: `Copyright © 安徽聆思智能科技有限公司皖ICP备05001217号`,
-    }
+    },
+    zoomSelector: '.markdown :not(em) > img',
   },
   presets: [
     [
@@ -283,5 +284,6 @@ module.exports = {
     // // ... Your other plugins.
     // 'lstenai-analytics',
     'listenai-kf',
+    'plugin-image-zoom',
   ],
 };
