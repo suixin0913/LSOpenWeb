@@ -31,7 +31,8 @@ export default (function () {
 
   return {
     onRouteUpdate({ location }) {
-      upload(location, window.location.origin);
+      // window.location.origin
+      upload(location, 'https://open.listenai.com');
     },
   };
 })();

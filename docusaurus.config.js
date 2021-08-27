@@ -282,7 +282,7 @@ module.exports = {
     //   {},
     // ],
     // // ... Your other plugins.
-    // 'lstenai-analytics',
+    'listenai-analytics',
     'listenai-kf',
     'plugin-image-zoom',
   ],
