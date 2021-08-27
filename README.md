@@ -9,8 +9,8 @@
 
 - `docs`：当前维护在线上的有效文档，若需改动请参考[文档维护指南](#文档维护指南)。
 - `docs_old`：已经不维护的文档，过一段时间会删除。
-- `static`：小文件存放地。
-- `src`：前端框架。
+- `static`：小文件存放地，如几MB以内的音视频。
+- `src`和其他文件：前端开发框架和开发工作流，文档贡献者和维护者无需关心。
 
 ## `docs`目录结构
 
@@ -75,7 +75,12 @@
 
 [8.13号后推送、拉取失败解决方案](https://blog.csdn.net/weixin_41010198/article/details/119698015)
 
+## 贡献
+欢迎开发者参与文档的贡献，不限于实现业务时遇到各种各样的问题，对应的解决方案和FAQ，以及创新参考。
+
+有贡献需求，可通过`issue`指派`zainosl`或者邮箱`zwliu@listenai.com`联系聆思工作人员。
+
 
 ## ReleaseNote
-每个版本以及迁移说明都记录在[GitHub的ReleaseNote](https://github.com/LISTENAI/LSOpenWeb/releases)页面上。
+每个版本以及迁移说明都记录在GitHub的[ReleaseNote](https://github.com/LISTENAI/LSOpenWeb/releases)页面上。
 
