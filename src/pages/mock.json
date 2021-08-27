@@ -296,8 +296,12 @@
             "to": "/AIsolution/ESR/softwaredevelopment/Advanced_development/factory_config"
         },
         {
-            "label": "CSK烧录器",
-            "to": "/tools/mass_production/cskburner"
+            "label": "芯片烧录",
+            "to": "/tools/mass_production/chipburner"
+        },
+        {
+            "label": "模组烧录",
+            "to": "/tools/mass_production/pcbaburner"
         }
     ]
 
