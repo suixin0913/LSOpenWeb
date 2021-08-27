@@ -14,7 +14,7 @@ module.exports = function (context) {
     name: "lstenai-analytics",
     getClientModules() {
       console.log("isProd-->", isProd);
-      return isProd ? [path.resolve(__dirname, "./analytics")] : [];
+      return !isProd ? [path.resolve(__dirname, "./analytics")] : [];
     },
   };
 };
