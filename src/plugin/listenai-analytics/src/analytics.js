@@ -16,7 +16,7 @@ async function upload(location, origin) {
       data: {
         event_type: "lsopen_pageview",
         title: pathname,
-        url: origin + pathname,
+        url: window.location.origin + pathname,
       },
     });
     console.log(response);
@@ -32,7 +32,7 @@ export default (function () {
   return {
     onRouteUpdate({ location }) {
       // window.location.origin
-      upload(location, 'https://open.listenai.com');
+      upload(location, window.location.origin.indexOf('staging') >= 0 ? 'https://staging-open.listenai.com' : 'https://open.listenai.com');
     },
   };
 })();
