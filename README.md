@@ -70,12 +70,12 @@
 ## 详细维护
 > 针对较大范围的文档内容新增、优化、修复。
 
-参考：[详细维护教程](https://www.tapd.cn/43138663/documents/show/1143138663001002430#target:toc15)
+参考[详细维护教程](https://www.tapd.cn/43138663/documents/show/1143138663001002430#target:toc15)
 
 ## FAQ
 
-[8.13号后推送、拉取失败解决方案](https://blog.csdn.net/weixin_41010198/article/details/119698015)
-[如何在提交commit时关联issue](https://www.kancloud.cn/thinkphp/github-tips/37883)
+- [8.13号后推送、拉取失败解决方案](https://blog.csdn.net/weixin_41010198/article/details/119698015)
+- [如何在提交commit时关联issue](https://www.kancloud.cn/thinkphp/github-tips/37883)
 
 ## 贡献
 欢迎开发者参与文档的贡献，不限于实现业务时遇到各种各样的问题，对应的解决方案和FAQ，以及创新参考。
