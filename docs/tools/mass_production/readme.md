@@ -22,7 +22,7 @@ sidebar_position: 1
 
     [USB转串口底板2.1](https://www.aifuwus.com/onstage/cmddetail?product_type=2672)
 
-    [芯片烧录座子板2.1](https://www.aifuwus.com/onstage/cmddetail?product_type=2672)
+    [芯片烧录座子板2.1](https://www.aifuwus.com/onstage/cmddetail?product_type=2768)
 
 
 ## 网页辅助小工具
