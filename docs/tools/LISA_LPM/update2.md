@@ -23,3 +23,19 @@ lisa -v
 - 登录
 
     lisa v2.0 版本需要进行登录，当然登录会非常简易，只需要执行下登录命令即可，可查看[文档](./instance/login)。
+
+- csk工程项目
+
+    lisa v2.0 对于task的绑定优化，@generator/csk的引用存在非兼容的变更。
+
+    当升级了lisa 到v2.0版本后，执行`lisa build`出现如下情况:
+
+    ![](./files/update/1.png)
+
+    解决办法：
+    
+    1、打开项目中的package.json, 找到 @generator/csk ，并修改为 "@generator/csk": "^2", 修改后保存。
+
+    2、删除项目中的yarn.lock，然后执行 `lisa install`。
+
+    3、执行 `lisa build` 即可。
