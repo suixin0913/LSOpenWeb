@@ -72,17 +72,17 @@
 
 参考[详细维护教程](https://www.tapd.cn/43138663/documents/show/1143138663001002430#target:toc15)
 
-## FAQ
+# FAQ
 
 - [8.13号后推送、拉取失败解决方案](https://blog.csdn.net/weixin_41010198/article/details/119698015)
 - [如何在提交commit时关联issue](https://www.kancloud.cn/thinkphp/github-tips/37883)
 
-## 贡献
+# 贡献
 欢迎开发者参与文档的贡献，不限于实现业务时遇到各种各样的问题，对应的解决方案和FAQ，以及创新参考。
 
 有贡献需求，可通过`issue`指派`zainosl`或者邮箱`zwliu@listenai.com`联系聆思工作人员。
 
 
-## ReleaseNote
+# ReleaseNote
 每个版本以及迁移说明都记录在GitHub的[ReleaseNote](https://github.com/LISTENAI/LSOpenWeb/releases)页面上。
 
