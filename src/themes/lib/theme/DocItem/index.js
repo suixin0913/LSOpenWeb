@@ -121,7 +121,9 @@ function DocItem(props) {
             <_GitalkComment.default />
           </div>
         </div>
-        {!hideTableOfContents && DocContent.toc && <div className="col col--3">
+        {!hideTableOfContents && DocContent.toc && <div className="col col--3" style={{
+        paddingLeft: '0px'
+      }}>
             <_TOC.default toc={DocContent.toc} />
           </div>}
       </div>

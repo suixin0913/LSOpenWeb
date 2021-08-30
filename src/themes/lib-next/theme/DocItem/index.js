@@ -107,7 +107,11 @@ function DocItem(props) {
           </div>
         </div>
         {!hideTableOfContents && DocContent.toc && (
-          <div className="col col--3">
+          <div
+            className="col col--3"
+            style={{
+              paddingLeft: '0px',
+            }}>
             <TOC toc={DocContent.toc} />
           </div>
         )}

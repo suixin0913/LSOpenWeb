@@ -203,12 +203,12 @@ html[data-theme='dark'] {
 }
 
 .row .col {
-  padding: 0 24px;
+  padding: 0 48px;
 }
-
+/* 
 .center-container {
   margin-left: 24px;
-}
+} */
 
 .medium-zoom-overlay {
   background: rgba(0,0,0, .5) !important;
@@ -224,6 +224,7 @@ html[data-theme='dark'] {
     margin-left: 0;
   }
   .row .col.col.col {
+    padding: 0 24px;
     --ifm-col-width: 100%;
     flex-basis: var(--ifm-col-width);
     margin-left: 0;
