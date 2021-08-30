@@ -55,7 +55,7 @@ Turnkey 方案提供集成了裁剪与产测校准算法的 **CSK 固件**（联
 
 | 文件             | 说明                                                    | 更新时间   | 操作                                                         |
 | ---------------- | ------------------------------------------------------- | ---------- | ------------------------------------------------------------ |
-| 隐式授权接口     | 通过隐式授权的方式，使设备通过iFLYOS云端鉴权            | 2021.08.09 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%89%AB%E6%8F%8F%E7%AC%94%2F%E6%95%B4%E6%9C%BA%E6%B5%8B%E8%AF%95%2F%E6%89%AB%E6%8F%8F%E7%AC%94%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%96%B9%E6%A1%88v1.0.2.pdf) |
+| 隐式授权接口     | 通过隐式授权的方式，使设备通过iFLYOS云端鉴权            | 2021.08.09 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%89%AB%E6%8F%8F%E7%AC%94%2F%E4%B8%8A%E4%BD%8D%E6%9C%BA%2FiFLYOS%E9%9A%90%E5%BC%8F%E6%8E%88%E6%9D%83%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.pdf) |
 | 扫描笔webAPI接口 | 包括请求OCR、口语评测、翻译的标准协议，以及词典接口调用 | 2021.08.09 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%89%AB%E6%8F%8F%E7%AC%94%2F%E4%B8%8A%E4%BD%8D%E6%9C%BA%2F%E6%89%AB%E6%8F%8F%E7%AC%94webAPI%E6%8E%A5%E5%8F%A3%20-%20iFLYOS.pdf) |
 
 此外，无论是否集成SDK，为保证更快的交互响应速度和更好的用户体验，我们建议在开发上位机固件时，参考以下文档：
