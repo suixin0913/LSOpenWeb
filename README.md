@@ -76,7 +76,7 @@
 参考[文档维护详细教程](https://www.tapd.cn/43138663/documents/show/1143138663001002430#target:toc15)（内部可看）
 
 # FAQ
-
+- [推送失败报：LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 解决方案](https://blog.csdn.net/daerzei/article/details/79528153)
 - [8.13号后推送、拉取失败解决方案](https://blog.csdn.net/weixin_41010198/article/details/119698015)
 - [如何在提交commit时关联issue](https://www.kancloud.cn/thinkphp/github-tips/37883)
 
