@@ -345,7 +345,7 @@ TF 卡镜像中的软件可能已经过时，需要手动更新到最新版本�
 
 ![](./files/对接Mes系统1.png)
 
-- 打开`LISTENAI`-`factory_config`目录下的`load.js`，配置Mes系统请求URL、请求所需参数等信息并保存，如图
+- 打开`LISTENAI`-`factory_config`目录下的`upload.js`，配置Mes系统请求URL、请求所需参数等信息并保存，如图
 
 ![](./files/对接Mes系统2.png)
 
@@ -504,19 +504,23 @@ TF 卡镜像中的软件可能已经过时，需要手动更新到最新版本�
 
   <img
       src={require('./files/蓝灯.png').default}
-      width="24%"
+      width="19%"
       alt="Example banner"
 /><img
       src={require('./files/黄灯.png').default}
-      width="25%"
+      width="20%"
       alt="Example banner"
 /><img
       src={require('./files/红灯.png').default}
-      width="25%"
+      width="20%"
       alt="Example banner"
 /><img
       src={require('./files/绿灯.png').default}
-      width="25%"
+      width="20%"
+      alt="Example banner"
+/><img
+      src={require('./files/异常状态显示.jpg').default}
+      width="19%"
       alt="Example banner"
 />
 
@@ -525,6 +529,7 @@ TF 卡镜像中的软件可能已经过时，需要手动更新到最新版本�
 - 标记"1"黄灯闪烁，表示正在烧录
 -  标记“2”红灯亮起，表示烧录失败
 - 标记“3”绿灯亮起，表示烧录成功
+- 绿灯、蓝灯、红灯一同亮起，表示自检程序或量产固件加载异常，请依照[附：烧录失败原因排查](#附：烧录失败原因排查)进行分析排查
 - 所有灯处于熄灭状态，表示烧录主控程序、自检程序、量产固件异常或树莓派处于关机状态，可以断电
 
 ### 可选：校验固件是否成功烧录
