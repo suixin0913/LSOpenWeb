@@ -29,9 +29,19 @@ CSK烧录器2.1是面向聆思代理商、方案商等合作伙伴，可配合�
 
 ### 1.3 使用方法简介
 
+树莓派上电，待固件加载完成后，按下USB转串口底板上的按键开始烧录，烧录结束后，底板将以红/绿灯显示烧录结果。烧录器框图如下：
+
+<div  align="center"><img
+  src={require('./files/烧录器框图.png').default}
+  width="100%"
+  alt="Example banner"
+/></div>
+
+#### 工厂使用案例
+
 - **芯片烧录**
 
-  ​将树莓派作为烧录器的控制设备，将烧录器搭载于烧录机台上，启动烧录机台。机械臂将芯片放置在烧录座子中，烧录器自动开始烧录。烧录结束后，烧录器将烧录结果通过电平信号传递给机台。接到烧录结果后，机台机械臂自动更换芯片，开始下一轮烧录。详细接线与实现方法请查看[2.3软硬件调试](/tools/mass_production/cskburner#硬件接法)。
+  ​树莓派作为烧录器的控制设备，将烧录器搭载于烧录机台上，启动烧录机台。机械臂将芯片放置在烧录座子中，烧录器自动开始烧录。烧录结束后，烧录器将烧录结果通过电平信号传递给机台。接到烧录结果后，机台机械臂自动更换芯片，开始下一轮烧录。详细接线与实现方法请查看[2.3软硬件调试](/tools/mass_production/cskburner#硬件接法)。
 
 <div  align="center"><img
   src={require('./files/image-20210722173608296.png').default}
@@ -163,7 +173,7 @@ Hub可能会影响烧录稳定性，请谨慎选择，如无特殊需求请按�
 
 - 用读卡器将TF卡插入电脑
 
-- 下载镜像：[raspios-lsfactory.20210803.img.7z](http://pan.iflytek.com:80/#/link/010457DE846A8D7C3E6D8E21AF131BA2) (访问密码：n5Op)，并解压
+- 下载镜像：[raspios-lsfactory.xxxxxxxx.img.7z](http://pan.iflytek.com:80/#/link/010457DE846A8D7C3E6D8E21AF131BA2) (访问密码：n5Op)，并解压
 
 - 使用 `balenaEtcher`（以管理员身份运行）将镜像烧写到 TF 卡
 
@@ -221,11 +231,11 @@ lisa build --factory
 
   - 芯片烧录自检固件
 
-    [101.376MHz.lpk](http://pan.iflytek.com:80/#/link/010457DE846A8D7C3E6D8E21AF131BA2) (访问密码：n5Op) 
+    [101.376MHz-xxxx.lpk](http://pan.iflytek.com:80/#/link/010457DE846A8D7C3E6D8E21AF131BA2) (访问密码：n5Op) 
 
   - 模组烧录自检固件
 
-    [245.760MHz.lpk](http://pan.iflytek.com:80/#/link/010457DE846A8D7C3E6D8E21AF131BA2) (访问密码：n5Op) 
+    [245.760MHz-xxxx.lpk](http://pan.iflytek.com:80/#/link/010457DE846A8D7C3E6D8E21AF131BA2) (访问密码：n5Op) 
 
 **设置自检程序** 
 
@@ -255,6 +265,7 @@ export const Highlight = ({children, color}) => (
   修改示例：
 
 ```txt
+
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 country=CN
 network={
@@ -399,7 +410,7 @@ TF 卡镜像中的软件可能已经过时，需要手动更新到最新版本�
     
     - 可选择接通的引脚：5V（建议外接5V给模组供电）、3.3V、RSTN、START、BUSSY_LED、OK_LED、NG_LED
 
-- **USB转串口板接口说明**
+- **USB转串口底板接口说明**
 
   - 接口1（芯片烧录机台信号线、治具可通过该接口中的引脚与烧录器相连接）：
 
