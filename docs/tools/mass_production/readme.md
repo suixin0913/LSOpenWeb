@@ -18,7 +18,7 @@ sidebar_position: 1
 
 - 按照本指引文档配置软硬件：[CSK烧录器](/tools/mass_production/cskburner)。
 
-- 点击以下跳转链接直接购买USB转串口板与芯片烧录座子板
+- 如时间紧急，无法自助打板，可点击以下跳转链接直接购买USB转串口板与芯片烧录座子板
 
     [USB转串口底板2.1](https://www.aifuwus.com/onstage/cmddetail?product_type=2672)
 
