@@ -53,11 +53,13 @@
 
 # 文档意见反馈
 
-- 在[文档中心](https://docs.listenai.com/)的每篇文档下，都有反馈入口，填写你的反馈内容将会自动在该项目下创建一条指派给聆思工作人员的issue。
-- 你也可以直接仓库提交issue对文档内容问题、需求进行反馈，完成内容的书写后，请指派聆思工作人员账号`zainosl`。
-![image](https://user-images.githubusercontent.com/48555232/130925791-8ede117b-3f78-4619-8f05-5e81d1858b9c.png)
+在[文档中心](https://docs.listenai.com/)的每篇文档下，都可以填写你的反馈，反馈内容提交后将会自动创建一条issue，指派聆思工作人员。
 
-> 文档反馈后，聆思工作人员将会审核你的反馈，并在issue中做回复。
+> 你也可以在仓库直接提交issue，issue请指派聆思工作人员账号`zainosl`。
+
+文档反馈后，聆思工作人员将会审核你的反馈，并在issue中做回复。
+
+![image](https://user-images.githubusercontent.com/48555232/130925791-8ede117b-3f78-4619-8f05-5e81d1858b9c.png)
 
 # 文档维护指南
 
