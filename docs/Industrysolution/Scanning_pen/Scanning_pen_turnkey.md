@@ -39,7 +39,7 @@ Turnkey 方案提供集成了裁剪与产测校准算法的 **CSK 固件**（联
 
 ### 1.集成上位机SDK
 
-为了帮助开发者快速接入 iFLYOS，Turnkey 方案提供了基于 [LISA API](https://open.listenai.com/resource/open/doc_resource%2F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%2FLISA%20API%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C.pdf) 实现的应用层 SDK， 功能包括：
+为了帮助开发者快速接入 iFLYOS，Turnkey 方案提供了基于 [LISA API](https://open.listenai.com/resource/open/doc_resource%2F%E6%89%AB%E6%8F%8F%E7%AC%94%2F%E4%B8%8A%E4%BD%8D%E6%9C%BA%2FLISA%20API%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8CV1.3.pdf) 实现的应用层 SDK， 功能包括：
 
 - 可直连 iFLYOS，无需另外实现鉴权逻辑；
 - 可使用云端的 OCR、翻译、词典、语音交互等能力；
