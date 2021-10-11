@@ -158,6 +158,10 @@ module.exports = {
             to: "/Industrysolution/Scanning_pen/Scanning_pen_turnkey",//跳转哪个目录
             label: '扫描笔',
           },
+          {
+            to: "/Industrysolution/Conference_calling_solutions/Quick_start/Scheme_introduction",//跳转哪个目录
+            label: '通话降噪',
+          },
         ],
       },
       {
