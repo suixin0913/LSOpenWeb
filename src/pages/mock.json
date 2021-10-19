@@ -220,11 +220,11 @@
                     "pipes": [
                         {
                             "label": "概览",
-                            "to": "/Industrysolution/Scanning_pen/Scanning_pen_turnkey"
+                            "to": "/Industrysolution/Scanning_pen/Scheme_introduction"
                         },
                         {
-                            "label": "笔头模组设计",
-                            "to": "/Industrysolution/Scanning_pen/Scanning_pen_turnkey#笔头模组"
+                            "label": "硬件开发",
+                            "to": "/Industrysolution/Scanning_pen/Scanning_pen_turnkey#硬件开发"
                         },
                         {
                             "label": "上位机开发",
