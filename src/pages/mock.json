@@ -239,8 +239,31 @@
                             "to": "/Industrysolution/Scanning_pen/Scanning_pen_turnkey#产测方案"
                         }
                     ]
-
-                    
+                },
+                {
+                    "icon": {
+                        "src": "img/h_interact_light.svg",
+                        "srcDark": "img/h_interact_dark.svg"
+                    },
+                    "title": "通话降噪 Turnkey 方案",
+                    "pipes": [
+                        {
+                            "label": "快速入门",
+                            "to": "/Industrysolution/Conference_calling_solutions/Quick_start/Scheme_introduction"
+                        },
+                        {
+                            "label": "硬件设计",
+                            "to": "/Industrysolution/Conference_calling_solutions/Hardwaredevelopment/hardware_guide"
+                        },
+                        {
+                            "label": "创建项目",
+                            "to": "/Industrysolution/Conference_calling_solutions/softwaredevelopment/create_project"
+                        },
+                        {
+                            "label": "效果调优",
+                            "to":"/Industrysolution/Conference_calling_solutions/Optimization/auto_optimize"
+                        }
+                    ]
                 }
             ]
         }
