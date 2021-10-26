@@ -16,7 +16,7 @@ title: 命令行工具包
 
 假设当前我有一个在windows下播放音频的命令行可执行工具。
 
-### 1、执行命令行工具包发布命令。
+### 1、执行命令行工具包发布命令
 
 ```sh
 lisa tools publish
@@ -72,7 +72,11 @@ audioplayer
 
 ![](../files/tools/tools_publish6.png)
 
-### 8、发布！
+### 8、选择你的readme文件
+
+会弹出系统的文件选择器，选择你已经写好的README.md文件即可。
+
+### 9、发布！
 
 这一步等待发布就可以了~
 
