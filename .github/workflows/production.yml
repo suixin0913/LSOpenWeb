@@ -21,6 +21,7 @@ jobs:
         env:
           USE_SSH: true
           GIT_USER: git
+          DEPLOY_ENV: prod
         run: |
           cp static/CNAME_PROD static/CNAME
           sed -i "s/projectName: 'LSOpenWeb'/projectName: 'LSOpenWebStatic'/" docusaurus.config.js

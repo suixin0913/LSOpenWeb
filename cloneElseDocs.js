@@ -6,7 +6,16 @@ const os = require('os')
 const DEPLOY_ENV = process.env.DEPLOY_ENV || 'staging'
 const DEPLOYMENT_BRANCH = `docs-${DEPLOY_ENV}`
 const REMOTE_BRANCH_PREFIX = 'git@github.com:LISTENAI/'
-const ELSE_DOCS_LIST = [
+const ELSE_DOCS_LIST = DEPLOY_ENV === 'staging' ? [
+    {
+        projectName: 'lisa-core',
+        targetDir: './docs/tools/LISA_LPM/development/API'
+    },
+    {
+        projectName: 'zephyr-sdk-api-docs',
+        targetDir: './docs/chips/600X/API'
+    }
+] : [
     {
         projectName: 'lisa-core',
         targetDir: './docs/tools/LISA_LPM/development/API'
