@@ -1,28 +1,24 @@
 # 导读
-聆思文档中心（LSOpen）专门提供安徽聆思智能科技有限公司的芯片和方案相关开发资料。
+
+[聆思文档中心（LSOpen）](https://docs.listenai.com/)专门提供安徽聆思智能科技有限公司的芯片和方案相关开发资料。
 
 目前主要由聆思产品团队和开发团队进行维护。
 
-[主页地址](https://docs.listenai.com/)
-
-## 项目主要文件
+# 项目主要文件
 
 - `docs`：当前维护在线上的有效文档，若需改动请参考[文档维护指南](#文档维护指南)。
+  - `start`：一些基础信息。
+  - `chips`：芯片相关资料，如datasheet、规格书等。
+  - `tools`：开发工具的下载和使用教程。
+  - `AIsolution`：AI应用解决方案。
+  - `Industrysolution`：行业（品类）解决方案。
+  - `school`：线上视频课程，不定期更新。
+  - `workorder`：工单入口。
 - `docs_old`：已经不维护的文档，过一段时间会删除。
 - `static`：小文件存放地，如几MB以内的音视频。
 - `docusaurus.config.js`：一二级目录配置。
 - `sidebars.js`：侧边栏配置。
 - `src`：可配置`pages`文件夹下`mock.json`自定义首页，其他文档贡献者和维护者无需关心。
-
-## `docs`目录结构
-
-- `start`：一些基础信息。
-- `chips`：芯片相关资料，如datasheet、规格书等。
-- `tools`：开发工具的下载和使用教程。
-- `AIsolution`：AI应用解决方案。
-- `Industrysolution`：行业（品类）解决方案。
-- `school`：线上视频课程，不定期更新。
-- `workorder`：工单入口。
 
 # 文档上线流程
 
@@ -78,9 +74,24 @@
 参考[文档维护详细教程](https://www.tapd.cn/43138663/documents/show/1143138663001002430#target:toc15)（内部可看）
 
 # FAQ
-- [推送失败报：LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 解决方案](https://blog.csdn.net/daerzei/article/details/79528153)
-- [8.13号后推送、拉取失败解决方案](https://blog.csdn.net/weixin_41010198/article/details/119698015)
+**克隆、推送失败，建议重启终端/客户端、试多几次，重启可以解决90%的问题。** 
+
+或者，联系 `@刘钟蔚` or `@赵卓斌` 检查账号权限。
+
+若非重启和权限问题，可根据不同的报错，找到对应的解决方案：
+- 错误：LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443
+  - [方案1：可尝试删除http代理](https://blog.csdn.net/daerzei/article/details/79528153) ，
+  - 若不行可尝试[方案2：修改SSL](https://blog.hyperzsb.tech/git-ssl-error/#%E4%BD%BF%E7%94%A8-https-%E4%BB%A3%E7%90%86)。
+  - 推荐优先使用终端，输入命令行进行推送，更加稳定。
+- 错误：remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+  - github开发搞事情，[解决方案](https://blog.csdn.net/weixin_41010198/article/details/119698015)
+
+依旧有问题，可联系`@刘钟蔚`。
+
+# 使用小技巧
+- [本地创建分支，然后推送到远程](https://blog.csdn.net/ljj_9/article/details/79386306) 或者 [方法2](https://segmentfault.com/a/1190000022351507)
 - [如何在提交commit时关联issue](https://www.kancloud.cn/thinkphp/github-tips/37883)
+
 
 # 贡献
 欢迎开发者参与文档的贡献，不限于实现业务时遇到各种各样的问题，对应的解决方案和FAQ，以及创新参考。

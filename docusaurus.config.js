@@ -52,7 +52,7 @@ module.exports = {
           position: 'left'
         },
         {
-          to: '/Industrysolution/Scanning_pen/Scanning_pen_turnkey',
+          to: '/Industrysolution/Scanning_pen/Scheme_introduction',
           label: '行业解决方案',
           position: 'left'
         },
@@ -156,8 +156,12 @@ module.exports = {
         dirName: '/Industrysolution',//对应的一级目录
         items: [
           {
-            to: "/Industrysolution/Scanning_pen/Scanning_pen_turnkey",//跳转哪个目录
+            to: "/Industrysolution/Scanning_pen/Scheme_introduction",//跳转哪个目录
             label: '扫描笔',
+          },
+          {
+            to: "/Industrysolution/Conference_calling_solutions/Quick_start/Scheme_introduction",//跳转哪个目录
+            label: '通话降噪',
           },
         ],
       },
@@ -283,7 +287,7 @@ module.exports = {
     // ],
     // // ... Your other plugins.
     'listenai-analytics',
-    'listenai-kf',
+    // 'listenai-kf',
     'plugin-image-zoom',
   ],
 };
