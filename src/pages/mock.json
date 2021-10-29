@@ -219,7 +219,7 @@
                     "title": "扫描笔 Turnkey 方案",
                     "pipes": [
                         {
-                            "label": "概览",
+                            "label": "方案介绍",
                             "to": "/Industrysolution/Scanning_pen/Scheme_introduction"
                         },
                         {
