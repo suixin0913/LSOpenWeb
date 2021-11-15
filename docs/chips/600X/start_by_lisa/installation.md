@@ -10,7 +10,7 @@ sidebar_position: 1
 2、全局安装lisa和yarn（当前为beta版）
 
 ```shell
-npm install @listenai/lisa@beta -g
+npm install @listenai/lisa@beta -g --registry=https://registry.npmjs.org
 ```
 
 ```shell
