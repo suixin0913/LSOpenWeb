@@ -11,6 +11,9 @@ sidebar_position: 1
 
 ```shell
 npm install @listenai/lisa@beta -g
+```
+
+```shell
 npm install yarn -g
 ```
 
