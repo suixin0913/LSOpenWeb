@@ -10,38 +10,43 @@ sidebar_position: 1
 2、全局安装lisa和yarn（当前为beta版）
 
 ```shell
-npm install @listenai/lisa@beta -g --registry=https://registry.npmjs.org
+> npm install yarn @listenai/lisa@beta -g --registry=https://registry.npmjs.org
 ```
 
 ```shell
-npm install yarn -g
+> npm install yarn -g
 ```
 
 现在，运行下lisa的命令看看吧～
 
 ```shell
-lisa -v
+> lisa -v
+@listenai/lisa/2.1.0-beta.11 win32-x64 node-v16.13.0
 ```
 
 3、尝试登录你的聆思账号~
 
 ```shell
-lisa login
+> lisa login
 ```
 
 ### 安装Zephyr扩展包
 
 执行lisa命令，一键安装Zephyr扩展包，该扩展包会自动根据本机系统，搭建对应的所需环境
 
+首次安装该扩展包时间会稍长，请耐心等待。
+
 ```shell
-lisa install @lisa-plugin/zephyr -g
+> lisa install @lisa-plugin/zephyr -g
 ```
 
 来查看下当前的zephyr环境吧~
 
 ```shell
-lisa info zephyr
+> lisa info zephyr
 ```
+
+![](../files/1.png)
 
 :::success
 

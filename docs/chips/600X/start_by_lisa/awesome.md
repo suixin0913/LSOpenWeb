@@ -6,8 +6,22 @@ sidebar_position: 2
 ### 设置sdk
 
 ```shell
-lisa zep use-sdk [path]
+> lisa zep use-sdk [sdk_path]
 ```
+
+__解析__
+
+__sdk_path__: ZEPHYR_BASE，需要自行从github拉取 或 拉取聆思的sdk
+
+```shell
+// 官方zephyr github地址: https://github.com/zephyrproject-rtos/zephyr/tree/main
+
+> mkdir my-zephyr-sdk
+> git clone https://github.com/zephyrproject-rtos/zephyr.git ./my-zephyr-sdk
+> lisa zep use-sdk ./my-zephyr-sdk
+```
+
+![](../files/2.png)
 
 ### 设置编译环境
 
