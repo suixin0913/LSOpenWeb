@@ -23,6 +23,18 @@ __sdk_path__: ZEPHYR_BASE，需要自行从github拉取 或 拉取聆思的sdk
 
 ![](../files/2.png)
 
+:::caution 注意
+
+若该sdk是首次use，use-sdk后需要执行初始化
+
+:::
+
+```shell
+// 初始化sdk
+
+> lisa zep west init
+```
+
 ### 设置编译环境
 
 ```shell
@@ -42,6 +54,14 @@ __esp32-c3__ [@lisa-env/esp32-c3](https://lpm.listenai.com/lpm/info?keyword=%40l
 ```shell
 lisa zep use-env esp32-c3
 ```
+
+![](../files/3.png)
+
+:::caution 注意
+
+部分环境在首次use-env后，需要进行west update
+
+:::
 
 ### 固件编译
 
