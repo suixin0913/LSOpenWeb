@@ -5,20 +5,6 @@ sidebar_position: 3
 
 # 扫描笔云端协议接口说明
 
-``` mermaid
-sequenceDiagram
-A-->A: 文本1
-A->>B: 文本2
-loop 循环1
-loop 循环2
-A->B: 文本3
-end
-loop 循环3
-B -->>A: 文本4
-end
-B -->> B: 文本5
-end
-```
 
 ## 更新记录
 
