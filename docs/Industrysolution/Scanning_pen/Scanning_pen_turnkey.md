@@ -51,7 +51,7 @@ sidebar_position: 2
 
 ### 方案1：接入扫描笔LISA SDK，适配平台底层驱动后可运行整体方案业务
 
-为了帮助开发者快速接入 iFLYOS，Turnkey 方案提供了基于 [LISA API](https://open.listenai.com/resource/open/doc_resource%2F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%2FLISA%20API%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C.pdf) 实现的应用层扫描笔LISA SDK。
+为了帮助开发者快速接入 iFLYOS，Turnkey 方案提供了基于 [LISA API](https://open.listenai.com/resource/open/doc_resource%2F%E6%89%AB%E6%8F%8F%E7%AC%94%2F%E4%B8%8A%E4%BD%8D%E6%9C%BA%2FLISA%20API%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8CV1.3.pdf) 实现的应用层扫描笔LISA SDK。
 
 聆思扫描笔SDK的设计宗旨为分层架构，从上往下共包括四层：
 - 应用层
@@ -75,13 +75,10 @@ sidebar_position: 2
 
 若开发者不便集成 SDK，聆思也提供了云端扫描笔业务接口，帮助开发者实现云端在线能力。
 
-| 提供内容 | 获取方式 | 
-| ---- | --- |
-| 《隐式授权接口》 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%89%AB%E6%8F%8F%E7%AC%94%2F%E6%95%B4%E6%9C%BA%E6%B5%8B%E8%AF%95%2F%E6%89%AB%E6%8F%8F%E7%AC%94%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%96%B9%E6%A1%88v1.0.2.pdf) | 
-| 《扫描笔webAPI接口》 | 联系商务获取 | 
-
-
-
+| 文件             | 说明                                                    | 更新时间   | 操作                                                         |
+| ---------------- | ------------------------------------------------------- | ---------- | ------------------------------------------------------------ |
+| 隐式授权接口     | 通过隐式授权的方式，使设备通过iFLYOS云端鉴权            | 2021.08.09 | [下载](https://open.listenai.com/resource/open/doc_resource%2F%E6%89%AB%E6%8F%8F%E7%AC%94%2F%E4%B8%8A%E4%BD%8D%E6%9C%BA%2FiFLYOS%E9%9A%90%E5%BC%8F%E6%8E%88%E6%9D%83%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.pdf) |
+| 扫描笔webAPI接口 | 包括请求OCR、口语评测、翻译的标准协议，以及词典接口调用 | 2021.11.22 | [查看](https://docs.listenai.com/Industrysolution/Scanning_pen/webapi) |
 ## 整机测试
 
 整机开发完成后，无论是正式出货前，还是后续每次固件更新迭代，都需要进行整机性能测试，确保固件可用性；为此，聆思根据扫描笔手持滑动的特性，以**机械臂**为工具载体，输出**《扫描笔自动化测试方案》**，⼤幅提升测试效率，加快发版速度。
