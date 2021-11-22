@@ -12,6 +12,7 @@ import LastUpdated from '@theme/LastUpdated';
 import TOC from '@theme/TOC';
 import EditThisPage from '@theme/EditThisPage';
 import {MainHeading} from '@theme/Heading';
+import GitalkComment from '@theme/GitalkComment';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 import {useActivePlugin, useVersions} from '@theme/hooks/useDocs';
@@ -102,10 +103,15 @@ function DocItem(props) {
             </article>
 
             <DocPaginator metadata={metadata} />
+            <GitalkComment />
           </div>
         </div>
         {!hideTableOfContents && DocContent.toc && (
-          <div className="col col--3">
+          <div
+            className="col col--3"
+            style={{
+              paddingLeft: '0px',
+            }}>
             <TOC toc={DocContent.toc} />
           </div>
         )}

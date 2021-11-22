@@ -21,6 +21,8 @@ var _EditThisPage = _interopRequireDefault(require("@theme/EditThisPage"));
 
 var _Heading = require("@theme/Heading");
 
+var _GitalkComment = _interopRequireDefault(require("@theme/GitalkComment"));
+
 var _clsx = _interopRequireDefault(require("clsx"));
 
 var _stylesModule = _interopRequireDefault(require("./styles.module.css"));
@@ -116,9 +118,12 @@ function DocItem(props) {
             </article>
 
             <_DocPaginator.default metadata={metadata} />
+            <_GitalkComment.default />
           </div>
         </div>
-        {!hideTableOfContents && DocContent.toc && <div className="col col--3">
+        {!hideTableOfContents && DocContent.toc && <div className="col col--3" style={{
+        paddingLeft: '0px'
+      }}>
             <_TOC.default toc={DocContent.toc} />
           </div>}
       </div>

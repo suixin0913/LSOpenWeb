@@ -19,7 +19,9 @@ https://www.tapd.cn/65128374/prong/stories/view/1165128374001011213 -->
 
 ### 1.1 Datasheet 与引脚列表
 
-为了避免硬件设计与芯片功能不匹配，软件工程师**务必要**与硬件工程师先明确清楚**引脚的选用与对应支持的功能**。芯片 Datasheet 是你们沟通需求的重要材料，可前往 http://open.listenai.com/chips 进行下载。
+为了避免硬件设计与芯片功能不匹配，软件工程师**务必要**与硬件工程师先明确清楚**引脚的选用与对应支持的功能**。芯片 Datasheet 是你们沟通需求的重要材料，可提前查阅：
+- [Datasheet](https://open.listenai.com/resource/open/doc_resource%2FCSK%20Datasheet%2FCastor4002%20datasheet%20V2.3(chipsky%20version).pdf)
+- [SDKchecklist](https://open.listenai.com/resource/open/doc_resource%2F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%2FCSK%20SDK%E5%BC%80%E5%8F%91checklistV1.0.xlsx)
 
 **引脚列表**
 
@@ -93,7 +95,7 @@ https://www.tapd.cn/65128374/prong/stories/view/1165128374001011213 -->
 
 ### 1.2 设计规则
 
-1. 通常 **MUX0** 列表示为 PA$  或 PB$ 的 PIN 都可以给用户自由配置,但有若干例外：
+1. 通常 **MUX0** 列表示为 PA  或 PB 的 PIN 都可以给用户自由配置,但有若干例外：
 
     * PIN 49/50 (PB5/PB6) 用来接喇叭，且只有它能接喇叭，所以通常不会用来做别的用途
     * PIN 6/7/8/39/40/41 **不可用**
@@ -103,12 +105,12 @@ https://www.tapd.cn/65128374/prong/stories/view/1165128374001011213 -->
 
 2. 对于上面所说的每一个可自由配置的 PIN，都可以将它配置为 MUX0 ~ MUX4 中的任一功能。但反过来，一个功能只能由一个 PIN 实现（互斥，比如不可以同时把两个 PIN 都配置为 TXD2）
 
-3. 上表中的 PA$ 和 PB$（通常是 MUX0，有例外）表示作为普通 GPIO 使用；其余 TXD$、I2C$、PWM$ 等表示作为这些特定协议的引脚使用（下面详细解释）
+3. 上表中的 PA 和 PB（通常是 MUX0，有例外）表示作为普通 GPIO 使用；其余 TXD、I2C、PWM 等表示作为这些特定协议的引脚使用（下面详细解释）
 
 4. 对于作为普通 GPIO 使用时，有如下参数：
     * `dir` 表示方向，为 `true` 表示输出；为 `false` 表示输入
     * `def` 表示默认值，为 `true` 表示默认高电平；为 `false` 表示默认低电平
-    * `rev` 表示电平和值的对应关系；为 `false` 表示低电平有效（即写入 `1` 输出低电平，或输入低电平时读出 `1`，反之亦然）；反之亦然
+    * `rev` 表示电平和值的对应关系；为 `false` 表示低电平有效（即写入 `1` 输出低电平，或输入低电平时读出 `1`），为`true`表示高电平有效。
 
 5. 对于作为特定协议的引脚使用时，有如下规则：
     * 通常使用 PB17/PB10/PA27/PB9/PB15 中的任意一个作为调试日志输出的 TXD 使用
@@ -138,7 +140,7 @@ https://www.tapd.cn/65128374/prong/stories/view/1165128374001011213 -->
 
 在创建 CSK 项目后，你可以在项目中找到用于配置引脚的 hardware.lini，具体路径是：
 
-`./config/environment/hardware.lini`
+`./config/hardware.lini`
 
 ## 3.lini 语法简介
 

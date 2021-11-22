@@ -17,12 +17,29 @@
     "@docusaurus/preset-classic": "2.0.0-beta.2",
     "@easyops-cn/docusaurus-search-local": "^0.18.1",
     "@mdx-js/react": "^1.6.21",
+    "ant-design": "^1.0.0",
+    "antd": "^3.26.20",
+    "autosize": "^5.0.1",
     "axios": "^0.21.1",
     "clsx": "^1.1.1",
+    "codemirror": "^5.62.2",
+    "enzyme": "^3.11.0",
+    "gitalk": "^1.7.2",
+    "github-markdown-css": "^4.0.0",
+    "listenai-analytics": "file:src/plugin/listenai-analytics",
+    "listenai-kf": "file:src/plugin/listenai-kf",
+    "lodash": "^4.17.21",
+    "marked": "^3.0.0",
+    "node-polyglot": "^2.4.2",
     "nodejieba": "2.5.2",
-    "lstenai-analytics": "file:src/plugin/lstenai-analytics",
+    "plugin-image-zoom": "github:ataft/plugin-image-zoom",
+    "prismjs": "^1.24.1",
+    "raw-loader": "^4.0.2",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "sinon": "^11.1.2",
+    "yt-emoji-picker": "^1.1.2",
+    "yt-simplemde-editor": "^3.2.2"
   },
   "browserslist": {
     "production": [
@@ -35,5 +52,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }

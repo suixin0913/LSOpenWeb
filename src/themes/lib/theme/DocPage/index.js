@@ -138,7 +138,7 @@ function DocPageContent({
         <main className={(0, _clsx.default)(_stylesModule.default.docMainContainer, {
         [_stylesModule.default.docMainContainerEnhanced]: hiddenSidebarContainer || !sidebar
       })}>
-          <div className={(0, _clsx.default)('container padding-top--md padding-bottom--lg', _stylesModule.default.docItemWrapper, {
+          <div className={(0, _clsx.default)('container padding-top--md padding-bottom--lg center-container', _stylesModule.default.docItemWrapper, {
           [_stylesModule.default.docItemWrapperEnhanced]: hiddenSidebarContainer
         })}>
             <_react2.MDXProvider components={_MDXComponents.default}>{children}</_react2.MDXProvider>

@@ -18,7 +18,8 @@ module.exports = {
       logo: {
         href: '/',
         alt: 'LSOpen Logo',
-        src: 'img/logo.png'
+        src: 'img/logo_light.svg',
+        srcDark: 'img/logo_dark.svg',
       },
       items: [
 //        {
@@ -210,7 +211,8 @@ module.exports = {
       // style: 'dark',
       links: [],
       copyright: `Copyright © 安徽聆思智能科技有限公司皖ICP备05001217号`,
-    }
+    },
+    zoomSelector: '.markdown :not(em) > img',
   },
   presets: [
     [
@@ -228,7 +230,7 @@ module.exports = {
         theme: {
           customCss: [
             require.resolve('./src/css/custom.css'),
-            require.resolve('./src/css/customMd.css')
+            require.resolve('./src/css/customMd.css'),
           ],
         },
       },
@@ -284,6 +286,8 @@ module.exports = {
     //   {},
     // ],
     // // ... Your other plugins.
-    // 'lstenai-analytics',
+    'listenai-analytics',
+    // 'listenai-kf',
+    'plugin-image-zoom',
   ],
 };

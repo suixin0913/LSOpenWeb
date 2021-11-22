@@ -40,7 +40,6 @@ const Logo = props => {
   } = (0, _useDocusaurusContext.default)();
   const {
     imageClassName,
-    titleClassName,
     ...propsRest
   } = props;
   const logoLink = (0, _useBaseUrl.default)(logo.href || '/');
@@ -52,7 +51,9 @@ const Logo = props => {
     target: logo.target
   }}>
       {logo.src && <_ThemedImage.default key={isClient} className={imageClassName} sources={sources} alt={logo.alt || navbarTitle || title} />}
-      {navbarTitle != null && <b className={titleClassName}>{navbarTitle}</b>}
+      {
+      /* {navbarTitle != null && <b className={titleClassName}>{navbarTitle}</b>} */
+    }
     </_Link.default>;
 };
 

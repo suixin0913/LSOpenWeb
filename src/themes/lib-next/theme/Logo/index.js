@@ -25,7 +25,7 @@ const Logo = (props) => {
     },
     isClient,
   } = useDocusaurusContext();
-  const {imageClassName, titleClassName, ...propsRest} = props;
+  const {imageClassName, ...propsRest} = props;
   const logoLink = useBaseUrl(logo.href || '/');
   const sources = {
     light: useBaseUrl(logo.src),
@@ -46,7 +46,7 @@ const Logo = (props) => {
           alt={logo.alt || navbarTitle || title}
         />
       )}
-      {navbarTitle != null && <b className={titleClassName}>{navbarTitle}</b>}
+      {/* {navbarTitle != null && <b className={titleClassName}>{navbarTitle}</b>} */}
     </Link>
   );
 };

@@ -17,7 +17,9 @@ https://www.tapd.cn/65128374/prong/stories/view/1165128374001011213 -->
 
 ### 1.1 Datasheet 与引脚列表
 
-为了避免硬件设计与芯片功能不匹配，软件工程师**务必要**与硬件工程师先明确清楚**引脚的选用与对应支持的功能**。芯片 Datasheet 是你们沟通需求的重要材料，可前往 http://open.listenai.com/datasheet 进行下载。
+为了避免硬件设计与芯片功能不匹配，软件工程师**务必要**与硬件工程师先明确清楚**引脚的选用与对应支持的功能**。请提前查阅以下相关资料：
+- [芯片Datasheet](https://open.listenai.com/resource/open/doc_resource%2FCSK%20Datasheet%2FCastor4002%20datasheet%20V2.3(chipsky%20version).pdf)
+- [SDKchecklist](https://open.listenai.com/resource/open/doc_resource%2F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%2FCSK%20SDK%E5%BC%80%E5%8F%91checklistV1.0.xlsx)
 
 **引脚列表**
 

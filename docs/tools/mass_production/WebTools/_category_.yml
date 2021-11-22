@@ -1,5 +1,5 @@
 label: '辅助小工具'
 # 排序
-position: 4
+position: 3
 # 是否默认展开
-# collapsed: false 
+collapsed: false 

@@ -27,7 +27,7 @@ sidebar_position: 3
 
 ### 开发环境搭建
 
-- 详细内容见[XRADIO_Quick_Start_Guide-CN.pdf](/) 1.1、1.2、1.3章节
+- 详细内容见[XRADIO_Quick_Start_Guide-CN.pdf](https://docs.xradiotech.com/zh/latest/download/4.SDK/document/XRADIO_Quick_Start_Guide-CN.pdf) 1.1、1.2、1.3章节
 
 ### 编译工具链地址
 
@@ -42,7 +42,7 @@ sidebar_position: 3
 
 #### 编译
 
-- 详细内容见[XRADIO_Quick_Start_Guide-CN.pdf](/) 2章节sdk编译
+- 详细内容见[XRADIO_Quick_Start_Guide-CN.pdf](https://docs.xradiotech.com/zh/latest/download/4.SDK/document/XRADIO_Quick_Start_Guide-CN.pdf) 2章节sdk编译
 
 #### 编译示例
 
