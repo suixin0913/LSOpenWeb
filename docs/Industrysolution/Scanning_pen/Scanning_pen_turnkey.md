@@ -1,3 +1,8 @@
+---
+sidebar_label: Turnkey介绍
+sidebar_position: 2
+---
+
 # 扫描笔Turnkey方案说明
 
 为帮助开发者快速落地自己的扫描笔产品，聆思推出扫描笔Turnkey（一站式）解决方案；
