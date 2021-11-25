@@ -1,6 +1,5 @@
 ---
 title: node环境搭建
-sidebar_position: 1
 ---
 
 ### Windows

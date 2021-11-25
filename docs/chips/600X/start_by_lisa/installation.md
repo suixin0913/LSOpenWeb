@@ -1,49 +1,44 @@
 ---
-title: 基于Lisa的Zephyr环境搭建
+title: 获取Zephyr扩展
 sidebar_position: 1
 ---
 
 ### 搭建Lisa环境
 
-1、确保你安装了较新版本的Node.js。打开[node官网](https://nodejs.org/zh-cn/)，根据自身系统平台，选择**长期维护版(LTS)16.13.0**进行下载安装。
+:::info
 
-2、全局安装lisa和yarn（当前为beta版）
+该功能需要Lisa v2.1.0 或以上版本支持，可执行lisa -v命令查看当前版本。
 
-```shell
-> npm install yarn @listenai/lisa@beta -g --registry=https://registry.npmjs.org
-```
+:::
 
-```shell
-> npm install yarn -g
-```
-
-现在，运行下lisa的命令看看吧～
-
-```shell
-> lisa -v
-@listenai/lisa/2.1.0-beta.11 win32-x64 node-v16.13.0
-```
-
-3、尝试登录你的聆思账号~
-
-```shell
-> lisa login
-```
+若未安装Lisa或版本过低，请参考该[文档](/tools/LISA_LPM/installation)，进行安装升级。
 
 ### 安装Zephyr扩展包
+
+:::info
+
+该安装过程需要你已经基于lisa进行登录，可执行lisa login命令进行登录你的聆思账号。
+
+:::
 
 执行lisa命令，一键安装Zephyr扩展包，该扩展包会自动根据本机系统，搭建对应的所需环境
 
 首次安装该扩展包时间会稍长，请耐心等待。
 
 ```shell
-> lisa install @lisa-plugin/zephyr -g
+lisa install @lisa-plugin/zephyr -g
+```
+
+执行该命令可以查看本机安装了的lisa扩展包
+
+```shell
+lisa plugins
 ```
 
 来查看下当前的zephyr环境吧~
 
 ```shell
-> lisa info zephyr
+lisa info zephyr
 ```
 
 ![](../files/1.png)
