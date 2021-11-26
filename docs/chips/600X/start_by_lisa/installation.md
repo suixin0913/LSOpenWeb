@@ -11,7 +11,31 @@ sidebar_position: 1
 
 :::
 
-若未安装Lisa或版本过低，请参考该[文档](/tools/LISA_LPM/installation)，进行安装升级。
+若未安装Lisa或版本过低，请进行安装/升级。
+
+1、确保你安装了较新版本的Node.js。可参考该[文档](/tools/LISA_LPM/node_installation)进行安装。
+
+2、全局安装yarn和lisa。
+
+```shell
+npm install yarn -g
+```
+
+```shell
+npm install @listenai/lisa -g
+```
+
+现在，运行下lisa的命令看看吧~
+
+```shell
+lisa -v
+```
+
+尝试登录你的聆思账号~
+
+```shell
+lisa login
+```
 
 ### 安装Zephyr扩展包
 
