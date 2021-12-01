@@ -13,58 +13,20 @@ sidebar_position: 2
 
 :::
 
-## 获取并设置Zephyr sdk
-
-### 1、获取Zephyr sdk
-
-#### 1.1 初始化
+## 设置Zephyr sdk
 
 ```shell
-lisa zep init ./my-zephyr
-```
-
-__解释__
-
-该命令基于当前执行的路径，创建__my-zephyr__文件夹，并初始化拉取Zephyr官方源代码。
-
-__注意__
-
-若过程中，提示你已经初始化过，在环境变量中已经设置了__ZEPHYR_BASE__，可执行如下命令后，再重新获取Zephyr源代码。
-
-```shell
-lisa zep use-sdk --clear
-```
-#### 1.2 更新
-
-```shell
-cd ./my-zephyr
-
-lisa zep update
+lisa zep use-sdk ./my-zephyr-project --from-git https://github.com/zephyrproject-rtos/zephyr.git#main
 ```
 
 __注意__
 
-该过程会拉取更新依赖，初次update时间较久，请耐心等待。
-
-过程中因网络原因会出现部分依赖update失败，可重新执行__lisa zep update__命令，直至update完全成功。
-
-### 2、设置Zephyr sdk
-
-```shell
-lisa zep use-sdk ./zephyr
-```
+该命令由于内置执行整个sdk设置的链路，设置时间较久，请耐心等待。
 
 __解释__
 
-该命令会进行sdk的设置，并在环境变量中设置__ZEPHYR_BASE__路径。命令示例中的__zephyr__文件夹，为__my-zephyr__中的文件夹。
+该命令基于当前执行的路径，创建__my-zephyr-project__文件夹，并基于__from-git__的git代码仓（示例中为Zephyr官方的代码仓，可以替换为聆思的sdk代码仓），初始化拉取代码，然后进行update和设置sdk，一条命令解决繁琐的配置工作。
 
-:::success
-
-可敲命令__lisa info zephyr__查看，__ZEPHYR_BASE__为你刚设置的sdk路径。
-
-恭喜你，你已经成功完成获取/设置Zephyr sdk。
-
-:::
 
 ## 设置编译环境
 
