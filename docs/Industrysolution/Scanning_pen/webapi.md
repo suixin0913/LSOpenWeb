@@ -1,6 +1,6 @@
 ---
 sidebar_label: 云端协议接口说明
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # 扫描笔云端协议接口说明
