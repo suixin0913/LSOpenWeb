@@ -48,12 +48,12 @@ module.exports = {
         {
           activeBasePath: "/AIsolution",
           to: '/AIsolution/ESR/Quick_start/Scheme_introduction',
-          label: 'AI应用方案',
+          label: 'AI语音应用方案',
           position: 'left'
         },
         {
           to: '/Industrysolution/Scanning_pen/Scheme_introduction',
-          label: '行业解决方案',
+          label: '行业Turnkey解决方案',
           position: 'left'
         },
         {
@@ -161,7 +161,7 @@ module.exports = {
           },
           {
             to: "/Industrysolution/Conference_calling_solutions/Quick_start/Scheme_introduction",//跳转哪个目录
-            label: '通话降噪',
+            label: '会议机',
           },
         ],
       },
