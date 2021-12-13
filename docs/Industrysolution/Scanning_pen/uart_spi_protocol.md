@@ -1038,8 +1038,6 @@ SPI通讯协议用于交互图像、音频、文本数据和参数。该协议�
   </tr>
 </tbody>
 </table>
-
-
 <table class="tg">
 <thead>
   <tr>
