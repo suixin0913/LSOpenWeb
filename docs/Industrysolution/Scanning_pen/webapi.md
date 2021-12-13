@@ -28,6 +28,8 @@ sidebar_position: 4
 | 1.15 | 1. 修正`image_metadata.tokenization`字段 | 刘钟蔚 | 2021.9.18 |
 | 1.16 | **词典查询**的英文单词返回新增`details_us_pronunce`美式发音字段。 | 刘钟蔚 | 2021.9.28 |
 | 1.17 | 更新**口语练习**相关协议和接口说明 | 张毅 | 2021.10.22 |
+| 1.18 | 更新词典**诗词**返回相关协议和接口说明 | 刘钟蔚 | 2021.12.13 |
+
 
 
 
@@ -1102,7 +1104,7 @@ Authorization: Bearer {token}
 | strokes_strokespath            | JSONArray | 每一笔画svg路径                                              |
 | strokes_storkes_medians        | JSONArray | 笔画坐标列表，用于展示每一笔画的动画，参见：https://www.skishore.me/makemeahanzi/ |
 
-#### 中文词语返回示例
+### 中文词语返回示例
 
 ```json
 {
@@ -1216,7 +1218,25 @@ Authorization: Bearer {token}
 | details_story                  | String    | 成语故事              |
 | details_poem                   | JSONArray | 成语相关诗歌          |
 
-#### 英文单词返回示例
+### 中文诗词返回示例
+
+```json
+{
+    "content": "静夜思",
+    "details": [
+        {
+            "poem": [
+                "床前明月光，疑是地上霜。",
+                "举头望明月，低头思故乡。"
+            ]
+        }
+    ],
+    "type": "poem"
+}
+```
+
+
+### 英文单词返回示例
 
 ```json
 {
