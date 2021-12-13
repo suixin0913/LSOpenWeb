@@ -108,8 +108,8 @@
 
     "paragraphs": [
         {
-            "title": "AI应用方案",
-            "desc": "快速上手语音交互等AI应用开发",
+            "title": "AI语音应用方案",
+            "desc": "快速上手语音交互类AI应用开发",
             "cards": [
                 {
                     "icon": {
@@ -208,8 +208,8 @@
             ]
         },
         {
-            "title": "行业解决方案",
-            "desc": "提供Trunkey行业解决方案",
+            "title": "行业Turnkey解决方案",
+            "desc": "提供扫描笔、会议机等品类Turnkey解决方案",
             "cards": [
                 {
                     "icon": {
@@ -245,7 +245,7 @@
                         "src": "img/h_interact_light.svg",
                         "srcDark": "img/h_interact_dark.svg"
                     },
-                    "title": "通话降噪 Turnkey 方案",
+                    "title": "会议机 Turnkey 方案",
                     "pipes": [
                         {
                             "label": "快速入门",
