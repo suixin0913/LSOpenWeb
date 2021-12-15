@@ -29,6 +29,7 @@ sidebar_position: 4
 | 1.16 | **词典查询**的英文单词返回新增`details_us_pronunce`美式发音字段。 | 刘钟蔚 | 2021.9.28 |
 | 1.17 | 更新**口语练习**相关协议和接口说明 | 张毅 | 2021.10.22 |
 | 1.18 | 更新词典**诗词**返回相关协议和接口说明 | 刘钟蔚 | 2021.12.13 |
+| 1.19 | 增加语速设置接口说明 | 刘钟蔚 | 2021.12.15 |
 
 
 
@@ -1496,4 +1497,64 @@ Authorization: Bearer {token}
 | content     | String | 参考回答                    |
 | beg_pos     | String | 朗读开始时间                |
 | end_pos     | String | 朗读结束时间                |
+
+## 语速设置
+
+**endpoint**
+
+https://api.iflyos.cn
+
+**headers**
+
+```http
+Content-Type: application/json
+Authorization: Bearer {token}
+```
+
+token为设备token
+
+### 获取设备语速配置
+
+```
+GET /external/ocr/device/voice_config
+```
+
+#### 响应示例
+
+```json
+{
+    "english": "middle",
+    "mandarin": "slow"
+}
+```
+
+####  响应字段
+
+| 参数名   | 说明                           |
+| -------- | ------------------------------ |
+| english  | 英语语速配置(slow,middle,fast) |
+| mandarin | 中文语速配置(slow,middle,fast) |
+
+### 更新设备语速配置
+
+```
+POST /external/ocr/device/update_voice_config
+```
+
+####  请求参数
+
+| 参数名   | 说明                   | 必填 | 示例    |
+| -------- | ---------------------- | ---- | ------- |
+| language | 语种(english,mandarin) | 是   | english |
+| speed    | 语速(slow,middle,fast) | 是   | fast    |
+
+####  响应示例
+
+```json
+Status: 200 OK
+
+{
+    "message": "更新成功"
+}
+```
 
