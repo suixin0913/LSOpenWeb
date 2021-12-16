@@ -6,7 +6,7 @@
 
 | 文件                 | 更新时间   | 操作                                                                                                                               |
 | -------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| **CSK 硬件设计参考** | 2021.11.15 | [下载](https://iflyos-external.oss-cn-shanghai.aliyuncs.com/public/lsopen/%E9%80%9A%E8%AF%9D%E9%99%8D%E5%99%AA/hardware_guide.zip) |
+| **CSK 硬件设计参考** | 2021.11.25 | [下载](https://iflyos-external.oss-cn-shanghai.aliyuncs.com/public/lsopen/%E9%80%9A%E8%AF%9D%E9%99%8D%E5%99%AA/hardware_guide.zip) |
 
 更新日志：
 
