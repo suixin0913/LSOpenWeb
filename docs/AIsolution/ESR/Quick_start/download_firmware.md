@@ -11,7 +11,7 @@ sidebar_position: 3
 
 1. 硬件准备：LSKit购买与组装。
 
-- [LSkit购买链接](https://fuwu.xfyun.cn/onstage/cmddetail?id=2466)（暂已下架）
+- [LSkit购买链接](https://www.aifuwus.com/onstage/cmddetail?product_type=2888)（LSKitsV1.1版本默认仅配备CSK4002纯离线模组）
 
 - [LSkit组装教程](https://www.bilibili.com/video/BV1po4y1d7fB)
 
@@ -45,7 +45,7 @@ sidebar_position: 3
 
 ## 选择固件
 
-> 以下固件可以直接烧录进LSkit进行体验。
+> 以下固件可以直接烧录进LSkits进行体验。
 
 ### 风扇
 
