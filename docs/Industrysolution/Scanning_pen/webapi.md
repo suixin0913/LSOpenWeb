@@ -1365,70 +1365,75 @@ Authorization: Bearer {token}
 
 ### 获取难度列表
 
-##### 接口地址
+#### 接口地址
 
 ```
 GET https://api.iflyos.cn/external/ocr/evaluate/levels
 ```
 
-##### 请求headers
+#### 请求headers
 
 ```
 Authorization: Bearer {token}
 ```
 
-##### 返回示例
+#### 返回示例
 
 ```json
 {
     "levels": [
         {
             "level_id": "1",
-            "title": "初级"
+            "title": "初级",
+            "types": ["translate"]
         },
         {
             "level_id": "2",
-            "title": "中级"
+            "title": "中级",
+            "types": ["translate"]
         },
         {
             "level_id": "3",
-            "title": "高级"
+            "title": "高级",
+            "types": ["translate", "answer"]
         }
     ]
 }
 ```
 
-| 参数     | 类型   | 说明                          |
-| :------- | :----- | :---------------------------- |
-| level_id | String | 难度ID                        |
-| title    | String | 英文单词类型固定为【en_word】 |
+| 参数     | 类型      | 说明                          |
+| :------- | :-------- | :---------------------------- |
+| level_id | String    | 难度ID                        |
+| title    | String    | 英文单词类型固定为【en_word】 |
+| types    | String    | 可选题型translate(翻译), answer(问答) |
 
 ### 获取随机题目
 
-##### 接口地址
+#### 接口地址
 
 ```
 GET https://api.iflyos.cn/external/ocr/evaluate/get_question
 ```
 
-##### 请求headers
+#### 请求headers
 
 ```
 Authorization: Bearer {token}
 ```
 
-##### 请求参数
+#### 请求参数
 
 | 参数     | 类型   | 说明   | 必填 |
 | :------- | :----- | :----- | :--- |
 | level_id | String | 难度ID | 是   |
+| type | String | 可选题型translate(翻译)、answer(问答) | choice |
 
-##### 返回示例
+#### 返回示例
 
 ```json
 {
     "question": {
-        "keyword": "Saturday.",
+        "type": "answer",
         "answers": [
             "Saturday.",
             "It is Saturday.",
@@ -1446,10 +1451,10 @@ Authorization: Bearer {token}
 
 | 参数      | 类型   | 说明               |
 | :-------- | :----- | :----------------- |
-| keyword   | String | 题目答案           |
 | answers   | String | 题目答案           |
 | audio_url | String | 题目音频url        |
 | text      | String | 问题文本，可能为空 |
+| type | String | 题型 |
 
 ### 请求协议（新增）
 
