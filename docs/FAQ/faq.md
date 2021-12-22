@@ -322,7 +322,5 @@ uac_desc_name = "LINGSI AI"
   uac_desc_name = "LINGSI AI"
 ```
 
----
-> 咨询更多的问题或者查看更多的FAQ，可点击页面右下方的 [客服机器人](https://qiyukf.com/client?k=d1c5d64b7d61c97003f611c502100008&u=&d=4c6nicl7ewh53igzqkqs&uuid=abtlxnumwkl5yb3umvqk&gid=0&sid=0&qtype=0&welcomeTemplateId=0&dvctimer=0&robotShuntSwitch=0&hc=0&robotId=0&pageId=16291834940233f8Alvya32&shuntId=0&ctm=LS0xNjI5MTgzNDk1NTYz&t=) 进行询问。
 
 
