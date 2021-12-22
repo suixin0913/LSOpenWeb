@@ -6,19 +6,19 @@ sidebar_position: 1
 
 > 本文主要介绍离在线项目 CSK 固件的制作方法，通过阅读本文，你将了解到：
 >
-> 如何在 LSTudio 配置、打包、并烧录 LSKIts 离在线开发板的 CSK 固件；
+> 如何在 LSTudio 配置、打包、并烧录 LSKits 离在线开发板的 CSK 固件；
 
 
 
-### 1.下载 LSTudio
+### 1.下载 LStudio
 
-LSTudio 主要用于 CSK 固件配置与烧录，在 CSK 项目开发指南中的[《快速入门CSK项目开发》](AIsolution/ESR/Quick_start/Quick_start)已详细说明如何下载安装 LStudio，此处不再做过多描述。
+LStudio 主要用于 CSK 固件配置与烧录，在 CSK 项目开发指南中的[《快速入门CSK项目开发》](https://docs.listenai.com/AIsolution/ESR/Quick_start/Quick_start)已详细说明如何下载安装 LStudio，此处不再做过多描述。
 
 
 
-### 2.在 LSTudio 创建项目
+### 2.在 LStudio 创建项目
 
-安装 LSTudio 后，鼠标悬停至顶部菜单栏的【项目】，选择【新建】，如下图；选择【固件开发项目】；
+安装 LStudio 后，鼠标悬停至顶部菜单栏的【项目】，选择【新建】，如下图；选择【固件开发项目】；
 
 【芯片型号及方案】选择 **4002**；
 
@@ -58,4 +58,4 @@ LSTudio 主要用于 CSK 固件配置与烧录，在 CSK 项目开发指南中�
 
 ![](./files/packaging.png)
 
-点击打包，并等待打包过程完毕。之后将 LSKits 与电脑通过 USB 线连接，同时按住 LSKits 上的【CSK UPDATE】键，最后点击 LSTudio 上的【烧录】键，进入固件烧录模式，等待固件烧录完毕后，重启 LSKits 即可。
+点击打包，并等待打包过程完毕。之后将 LSKits 与电脑通过 USB 线连接，同时按住 LSKits 上的【CSK UPDATE】键，最后点击 LStudio 上的【烧录】键，进入固件烧录模式，等待固件烧录完毕后，重启 LSKits 即可。
