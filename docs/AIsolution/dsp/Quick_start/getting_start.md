@@ -19,10 +19,15 @@ sidebar_position: 2
 
 ### 1.1.准备LSKits离在线开发套件
 
-首先，你需要准备一个聆思官方推出的简易开发套件，请在[讯飞AI服务市场](https://www.aifuwus.com/onstage/cmddetail?product_type=2466)或关注聆思科技公众号（LISTENAI）获取。拿到开发套件后，将底板与 CSK+XR872AT 核心板通过插针拼接在一起，如下图：
+首先，你需要准备一个聆思官方推出的简易开发套件，请在[讯飞AI服务市场](https://www.aifuwus.com/onstage/cmddetail?product_type=2888)或关注聆思科技公众号（LISTENAI）获取。拿到开发套件后，将底板与 CSK+XR872AT 核心板通过插针拼接在一起，如下图：
 
 ![](./files/LSKits_XR872AT.jpg)
 
+::: info 
+
+LSKitsV1.1默认不再提供 CSK+XR872AT核心板，如有需要，请联系商务进行确认。
+
+:::
 
 
 ### 1.2.下载小飞在线APP
